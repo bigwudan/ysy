@@ -1434,7 +1434,6 @@ class Model {
         if('' === $linkNum && $this->db) {
             return $this->db;
         }
-
         if(!isset($this->_db[$linkNum]) || $force ) {
             // 创建一个新的实例
             if(!empty($config) && is_string($config) && false === strpos($config,'/')) { // 支持读取配置参数

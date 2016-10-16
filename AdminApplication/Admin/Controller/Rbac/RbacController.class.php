@@ -180,8 +180,11 @@ EOT;
      * 测试
      */
     public function actionTest(){
-        die('wudan');
-        $this->display('/Rbac/Test');
+        //import("TestData",THINK_PATH.'../CommonClass/Data/');
+        $obj = new \CommonClass\Data\TestData();
+//        $obj = new \TestData();
+        var_dump($obj);
+        //$this->display('/Rbac/Test');
     }
 
 
