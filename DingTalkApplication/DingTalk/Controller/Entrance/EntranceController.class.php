@@ -14,10 +14,9 @@ class EntranceController extends Controller
     /**
      * 初始化
      */
-    public function __construct(){
-        $obj = new \Vendor\Rbac\MyRbac();
-        $res = $obj->checkAccess(3);
-        var_dump($res);
+    protected function _initialize(){
+        $obj = new \DingTalk\Common\AdminAuthor();
+        $obj->init();
     }
     /**
      *
