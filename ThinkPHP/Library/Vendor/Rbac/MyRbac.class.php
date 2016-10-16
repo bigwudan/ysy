@@ -66,73 +66,94 @@ CREATE TABLE `think_user` (
 
 
  */
-
-
-
-
 namespace Vendor\Rbac;
-use Vendor\Rbac\IRbac;
 
 class MyRbac implements IRbac{
 
     /**
-     * @param int $varAuthId 登录id
-     * return boole
+     * @param $varUid
+     * @param string $checkType
      */
-    public static function saveAccessList($varAuthId){
-        $authAccessList = self::_getAuthAccessListFromDB($varAuthId);
-        $saveSessionFlag = session('authAccessList' , $authAccessList);
-        return $saveSessionFlag ? $saveSessionFlag : null;
+
+    public static function checkAccess($varUid , $checkType = 'module'){
+        $authorList = self::_authorListByUid($varUid);
+        if($checkType === 'module'){
+            $res = self::_checkModule($authorList);
+        }else if($checkType === 'controll'){
+            $res = self::_checkControll($authorList);
+        }else{
+            $res = self::_checkAction($authorList);
+        }
+        return $res;
     }
 
     /**
-     * 从access得到角色链
-     * @return array
+     * @param $varAuthorList
      */
-    public static function getRecordAccessList(){
-        $authAccessList = session('authAccessList');
-        return $authAccessList ? $authAccessList : null;
+    private static function _checkModule($varAuthorList){
+        return $varAuthorList['module'][MODULE_NAME];
     }
 
     /**
-     * 从数据库得到权限数组
+     * @param $varAuthorList
      */
-    private static function _getAuthAccessListFromDB($varAuthId){
-        if(null === $varAuthId) return false;
+    private static function _checkControll($varAuthorList){
+        return $varAuthorList['controll'][MODULE_NAME][CONTROLLER_NAME];
+    }
+
+    /**
+     * @param $varAuthorList
+     */
+    private static function _checkAction($varAuthorList){
+        return $varAuthorList['action'][MODULE_NAME][CONTROLLER_NAME][ACTION_NAME];
+    }
+    /**
+     * @param $varUid 用户uid
+     * @return mixed
+     */
+    private static function _authorListByUid($varUid){
         $data = M('user')->alias('u')
             ->field(" u.username as username , ru.user_id , ru.role_id , r.name as role_name , a.node_id , n.name as node_name , n.title as node_title , n.pid , n.level")
             ->join('think_role_user AS ru ON ru.user_id = u.id')
             ->join('think_role AS r ON r.id = ru.role_id')
             ->join('think_access AS a ON a.role_id = r.id')
             ->join('think_node AS n ON a.node_id = n.id')
-            ->where("ru.user_id = {$varAuthId}")->select();
-        $sortAuthData = array();
-        foreach($data as $k => $v)
-            $sortAuthData[$v['level']][] = $v;
-        $authAccessListTmp = array();
-        foreach($sortAuthData[1] as $k => $v){
-            foreach($sortAuthData[2] as $k1 => $v1)
-                if($v['node_id'] == $v1['pid']) $authAccessListTmp[$v['node_name']][$v1['node_name']] = $v1;
-        }
-        $authAccessList = array();
-        foreach($authAccessListTmp as $k => $v){
-            foreach($v as $k1 => $v1){
-                foreach($sortAuthData[3] as $k2 => $v2)
-                    if($v1['node_id'] == $v2['pid']) $authAccessList[$k][$k1][$v2['node_name']] = true;
+            ->where("ru.user_id = {$varUid}")->select();
+        $moduleArr = array();
+        if($data){
+            foreach($data as $k => $v){
+                if($v['level'] == 1){
+                    $moduleArr[$v['node_name']] = $v['node_id'];
+                }
             }
         }
-        return $authAccessList ? $authAccessList : null;
+        $controllArr = array();
+        if($moduleArr){
+            foreach($moduleArr as $k => $v){
+                foreach($data as $k1 => $v1){
+                    if($v == $v1['pid']){
+                        $controllArr[$k][$v1['node_name']] = $v1['node_id'];
+                    }
+                }
+            }
+        }
+        $actionArr = array();
+        if($controllArr){
+            foreach($controllArr as $k => $v){
+                foreach($v as $k1 => $v1){
+                    foreach($data as $k2 => $v2){
+                        if($v1 == $v2['pid']){
+                            $actionArr[$k][$k1][$v2['node_name']] = $v2['node_id'];
+                        }
+                    }
+                }
+            }
+        }
+        $res = array(
+            'module' => $moduleArr,
+            'controll' => $controllArr,
+            'action' => $actionArr
+        );
+        return $res;
     }
-
-    /**
-     * 检查是否含有权限
-     * @param string $varModuleName 模块名称
-     * @param string $varModuleControllerName 模块名称
-     * @param string $varActionName 模块名称
-     */
-    public static function checkAccess($varModuleName , $varModuleControllerName , $varActionName){
-        $recordAccessList = self::getRecordAccessList();
-        return $recordAccessList[$varModuleName][$varModuleControllerName][$varActionName] ? true : false;
-    }
-
 }

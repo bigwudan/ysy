@@ -12,16 +12,9 @@ namespace Vendor\Rbac;
 interface IRbac
 {
     /**
-     * @param $authId
-     * @param $data
+     * @param $varUid
+     * @param string $checkType
      */
-    public static function saveAccessList($varAuthId);
-
-    /**
-     * @param $template
-     * @return mixed
-     */
-    public static function getRecordAccessList();
-
+    public static function checkAccess($varUid , $checkType = 'module');
 
 }
