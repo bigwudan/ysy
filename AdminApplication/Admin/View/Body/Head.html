@@ -13,12 +13,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li {$active}><a href="#">登录用户管理 <span class="sr-only">(current)</span></a></li>
-                <li ><a href="#">XXX <span class="sr-only">(current)</span></a></li>
+                <foreach name="headTitleArr" item="vo" key="k" >
+                    <li <if condition="$vo['active'] eq 1 ">class="active"<else /></if>><a href="{$vo['url']}">{$vo['title']}<span class="sr-only">(current)</span></a></li>
+                </foreach>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">首页</a></li>
             </ul>
+
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

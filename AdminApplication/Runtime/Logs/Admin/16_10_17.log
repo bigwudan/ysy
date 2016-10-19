@@ -1,0 +1,9 @@
+[ 2016-10-17T21:46:30+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/actionTest.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: select * from think_user [ RunTime:0.0180s ]
+
