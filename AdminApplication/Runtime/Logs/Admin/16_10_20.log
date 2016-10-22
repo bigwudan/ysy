@@ -1,0 +1,32 @@
+[ 2016-10-20T10:47:31+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/actionOperationUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.036486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.008790s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.008860s ]
+NOTIC: [8] Undefined index: active D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\cb0e71f9cf3e52eb3466f360e3232639.php 第 16 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044736s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000624s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.1176s ]
+SQL: SELECT * FROM `think_user`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:-1.366806s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029314s ]
+INFO: [ view_parse ] --END-- [ RunTime:-1.362118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000013s ]
+INFO: [ view_filter ] --END-- [ RunTime:-1.390882s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001428s ]
+
