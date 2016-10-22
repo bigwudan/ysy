@@ -5,6 +5,15 @@ use Think\Controller;
 
 class RbacController extends Controller
 {
+
+    /**
+     * 初始化
+     */
+    protected function _initialize(){
+        $obj = new \Admin\Common\AdminAuthor();
+        $obj->init();
+    }
+
     public function actionOperationUser(){
         $user = new \Admin\Controller\Body\BodyController();
         $mainHeadHtml = $user->operationHead();
@@ -34,7 +43,7 @@ class RbacController extends Controller
     /**
      * 操作管理员
      * @param array get请求过来的数据
-     * return string
+     * @return string
      */
     private function _operationUser($varResquestData){
         $id = intval($varResquestData['userid']);

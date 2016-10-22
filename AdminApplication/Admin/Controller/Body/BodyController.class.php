@@ -32,7 +32,7 @@ class BodyController extends Controller
         }
         $this->assign('active' , 'class="active"');
         $this->assign('headTitleArr' , $headTitleArr);
-        $mainHeadHtml = $this->fetch('/Body/head');
+        $mainHeadHtml = $this->fetch('/Body/Head');
         return $mainHeadHtml;
     }
 }
