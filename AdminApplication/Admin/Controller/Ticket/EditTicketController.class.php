@@ -13,6 +13,13 @@ use Think\Controller;
 class EditTicketController extends Controller
 {
     /**
+     * 初始化
+     */
+    protected function _initialize(){
+        $obj = new \Admin\Common\AdminAuthor();
+        $obj->init();
+    }
+    /**
      * 选择条件
      */
     private function _getWhere(){

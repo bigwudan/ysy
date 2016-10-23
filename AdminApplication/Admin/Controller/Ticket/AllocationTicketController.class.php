@@ -13,6 +13,13 @@ use Think\Controller;
 class AllocationTicketController extends Controller
 {
     /**
+     * 初始化
+     */
+    protected function _initialize(){
+        $obj = new \Admin\Common\AdminAuthor();
+        $obj->init();
+    }
+    /**
      * 分配卷
      */
     public function actionViewTicket(){
