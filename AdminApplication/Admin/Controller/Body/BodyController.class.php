@@ -17,6 +17,11 @@ class BodyController extends Controller
         'Financial/Financial' => array(
             'url' => '/Financial/Financial/actionOperationUser.html',
             'title' => '财务管理'
+        ),
+
+        'Ticket/AllocationTicket' => array(
+            'url' => '/Ticket/AllocationTicket/actionViewTicket.html',
+            'title' => '管理对卷'
         )
     );
     public function operationHead(){

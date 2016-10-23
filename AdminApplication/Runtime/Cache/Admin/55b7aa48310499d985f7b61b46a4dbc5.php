@@ -94,7 +94,6 @@
                 });
             }
         };
-
         var _initi = function(){
             $('.table-hover tr').on('click' , _clickTrOperation);
 
@@ -110,23 +109,11 @@
                     $('#operationnode').modal('hide');
                 });
             });
-
         }();
-
-
         return {
-
             checkTreeControl:checkTreeControl
-
         }
-
     }();
-
-
-
 </script>
-
-
-
 </body>
 </html>
