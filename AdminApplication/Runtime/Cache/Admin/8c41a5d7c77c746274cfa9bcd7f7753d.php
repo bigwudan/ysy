@@ -15,26 +15,36 @@
     <div class="row">
         <div class="col-md-2">
             <ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
-                <li role="presentation" class="active"><a href="#">增加对卷</a></li>
-                <li role="presentation"><a href="<?php echo U("Ticket/EditTicket/actionViewTicket") ?>">查看卷号</a></li>
+                <li role="presentation" ><a href="<?php echo U("Ticket/AllocationTicket/actionViewTicket") ?>">增加对卷</a></li>
+                <li role="presentation" class="active"><a href="#">查看卷号</a></li>
             </ul>
         </div>
         <div class="col-md-10">
             <table class="table table-hover">
                 <tr>
-                    <th>起始号</th>
-                    <th>卷号总数</th>
-                    <th>领卷单位</th>
+                    <th>卷号</th>
+                    <th>姓名</th>
+                    <th>地址</th>
+                    <th>电话</th>
+                    <th>单位</th>
                     <th>截止时间</th>
+                    <th>操作</th>
                 </tr>
-                <?php if(is_array($ticketDataFromDb)): foreach($ticketDataFromDb as $k=>$v): ?><tr>
+                <?php if(is_array($ticketData)): foreach($ticketData as $k=>$v): ?><tr>
                         <td><?php echo ($v["id"]); ?></td>
-                        <td><?php echo ($v["amount"]); ?></td>
+                        <td><?php echo ($v["customername"]); ?></td>
+                        <td><?php echo ($v["customeraddress"]); ?></td>
+                        <td><?php echo ($v["customerphone"]); ?></td>
+
                         <td><?php echo ($v["recvcompany"]); ?></td>
+
                         <td><?php echo (date("Y-m-d",$v["deadline"])); ?></td>
+                        <td>[修改]</td>
                     </tr><?php endforeach; endif; ?>
             </table>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">增加卷号</button>
+            <div style="font-size: 20px">
+                <?php echo ($show); ?>
+            </div>
         </div>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
             <form action="<?php echo U('Ticket/AllocationTicket/actionDistributeTicketToDb') ?>" method="get">
