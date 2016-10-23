@@ -10,16 +10,10 @@
 <!--<script src="/myysy/Public/Js/bootstrap/bootstrap.min.js"></script>-->
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <body>
-<?php echo ($head); ?>
+<?php echo ($body['head']); ?>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2">
-            <ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
-                <li role="presentation" class="active"><a href="#">管理员管理</a></li>
-                <li role="presentation"><a href="<?php echo U("Rbac/Rbac/actionOperationRole") ?>">角色管理</a></li>
-                <li role="presentation"><a href="#">增加权限</a></li>
-            </ul>
-        </div>
+        <?php echo ($body['sider']); ?>
         <div class="col-md-10">
             <div class="alert alert-danger alert-dismissible" style="display: none" role="alert">
                 <button type="button" class="close definedclose" ><span aria-hidden="true">×</span></button>

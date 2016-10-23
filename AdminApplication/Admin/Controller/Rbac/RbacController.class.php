@@ -16,9 +16,9 @@ class RbacController extends Controller
 
     public function actionOperationUser(){
         $user = new \Admin\Controller\Body\BodyController();
-        $mainHeadHtml = $user->operationHead();
+        $body = $user->bodyFactory();
         $userInfoDataDB = M('user')->select();
-        $this->assign('head' , $mainHeadHtml);
+        $this->assign('body' , $body);
         $this->assign('userInfoDataDB' , $userInfoDataDB);
         $this->display('/Rbac/Rbac');
     }
@@ -82,9 +82,9 @@ class RbacController extends Controller
      */
     public function actionOperationRole(){
         $user = new \Admin\Controller\Body\BodyController();
-        $mainHeadHtml = $user->operationHead();
+        $body = $user->bodyFactory();
         $roleInfoDataDB = M('role')->select();
-        $this->assign('head' , $mainHeadHtml);
+        $this->assign('body' , $body);
         $this->assign('roleInfoDataDB' , $roleInfoDataDB);
         $this->display('/Rbac/OperationRole');
     }

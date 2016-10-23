@@ -24,14 +24,14 @@ class AllocationTicketController extends Controller
      */
     public function actionViewTicket(){
         $user = new \Admin\Controller\Body\BodyController();
-        $mainHeadHtml = $user->operationHead();
+        $body = $user->bodyFactory();
         $ticketDataFromDb = M('ticket')->field('id , count(0) as amount,recvcompany,deadline,saleuid')
             ->where("deadline != 0")
             ->group('recvcompany')
             ->select();
         $this->assign('ticketDataFromDb' , $ticketDataFromDb);
 
-        $this->assign('head' , $mainHeadHtml);
+        $this->assign('body' , $body);
         $this->display('/Ticket/ViewTicket');
     }
 
@@ -97,5 +97,31 @@ class AllocationTicketController extends Controller
 
     }
 
+
+    /**
+     * 选择条件
+     */
+    private function _getWhere(){
+
+        return '';
+    }
+
+
+    /**
+     * 分配卷
+     */
+    public function actionEditTicket(){
+        $where = $this->_getWhere();
+        $count      = M('ticket')->where("1 = 1 {$where}")->count();// 查询满足要求的总记录数
+        $Page       = new \Think\Page($count,25);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+        $show       = $Page->show();// 分页显示输出
+        $ticketData = M('ticket')->where("1 = 1 {$where}")->limit($Page->firstRow.','.$Page->listRows)->select();
+        $user = new \Admin\Controller\Body\BodyController();
+        $body = $user->bodyFactory();
+        $this->assign('show' , $show);
+        $this->assign('ticketData' ,  $ticketData);
+        $this->assign('body' , $body);
+        $this->display('/Ticket/EditTicket');
+    }
 
 }

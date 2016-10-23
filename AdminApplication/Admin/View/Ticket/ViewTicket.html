@@ -10,15 +10,10 @@
 <!--<script src="__ROOT__/Public/Js/bootstrap/bootstrap.min.js"></script>-->
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <body>
-{$head}
+{$body['head']}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-2">
-            <ul class="nav nav-pills nav-stacked nav-pills-stacked-example">
-                <li role="presentation" class="active"><a href="#">增加对卷</a></li>
-                <li role="presentation"><a href="<?php echo U("Ticket/EditTicket/actionViewTicket") ?>">查看卷号</a></li>
-            </ul>
-        </div>
+        {$body['sider']}
         <div class="col-md-10">
             <table class="table table-hover">
                 <tr>
