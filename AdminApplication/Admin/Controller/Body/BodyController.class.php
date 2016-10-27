@@ -14,64 +14,63 @@ class BodyController extends Controller
     /**
      * 得到html
      */
-    public function bodyFactory(){
-        $this->init();
+    public function bodyFactory($varAuthList){
+        $this->_authData = $varAuthList;
         $sider = $this->operationSider();
         $head = $this->operationHead();
         return array('sider' => $sider , 'head' => $head);
     }
 
 
-    public function init(){
-        $this->_getAuthDataFromDb();
 
-    }
-
-    /**
-     * 数据库
-     */
-    private function _getAuthDataFromDb(){
-        $uid = session('uid');
-        $data = M('user')->alias('u')
-            ->field(" u.username as username , ru.user_id , ru.role_id , r.name as role_name , a.node_id , n.name as node_name , n.title as node_title , n.pid , n.level , n.url")
-            ->join('think_role_user AS ru ON ru.user_id = u.id')
-            ->join('think_role AS r ON r.id = ru.role_id')
-            ->join('think_access AS a ON a.role_id = r.id')
-            ->join('think_node AS n ON a.node_id = n.id')
-            ->where("ru.user_id = {$uid} AND n.status = 1")->select();
-        $existList = array();
-        $newArr = array();
-        foreach($data as $k => $v){
-            if(!in_array( $v['node_id'], $existList)){
-                $newArr[] = $v;
-                $existList[] = $v['node_id'];
-            }
-        }
-        $this->_authData = $newArr;
-    }
+//    /**
+//     * 数据库
+//     */
+//    private function _getAuthDataFromDb(){
+//        $uid = session('uid');
+//        $data = M('user')->alias('u')
+//            ->field(" u.username as username , ru.user_id , ru.role_id , r.name as role_name , a.node_id , n.name as node_name , n.title as node_title , n.pid , n.level , n.url")
+//            ->join('think_role_user AS ru ON ru.user_id = u.id')
+//            ->join('think_role AS r ON r.id = ru.role_id')
+//            ->join('think_access AS a ON a.role_id = r.id')
+//            ->join('think_node AS n ON a.node_id = n.id')
+//            ->where("ru.user_id = {$uid} AND n.status = 1")->select();
+//        $existList = array();
+//        $newArr = array();
+//        foreach($data as $k => $v){
+//            if(!in_array( $v['node_id'], $existList)){
+//                $newArr[] = $v;
+//                $existList[] = $v['node_id'];
+//            }
+//        }
+//        $this->_authData = $newArr;
+//    }
 
     /**
      * 获得侧边栏
      */
     public function operationSider(){
-        $controller = array();
-        foreach($this->_authData as $k => $v){
-            if($v['node_name'] == CONTROLLER_NAME && $v['level'] == 2){
-                $controller = $v;
-                break;
-            }
+        $siderList = array();
+        if(defined("CONTROLLER_1_NAME")){
+            $authData = $this->_authData['controller_2'][MODULE_NAME][CONTROLLER_1_NAME];
+            $controller = CONTROLLER_1_NAME;
+        }else{
+            $authData = $this->_authData['controller_2'][MODULE_NAME][strtolower(CONTROLLER_NAME)];
+            $controller = strtolower(CONTROLLER_NAME);
         }
-        $actionList = array();
-        foreach($this->_authData as $k => $v){
-            if($controller['node_id'] == $v['pid'] && $v['level'] == 3){
+
+        if($authData){
+            foreach($authData as $k => $v){
                 if($v['url'] == '' || !$v['url']){
-                    $v['url'] = $v['node_name'];
+                    $v['url'] = __MODULE__.'/'.$controller.'/'.$v['node_name'];
                 }
-                $v['url'] = U($v['url']);
-                $actionList[] = $v;
+                $siderList[] = $v;
             }
+        }else{
+            die('no silder');
         }
-        $html = $this->_buildSilderHtml($actionList);
+        $html = $this->_buildSilderHtml($siderList);
+
         return $html;
     }
 
@@ -84,7 +83,7 @@ class BodyController extends Controller
         $html = '';
         foreach($varActionList as $k => $v){
             $action = '';
-            if($v['node_name'] == ACTION_NAME ){
+            if($v['node_name'] == CONTROLLER_2_NAME ){
                 $v['url'] = '#';
                 $action = 'class="active"';
             }
@@ -147,8 +146,9 @@ EOT;
      */
     private function _buildHeadHtml($varControllerData){
         $headHtml = '';
+        $controller = defined("CONTROLLER_1_NAME") ? CONTROLLER_1_NAME : strtolower(CONTROLLER_NAME);
         foreach($varControllerData as $k => $v){
-            $active =$v['node_name'] == CONTROLLER_NAME ? 'class="active"' : '';
+            $active =$v['node_name'] == $controller ? 'class="active"' : '';
             $headHtml .="<li $active><a href=\"{$v['url']}\">{$v['node_title']}<span class=\"sr-only\">(current)</span></a></li>";
         }
         return $headHtml;
@@ -158,25 +158,13 @@ EOT;
      * 得到控制器数据
      */
     private function _getControllerData(){
-        $moduleList = array();
-        foreach($this->_authData as $k => $v){
-            if($v['node_name'] == MODULE_NAME && $v['level'] == 1){
-                $moduleList = $v;
+        $this->_authData['controller_1'][MODULE_NAME] || die('no head');
+        foreach($this->_authData['controller_1'][MODULE_NAME] as $k => $v){
+            if($v['url'] == '' || !$v['url']){
+                $v['url'] = __MODULE__.'/'.$v['node_name'];
             }
+            $headList[] = $v;
         }
-        if(!$moduleList){
-            die('无模块权限');
-        }
-        $controllList = array();
-        foreach($this->_authData as $k => $v){
-            if($v['pid'] == $moduleList['node_id'] && $v['level'] == 2){
-                if($v['url'] == '' || !$v['url']){
-                    $v['url'] = __MODULE__;
-                }
-                $v['url'] = U($v['url']);
-                $controllList[] = $v;
-            }
-        }
-        return $controllList;
+        return $headList;
     }
 }

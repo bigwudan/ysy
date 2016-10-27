@@ -12,6 +12,10 @@ use Think\Controller;
 
 class LoginController extends Controller
 {
+    public function index(){
+        die('xx');
+    }
+
     public function actionLogin()
     {
         $this->display('/Login/Login');

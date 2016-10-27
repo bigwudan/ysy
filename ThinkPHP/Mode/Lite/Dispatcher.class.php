@@ -204,6 +204,7 @@ class Dispatcher {
         }
         // 获取控制器和操作名
         define('CONTROLLER_NAME',   self::getController($varController,$urlCase));
+
         define('ACTION_NAME',       self::getAction($varAction,$urlCase));
 
         // 当前控制器的UR地址

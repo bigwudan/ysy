@@ -138,7 +138,7 @@ class Dispatcher {
 
         // 获取模块名称
         define('MODULE_NAME', defined('BIND_MODULE')? BIND_MODULE : self::getModule($varModule));
-        
+
         // 检测模块是否存在
         if( MODULE_NAME && (defined('BIND_MODULE') || !in_array_case(MODULE_NAME,C('MODULE_DENY_LIST')) ) && is_dir(APP_PATH.MODULE_NAME)){
             // 定义当前模块路径
@@ -237,6 +237,7 @@ class Dispatcher {
         define('CONTROLLER_PATH',   self::getSpace($varAddon,$urlCase));
         // 获取控制器和操作名
         define('CONTROLLER_NAME',   defined('BIND_CONTROLLER')? BIND_CONTROLLER : self::getController($varController,$urlCase));
+
         define('ACTION_NAME',       defined('BIND_ACTION')? BIND_ACTION : self::getAction($varAction,$urlCase));
 
         // 当前控制器的UR地址
@@ -248,7 +249,23 @@ class Dispatcher {
 
         //保证$_REQUEST正常取值
         $_REQUEST = array_merge($_POST,$_GET,$_COOKIE);	// -- 加了$_COOKIE.  保证哦..
+        self::_getControllerLevel();
     }
+
+    /**
+     * wudan加入controller层级
+     */
+    static private function _getControllerLevel(){
+        $controllList = explode('/',CONTROLLER_NAME);
+        if(count($controllList) >= 2 ){
+            define('CONTROLLER_1_NAME',   strtolower($controllList[0]));
+            define('CONTROLLER_2_NAME',   strtolower($controllList[1]));
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 
     /**
      * 获得控制器的命名空间路径 便于插件机制访问

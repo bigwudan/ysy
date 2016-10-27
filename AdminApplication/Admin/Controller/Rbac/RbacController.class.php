@@ -12,13 +12,20 @@ class RbacController extends Controller
     protected function _initialize(){
         $obj = new \Admin\Common\AdminAuthor();
         $obj->init();
+        $user = new \Admin\Controller\Body\BodyController();
+        $body = $user->bodyFactory($obj->getAuthorList());
+        $this->assign('body' , $body);
+    }
+
+    public function index(){
+        $this->display('/Rbac/Rbac');
     }
 
     public function actionOperationUser(){
-        $user = new \Admin\Controller\Body\BodyController();
-        $body = $user->bodyFactory();
+//        $user = new \Admin\Controller\Body\BodyController();
+//        $body = $user->bodyFactory();
         $userInfoDataDB = M('user')->select();
-        $this->assign('body' , $body);
+
         $this->assign('userInfoDataDB' , $userInfoDataDB);
         $this->display('/Rbac/Rbac');
     }
@@ -189,11 +196,10 @@ EOT;
      * 测试
      */
     public function actionTest(){
-        //import("TestData",THINK_PATH.'../CommonClass/Data/');
-        $obj = new \CommonClass\Data\TestData();
-//        $obj = new \TestData();
-        var_dump($obj);
-        //$this->display('/Rbac/Test');
+
+        $obj = new \Vendor\Rbac\MyRbac();
+        $obj->authorListByUid(1);
+        var_dump($obj);die(__CLASS__);
     }
 
 

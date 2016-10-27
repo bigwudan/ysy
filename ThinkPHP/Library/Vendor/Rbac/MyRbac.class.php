@@ -70,48 +70,68 @@ namespace Vendor\Rbac;
 
 class MyRbac implements IRbac{
 
+
+    /**
+     * 得到_authorList
+     */
+    static private $_authorList = array();
+
+
     /**
      * @param $varUid
      * @param string $checkType
      */
 
     public static function checkAccess($varUid , $checkType = 'module'){
-        $authorList = self::_authorListByUid($varUid);
+        self::authorListByUid($varUid);
         if($checkType === 'module'){
-            $res = self::_checkModule($authorList);
-        }else if($checkType === 'controll'){
-            $res = self::_checkControll($authorList);
+            $res = self::_checkModule();
+        }else if($checkType === 'controller_1'){
+            $res = self::_controller_1();
+        }else if($checkType === 'controller_2'){
+            $res = self::_controller_2();
         }else{
-            $res = self::_checkAction($authorList);
+            $res = self::_checkAction();
         }
         return $res;
     }
 
     /**
-     * @param $varAuthorList
      */
-    private static function _checkModule($varAuthorList){
-        return $varAuthorList['module'][MODULE_NAME];
+    private static function _checkModule(){
+        return self::$_authorList['module'][MODULE_NAME];
     }
 
     /**
-     * @param $varAuthorList
      */
-    private static function _checkControll($varAuthorList){
-        return $varAuthorList['controll'][MODULE_NAME][CONTROLLER_NAME];
+    private static function _controller_1(){
+        return self::$_authorList['controll'][MODULE_NAME][CONTROLLER_1_NAME];
     }
 
     /**
-     * @param $varAuthorList
      */
-    private static function _checkAction($varAuthorList){
-        return $varAuthorList['action'][MODULE_NAME][CONTROLLER_NAME][ACTION_NAME];
+    private static function _controller_2(){
+        return self::$_authorList['controll'][MODULE_NAME][CONTROLLER_1_NAME][CONTROLLER_2_NAME];
+    }
+
+    /**
+     */
+    private static function _checkAction(){
+
+        if(defined("CONTROLLER_1_NAME")){
+
+            return self::$_authorList['action'][MODULE_NAME][CONTROLLER_1_NAME][CONTROLLER_2_NAME][ACTION_NAME];
+        }else{
+
+            return self::$_authorList['controller_1'][MODULE_NAME][strtolower(CONTROLLER_NAME)];
+        }
+        return false;
     }
     /**
      * @param $varUid 用户uid
      * @return mixed
      */
-    private static function _authorListByUid($varUid){
+    public static function authorListByUid($varUid){
         $data = M('user')->alias('u')
             ->field(" u.username as username , ru.user_id , ru.role_id , r.name as role_name , a.node_id , n.name as node_name , n.title as node_title , n.pid , n.level")
             ->join('think_role_user AS ru ON ru.user_id = u.id')
@@ -120,30 +140,46 @@ class MyRbac implements IRbac{
             ->join('think_node AS n ON a.node_id = n.id')
             ->where("ru.user_id = {$varUid}")->select();
         $moduleArr = array();
+
         if($data){
             foreach($data as $k => $v){
                 if($v['level'] == 1){
-                    $moduleArr[$v['node_name']] = $v['node_id'];
+                    $moduleArr[$v['node_name']] = $v;
                 }
             }
         }
-        $controllArr = array();
+        $controll_1_Arr = array();
         if($moduleArr){
             foreach($moduleArr as $k => $v){
                 foreach($data as $k1 => $v1){
-                    if($v == $v1['pid']){
-                        $controllArr[$k][$v1['node_name']] = $v1['node_id'];
+                    if($v['node_id'] == $v1['pid']){
+                        $controll_1_Arr[$k][$v1['node_name']] = $v1;
                     }
                 }
             }
         }
-        $actionArr = array();
-        if($controllArr){
-            foreach($controllArr as $k => $v){
+        $controll_2_Arr = array();
+        if($controll_1_Arr){
+            foreach($controll_1_Arr as $k => $v){
                 foreach($v as $k1 => $v1){
                     foreach($data as $k2 => $v2){
-                        if($v1 == $v2['pid']){
-                            $actionArr[$k][$k1][$v2['node_name']] = $v2['node_id'];
+                        if($v1['node_id'] == $v2['pid']){
+                            $controll_2_Arr[$k][$k1][$v2['node_name']] = $v2;
+                        }
+                    }
+                }
+            }
+        }
+
+        $actionArr = array();
+        if($controll_2_Arr){
+            foreach($controll_2_Arr as $k => $v){
+                foreach($v as $k1 => $v1){
+                    foreach($v1 as $k2 => $v2){
+                        foreach($data as $k3 => $v3){
+                            if($v2['node_id'] == $v3['pid']){
+                                $actionArr[$k][$k1][$k2][$v3['node_name']] = $v3;
+                            }
                         }
                     }
                 }
@@ -151,9 +187,17 @@ class MyRbac implements IRbac{
         }
         $res = array(
             'module' => $moduleArr,
-            'controll' => $controllArr,
+            'controller_1' => $controll_1_Arr,
+            'controller_2' => $controll_2_Arr,
             'action' => $actionArr
         );
-        return $res;
+        self::$_authorList = $res;
+    }
+
+    /**
+     * 得到
+     */
+    static public function getAuthorList(){
+        return self::$_authorList;
     }
 }

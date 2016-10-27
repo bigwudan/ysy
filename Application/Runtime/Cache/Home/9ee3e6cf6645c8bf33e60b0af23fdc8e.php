@@ -70,7 +70,6 @@
 </form>
 
 <style>
-
     .asymmetric-radius {
         width:100px;
         /* you can add backround style by yourself */
@@ -85,12 +84,10 @@
         top: 10%;
         margin-left: 35%;
         transition: opacity 5s;
-
     }
     .asymmetric-radius-opacity{
         opacity: 0;
     }
-
     .spinner {
         z-index: 99999;
         top: 10%;

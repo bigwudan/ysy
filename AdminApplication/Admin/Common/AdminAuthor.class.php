@@ -9,6 +9,11 @@ namespace Admin\Common;
 class AdminAuthor
 {
     /**
+     *
+     */
+    private $_authList = array();
+
+    /**
      * 初始化
      */
     public function init(){
@@ -30,8 +35,16 @@ class AdminAuthor
     private function _checkAuthor($varUid){
         $obj = new \Vendor\Rbac\MyRbac();
         $res = $obj->checkAccess($varUid , 'action');
+        $this->_authList = $obj->getAuthorList();
         if(!$res){
-            die('no enter');
+            die('no auth');
         }
+    }
+
+    /**
+     * 得到authList
+     */
+    public function getAuthorList(){
+       return $this->_authList;
     }
 }
