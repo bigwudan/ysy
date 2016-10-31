@@ -52,10 +52,10 @@ class BodyController extends Controller
     public function operationSider(){
         $siderList = array();
         if(defined("CONTROLLER_1_NAME")){
-            $authData = $this->_authData['controller_2'][MODULE_NAME][CONTROLLER_1_NAME];
+            $authData = $this->_authData['controller_2'][strtolower(MODULE_NAME)][strtolower(CONTROLLER_1_NAME)];
             $controller = CONTROLLER_1_NAME;
         }else{
-            $authData = $this->_authData['controller_2'][MODULE_NAME][strtolower(CONTROLLER_NAME)];
+            $authData = $this->_authData['controller_2'][strtolower(MODULE_NAME)][strtolower(CONTROLLER_NAME)];
             $controller = strtolower(CONTROLLER_NAME);
         }
 
@@ -83,7 +83,7 @@ class BodyController extends Controller
         $html = '';
         foreach($varActionList as $k => $v){
             $action = '';
-            if($v['node_name'] == CONTROLLER_2_NAME ){
+            if(strtolower($v['node_name']) == strtolower(CONTROLLER_2_NAME) ){
                 $v['url'] = '#';
                 $action = 'class="active"';
             }
@@ -98,7 +98,6 @@ $html =<<<EOT
 EOT;
         return $html;
     }
-
 
     /**
      * 首页
@@ -146,7 +145,7 @@ EOT;
      */
     private function _buildHeadHtml($varControllerData){
         $headHtml = '';
-        $controller = defined("CONTROLLER_1_NAME") ? CONTROLLER_1_NAME : strtolower(CONTROLLER_NAME);
+        $controller = defined("CONTROLLER_1_NAME") ? strtolower(CONTROLLER_1_NAME) : strtolower(CONTROLLER_NAME);
         foreach($varControllerData as $k => $v){
             $active =$v['node_name'] == $controller ? 'class="active"' : '';
             $headHtml .="<li $active><a href=\"{$v['url']}\">{$v['node_title']}<span class=\"sr-only\">(current)</span></a></li>";
@@ -158,8 +157,8 @@ EOT;
      * 得到控制器数据
      */
     private function _getControllerData(){
-        $this->_authData['controller_1'][MODULE_NAME] || die('no head');
-        foreach($this->_authData['controller_1'][MODULE_NAME] as $k => $v){
+        $this->_authData['controller_1'][strtolower(MODULE_NAME)] || die('no head');
+        foreach($this->_authData['controller_1'][strtolower(MODULE_NAME)] as $k => $v){
             if($v['url'] == '' || !$v['url']){
                 $v['url'] = __MODULE__.'/'.$v['node_name'];
             }

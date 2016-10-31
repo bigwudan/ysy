@@ -80,6 +80,7 @@ class MyRbac implements IRbac{
     /**
      * @param $varUid
      * @param string $checkType
+     * @return array
      */
 
     public static function checkAccess($varUid , $checkType = 'module'){
@@ -117,13 +118,10 @@ class MyRbac implements IRbac{
     /**
      */
     private static function _checkAction(){
-
         if(defined("CONTROLLER_1_NAME")){
-
-            return self::$_authorList['action'][MODULE_NAME][CONTROLLER_1_NAME][CONTROLLER_2_NAME][ACTION_NAME];
+            return self::$_authorList['action'][strtolower(MODULE_NAME)][strtolower(CONTROLLER_1_NAME)][strtolower(CONTROLLER_2_NAME)][strtolower(ACTION_NAME)];
         }else{
-
-            return self::$_authorList['controller_1'][MODULE_NAME][strtolower(CONTROLLER_NAME)];
+            return self::$_authorList['controller_1'][strtolower(MODULE_NAME)][strtolower(CONTROLLER_NAME)];
         }
         return false;
     }
@@ -144,27 +142,29 @@ class MyRbac implements IRbac{
         if($data){
             foreach($data as $k => $v){
                 if($v['level'] == 1){
-                    $moduleArr[$v['node_name']] = $v;
+                    $moduleArr[strtolower($v['node_name'])] = $v;
                 }
             }
         }
+
         $controll_1_Arr = array();
         if($moduleArr){
             foreach($moduleArr as $k => $v){
                 foreach($data as $k1 => $v1){
                     if($v['node_id'] == $v1['pid']){
-                        $controll_1_Arr[$k][$v1['node_name']] = $v1;
+                        $controll_1_Arr[$k][strtolower($v1['node_name'])] = $v1;
                     }
                 }
             }
         }
+
         $controll_2_Arr = array();
         if($controll_1_Arr){
             foreach($controll_1_Arr as $k => $v){
                 foreach($v as $k1 => $v1){
                     foreach($data as $k2 => $v2){
                         if($v1['node_id'] == $v2['pid']){
-                            $controll_2_Arr[$k][$k1][$v2['node_name']] = $v2;
+                            $controll_2_Arr[strtolower($k)][strtolower($k1)][strtolower($v2['node_name'])] = $v2;
                         }
                     }
                 }
@@ -178,7 +178,7 @@ class MyRbac implements IRbac{
                     foreach($v1 as $k2 => $v2){
                         foreach($data as $k3 => $v3){
                             if($v2['node_id'] == $v3['pid']){
-                                $actionArr[$k][$k1][$k2][$v3['node_name']] = $v3;
+                                $actionArr[strtolower($k)][strtolower($k1)][strtolower($k2)][strtolower($v3['node_name'])] = $v3;
                             }
                         }
                     }

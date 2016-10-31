@@ -22,8 +22,7 @@ class RbacController extends Controller
     }
 
     public function actionOperationUser(){
-//        $user = new \Admin\Controller\Body\BodyController();
-//        $body = $user->bodyFactory();
+
         $userInfoDataDB = M('user')->select();
 
         $this->assign('userInfoDataDB' , $userInfoDataDB);
