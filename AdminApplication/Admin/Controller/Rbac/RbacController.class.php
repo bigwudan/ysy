@@ -18,7 +18,9 @@ class RbacController extends Controller
     }
 
     public function index(){
-        $this->display('/Rbac/Rbac');
+        $obj = new \Org\Jbmp\Service\ExecutionService();
+        $obj->test();
+        die('xxx');
     }
 
     public function actionOperationUser(){
@@ -166,6 +168,7 @@ EOT;
      * @param string $varParent
      * @param string $varChildren
      * @param int $varPVal
+     * @return array
      */
     private function _iterationTree($varData , $varPVal = 0 , $varParent = 'pid' , $varChildren = 'id' ){
         $data = $varData;
