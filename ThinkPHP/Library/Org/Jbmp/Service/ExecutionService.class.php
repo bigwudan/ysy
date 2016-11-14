@@ -8,10 +8,21 @@ namespace Org\Jbmp\Service;
  */
 class ExecutionService
 {
+
     /**
-     * 初始化
+     * 启动模板
+     * @param $varModelName string 模板名称
      */
-    public function test(){
-        die('test');
+    public function startProcessInstanceById($varModelName){
+        $obj = new \Org\Jbmp\ProcessDataBase\SelectDataFromDb();
+        $rule = $obj->getRuleByModuleName($varModelName);
+        $property = $obj->getProperty();
+        $StartObj = new \Org\Jbmp\ExecutionClass\StartExecutionClass();
+        $StartObj->setRule($rule['rule']);
+        $StartObj->setProperty($property['value']);
+        $XmlObj = new \Org\Jbmp\ProcessFunction\XmlEngine();
+        $obj = $XmlObj->getDbToXmlObj($rule['rule']);
+        $StartObj->setXmlObj($obj);
     }
+
 }

@@ -19,7 +19,7 @@ class RbacController extends Controller
 
     public function index(){
         $obj = new \Org\Jbmp\Service\ExecutionService();
-        $obj->test();
+        $obj->startProcessInstanceById('demo');
         die('xxx');
     }
 
