@@ -8,13 +8,32 @@ namespace Org\Jbmp\TargetExecutionClass;
  */
 class CommonTargetExecutionClass
 {
-    /**
-     *
-     */
-    protected $_nodeName = '';
 
     /**
-     *
+     * xml对象
      */
-    protected $_nodeType = '';
+    protected $_executionObj = null;
+
+    /**
+     * transition
+     */
+    protected $_targetNodeList  =  null;
+
+
+
+
+    public function initi( $varExecutionObj , $varTargetNodeList = null){
+        $this->_executionObj =  $varExecutionObj;
+        $this->_targetNodeList =  $varTargetNodeList;
+    }
+
+    public function process(){
+
+    }
+
+    public function getTargetNodeList(){
+        return $this->_targetNodeList;
+    }
+
+
 }

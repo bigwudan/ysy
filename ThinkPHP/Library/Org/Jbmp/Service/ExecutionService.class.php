@@ -23,6 +23,18 @@ class ExecutionService
         $XmlObj = new \Org\Jbmp\ProcessFunction\XmlEngine();
         $obj = $XmlObj->getDbToXmlObj($rule['rule']);
         $StartObj->setXmlObj($obj);
+        $FranslateObj = new \Org\Jbmp\Translate\FranslateFactory();
+        $FranslateObj->initi($StartObj);
+        $obj =  $FranslateObj->translate();
+
+        $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
+
+        $AssembleObj->initi($StartObj , $obj);
+        $AssembleObj->process();
+
+
     }
+
+
 
 }

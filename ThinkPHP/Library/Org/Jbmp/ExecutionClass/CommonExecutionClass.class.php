@@ -23,6 +23,7 @@ class CommonExecutionClass
      */
     protected $_xmlRuleObj = array();
 
+    protected $_currNode = array();
 
     /**
      * 设置rule
@@ -58,7 +59,10 @@ class CommonExecutionClass
      * 设置xml对象
      */
     public function setXmlObj($varXmlObj){
+
         $this->_xmlRuleObj = $varXmlObj;
+        $this->setNode();
+
     }
 
     /**
@@ -66,6 +70,25 @@ class CommonExecutionClass
      */
     public function getXmlObj(){
         return $this->_xmlRuleObj;
+    }
+
+    /**
+     * 得到当前的node
+     */
+    public function setNode(){
+        $obj =  new \Org\Jbmp\ProcessFunction\XmlEngine();
+        if($this->_execution){
+            $this->_execution['activityname'] = null;
+        }
+        $res =  $obj->getActionXml($this->_xmlRuleObj , $this->_execution['activityname']);
+        $this->_currNode = $res;
+    }
+
+    /**
+     * 得到node
+     */
+    public function getCurrNode(){
+        return $this->_currNode;
     }
 
 
