@@ -7,7 +7,7 @@ namespace Org\Jbmp\Translate;
  * Time: 10:50
  */
 
-class FranslateFactory {
+class TranslateFactory {
 
     private $_executionObj= null;
 
@@ -44,19 +44,25 @@ class FranslateFactory {
             }
         }else{
             $target = $currNode['transitionList'][0];
-
         }
-
         $XmlObj  =  new \Org\Jbmp\ProcessFunction\XmlEngine();
         $targetNodeList = $XmlObj->getActionXml( $this->_executionObj->getXmlObj() ,  $target['to']);
         return $targetNodeList;
     }
 
     private function _assignTargetClass($varTargetNodeList){
-        $obj =  new \Org\Jbmp\TargetExecutionClass\StateTargetExecutinClass();
-        $obj->initi($this->_executionObj ,  $varTargetNodeList);
+        if($varTargetNodeList['nodeName'] == 'task'){
+            $obj =  new \Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass();
+            $obj->initi($this->_executionObj ,  $varTargetNodeList);
+            $obj->process();
+        }elseif($varTargetNodeList['nodeName'] == 'decision'){
+            $obj =  new \Org\Jbmp\TargetExecutionClass\DecisionTargetExecution();
+            $obj->initi($this->_executionObj ,  $varTargetNodeList);
+        }else{
+            $obj =  new \Org\Jbmp\TargetExecutionClass\StateTargetExecutinClass();
+            $obj->initi($this->_executionObj ,  $varTargetNodeList);
+        }
         return $obj;
-
     }
 
 

@@ -12,8 +12,9 @@ class ExecutionService
     /**
      * 启动模板
      * @param $varModelName string 模板名称
+     * @param $varVars array 参数
      */
-    public function startProcessInstanceById($varModelName){
+    public function startProcessInstanceById($varModelName , $varVars = null){
         $obj = new \Org\Jbmp\ProcessDataBase\SelectDataFromDb();
         $rule = $obj->getRuleByModuleName($varModelName);
         $property = $obj->getProperty();
@@ -23,16 +24,12 @@ class ExecutionService
         $XmlObj = new \Org\Jbmp\ProcessFunction\XmlEngine();
         $obj = $XmlObj->getDbToXmlObj($rule['rule']);
         $StartObj->setXmlObj($obj);
-        $FranslateObj = new \Org\Jbmp\Translate\FranslateFactory();
+        $FranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
         $FranslateObj->initi($StartObj);
         $obj =  $FranslateObj->translate();
-
         $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
-
-        $AssembleObj->initi($StartObj , $obj);
+        $AssembleObj->initi($StartObj , $obj , $varVars);
         $AssembleObj->process();
-
-
     }
 
 

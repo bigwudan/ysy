@@ -13,23 +13,16 @@ class AssembleExecutionAndTarget {
 
     private $_executionObj  =  null;
     private $_targetNode = null;
-
     private $_num = null;
-
-    private $_dbid = array(
-
-
-
-    );
-
+    private $_varsList = array();
     private $_insertVars = null;
-
     private $_execution =  null;
-
     private $_histProcinst = null;
-
     private $_histActinst = null;
-
+    private $_variable = null;
+    private $_task = null;
+    private $_hisTask = null;
+    private $_participation = null;
 
 
     /**
@@ -41,6 +34,7 @@ class AssembleExecutionAndTarget {
     public function initi($varExecution  ,  $varTargetNode ,  $varVars = array()){
         $this->_executionObj = $varExecution;
         $this->_targetNode = $varTargetNode;
+        $this->_varsList = $varVars;
         $this->_num  =  $this->_executionObj->getProperty();
         $this->_num =  $this->_num + \Org\Jbmp\Config\CommonConfig::getProperty()['totalsum'];
     }
@@ -48,11 +42,15 @@ class AssembleExecutionAndTarget {
     public function process(){
         $this->_processExecution();
         $this->_processHistProcinst();
-        $this->_processTask();
-        $this->_processHisTask();
+        if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
+            $this->_processTask();
+            $this->_processHisTask();
+            $this->_processParticipation();
+        }
         $this->_processHistActinst();
-        $this->_processParticipation();
-        $this->_processVarsList();
+        if($this->_varsList){
+            $this->_processVarsList();
+        }
         die('xxx');
     }
 
@@ -90,21 +88,61 @@ class AssembleExecutionAndTarget {
 
     private function _processHisTask(){
 
+        $hisTask['insert'][] = array(
+            'dbid' => $this->_task['insert'][0]['dbid'],
+            'execution' => $this->_execution['insert'][0]['id'],
+            'outcome' => '',
+            'assignee' => '',
+            'priority' => 0,
+            'state' => '',
+            'create' => time(),
+            'end' => 0,
+            'duration' => 0
+        );
+        $this->_hisTask = $hisTask;
     }
 
     private function _processParticipation(){
-
-
+        $candidateList = $this->_targetNode->getCandidate();
+        $participation = array();
+        foreach($candidateList as $k => $v){
+            foreach($v as $k1 => $v1){
+                if($k == 'groupid'){
+                    $tmpUserId = 0;
+                    $tmpGroupId = $v1;
+                }else{
+                    $tmpUserId = $v1;
+                    $tmpGroupId = 0;
+                }
+                $participation['insert'][] = array(
+                    'dbid' => $this->_num,
+                    'groupid' => $tmpGroupId,
+                    'userid' => $tmpUserId,
+                    'type' => 'candidate',
+                    'task' => $this->_task['insert'][0]['dbid']
+                );
+                $this->_num = $this->_num + 1;
+            }
+        }
+        $this->_participation = $participation;
     }
 
     private function _processVarsList(){
+        for($num = 0 ; $num < 2 ; $num++){
+            $this->_variable['insert'][] = array(
+                'dbid' => $this->_num,
+                'class' => 'string',
+                'key' => 'username',
+                'execution' => $this->_execution['insert'][0]['dbid'],
+                'string_value' => 'wudan'.$num
 
-
-
+            );
+            $this->_num = $this->_num +1;
+        }
     }
 
     private function _processExecution(){
-        $hasVars  =  $this->_insertVars ? 1 :  0;
+        $hasVars  =  $this->_varsList ? 1 :  0;
         $currNode  =  $this->_executionObj->getCurrNode();;
         if($currNode['nodeName'] == 'start'){
             $execution['insert'][] =  array(
@@ -129,12 +167,26 @@ class AssembleExecutionAndTarget {
     }
 
     private function _processTask(){
-
+        $hasVars  =  $this->_varsList ? 1 :  0;
+        $task['insert'][] = array(
+            'dbid' => $this->_num,
+            'name' => $this->_targetNode->getTargetNodeList()['name'],
+            'state' => 'open',
+            'assignee' => '',
+            'priority' => 0,
+            'create' => time(),
+            'execution_id' => $this->_execution['insert'][0]['id'],
+            'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
+            'hasvars' => $hasVars,
+            'execution' => $this->_execution['insert'][0]['dbid'],
+            'procinst' => $this->_execution['insert'][0]['dbid']
+        );
+        $this->_num = $this->_num + 1;
+        $this->_task = $task;
     }
 
 
     private function _processHistActinst(){
-
         if($this->_execution['insert']){
             $histActinst['insert'][] = array(
                 'dbid' => $this->_num,
@@ -149,14 +201,11 @@ class AssembleExecutionAndTarget {
                 'htask' => 0
 
             );
-
-
         }
         $this->_histActinst = $histActinst;
     }
 
     private function _processHistProcinst(){
-
         if($this->_execution['insert']){
             $histProcinst['insert'][] = array(
                 'dbid' => $this->_execution['insert'][0]['dbid'],
@@ -171,9 +220,7 @@ class AssembleExecutionAndTarget {
 
             );
         }
-
         $this->_histProcinst = $histProcinst;
-
     }
 
 }

@@ -19,6 +19,7 @@ class CommonTargetExecutionClass
      */
     protected $_targetNodeList  =  null;
 
+    protected $_candidate = null;
 
 
 
@@ -35,5 +36,11 @@ class CommonTargetExecutionClass
         return $this->_targetNodeList;
     }
 
+    protected function _setCandidate($varCandidate){
+        $this->_candidate = $varCandidate;
+    }
 
+    public function getCandidate(){
+        return $this->_candidate;
+    }
 }
