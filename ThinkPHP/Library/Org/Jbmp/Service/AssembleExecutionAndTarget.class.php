@@ -26,6 +26,10 @@ class AssembleExecutionAndTarget {
 
     private $_execution =  null;
 
+    private $_histProcinst = null;
+
+    private $_histActinst = null;
+
 
 
     /**
@@ -42,11 +46,13 @@ class AssembleExecutionAndTarget {
     }
 
     public function process(){
-
         $this->_processExecution();
-        $this->_processHistActinst();
         $this->_processHistProcinst();
-
+        $this->_processTask();
+        $this->_processHisTask();
+        $this->_processHistActinst();
+        $this->_processParticipation();
+        $this->_processVarsList();
         die('xxx');
     }
 
@@ -81,6 +87,22 @@ class AssembleExecutionAndTarget {
         return $insertVarsList;
     }
 
+
+    private function _processHisTask(){
+
+    }
+
+    private function _processParticipation(){
+
+
+    }
+
+    private function _processVarsList(){
+
+
+
+    }
+
     private function _processExecution(){
         $hasVars  =  $this->_insertVars ? 1 :  0;
         $currNode  =  $this->_executionObj->getCurrNode();;
@@ -93,7 +115,7 @@ class AssembleExecutionAndTarget {
                 'key' => '',
                 'id' => "{$this->_executionObj->getRule()['rulename']}.{$this->_num}",
                 'state' => 'active-root',
-                'priority' => 1,
+                'priority' => 0,
                 'hisactinst' => $this->_num+1,
                 'parent' => 0,
                 'parentidx' => 0,
@@ -105,6 +127,11 @@ class AssembleExecutionAndTarget {
         }
         $this->_execution  = $execution;
     }
+
+    private function _processTask(){
+
+    }
+
 
     private function _processHistActinst(){
 
@@ -125,6 +152,7 @@ class AssembleExecutionAndTarget {
 
 
         }
+        $this->_histActinst = $histActinst;
     }
 
     private function _processHistProcinst(){
@@ -144,8 +172,8 @@ class AssembleExecutionAndTarget {
             );
         }
 
-        var_dump($histProcinst);
-        die();
+        $this->_histProcinst = $histProcinst;
+
     }
 
 }
