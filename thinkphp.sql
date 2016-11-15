@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
+Source Server         : wwewe
 Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : thinkphp
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2016-11-14 23:14:23
+Date: 2016-11-15 17:33:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -26,7 +26,7 @@ CREATE TABLE `think_access` (
   `module` varchar(50) DEFAULT NULL,
   KEY `groupId` (`role_id`),
   KEY `nodeId` (`node_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_access
@@ -87,7 +87,7 @@ CREATE TABLE `think_flow_execution` (
   KEY `key` (`key`),
   KEY `instance` (`instance`),
   KEY `hisactinst` (`hisactinst`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_execution
@@ -111,7 +111,7 @@ CREATE TABLE `think_flow_histactinst` (
   PRIMARY KEY (`dbid`),
   KEY `hprocid` (`hprocid`),
   KEY `htask` (`htask`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_histactinst
@@ -132,7 +132,7 @@ CREATE TABLE `think_flow_histprocinst` (
   `state` varchar(255) NOT NULL,
   `endactivity` varchar(255) NOT NULL,
   PRIMARY KEY (`dbid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_histprocinst
@@ -153,7 +153,7 @@ CREATE TABLE `think_flow_histtask` (
   `end` int(10) unsigned NOT NULL DEFAULT '0',
   `duration` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`dbid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_histtask
@@ -171,7 +171,7 @@ CREATE TABLE `think_flow_modulerule` (
   `creater` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建人',
   PRIMARY KEY (`moduleid`),
   UNIQUE KEY `rulename` (`rulename`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_modulerule
@@ -190,7 +190,7 @@ CREATE TABLE `think_flow_participation` (
   `task` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '任务id',
   PRIMARY KEY (`dbid`),
   KEY `FK_PART_TASK` (`task`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_participation
@@ -205,7 +205,7 @@ CREATE TABLE `think_flow_property` (
   `version` int(11) NOT NULL,
   `value` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`key`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_property
@@ -229,7 +229,7 @@ CREATE TABLE `think_flow_task` (
   `execution` int(10) unsigned NOT NULL DEFAULT '0',
   `procinst` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`dbid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_task
@@ -248,7 +248,7 @@ CREATE TABLE `think_flow_variable` (
   `long_value` int(10) DEFAULT NULL,
   `string_value` varchar(255) DEFAULT NULL,
   `text_value` longtext
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_variable
@@ -267,7 +267,7 @@ CREATE TABLE `think_log` (
   `action` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `action` (`action`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_log
@@ -293,7 +293,7 @@ CREATE TABLE `think_node` (
   KEY `pid` (`pid`),
   KEY `status` (`status`),
   KEY `name` (`name`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_node
@@ -308,8 +308,8 @@ INSERT INTO `think_node` VALUES ('8', 'OperationUser111', '添加角色', '1', '
 INSERT INTO `think_node` VALUES ('9', 'actionAddNode', '添加权限', '1', '', '1', '2', '3', '');
 INSERT INTO `think_node` VALUES ('10', 'actionManageNode', '权限管理', '1', '', '1', '2', '3', '');
 INSERT INTO `think_node` VALUES ('11', 'OperationUser', '添加用户', '1', '', '1', '2', '3', '');
-INSERT INTO `think_node` VALUES ('16', 'Home', 'home', '1', '', '1', '0', '1', '');
 INSERT INTO `think_node` VALUES ('15', 'test', 'testRar', '0', '', '1212', '2', '3', '');
+INSERT INTO `think_node` VALUES ('16', 'Home', 'home', '1', '', '1', '0', '1', '');
 INSERT INTO `think_node` VALUES ('17', 'Index', 'Index', '1', '', '2', '16', '2', '');
 INSERT INTO `think_node` VALUES ('18', 'actionOperationRole', 'actionTest', '1', '', '3', '2', '3', '');
 INSERT INTO `think_node` VALUES ('19', 'DingTalk', '顶钉管理', '1', '', '1', '0', '1', '');
@@ -334,7 +334,7 @@ CREATE TABLE `think_role` (
   PRIMARY KEY (`id`),
   KEY `pid` (`pid`),
   KEY `status` (`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_role
@@ -353,7 +353,7 @@ CREATE TABLE `think_role_user` (
   `user_id` char(32) DEFAULT NULL,
   KEY `group_id` (`role_id`),
   KEY `user_id` (`user_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_role_user
@@ -375,7 +375,7 @@ CREATE TABLE `think_user` (
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `realname` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_user
