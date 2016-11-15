@@ -18,7 +18,7 @@ class ExecutionService
         $rule = $obj->getRuleByModuleName($varModelName);
         $property = $obj->getProperty();
         $StartObj = new \Org\Jbmp\ExecutionClass\StartExecutionClass();
-        $StartObj->setRule($rule['rule']);
+        $StartObj->setRule($rule);
         $StartObj->setProperty($property['value']);
         $XmlObj = new \Org\Jbmp\ProcessFunction\XmlEngine();
         $obj = $XmlObj->getDbToXmlObj($rule['rule']);
