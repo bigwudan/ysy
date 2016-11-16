@@ -59,6 +59,10 @@ class TranslateFactory {
             $obj =  new \Org\Jbmp\TargetExecutionClass\DecisionTargetExecution();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);
             $obj->process();
+        }elseif($varTargetNodeList['nodeName'] == 'fork'){
+            $obj =  new \Org\Jbmp\TargetExecutionClass\ForkTargetExecution();
+            $obj->initi($this->_executionObj ,  $varTargetNodeList);
+            $obj->process();
         }else{
             $obj =  new \Org\Jbmp\TargetExecutionClass\StateTargetExecutinClass();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);
