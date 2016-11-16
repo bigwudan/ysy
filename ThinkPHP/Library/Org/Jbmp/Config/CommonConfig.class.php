@@ -8,7 +8,7 @@
 namespace Org\Jbmp\Config;
 class CommonConfig {
     private static $_property = array(
-        'totalsum' => 1000
+        'totalsum' => 100
 
     );
 

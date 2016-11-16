@@ -29,7 +29,15 @@ class ExecutionService
         $obj =  $FranslateObj->translate();
         $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
         $AssembleObj->initi($StartObj , $obj , $varVars);
-        $AssembleObj->process();
+        $Translateobj = $AssembleObj->process();
+
+        $obj = new \Org\Jbmp\ProcessDataBase\WriteToDataBase();
+        $obj->initi($Translateobj);
+
+        $obj->writeToDataBase();
+
+        die();
+
     }
 
 

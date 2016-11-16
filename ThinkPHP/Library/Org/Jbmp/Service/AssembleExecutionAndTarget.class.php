@@ -12,7 +12,6 @@ namespace Org\Jbmp\Service;
 class AssembleExecutionAndTarget {
 
     private $_translateInfoObj = null;
-
     private $_executionObj  =  null;
     private $_targetNode = null;
     private $_num = null;
@@ -58,16 +57,13 @@ class AssembleExecutionAndTarget {
         $this->_histActinst && $TranslateInfoObj->setHistactinst($this->_histActinst);
         $this->_variable && $TranslateInfoObj->setVariable($this->_variable);
 
-
-
+        $this->_translateInfoObj = $TranslateInfoObj;
         //var_dump($this->_execution);
         //var_dump($this->_histProcinst);
         //var_dump($this->_task);
-        var_dump($this->_participation);
-
-
-        die(__CLASS__);
-
+        //var_dump($this->_participation);
+        //var_dump($this->_histActinst);
+        //var_dump($this->_variable);
         return $TranslateInfoObj;
     }
 
@@ -87,7 +83,7 @@ class AssembleExecutionAndTarget {
         if($this->_varsList){
             $this->_processVarsList();
         }
-        $this->getProcessTranslateInfo();
+        return $this->getProcessTranslateInfo();
     }
 
     /**
@@ -398,6 +394,16 @@ class AssembleExecutionAndTarget {
                 );
                 $this->_execution['insert'][0]['hisactinst'] = $this->_num;
                 $this->_num = $this->_num + 1;
+            }
+        }
+        if($this->_task['insert']){
+            foreach($histActinst['insert'] as $k => $v){
+                foreach($this->_task['insert'] as $k1 => $v1){
+                    if($v1['activity_name'] == $v['activity_name']){
+                        $histActinst['insert'][$k]['htask'] = $v1['dbid'];
+                        break;
+                    }
+                }
             }
         }
         $this->_histActinst = $histActinst;
