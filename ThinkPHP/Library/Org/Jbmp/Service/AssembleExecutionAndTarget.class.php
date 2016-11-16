@@ -87,7 +87,6 @@ class AssembleExecutionAndTarget {
 
 
     private function _processHisTask(){
-
         $hisTask['insert'][] = array(
             'dbid' => $this->_task['insert'][0]['dbid'],
             'execution' => $this->_execution['insert'][0]['id'],
@@ -154,12 +153,12 @@ class AssembleExecutionAndTarget {
                 'id' => "{$this->_executionObj->getRule()['rulename']}.{$this->_num}",
                 'state' => 'active-root',
                 'priority' => 0,
-                'hisactinst' => $this->_num+1,
+                'hisactinst' => 0,
                 'parent' => 0,
                 'parentidx' => 0,
                 'instance' => $this->_num
             );
-            $this->_num =$this->_num + 2;
+            $this->_num =$this->_num + 1;
 
         }else{
         }
@@ -188,6 +187,22 @@ class AssembleExecutionAndTarget {
 
     private function _processHistActinst(){
         if($this->_execution['insert']){
+            if($decision = $this->_targetNode->getDecision()){
+                $histActinst['insert'][] = array(
+                    'dbid' => $this->_num,
+                    'hprocid' => $this->_execution['insert'][0]['instance'],
+                    'type' => $decision['nodeName'],
+                    'execution' => $this->_execution['insert'][0]['dbid'],
+                    'activity_name' => $decision['name'],
+                    'start' => time(),
+                    'end'  => time(),
+                    'duration' => 0,
+                    'transition' => "to {$this->_targetNode->getTargetNodeList()['name']}",
+                    'htask' => 0
+
+                );
+                $this->_num = $this->_num + 1;
+            }
             $histActinst['insert'][] = array(
                 'dbid' => $this->_num,
                 'hprocid' => $this->_execution['insert'][0]['instance'],
@@ -202,6 +217,8 @@ class AssembleExecutionAndTarget {
 
             );
         }
+        $this->_execution['insert'][0]['hisactinst'] = $this->_num;
+        $this->_num = $this->_num + 1;
         $this->_histActinst = $histActinst;
     }
 

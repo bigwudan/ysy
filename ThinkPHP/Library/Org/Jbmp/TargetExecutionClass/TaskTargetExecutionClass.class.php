@@ -15,11 +15,11 @@ class TaskTargetExecutionClass extends \Org\Jbmp\TargetExecutionClass\CommonTarg
     public function process()
     {
         $this->_executionObj;
-        $this->_getCandidate();
+        $this->_candidate = $this->getCandidate($this->_targetNodeList);
     }
 
-    private function _getCandidate(){
-        $attrList = $this->_targetNodeList['attributeList'];
+    public function getCandidate($varTargetNodeList){
+        $attrList = $varTargetNodeList['attributeList'];
         $candidate = array();
         foreach($attrList as $k => $v){
             if($v['nodeName'] == 'candidate-groups'){
@@ -30,7 +30,7 @@ class TaskTargetExecutionClass extends \Org\Jbmp\TargetExecutionClass\CommonTarg
                 break;
             }
         }
-        $this->_candidate = $candidate;
+        return $candidate;
     }
 
 }

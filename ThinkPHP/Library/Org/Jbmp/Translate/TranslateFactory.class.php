@@ -58,6 +58,7 @@ class TranslateFactory {
         }elseif($varTargetNodeList['nodeName'] == 'decision'){
             $obj =  new \Org\Jbmp\TargetExecutionClass\DecisionTargetExecution();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);
+            $obj->process();
         }else{
             $obj =  new \Org\Jbmp\TargetExecutionClass\StateTargetExecutinClass();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);

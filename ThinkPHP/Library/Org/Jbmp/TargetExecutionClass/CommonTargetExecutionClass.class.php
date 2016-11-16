@@ -21,7 +21,16 @@ class CommonTargetExecutionClass
 
     protected $_candidate = null;
 
+    /**
+     * 得到数据
+     */
+    protected $_decision = null;
 
+
+    /**
+     * @param $varExecutionObj
+     * @param null $varTargetNodeList
+     */
 
     public function initi( $varExecutionObj , $varTargetNodeList = null){
         $this->_executionObj =  $varExecutionObj;
@@ -31,6 +40,16 @@ class CommonTargetExecutionClass
     public function process(){
 
     }
+
+    public function setDecision($varDecision){
+
+        $this->_decision = $varDecision;
+    }
+
+    public function getDecision(){
+        return $this->_decision;
+    }
+
 
     public function getTargetNodeList(){
         return $this->_targetNodeList;
