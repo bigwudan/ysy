@@ -11,6 +11,8 @@ namespace Org\Jbmp\Service;
 
 class AssembleExecutionAndTarget {
 
+    private $_translateInfoObj = null;
+
     private $_executionObj  =  null;
     private $_targetNode = null;
     private $_num = null;
@@ -39,12 +41,41 @@ class AssembleExecutionAndTarget {
         $this->_varsList = $varVars;
         $this->_num  =  $this->_executionObj->getProperty();
         $this->_num =  $this->_num + \Org\Jbmp\Config\CommonConfig::getProperty()['totalsum'];
+
+    }
+
+
+    /**
+     *
+     */
+    public function getProcessTranslateInfo(){
+        $TranslateInfoObj = new \Org\Jbmp\Translate\TranslateInfoClass();
+        $this->_execution && $TranslateInfoObj->setExecution($this->_execution);
+        $this->_histProcinst && $TranslateInfoObj->setHistprocinst($this->_histProcinst);
+        $this->_task && $TranslateInfoObj->setTask($this->_task);
+        $this->_hisTask && $TranslateInfoObj->setHisttask($this->_hisTask);
+        $this->_participation && $TranslateInfoObj->setParticipation($this->_participation);
+        $this->_histActinst && $TranslateInfoObj->setHistactinst($this->_histActinst);
+        $this->_variable && $TranslateInfoObj->setVariable($this->_variable);
+
+
+
+        //var_dump($this->_execution);
+        //var_dump($this->_histProcinst);
+        //var_dump($this->_task);
+        var_dump($this->_participation);
+
+
+        die(__CLASS__);
+
+        return $TranslateInfoObj;
     }
 
     public function process(){
         $this->_processExecution();
         $this->_processHistProcinst();
-        if($tmp = $this->_targetNode->getForkTargetNodeList()){
+        if(method_exists($this->_targetNode , 'getForkTargetNodeList')){
+            $tmp = $this->_targetNode->getForkTargetNodeList();
             $this->_tmpTask = $this->_getTaskByFork($tmp);
         }
         if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task' || $this->_tmpTask  ){
@@ -56,7 +87,7 @@ class AssembleExecutionAndTarget {
         if($this->_varsList){
             $this->_processVarsList();
         }
-        die(__CLASS__);
+        $this->getProcessTranslateInfo();
     }
 
     /**

@@ -61,7 +61,7 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
      */
     private function _taskTarget($varData){
         $TaskObj = new \Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass();
-        $this->_candidate = $TaskObj->getCandidate($varData);
+        $this->_candidate = $TaskObj->processCandidate($varData);
     }
 
 

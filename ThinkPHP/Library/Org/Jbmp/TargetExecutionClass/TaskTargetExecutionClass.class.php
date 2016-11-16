@@ -15,10 +15,10 @@ class TaskTargetExecutionClass extends \Org\Jbmp\TargetExecutionClass\CommonTarg
     public function process()
     {
         $this->_executionObj;
-        $this->_candidate = $this->getCandidate($this->_targetNodeList);
+        $this->_candidate = $this->processCandidate($this->_targetNodeList);
     }
 
-    public function getCandidate($varTargetNodeList){
+    public function processCandidate($varTargetNodeList){
         $attrList = $varTargetNodeList['attributeList'];
         $candidate = array();
         foreach($attrList as $k => $v){
