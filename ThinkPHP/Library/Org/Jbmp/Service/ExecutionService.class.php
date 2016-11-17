@@ -40,6 +40,16 @@ class ExecutionService
 
     }
 
+    /**
+     * 得到task
+     * @param $varExecution int
+     * @param $varTranslate string
+     */
+    public function completeTask($varExecution , $varTranslate = null){
+        $obj = new \Org\Jbmp\ProcessDataBase\SelectDataFromDb();
+        $obj->getDataFromDataBaseByExecution($varExecution);
+
+    }
 
 
 }

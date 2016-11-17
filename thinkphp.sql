@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : wwewe
+Source Server         : localhost
 Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : thinkphp
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2016-11-15 17:33:45
+Date: 2016-11-17 22:57:21
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -86,12 +86,15 @@ CREATE TABLE `think_flow_execution` (
   UNIQUE KEY `id` (`id`),
   KEY `key` (`key`),
   KEY `instance` (`instance`),
-  KEY `hisactinst` (`hisactinst`)
+  KEY `hisactinst` (`hisactinst`),
+  KEY `pr` (`procdefid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_execution
 -- ----------------------------
+INSERT INTO `think_flow_execution` VALUES ('101', 'task1', 'test2', '1', '', 'test2.101', 'active-root', '0', '104', '0', '0', '101');
+INSERT INTO `think_flow_execution` VALUES ('201', 'task1', 'test2', '1', '', 'test2.201', 'active-root', '0', '205', '0', '0', '201');
 
 -- ----------------------------
 -- Table structure for `think_flow_histactinst`
@@ -116,6 +119,8 @@ CREATE TABLE `think_flow_histactinst` (
 -- ----------------------------
 -- Records of think_flow_histactinst
 -- ----------------------------
+INSERT INTO `think_flow_histactinst` VALUES ('104', '101', 'task', '101', 'task1', '1479391628', '0', '0', '', '102');
+INSERT INTO `think_flow_histactinst` VALUES ('205', '201', 'task', '201', 'task1', '1479391842', '0', '0', '', '202');
 
 -- ----------------------------
 -- Table structure for `think_flow_histprocinst`
@@ -137,6 +142,8 @@ CREATE TABLE `think_flow_histprocinst` (
 -- ----------------------------
 -- Records of think_flow_histprocinst
 -- ----------------------------
+INSERT INTO `think_flow_histprocinst` VALUES ('101', 'test2.101', 'test2', '', '1479391628', '0', '0', 'active', '');
+INSERT INTO `think_flow_histprocinst` VALUES ('201', 'test2.201', 'test2', '', '1479391842', '0', '0', 'active', '');
 
 -- ----------------------------
 -- Table structure for `think_flow_histtask`
@@ -158,6 +165,8 @@ CREATE TABLE `think_flow_histtask` (
 -- ----------------------------
 -- Records of think_flow_histtask
 -- ----------------------------
+INSERT INTO `think_flow_histtask` VALUES ('102', 'test2.101', '', '', '0', '', '1479391628', '0', '0');
+INSERT INTO `think_flow_histtask` VALUES ('202', 'test2.201', '', '', '0', '', '1479391842', '0', '0');
 
 -- ----------------------------
 -- Table structure for `think_flow_modulerule`
@@ -171,12 +180,13 @@ CREATE TABLE `think_flow_modulerule` (
   `creater` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建人',
   PRIMARY KEY (`moduleid`),
   UNIQUE KEY `rulename` (`rulename`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_modulerule
 -- ----------------------------
-INSERT INTO `think_flow_modulerule` VALUES ('1', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start name=\"start1\" g=\"158,62,48,48\">\r\n      <transition name=\"to 审批\" to=\"审批\" g=\"-45,-22\"/>\r\n   </start>\r\n   <end name=\"end1\" g=\"169,281,48,48\"/>\r\n   <state name=\"审批\" g=\"151,174,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n</process>', 'demo', '0', '0');
+INSERT INTO `think_flow_modulerule` VALUES ('5', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"369,13,48,48\" name=\"start1\">\r\n      <transition g=\"-52,-22\" name=\"to fork1\" to=\"fork1\"/>\r\n   </start>\r\n   <end g=\"443,543,48,48\" name=\"end1\"/>\r\n   <fork g=\"380,135,48,48\" name=\"fork1\">\r\n      <transition g=\"-56,-22\" name=\"to state1\" to=\"state1\"/>\r\n      <transition g=\"-52,-22\" name=\"to task1\" to=\"task1\"/>\r\n   </fork>\r\n   <state g=\"290,291,92,52\" name=\"state1\">\r\n      <transition g=\"-49,-22\" name=\"to join1\" to=\"join1\"/>\r\n   </state>\r\n   <task candidate-users=\"user1,user2\" g=\"517,299,92,52\" name=\"task1\">\r\n      <transition g=\"-49,-22\" name=\"to join1\" to=\"join1\"/>\r\n   </task>\r\n   <join g=\"461,438,48,48\" name=\"join1\">\r\n      <transition g=\"-50,-22\" name=\"to end1\" to=\"end1\"/>\r\n   </join>\r\n</process>', 'test1', '0', '0');
+INSERT INTO `think_flow_modulerule` VALUES ('6', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"369,13,48,48\" name=\"start1\">\r\n      <transition g=\"-52,-22\" name=\"to task1\" to=\"task1\"/>\r\n   </start>\r\n   <end g=\"443,543,48,48\" name=\"end1\"/>\r\n   <task candidate-users=\"user1,user2\" g=\"395,140,92,52\" name=\"task1\">\r\n      <transition g=\"-56,-22\" name=\"to state1\" to=\"state1\"/>\r\n      <transition name=\"to state2\" to=\"state2\" g=\"-56,-22\"/>\r\n   </task>\r\n   <state g=\"461,315,92,52\" name=\"state1\">\r\n      <transition g=\"-50,-22\" name=\"to end1\" to=\"end1\"/>\r\n   </state>\r\n   <state name=\"state2\" g=\"283,317,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n</process>', 'test2', '0', '0');
 
 -- ----------------------------
 -- Table structure for `think_flow_participation`
@@ -195,22 +205,25 @@ CREATE TABLE `think_flow_participation` (
 -- ----------------------------
 -- Records of think_flow_participation
 -- ----------------------------
+INSERT INTO `think_flow_participation` VALUES ('103', '0', 'user1.user2', 'candidate', '102');
+INSERT INTO `think_flow_participation` VALUES ('203', '0', 'user1', 'candidate', '202');
+INSERT INTO `think_flow_participation` VALUES ('204', '0', 'user2', 'candidate', '202');
 
 -- ----------------------------
 -- Table structure for `think_flow_property`
 -- ----------------------------
 DROP TABLE IF EXISTS `think_flow_property`;
 CREATE TABLE `think_flow_property` (
-  `key` varchar(255) NOT NULL,
+  `keyname` varchar(255) NOT NULL,
   `version` int(11) NOT NULL,
   `value` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`key`)
+  PRIMARY KEY (`keyname`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_property
 -- ----------------------------
-INSERT INTO `think_flow_property` VALUES ('next.dbid', '1', '1');
+INSERT INTO `think_flow_property` VALUES ('', '3', '201');
 
 -- ----------------------------
 -- Table structure for `think_flow_task`
@@ -234,6 +247,8 @@ CREATE TABLE `think_flow_task` (
 -- ----------------------------
 -- Records of think_flow_task
 -- ----------------------------
+INSERT INTO `think_flow_task` VALUES ('102', 'task1', 'open', '', '0', '1479391628', 'test2.101', 'task1', '1', '101', '101');
+INSERT INTO `think_flow_task` VALUES ('202', 'task1', 'open', '', '0', '1479391842', 'test2.201', 'task1', '1', '201', '201');
 
 -- ----------------------------
 -- Table structure for `think_flow_variable`
@@ -242,17 +257,22 @@ DROP TABLE IF EXISTS `think_flow_variable`;
 CREATE TABLE `think_flow_variable` (
   `dbid` int(10) NOT NULL,
   `class` varchar(255) NOT NULL,
-  `key` varchar(255) DEFAULT NULL,
-  `execution` int(10) DEFAULT NULL,
-  `double_value` double DEFAULT NULL,
-  `long_value` int(10) DEFAULT NULL,
-  `string_value` varchar(255) DEFAULT NULL,
-  `text_value` longtext
+  `key` varchar(255) NOT NULL,
+  `execution` int(10) NOT NULL,
+  `double_value` double NOT NULL,
+  `long_value` int(10) NOT NULL,
+  `string_value` varchar(255) NOT NULL,
+  `text_value` longtext NOT NULL,
+  PRIMARY KEY (`dbid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_variable
 -- ----------------------------
+INSERT INTO `think_flow_variable` VALUES ('105', 'string', 'username', '101', '0', '0', 'wudan0', '');
+INSERT INTO `think_flow_variable` VALUES ('106', 'string', 'username', '101', '0', '0', 'wudan1', '');
+INSERT INTO `think_flow_variable` VALUES ('206', 'string', 'username', '201', '0', '0', 'wudan0', '');
+INSERT INTO `think_flow_variable` VALUES ('207', 'string', 'username', '201', '0', '0', 'wudan1', '');
 
 -- ----------------------------
 -- Table structure for `think_log`
@@ -375,7 +395,7 @@ CREATE TABLE `think_user` (
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `realname` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_user

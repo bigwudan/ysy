@@ -33,4 +33,52 @@ class SelectDataFromDb
         }
     }
 
+    /**
+     * 得到task
+     * @param $varExecution int 数组
+     */
+    public function getDataFromDataBaseByExecution($varExecution){
+        $data = M('flow_execution')->alias('e')
+            ->field("t.dbid as taskid , e.hasvars as hasvars , e.dbid as executionid")
+            ->join('think_flow_histactinst AS ha ON e.hisactinst = ha.dbid')
+            ->join('think_flow_histprocinst AS hp ON e.instance = hp.dbid')
+            ->join('think_flow_histtask AS ht ON e.id = ht.execution')
+            ->join('think_flow_modulerule AS mr ON e.procdefid = mr.rulename')
+            ->join('think_flow_task AS t ON e.dbid = t.execution')
+            ->where("e.dbid = {$varExecution}")->find();
+        $baseDataBase = $data;
+
+        $property = $this->getProperty();
+        $participation = $this->getParticipationFromDataBaseByTask($data['taskid']);
+        $variable = null;
+        if($data['hasvars']){
+            $variable = $this->getVariableFromDataBaseByTask($data['executionid']);
+        }
+
+
+
+        var_dump($data);
+        die();
+    }
+
+    /**
+     * 得到participation
+     * @param $varTask int
+     * @return array
+     */
+    public function getParticipationFromDataBaseByTask($varTask){
+        $data = M('flow_participation')->where("task={$varTask}")->select();
+        return $data;
+    }
+
+    /**
+     * 得到participation
+     * @param $varExecution int
+     * @return array
+     */
+    public function getVariableFromDataBaseByTask($varExecution){
+        $data = M('flow_variable')->where("execution={$varExecution}")->select();
+        return $data;
+    }
+
 }
