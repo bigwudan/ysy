@@ -17,7 +17,6 @@ class TranslateFactory {
      *
      */
     public function initi($varExecutionObj , $varTransition = null){
-        die(__CLASS__);
         $this->_executionObj = $varExecutionObj;
         $this->_transition = $varTransition;
 
@@ -47,7 +46,7 @@ class TranslateFactory {
             $target = $currNode['transitionList'][0];
         }
         $XmlObj  =  new \Org\Jbmp\ProcessFunction\XmlEngine();
-        $targetNodeList = $XmlObj->getActionXml( $this->_executionObj->getXmlObj() ,  $target['to']);
+        $targetNodeList = $XmlObj->getActionXml( $this->_executionObj->getXmlObj() ,  $target);
         return $targetNodeList;
     }
 

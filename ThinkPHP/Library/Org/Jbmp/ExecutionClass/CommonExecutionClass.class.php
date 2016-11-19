@@ -103,9 +103,7 @@ class CommonExecutionClass
      */
     public function setNode(){
         $obj =  new \Org\Jbmp\ProcessFunction\XmlEngine();
-        if($this->_execution){
-            $this->_execution['activityname'] = null;
-        }
+        (!$this->_execution) && ($this->_execution['activityname'] = null);
         $res =  $obj->getActionXml($this->_xmlRuleObj , $this->_execution['activityname']);
         $this->_currNode = $res;
     }

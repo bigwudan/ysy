@@ -45,7 +45,7 @@ class ExecutionService
      * @param $varExecution int
      * @param $varTranslate string
      */
-    public function completeTask($varExecution , $varTranslate = null){
+    public function completeTask($varExecution , $varTranslate = null , $varVariable = null){
         $TaskExecutionObj = new \Org\Jbmp\ExecutionClass\TaskExecutionClass();
         $obj = new \Org\Jbmp\ProcessDataBase\SelectDataFromDb();
         $data = $obj->getDataFromDataBaseByExecution($varExecution);
@@ -63,7 +63,6 @@ class ExecutionService
             'parentidx' => $data['eparentidx'],
             'instance' => $data['einstance'],
         );
-
         $histActinst = array(
             'dbid' => $data['hpdbid'],
             'hprocid' => $data['hprocid'],
@@ -138,9 +137,14 @@ class ExecutionService
         $TaskExecutionObj->setXmlObj($obj);
         $FranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
         $FranslateObj->initi($TaskExecutionObj , $varTranslate);
+        $obj =  $FranslateObj->translate();
+        $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
+        $AssembleObj->initi($FranslateObj , $obj , $varVariable);
+        $Translateobj = $AssembleObj->process();
+        die('11');
 
 
-
+        die();
     }
 
 
