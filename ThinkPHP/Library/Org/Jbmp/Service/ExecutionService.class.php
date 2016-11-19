@@ -49,6 +49,7 @@ class ExecutionService
         $TaskExecutionObj = new \Org\Jbmp\ExecutionClass\TaskExecutionClass();
         $obj = new \Org\Jbmp\ProcessDataBase\SelectDataFromDb();
         $data = $obj->getDataFromDataBaseByExecution($varExecution);
+        $property = $obj->getProperty();
         $execution = array(
             'dbid' => $data['edbid'],
             'activityname' => $data['eactivityname'],
@@ -64,18 +65,17 @@ class ExecutionService
             'instance' => $data['einstance'],
         );
         $histActinst = array(
-            'dbid' => $data['hpdbid'],
-            'hprocid' => $data['hprocid'],
-            'type' => $data['hptype'],
-            'execution' => $data['hpexecution'],
-            'activity_name' => $data['hpactivity_name'],
-            'start' => $data['hpstart'],
-            'end' => $data['hpend'],
-            'duration' => $data['hpduration'],
-            'transition' => $data['hptransition'],
-            'htask' => $data['hphtask'],
+            'dbid' => $data['hadbid'],
+            'hprocid' => $data['hahprocid'],
+            'type' => $data['hatype'],
+            'execution' => $data['haexecution'],
+            'activity_name' => $data['haactivity_name'],
+            'start' => $data['hastart'],
+            'end' => $data['haend'],
+            'duration' => $data['haduration'],
+            'transition' => $data['hatransition'],
+            'htask' => $data['hahtask'],
         );
-
         $histProcinst = array(
             'dbid' => $data['hpdbid'],
             'id' => $data['hpid'],
@@ -120,6 +120,9 @@ class ExecutionService
             'execution' => $data['texecution'],
             'procinst' => $data['tprocinst']
         );
+
+
+        $TaskExecutionObj->setProperty($property['value']);
         $TaskExecutionObj->setExecution($execution);
         $TaskExecutionObj->setHistActinst($histActinst);
         $TaskExecutionObj->setHistProcinst($histProcinst);
@@ -139,7 +142,7 @@ class ExecutionService
         $FranslateObj->initi($TaskExecutionObj , $varTranslate);
         $obj =  $FranslateObj->translate();
         $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
-        $AssembleObj->initi($FranslateObj , $obj , $varVariable);
+        $AssembleObj->initi($TaskExecutionObj , $obj , $varVariable);
         $Translateobj = $AssembleObj->process();
         die('11');
 

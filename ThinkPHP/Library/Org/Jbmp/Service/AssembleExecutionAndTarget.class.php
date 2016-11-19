@@ -40,7 +40,6 @@ class AssembleExecutionAndTarget {
         $this->_varsList = $varVars;
         $this->_num  =  $this->_executionObj->getProperty();
         $this->_num =  $this->_num + \Org\Jbmp\Config\CommonConfig::getProperty()['totalsum'];
-
     }
 
 
@@ -234,62 +233,10 @@ class AssembleExecutionAndTarget {
     }
 
     private function _processExecution(){
-        $hasVars  =  $this->_varsList ? 1 :  0;
-        $currNode  =  $this->_executionObj->getCurrNode();;
-        if($currNode['nodeName'] == 'start'){
-            if($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
-                $execution['insert']['forkmain'] = array(
-                    'dbid' => $this->_num,
-                    'activityname'  => '',
-                    'procdefid' => $this->_executionObj->getRule()['rulename'],
-                    'hasvars' => $hasVars,
-                    'key' => '',
-                    'id' => "{$this->_executionObj->getRule()['rulename']}.{$this->_num}",
-                    'state' => 'inactive-concurrent-root',
-                    'priority' => 0,
-                    'hisactinst' => 0,
-                    'parent' => 0,
-                    'parentidx' => 0,
-                    'instance' => $this->_num
-                );
-                $this->_num =$this->_num + 1;
-                foreach($this->_targetNode->getForkTargetNodeList() as $k => $v){
-                    $execution['insert']['fork'][] = array(
-                        'dbid' => $this->_num,
-                        'activityname'  => $v['name'],
-                        'procdefid' => $this->_executionObj->getRule()['rulename'],
-                        'hasvars' => $hasVars,
-                        'key' => '',
-                        'id' => "{$execution['insert']['forkmain']['id']}.to {$v['name']}.{$this->_num}",
-                        'state' => 'active-concurrent',
-                        'priority' => 0,
-                        'hisactinst' => 0,
-                        'parent' => $execution['insert']['forkmain']['dbid'],
-                        'parentidx' => 0,
-                        'instance' => $this->_num
-                    );
-                    $this->_num =$this->_num + 1;
-                }
-            }else{
-                $execution['insert'][] =  array(
-                    'dbid' => $this->_num,
-                    'activityname'  => $this->_targetNode->getTargetNodeList()['name'],
-                    'procdefid' => $this->_executionObj->getRule()['rulename'],
-                    'hasvars' => $hasVars,
-                    'key' => '',
-                    'id' => "{$this->_executionObj->getRule()['rulename']}.{$this->_num}",
-                    'state' => 'active-root',
-                    'priority' => 0,
-                    'hisactinst' => 0,
-                    'parent' => 0,
-                    'parentidx' => 0,
-                    'instance' => $this->_num
-                );
-                $this->_num =$this->_num + 1;
-            }
-        }else{
-        }
-        $this->_execution  = $execution;
+        $obj = new \Org\Jbmp\HandlerClass\AssmebleExecution();
+        $this->_execution = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_varsList)->process();
+        $this->_num = $obj->getNum();
+
     }
 
     private function _processTask(){
@@ -342,6 +289,11 @@ class AssembleExecutionAndTarget {
 
 
     private function _processHistActinst(){
+        $obj = new \Org\Jbmp\HandlerClass\AssmebleHistActinst();
+        $this->_histProcinst = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
+        $this->_num = $obj->getNum();
+        die('xxxx');
+
         if($this->_execution['insert']){
             if($this->_execution['insert']['forkmain']){
                 foreach($this->_execution['insert']['fork'] as $k => $v){
@@ -410,35 +362,9 @@ class AssembleExecutionAndTarget {
     }
 
     private function _processHistProcinst(){
-        if($this->_execution['insert']){
-            if($this->_execution['insert']['forkmain']){
-                $histProcinst['insert'][] = array(
-                    'dbid' => $this->_execution['insert']['forkmain']['dbid'],
-                    'id' => $this->_execution['insert']['forkmain']['id'],
-                    'procdefid' => $this->_executionObj->getRule()['rulename'],
-                    'key' => '',
-                    'start' => time(),
-                    'end' => 0,
-                    'duration' =>0,
-                    'state' => 'active',
-                    'endactivity' => ''
-                );
-            }else{
-                $histProcinst['insert'][] = array(
-                    'dbid' => $this->_execution['insert'][0]['dbid'],
-                    'id' => $this->_execution['insert'][0]['id'],
-                    'procdefid' => $this->_executionObj->getRule()['rulename'],
-                    'key' => '',
-                    'start' => time(),
-                    'end' => 0,
-                    'duration' =>0,
-                    'state' => 'active',
-                    'endactivity' => ''
-
-                );
-            }
-        }
-        $this->_histProcinst = $histProcinst;
-    }
+        $obj = new \Org\Jbmp\HandlerClass\AssmebleHistProcinst();
+        $this->_histProcinst = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution)->process();
+        $this->_num = $obj->getNum();
+   }
 
 }
