@@ -17,6 +17,7 @@ class TranslateFactory {
      *
      */
     public function initi($varExecutionObj , $varTransition = null){
+        die(__CLASS__);
         $this->_executionObj = $varExecutionObj;
         $this->_transition = $varTransition;
 
