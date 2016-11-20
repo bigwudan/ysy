@@ -69,7 +69,7 @@ class AssmebleHistActinst
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
         if($currNode['nodeName'] == 'start'){
-            $histActinst = $this->_processBelongToStart();
+            $histActinst = $this->_processInsert();
         }else{
             $histActinst = $this->_processBelongToCommon();
         }
@@ -97,23 +97,15 @@ class AssmebleHistActinst
             'end' => time(),
             'duration' => time() - $histActinst['start'],
         );
-
         $tmpHistActinst['updata'] = array(
-            array(
-                'where'=>$where,
-                'data'=>$upData
-            )
+            $histActinst['dbid'] =>array('where'=>$where,'data'=>$upData)
         );
-
-        var_dump($this->_execution);
-        die();
-
         return $tmpHistActinst;
     }
     /**
      * 处理开始
      */
-    private function _processBelongToStart(){
+    private function _processInsert(){
         if($this->_execution['insert']){
             if($this->_execution['insert']['forkmain']){
                 foreach($this->_execution['insert']['fork'] as $k => $v){
@@ -136,11 +128,11 @@ class AssmebleHistActinst
                 }
             }else{
                 if($decision = $this->_targetNode->getDecision()){
-                    $histActinst['insert'][] = array(
+                    $histActinst['insert'][$this->_num] = array(
                         'dbid' => $this->_num,
-                        'hprocid' => $this->_execution['insert'][0]['instance'],
+                        'hprocid' => current($this->_execution['insert'])['instance'],
                         'type' => $decision['nodeName'],
-                        'execution' => $this->_execution['insert'][0]['dbid'],
+                        'execution' => current($this->_execution['insert'])['dbid'],
                         'activity_name' => $decision['name'],
                         'start' => time(),
                         'end'  => time(),
@@ -151,11 +143,11 @@ class AssmebleHistActinst
                     );
                     $this->_num = $this->_num + 1;
                 }
-                $histActinst['insert'][] = array(
+                $histActinst['insert'][$this->_num] = array(
                     'dbid' => $this->_num,
-                    'hprocid' => $this->_execution['insert'][0]['instance'],
+                    'hprocid' => current($this->_execution['insert'])['instance'],
                     'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
-                    'execution' => $this->_execution['insert'][0]['dbid'],
+                    'execution' => current($this->_execution['insert'])['dbid'],
                     'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
                     'start' => time(),
                     'end'  => 0,
@@ -164,7 +156,7 @@ class AssmebleHistActinst
                     'htask' => 0
 
                 );
-                $this->_execution['insert'][0]['hisactinst'] = $this->_num;
+                $this->_execution['insert'][current($this->_execution['insert'])['dbid']]['hisactinst'] = $this->_num;
                 $this->_num = $this->_num + 1;
             }
         }
@@ -180,6 +172,13 @@ class AssmebleHistActinst
         }
         $this->_histActinst = $histActinst;
 
+    }
+
+    /**
+     * 得到execution
+     */
+    public function getExecution(){
+        return $this->_execution;
     }
 
 }

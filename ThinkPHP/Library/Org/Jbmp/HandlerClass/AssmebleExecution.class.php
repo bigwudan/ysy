@@ -36,6 +36,11 @@ class AssmebleExecution
 
     /**
      * 初始化
+     * @param $varExecution
+     * @param $varTargetNode
+     * @param $varNum
+     * @param $varVars
+     * @return array
      */
     public function initi($varExecution  ,  $varTargetNode , $varNum,  $varVars = array()){
         $this->_executionObj = $varExecution;
@@ -51,7 +56,7 @@ class AssmebleExecution
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
         if($currNode['nodeName'] == 'start'){
-            $execution = $this->_processBelongToStart();
+            $execution = $this->_processInsert();
         }else{
             $execution = $this->_processBelongToCommon();
         }
@@ -92,7 +97,7 @@ class AssmebleExecution
     /**
      * 处理开始
      */
-    private function _processBelongToStart(){
+    private function _processInsert(){
         $hasVars  =  $this->_varsList ? 1 :  0;
         if($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
             $execution['insert']['forkmain'] = array(
@@ -128,7 +133,7 @@ class AssmebleExecution
                 $this->_num =$this->_num + 1;
             }
         }else{
-            $execution['insert'][] =  array(
+            $execution['insert'][$this->_num] =  array(
                 'dbid' => $this->_num,
                 'activityname'  => $this->_targetNode->getTargetNodeList()['name'],
                 'procdefid' => $this->_executionObj->getRule()['rulename'],

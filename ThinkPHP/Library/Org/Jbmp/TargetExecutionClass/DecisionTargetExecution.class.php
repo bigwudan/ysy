@@ -40,6 +40,7 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
 
     /**
      * 执行跳转
+     * @param $varData 数据
      */
     private function _translate($varData){
         $xmlObj = $this->_executionObj->getXmlObj();
@@ -51,6 +52,7 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
 
     /**
      * 通常的处理
+     * @param $varData 数据
      */
     private function _commonTarget($varData){
         $this->_targetNodeList = $varData;
@@ -58,6 +60,7 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
 
     /**
      * 处理task
+     * @param $varData 数据
      */
     private function _taskTarget($varData){
         $TaskObj = new \Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass();

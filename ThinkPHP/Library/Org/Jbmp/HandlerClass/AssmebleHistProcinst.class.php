@@ -59,7 +59,7 @@ class AssmebleHistProcinst
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
         if($currNode['nodeName'] == 'start'){
-            $histProcinst = $this->_processBelongToStart();
+            $histProcinst = $this->_processInsert();
         }else{
             $histProcinst = array();
         }
@@ -78,8 +78,8 @@ class AssmebleHistProcinst
     /**
      * 处理开始
      */
-    private function _processBelongToStart(){
-        if($this->_execution['insert']){
+    private function _processInsert(){
+        if($firstExecution = current($this->_execution['insert'])){
             if($this->_execution['insert']['forkmain']){
                 $histProcinst['insert'][] = array(
                     'dbid' => $this->_execution['insert']['forkmain']['dbid'],
@@ -93,9 +93,9 @@ class AssmebleHistProcinst
                     'endactivity' => ''
                 );
             }else{
-                $histProcinst['insert'][] = array(
-                    'dbid' => $this->_execution['insert'][0]['dbid'],
-                    'id' => $this->_execution['insert'][0]['id'],
+                $histProcinst['insert'][$firstExecution['dbid']] = array(
+                    'dbid' => $firstExecution['dbid'],
+                    'id' => $firstExecution['id'],
                     'procdefid' => $this->_executionObj->getRule()['rulename'],
                     'key' => '',
                     'start' => time(),
@@ -108,7 +108,6 @@ class AssmebleHistProcinst
             }
         }
         $this->_histProcinst = $histProcinst;
-
     }
 
 }

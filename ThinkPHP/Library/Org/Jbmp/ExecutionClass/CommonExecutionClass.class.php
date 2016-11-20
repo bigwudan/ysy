@@ -85,6 +85,7 @@ class CommonExecutionClass
 
     /**
      * 设置xml对象
+     * @param $varXmlObj 数据
      */
     public function setXmlObj($varXmlObj){
         $this->_xmlRuleObj = $varXmlObj;
