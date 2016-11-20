@@ -107,15 +107,25 @@ class AssmebleHistActinst
      */
     private function _processInsert(){
         if($this->_execution['insert']){
-            if($this->_execution['insert']['forkmain']){
-                foreach($this->_execution['insert']['fork'] as $k => $v){
-                    $tmpTargetNode = $this->_targetNode->getForkTargetNodeList()[$k];
-                    $histActinst['insert'][] = array(
+            if(method_exists($this->_targetNode , 'getForkTargetNodeList')){
+                $tmpNum = 0;
+                foreach($this->_execution['insert'] as $k => $v){
+                    $tmpNum++;
+                    if($tmpNum == 1) continue;
+                    $tmpTargetNode = $this->_targetNode->getForkTargetNodeList();
+                    $tmpTarget = array();
+                    foreach($tmpTargetNode as $k1 => $v1){
+                        if($v1['name'] == $v['activityname']){
+                            $tmpTarget = $v1;
+                            break;
+                        }
+                    }
+                    $histActinst['insert'][$this->_num] = array(
                         'dbid' => $this->_num,
-                        'hprocid' => $this->_execution['insert']['forkmain']['instance'],
-                        'type' => $tmpTargetNode['nodeName'],
+                        'hprocid' => current($this->_execution['insert'])['instance'],
+                        'type' => $tmpTarget['nodeName'],
                         'execution' => $v['dbid'],
-                        'activity_name' => $tmpTargetNode['name'],
+                        'activity_name' => $tmpTarget['name'],
                         'start' => time(),
                         'end'  => 0,
                         'duration' => 0,
@@ -123,7 +133,7 @@ class AssmebleHistActinst
                         'htask' => 0
 
                     );
-                    $this->_execution['insert']['fork'][$k]['hisactinst'] = $this->_num;
+                    $this->_execution['insert'][$k]['hisactinst'] = $this->_num;
                     $this->_num = $this->_num + 1;
                 }
             }else{
@@ -171,7 +181,6 @@ class AssmebleHistActinst
             }
         }
         $this->_histActinst = $histActinst;
-
     }
 
     /**

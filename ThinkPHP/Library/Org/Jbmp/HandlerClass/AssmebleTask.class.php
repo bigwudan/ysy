@@ -37,17 +37,24 @@ class AssmebleTask
     private $_num = null;
 
     /**
+     *
+     */
+    private  $_tmpTask = null;
+
+    /**
      * 初始化
      * @param $varExecution
      * @param $varTargetNode
      * @param $varNum
      * @param $varVars
+     * @param $varTmpTask
      * @return array
      */
-    public function initi($varExecutionObj  ,  $varTargetNode , $varNum, $varExecution ,$varVars = array()){
+    public function initi($varExecutionObj  ,  $varTargetNode , $varNum, $varExecution ,$varVars = array() , $varTmpTask){
         $this->_executionObj = $varExecutionObj;
         $this->_targetNode = $varTargetNode;
         $this->_execution = $varExecution;
+        $this->_tmpTask = $varTmpTask;
         $this->_num = $varNum;
         $varVars && $this->_varsList = $varVars;
         return $this;
@@ -71,7 +78,7 @@ class AssmebleTask
         if($this->_tmpTask){
             foreach($this->_tmpTask as $k => $v){
                 $tmp = array();
-                foreach($this->_execution['insert']['fork'] as $k1 => $v1){
+                foreach($this->_execution['insert'] as $k1 => $v1){
                     if($v['name'] == $v1['activityname']){
                         $tmp['execution_id'] = $v1['id'];
                         $tmp['execution'] = $v1['dbid'];
@@ -79,8 +86,7 @@ class AssmebleTask
                         break;
                     }
                 }
-
-                $task['insert'][] = array(
+                $task['insert'][$this->_num] = array(
                     'dbid' => $this->_num,
                     'name' => $v['name'],
                     'state' => 'open',
@@ -118,7 +124,6 @@ class AssmebleTask
      * 得到num
      */
     public function getNum(){
-
         return $this->_num;
     }
 

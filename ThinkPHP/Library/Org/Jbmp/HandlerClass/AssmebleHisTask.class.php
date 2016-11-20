@@ -52,14 +52,20 @@ class AssmebleHisTask
     private $_histActinst = null;
 
     /**
+     *
+     */
+    private $_tmpTask = null;
+
+    /**
      * 初始化
      */
-    public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution , $task ){
+    public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution , $task ,$tmpTask ){
         $this->_executionObj = $varExecution;
         $this->_targetNode = $varTargetNode;
         $this->_num = $varNum;
         $this->_execution = $execution;
         $this->_task = $task;
+        $this->_tmpTask = $tmpTask;
         return $this;
     }
 
@@ -82,7 +88,7 @@ class AssmebleHisTask
     private function _processInsert(){
         if($this->_tmpTask){
             foreach($this->_task['insert'] as $k => $v){
-                $hisTask['insert'][] = array(
+                $hisTask['insert'][$v['dbid']] = array(
                     'dbid' => $v['dbid'],
                     'execution' => $v['execution_id'],
                     'outcome' => '',
@@ -108,8 +114,6 @@ class AssmebleHisTask
             );
         }
         return $hisTask;
-
-
     }
 
 }

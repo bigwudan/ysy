@@ -52,6 +52,8 @@ class ForkTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
 
     /**
      * 跳转
+     * @param $varDataName string
+     * @return array
      */
     private function _translate($varDataName){
         $xmlObj = $this->_executionObj->getXmlObj();

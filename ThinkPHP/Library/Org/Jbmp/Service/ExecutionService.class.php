@@ -30,7 +30,7 @@ class ExecutionService
         $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
         $AssembleObj->initi($StartObj , $obj , $varVars);
         $Translateobj = $AssembleObj->process();
-        die();
+        die(__CLASS__);
         $obj = new \Org\Jbmp\ProcessDataBase\WriteToDataBase();
         $obj->initi($Translateobj);
         $obj->writeToDataBase();

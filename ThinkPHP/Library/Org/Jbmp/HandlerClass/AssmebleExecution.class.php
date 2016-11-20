@@ -100,7 +100,8 @@ class AssmebleExecution
     private function _processInsert(){
         $hasVars  =  $this->_varsList ? 1 :  0;
         if($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
-            $execution['insert']['forkmain'] = array(
+
+            $execution['insert'][$this->_num] = array(
                 'dbid' => $this->_num,
                 'activityname'  => '',
                 'procdefid' => $this->_executionObj->getRule()['rulename'],
@@ -115,18 +116,20 @@ class AssmebleExecution
                 'instance' => $this->_num
             );
             $this->_num =$this->_num + 1;
+
+            $mainId = current($execution['insert'])['id'];
             foreach($this->_targetNode->getForkTargetNodeList() as $k => $v){
-                $execution['insert']['fork'][] = array(
+                $execution['insert'][$this->_num] = array(
                     'dbid' => $this->_num,
                     'activityname'  => $v['name'],
                     'procdefid' => $this->_executionObj->getRule()['rulename'],
                     'hasvars' => $hasVars,
                     'key' => '',
-                    'id' => "{$execution['insert']['forkmain']['id']}.to {$v['name']}.{$this->_num}",
+                    'id' => "{$mainId}.to {$v['name']}.{$this->_num}",
                     'state' => 'active-concurrent',
                     'priority' => 0,
                     'hisactinst' => 0,
-                    'parent' => $execution['insert']['forkmain']['dbid'],
+                    'parent' => current($execution['insert'])['dbid'],
                     'parentidx' => 0,
                     'instance' => $this->_num
                 );

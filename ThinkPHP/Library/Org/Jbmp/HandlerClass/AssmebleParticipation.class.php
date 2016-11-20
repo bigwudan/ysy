@@ -52,14 +52,20 @@ class AssmebleParticipation
     private $_histActinst = null;
 
     /**
+     *
+     */
+    private $_tmpTask = null;
+
+    /**
      * 初始化
      */
-    public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution , $task ){
+    public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution , $task , $tmpTask){
         $this->_executionObj = $varExecution;
         $this->_targetNode = $varTargetNode;
         $this->_num = $varNum;
         $this->_execution = $execution;
         $this->_task = $task;
+        $this->_tmpTask = $tmpTask;
         return $this;
     }
 
@@ -91,7 +97,6 @@ class AssmebleParticipation
                 }
                 foreach($v['candidate'] as $k2 => $v2){
                     foreach($v2 as $k3 => $v3){
-
                         if($k == 'groupid'){
                             $tmpUserId = 0;
                             $tmpGroupId = $v3;
@@ -99,8 +104,7 @@ class AssmebleParticipation
                             $tmpUserId = $v3;
                             $tmpGroupId = 0;
                         }
-
-                        $participation['insert'][] = array(
+                        $participation['insert'][$this->_num] = array(
                             'dbid' => $this->_num,
                             'groupid' => $tmpGroupId,
                             'userid' => $tmpUserId,

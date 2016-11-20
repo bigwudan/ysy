@@ -130,12 +130,12 @@ class AssembleExecutionAndTarget {
 
     private function _processHisTask(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleHisTask();
-        $this->_hisTask = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
+        $this->_hisTask = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task , $this->_tmpTask)->process();
     }
 
     private function _processParticipation(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleParticipation();
-        $this->_participation = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
+        $this->_participation = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task , $this->_tmpTask)->process();
         $this->_num = $obj->getNum();
     }
 
@@ -154,7 +154,7 @@ class AssembleExecutionAndTarget {
 
     private function _processTask(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleTask();
-        $this->_task = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_varsList)
+        $this->_task = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_varsList , $this->_tmpTask)
             ->process();
         $this->_num = $obj->getNum();
     }
