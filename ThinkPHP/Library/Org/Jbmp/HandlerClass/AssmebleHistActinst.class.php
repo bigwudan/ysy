@@ -68,10 +68,18 @@ class AssmebleHistActinst
      */
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
+        $histActinst = array();
         if($currNode['nodeName'] == 'start'){
             $histActinst = $this->_processInsert();
         }else{
-            $histActinst = $this->_processBelongToCommon();
+            $histActinstUp = $this->_processUpdata();
+            if($histActinstUp){
+                $histActinst = array_merge($histActinstUp , $histActinst);
+            }
+            $histActinstInsert = $this->_processInsert();
+            if($histActinstInsert){
+                $histActinst = array_merge($histActinstInsert , $histActinst);
+            }
         }
         $this->_histActinst  = $histActinst;
         return $histActinst;
@@ -87,7 +95,7 @@ class AssmebleHistActinst
     /**
      * 处理其他
      */
-    private function _processBelongToCommon(){
+    private function _processUpdata(){
         $histActinst = $this->_executionObj->getHistActinst();
         $where = array();
         $where['dbid'] = $histActinst['dbid'];
@@ -106,7 +114,25 @@ class AssmebleHistActinst
      * 处理开始
      */
     private function _processInsert(){
-        if($this->_execution['insert']){
+        if(current($this->_execution['updata'])){
+            $histActinst['insert'][$this->_num] = array(
+                'dbid' => $this->_num,
+                'hprocid' => $this->_executionObj->getHistprocinst()['dbid'],
+                'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
+                'execution' => current($this->_execution['updata'])['where']['dbid'],
+                'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
+                'start' => time(),
+                'end'  => 0,
+                'duration' => 0,
+                'transition' => "",
+                'htask' => 0
+
+            );
+            foreach($this->_execution['updata'] as $k => $v){
+                $this->_execution['updata'][$k]['data']['hisactinst'] = $this->_num;
+            }
+            $this->_num = $this->_num + 1;
+        }else if($this->_execution['insert']){
             if(method_exists($this->_targetNode , 'getForkTargetNodeList')){
                 $tmpNum = 0;
                 foreach($this->_execution['insert'] as $k => $v){
@@ -180,7 +206,7 @@ class AssmebleHistActinst
                 }
             }
         }
-        $this->_histActinst = $histActinst;
+        return $histActinst;
     }
 
     /**
@@ -188,6 +214,13 @@ class AssmebleHistActinst
      */
     public function getExecution(){
         return $this->_execution;
+    }
+
+    /**
+     * 得到task
+     */
+    public function getTask(){
+        return $this->_task;
     }
 
 }

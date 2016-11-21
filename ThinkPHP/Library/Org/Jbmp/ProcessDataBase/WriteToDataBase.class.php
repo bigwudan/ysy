@@ -32,7 +32,6 @@ class WriteToDataBase
         $Dao = M();
         $totalsum = \Org\Jbmp\Config\CommonConfig::getProperty()['totalsum'];
         $execution = $this->_translateInfoObj->getExecution();
-        $execution = $this->_processExecution($execution);
         $histProcinst = $this->_translateInfoObj->getHistProcinst();
         $task = $this->_translateInfoObj->getTask();
         $participation = $this->_translateInfoObj->getParticipation();
@@ -42,33 +41,57 @@ class WriteToDataBase
         $model = new \Think\Model();
         $model->startTrans();
         try{
-            $flag = M('flow_execution')->addAll($execution['insert']);
-            if(!$flag){
-                new \Exception('error');
+            if($execution['insert']){
+                $flag = M('flow_execution')->addAll(array_merge($execution['insert']));
+                if(!$flag){
+                    new \Exception('error');
+                }
             }
-            $flag = M('flow_histprocinst')->addAll($histProcinst['insert']);
-            if(!$flag){
-                new \Exception('error');
+
+            if($histProcinst['insert']){
+                $flag = M('flow_histprocinst')->addAll(array_merge($histProcinst['insert']));
+                if(!$flag){
+                    new \Exception('error');
+                }
             }
-            $flag = M('flow_task')->addAll($task['insert']);
-            if(!$flag){
-                new \Exception('error');
+
+            if($task['insert']){
+                $flag = M('flow_task')->addAll(array_merge($task['insert']));
+                if(!$flag){
+                    new \Exception('error');
+                }
             }
-            $flag = M('flow_participation')->addAll($participation['insert']);
-            if(!$flag){
-                new \Exception('error');
+
+
+            if($participation['insert']){
+                $flag = M('flow_participation')->addAll(array_merge($participation['insert']));
+                if(!$flag){
+                    new \Exception('error');
+                }
             }
-            $flag = M('flow_histactinst')->addAll($histActinst['insert']);
-            if(!$flag){
-                new \Exception('error');
+
+            if($histActinst['insert']){
+                $flag = M('flow_histactinst')->addAll(array_merge($histActinst['insert']));
+                if(!$flag){
+                    new \Exception('error');
+                }
             }
-            $flag = M('flow_variable')->addAll($variable['insert']);
-            if(!$flag){
-                new \Exception('error');
+
+
+            if($variable['insert']){
+                $flag = M('flow_variable')->addAll(array_merge($variable['insert']));
+                if(!$flag){
+                    new \Exception('error');
+                }
             }
-            $flag = M('flow_histtask')->addAll($histtask['insert']);
-            if(!$flag){
-                new \Exception('error');
+
+
+            if($histtask['insert']){
+                $flag = M('flow_histtask')->addAll(array_merge($histtask['insert']));
+                if(!$flag){
+                    new \Exception('error');
+                }
+
             }
             $flag = $Dao->execute("update think_flow_property set version = version + 1 , value = value + {$totalsum}");
             if(!$flag){
@@ -78,24 +101,9 @@ class WriteToDataBase
         }catch (\Exception $e){
             $model->rollback();
         }
-
-        die('11');
+        die('over');
     }
 
-    /**
-     *
-     */
-    private function _processExecution($varExecution){
-        $tmpExecution = array();
-        if(array_key_exists('forkmain' , $varExecution['insert'])){
-            $tmpExecution['insert'][] = $varExecution['insert']['forkmain'];
-            foreach($varExecution['insert']['fork'] as $k => $v){
-                $tmpExecution['insert'][] = $v;
-            }
-        }else{
-            $tmpExecution = $varExecution;
-        }
-        return $tmpExecution;
-    }
+
 
 }

@@ -58,7 +58,7 @@ class AssmebleVariable
      *
      */
     public function process(){
-        $tmpDbid = current($this->_execution['insert'])['dbid'] ;
+        $tmpDbid = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : current($this->_execution['updata'])['where']['dbid'] ;
         for($num = 0 ; $num < 2 ; $num++){
             $variable['insert'][$this->_num] = array(
                 'dbid' => $this->_num,

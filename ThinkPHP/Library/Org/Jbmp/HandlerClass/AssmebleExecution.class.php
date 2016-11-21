@@ -55,10 +55,11 @@ class AssmebleExecution
      */
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
+        $execution = array();
         if($currNode['nodeName'] == 'start'){
-            $execution = $this->_processInsert();
+            $execution = array_merge($this->_processInsert() , $execution);
         }else{
-            $execution = $this->_processBelongToCommon();
+            $execution = array_merge($this->_processUpdata() , $execution);
         }
         $this->_execution  = $execution;
         return $execution;
@@ -68,7 +69,7 @@ class AssmebleExecution
     /**
      * 处理其他
      */
-    private function _processBelongToCommon(){
+    private function _processUpdata(){
         $execution = $this->_executionObj->getExecution();
         $where = array();
         $where['dbid'] = $execution['dbid'];
@@ -78,11 +79,12 @@ class AssmebleExecution
             'hisactinst' => 0
         );
         $this->_num =$this->_num + 1;
-        $tmpExecution['updata'] = array(
-            array(
-                'where'=>$where,
-                'data'=>$upData
-            )
+        $tmpExecution['updata']= array(
+            $execution['dbid'] =>
+                array(
+                    'where'=>$where,
+                    'data'=>$upData
+                )
         );
         return $tmpExecution;
     }

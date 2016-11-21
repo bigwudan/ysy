@@ -10,7 +10,6 @@ namespace Org\Jbmp\Service;
 
 
 class AssembleExecutionAndTarget {
-
     private $_translateInfoObj = null;
     private $_executionObj  =  null;
     private $_targetNode = null;
@@ -25,8 +24,6 @@ class AssembleExecutionAndTarget {
     private $_hisTask = null;
     private $_participation = null;
     private $_tmpTask = array();
-
-
 
     /**
      * @param $varExecution
@@ -55,7 +52,6 @@ class AssembleExecutionAndTarget {
         $this->_participation && $TranslateInfoObj->setParticipation($this->_participation);
         $this->_histActinst && $TranslateInfoObj->setHistactinst($this->_histActinst);
         $this->_variable && $TranslateInfoObj->setVariable($this->_variable);
-
         $this->_translateInfoObj = $TranslateInfoObj;
         //var_dump($this->_execution);
         //var_dump($this->_histProcinst);
@@ -143,7 +139,11 @@ class AssembleExecutionAndTarget {
         $obj = new \Org\Jbmp\HandlerClass\AssmebleVariable();
         $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $varVars = array() , $this->_execution);
         $this->_variable = $obj->process();
-        $this->_num = $this->_num +1;
+        $this->_num = $obj->getNum();
+
+        var_dump($this->_variable);
+        die();
+
     }
 
     private function _processExecution(){
@@ -164,6 +164,7 @@ class AssembleExecutionAndTarget {
         $obj = new \Org\Jbmp\HandlerClass\AssmebleHistActinst();
         $this->_histActinst = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
         $this->_execution = $obj->getExecution();
+        $this->_task = $obj->getTask();
         $this->_num = $obj->getNum();
     }
 

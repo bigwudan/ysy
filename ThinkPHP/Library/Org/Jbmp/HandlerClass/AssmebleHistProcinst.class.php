@@ -80,34 +80,21 @@ class AssmebleHistProcinst
      */
     private function _processInsert(){
         if($firstExecution = current($this->_execution['insert'])){
-            if($this->_execution['insert']['forkmain']){
-                $histProcinst['insert'][] = array(
-                    'dbid' => $this->_execution['insert']['forkmain']['dbid'],
-                    'id' => $this->_execution['insert']['forkmain']['id'],
-                    'procdefid' => $this->_executionObj->getRule()['rulename'],
-                    'key' => '',
-                    'start' => time(),
-                    'end' => 0,
-                    'duration' =>0,
-                    'state' => 'active',
-                    'endactivity' => ''
-                );
-            }else{
-                $histProcinst['insert'][$firstExecution['dbid']] = array(
-                    'dbid' => $firstExecution['dbid'],
-                    'id' => $firstExecution['id'],
-                    'procdefid' => $this->_executionObj->getRule()['rulename'],
-                    'key' => '',
-                    'start' => time(),
-                    'end' => 0,
-                    'duration' =>0,
-                    'state' => 'active',
-                    'endactivity' => ''
+            $histProcinst['insert'][$firstExecution['dbid']] = array(
+                'dbid' => $firstExecution['dbid'],
+                'id' => $firstExecution['id'],
+                'procdefid' => $this->_executionObj->getRule()['rulename'],
+                'key' => '',
+                'start' => time(),
+                'end' => 0,
+                'duration' =>0,
+                'state' => 'active',
+                'endactivity' => ''
 
-                );
-            }
+            );
         }
         $this->_histProcinst = $histProcinst;
+        return $histProcinst;
     }
 
 }

@@ -35,6 +35,7 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
                 break;
             }
         }
+        if(!$transitionList) die('no decision');
         return $transitionList;
     }
 

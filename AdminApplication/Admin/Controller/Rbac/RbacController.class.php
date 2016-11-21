@@ -19,8 +19,8 @@ class RbacController extends Controller
 
     public function index(){
         $obj = new \Org\Jbmp\Service\ExecutionService();
-        $obj->startProcessInstanceById('test1' , array('11'));
-        //$obj->completeTask("201", "to state1" , array('11'));
+        //$obj->startProcessInstanceById('test2' , array('11'));
+        $obj->completeTask("401", "to state1" , array('11'));
     }
 
     public function actionOperationUser(){
