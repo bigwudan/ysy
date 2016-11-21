@@ -115,6 +115,22 @@ class AssmebleHistActinst
      */
     private function _processInsert(){
         if(current($this->_execution['updata'])){
+            if($decision = $this->_targetNode->getDecision()){
+                $histActinst['insert'][$this->_num] = array(
+                    'dbid' => $this->_num,
+                    'hprocid' => $this->_executionObj->getHistprocinst()['dbid'],
+                    'type' => $decision['nodeName'],
+                    'execution' => current($this->_execution['updata'])['where']['dbid'],
+                    'activity_name' => $decision['name'],
+                    'start' => time(),
+                    'end'  => time(),
+                    'duration' => 0,
+                    'transition' => "to {$this->_targetNode->getTargetNodeList()['name']}",
+                    'htask' => 0
+
+                );
+                $this->_num = $this->_num + 1;
+            }
             $histActinst['insert'][$this->_num] = array(
                 'dbid' => $this->_num,
                 'hprocid' => $this->_executionObj->getHistprocinst()['dbid'],

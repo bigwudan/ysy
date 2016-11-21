@@ -75,12 +75,22 @@ class AssmebleParticipation
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
         if($currNode['nodeName'] == 'start'){
-            $histTask = $this->_processInsert();
+            $participation = $this->_processInsert();
         }else{
-            $histTask = $this->_processBelongToCommon();
+            $participation = $this->_processDel();
         }
-        return $histTask;
+        return $participation;
     }
+
+    /**
+     * 删除
+     */
+    public function _processDel(){
+        $tmpParticipation = $this->_executionObj->getParticipation();
+        $participation['del'][$tmpParticipation[0]['dbid']] = $tmpParticipation[0]['task'];
+        return $participation;
+    }
+
 
     /**
      * 插入

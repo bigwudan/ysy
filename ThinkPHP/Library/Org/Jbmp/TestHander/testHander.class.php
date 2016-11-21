@@ -11,7 +11,7 @@ class testHander {
      * 测试
      */
     public function decide($varExecution){
-        return 'to task1';
+        return 'to state1';
     }
 
 

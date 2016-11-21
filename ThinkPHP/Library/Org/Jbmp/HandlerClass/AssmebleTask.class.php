@@ -65,13 +65,28 @@ class AssmebleTask
      */
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
+        $task = array();
         if($currNode['nodeName'] == 'start'){
             $task = $this->_processInsert();
         }else{
-            $task = $this->_processBelongToCommon();
+            //$task = $this->_processBelongToCommon();
+            $taskDel = $this->_processDel();
+            if($taskDel){
+                $task = array_merge($taskDel , $task);
+            }
         }
         return $task;
     }
+
+    /**
+     * 删除
+     */
+    private function _processDel(){
+        $tmpTask = $this->_executionObj->getTask();
+        $task['del'][$tmpTask['dbid']] = $tmpTask['dbid'];
+        return $task;
+    }
+
 
     private function _processInsert(){
         $hasVars  =  $this->_varsList ? 1 :  0;

@@ -138,9 +138,9 @@ class ExecutionService
         $TaskExecutionObj->setXmlObj($obj);
         $FranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
         $FranslateObj->initi($TaskExecutionObj , $varTranslate);
-
-
         $obj =  $FranslateObj->translate();
+
+
         $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
         $AssembleObj->initi($TaskExecutionObj , $obj , $varVariable);
         $Translateobj = $AssembleObj->process();

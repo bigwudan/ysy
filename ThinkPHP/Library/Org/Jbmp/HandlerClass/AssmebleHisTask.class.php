@@ -77,10 +77,33 @@ class AssmebleHisTask
         if($currNode['nodeName'] == 'start'){
             $histTask = $this->_processInsert();
         }else{
-            $histTask = $this->_processBelongToCommon();
+            $histTask = $this->_processUpdata();
         }
         return $histTask;
     }
+
+
+    /**
+     * 更新
+     */
+    private function _processUpdata(){
+        $hisTask = $this->_executionObj->getHisTask();
+        $this->_targetNode->getTargetNodeList();
+        $where['dbid'] = $hisTask['dbid'];
+        $upData = array(
+            'outcome' => $this->_targetNode->getTargetNodeList()['name'],
+            'state' => 'complete',
+            'end' => time(),
+            'duration' =>time() - $hisTask['create']
+        );
+        $tmpHistTask['updata'] = array(
+            $hisTask['dbid'] =>array(
+                'where'=>$where,
+                'data'=>$upData)
+        );
+        return $tmpHistTask;
+    }
+
 
     /**
      * 插入
@@ -94,7 +117,7 @@ class AssmebleHisTask
                     'outcome' => '',
                     'assignee' => '',
                     'priority' => 0,
-                    'state' => '',
+                    'state' => 'open',
                     'create' => time(),
                     'end' => 0,
                     'duration' => 0
@@ -107,7 +130,7 @@ class AssmebleHisTask
                 'outcome' => '',
                 'assignee' => '',
                 'priority' => 0,
-                'state' => '',
+                'state' => 'open',
                 'create' => time(),
                 'end' => 0,
                 'duration' => 0

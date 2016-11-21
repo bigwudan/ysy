@@ -69,7 +69,7 @@ class AssembleExecutionAndTarget {
             $tmp = $this->_targetNode->getForkTargetNodeList();
             $this->_tmpTask = $this->_getTaskByFork($tmp);
         }
-        if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task' || $this->_tmpTask  ){
+        if( $this->_executionObj->getCurrNode()['nodeName'] == 'task'|| $this->_targetNode->getTargetNodeList()['nodeName'] == 'task' || $this->_tmpTask  ){
             $this->_processTask();
             $this->_processHisTask();
             $this->_processParticipation();
@@ -140,10 +140,6 @@ class AssembleExecutionAndTarget {
         $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $varVars = array() , $this->_execution);
         $this->_variable = $obj->process();
         $this->_num = $obj->getNum();
-
-        var_dump($this->_variable);
-        die();
-
     }
 
     private function _processExecution(){
