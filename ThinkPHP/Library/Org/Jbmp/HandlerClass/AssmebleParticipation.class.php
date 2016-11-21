@@ -74,10 +74,15 @@ class AssmebleParticipation
      */
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
+        $participation = array();
         if($currNode['nodeName'] == 'start'){
             $participation = $this->_processInsert();
         }else{
-            $participation = $this->_processDel();
+            $participationDel = $this->_processDel();
+            $participationDel && ($participation = array_merge($participationDel , $participation));
+            $participationInsert = $this->_processInsert();
+            $participationInsert && $participation = array_merge($participationInsert , $participation);
+
         }
         return $participation;
     }

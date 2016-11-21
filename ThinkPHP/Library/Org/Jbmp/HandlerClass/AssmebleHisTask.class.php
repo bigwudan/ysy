@@ -74,10 +74,18 @@ class AssmebleHisTask
      */
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
+        $histTask = array();
         if($currNode['nodeName'] == 'start'){
             $histTask = $this->_processInsert();
         }else{
-            $histTask = $this->_processUpdata();
+            $histTaskUp = $this->_processUpdata();
+            if($histTaskUp){
+                $histTask = array_merge($histTaskUp , $histTask);
+            }
+            $histTaskInsert = $this->_processInsert();
+            if($histTaskInsert){
+                $histTask = array_merge($histTaskInsert , $histTask);
+            }
         }
         return $histTask;
     }
@@ -124,9 +132,11 @@ class AssmebleHisTask
                 );
             }
         }else{
+            $execution = $this->_executionObj->getExecution();
+            $tmpExecution = current($this->_execution['insert'])['id'] ? current($this->_execution['insert'])['id'] : $execution['id'];
             $hisTask['insert'][current($this->_task['insert'])['dbid']] = array(
                 'dbid' => current($this->_task['insert'])['dbid'],
-                'execution' => current($this->_execution['insert'])['id'],
+                'execution' => $tmpExecution,
                 'outcome' => '',
                 'assignee' => '',
                 'priority' => 0,

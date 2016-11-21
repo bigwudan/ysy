@@ -59,7 +59,15 @@ class AssmebleExecution
         if($currNode['nodeName'] == 'start'){
             $execution = array_merge($this->_processInsert() , $execution);
         }else{
-            $execution = array_merge($this->_processUpdata() , $execution);
+            $executionUp = array_merge($this->_processUpdata() , $execution);
+            if($executionUp){
+                $execution = array_merge($executionUp , $execution);
+            }
+            $executionInsert = $this->_processInsert($execution);
+            if($executionInsert){
+                $execution = array_merge($execution , $executionInsert);
+            }
+
         }
         $this->_execution  = $execution;
         return $execution;
@@ -99,41 +107,50 @@ class AssmebleExecution
     /**
      * 处理开始
      */
-    private function _processInsert(){
+    private function _processInsert($varExecution = null){
         $hasVars  =  $this->_varsList ? 1 :  0;
+        $execution = $varExecution;
         if($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
-
-            $execution['insert'][$this->_num] = array(
-                'dbid' => $this->_num,
-                'activityname'  => '',
-                'procdefid' => $this->_executionObj->getRule()['rulename'],
-                'hasvars' => $hasVars,
-                'key' => '',
-                'id' => "{$this->_executionObj->getRule()['rulename']}.{$this->_num}",
-                'state' => 'inactive-concurrent-root',
-                'priority' => 0,
-                'hisactinst' => 0,
-                'parent' => 0,
-                'parentidx' => 0,
-                'instance' => $this->_num
-            );
-            $this->_num =$this->_num + 1;
-
-            $mainId = current($execution['insert'])['id'];
+            if($execution){
+                foreach($execution['updata'] as $k => $v){
+                    $execution['updata'][$k]['data']['state'] = 'inactive-concurrent-root';
+                    break;
+                }
+            }else{
+                $execution['insert'][$this->_num] = array(
+                    'dbid' => $this->_num,
+                    'activityname'  => '',
+                    'procdefid' => $this->_executionObj->getRule()['rulename'],
+                    'hasvars' => $hasVars,
+                    'key' => '',
+                    'id' => "{$this->_executionObj->getRule()['rulename']}.{$this->_num}",
+                    'state' => 'inactive-concurrent-root',
+                    'priority' => 0,
+                    'hisactinst' => 0,
+                    'parent' => 0,
+                    'parentidx' => 0,
+                    'instance' => $this->_num
+                );
+                $this->_num =$this->_num + 1;
+            }
+            $tmpExecution = array();
+            $tmpExecution['mainid'] = ($this->_executionObj->getCurrNode()['nodeName'] == 'start') ? current($execution['insert'])['id'] : current($execution['updata'])['where']['dbid'];
+            $tmpExecution['parent'] = ($this->_executionObj->getCurrNode()['nodeName'] == 'start') ? current($execution['insert'])['dbid'] : current($execution['updata'])['where']['dbid'];
             foreach($this->_targetNode->getForkTargetNodeList() as $k => $v){
+                $tmpExecution['instance'] = ($this->_executionObj->getCurrNode()['nodeName'] == 'start') ? $this->_num : $tmpExecution['parent'];
                 $execution['insert'][$this->_num] = array(
                     'dbid' => $this->_num,
                     'activityname'  => $v['name'],
                     'procdefid' => $this->_executionObj->getRule()['rulename'],
                     'hasvars' => $hasVars,
                     'key' => '',
-                    'id' => "{$mainId}.to {$v['name']}.{$this->_num}",
+                    'id' => "{$tmpExecution['mainid']}.to {$v['name']}.{$this->_num}",
                     'state' => 'active-concurrent',
                     'priority' => 0,
                     'hisactinst' => 0,
-                    'parent' => current($execution['insert'])['dbid'],
+                    'parent' => $tmpExecution['parent'],
                     'parentidx' => 0,
-                    'instance' => $this->_num
+                    'instance' => $tmpExecution['instance']
                 );
                 $this->_num =$this->_num + 1;
             }

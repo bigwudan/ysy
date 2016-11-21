@@ -115,39 +115,87 @@ class AssmebleHistActinst
      */
     private function _processInsert(){
         if(current($this->_execution['updata'])){
-            if($decision = $this->_targetNode->getDecision()){
+            if(method_exists($this->_targetNode , 'getForkTargetNodeList')){
+                $histActinst['insert'][$this->_num] = array(
+                    'dbid' => $this->_num,
+                    'hprocid' => $this->_executionObj->getExecution()['instance'],
+                    'type' => 'fork',
+                    'execution' => current($this->_execution['updata'])['where']['dbid'],
+                    'activity_name' => current($this->_execution['updata'])['data']['activityname'],
+                    'start' => time(),
+                    'end'  => 0,
+                    'duration' => 0,
+                    'transition' => "",
+                    'htask' => 0
+                );
+                foreach($this->_execution['updata'] as $k => $v){
+                    $this->_execution['updata'][$k]['data']['hisactinst'] = $this->_num;
+                    break;
+                }
+                $this->_num = $this->_num + 1;
+
+
+                $tmpTargetNode = $this->_targetNode->getForkTargetNodeList();
+                foreach($this->_execution['insert'] as $k => $v){
+                    $tmpTarget = array();
+                    foreach($tmpTargetNode as $k1 => $v1){
+                        if($v1['name'] == $v['activityname']){
+                            $tmpTarget = $v1;
+                            break;
+                        }
+                    }
+                    $histActinst['insert'][$this->_num] = array(
+                        'dbid' => $this->_num,
+                        'hprocid' => $this->_executionObj->getExecution()['instance'],
+                        'type' => $tmpTarget['nodeName'],
+                        'execution' => $v['dbid'],
+                        'activity_name' => $tmpTarget['name'],
+                        'start' => time(),
+                        'end'  => 0,
+                        'duration' => 0,
+                        'transition' => "",
+                        'htask' => 0
+
+                    );
+                    $this->_execution['insert'][$k]['hisactinst'] = $this->_num;
+                    $this->_num = $this->_num + 1;
+                }
+
+            }else{
+                if($decision = $this->_targetNode->getDecision()){
+                    $histActinst['insert'][$this->_num] = array(
+                        'dbid' => $this->_num,
+                        'hprocid' => $this->_executionObj->getHistprocinst()['dbid'],
+                        'type' => $decision['nodeName'],
+                        'execution' => current($this->_execution['updata'])['where']['dbid'],
+                        'activity_name' => $decision['name'],
+                        'start' => time(),
+                        'end'  => time(),
+                        'duration' => 0,
+                        'transition' => "to {$this->_targetNode->getTargetNodeList()['name']}",
+                        'htask' => 0
+
+                    );
+                    $this->_num = $this->_num + 1;
+                }
                 $histActinst['insert'][$this->_num] = array(
                     'dbid' => $this->_num,
                     'hprocid' => $this->_executionObj->getHistprocinst()['dbid'],
-                    'type' => $decision['nodeName'],
+                    'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
                     'execution' => current($this->_execution['updata'])['where']['dbid'],
-                    'activity_name' => $decision['name'],
+                    'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
                     'start' => time(),
-                    'end'  => time(),
+                    'end'  => 0,
                     'duration' => 0,
-                    'transition' => "to {$this->_targetNode->getTargetNodeList()['name']}",
+                    'transition' => "",
                     'htask' => 0
 
                 );
+                foreach($this->_execution['updata'] as $k => $v){
+                    $this->_execution['updata'][$k]['data']['hisactinst'] = $this->_num;
+                }
                 $this->_num = $this->_num + 1;
             }
-            $histActinst['insert'][$this->_num] = array(
-                'dbid' => $this->_num,
-                'hprocid' => $this->_executionObj->getHistprocinst()['dbid'],
-                'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
-                'execution' => current($this->_execution['updata'])['where']['dbid'],
-                'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
-                'start' => time(),
-                'end'  => 0,
-                'duration' => 0,
-                'transition' => "",
-                'htask' => 0
-
-            );
-            foreach($this->_execution['updata'] as $k => $v){
-                $this->_execution['updata'][$k]['data']['hisactinst'] = $this->_num;
-            }
-            $this->_num = $this->_num + 1;
         }else if($this->_execution['insert']){
             if(method_exists($this->_targetNode , 'getForkTargetNodeList')){
                 $tmpNum = 0;

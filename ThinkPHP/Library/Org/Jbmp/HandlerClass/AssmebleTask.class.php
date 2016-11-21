@@ -69,10 +69,13 @@ class AssmebleTask
         if($currNode['nodeName'] == 'start'){
             $task = $this->_processInsert();
         }else{
-            //$task = $this->_processBelongToCommon();
             $taskDel = $this->_processDel();
             if($taskDel){
                 $task = array_merge($taskDel , $task);
+            }
+            $taskInsert = $this->_processInsert();
+            if($taskInsert){
+                $task = array_merge($taskInsert , $task);
             }
         }
         return $task;
@@ -117,6 +120,12 @@ class AssmebleTask
                 $this->_num = $this->_num + 1;
             }
         }else{
+            $execution = $this->_executionObj->getExecution();
+            $tmpTask = array();
+            $tmpTask['execution_id'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['id'] : $execution['id'];
+            $tmpTask['execution'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : $execution['dbid'];
+            $tmpTask['procinst'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : $execution['instance'];
+
             $task['insert'][$this->_num] = array(
                 'dbid' => $this->_num,
                 'name' => $this->_targetNode->getTargetNodeList()['name'],
@@ -124,11 +133,11 @@ class AssmebleTask
                 'assignee' => '',
                 'priority' => 0,
                 'create' => time(),
-                'execution_id' => current($this->_execution['insert'])['id'],
+                'execution_id' => $tmpTask['execution_id'],
                 'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
                 'hasvars' => $hasVars,
-                'execution' => current($this->_execution['insert'])['dbid'],
-                'procinst' => current($this->_execution['insert'])['dbid']
+                'execution' => $tmpTask['execution'],
+                'procinst' => $tmpTask['procinst']
             );
             $this->_num = $this->_num + 1;
         }
