@@ -76,9 +76,11 @@ class AssmebleHistActinst
             if($histActinstUp){
                 $histActinst = array_merge($histActinstUp , $histActinst);
             }
-            $histActinstInsert = $this->_processInsert();
-            if($histActinstInsert){
-                $histActinst = array_merge($histActinstInsert , $histActinst);
+            if($this->_targetNode->getTargetNodeList()['nodeName'] != 'end'){
+                $histActinstInsert = $this->_processInsert();
+                if($histActinstInsert){
+                    $histActinst = array_merge($histActinstInsert , $histActinst);
+                }
             }
         }
         $this->_histActinst  = $histActinst;

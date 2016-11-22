@@ -132,7 +132,7 @@ class AssmebleHisTask
                 );
             }
         }else{
-            if($this->_targetNode->getTargetNodeList() == 'task'){
+            if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
                 $execution = $this->_executionObj->getExecution();
                 $tmpExecution = current($this->_execution['insert'])['id'] ? current($this->_execution['insert'])['id'] : $execution['id'];
                 $hisTask['insert'][current($this->_task['insert'])['dbid']] = array(
@@ -147,7 +147,7 @@ class AssmebleHisTask
                     'duration' => 0
                 );
             }else{
-                $hisTask['insert'] = array();
+                $hisTask = array();
             }
         }
         return $hisTask;

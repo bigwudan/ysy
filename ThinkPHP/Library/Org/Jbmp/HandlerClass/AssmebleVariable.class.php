@@ -48,7 +48,6 @@ class AssmebleVariable
         $this->_executionObj = $varExecution;
         $this->_targetNode = $varTargetNode;
         $this->_execution = $varExecution;
-
         $this->_num = $varNum;
         $varVars && $this->_varsList = $varVars;
         return $this;
@@ -58,6 +57,25 @@ class AssmebleVariable
      *
      */
     public function process(){
+        if($this->_targetNode->getTargetNodeList()['nodeName'] == 'end'){
+            $variable = $this->_processDel();
+        }else{
+            $variable = $this->_processInsert();
+        }
+        return $variable;
+    }
+
+    /**
+     * 删除
+     */
+    private function _processDel(){
+        $variable['del'] = $this->_execution['del'];
+        return $variable;
+    }
+    /**
+     * 更新
+     */
+    private function _processInsert(){
         $tmpDbid = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : current($this->_execution['updata'])['where']['dbid'] ;
         for($num = 0 ; $num < 2 ; $num++){
             $variable['insert'][$this->_num] = array(
@@ -71,7 +89,6 @@ class AssmebleVariable
         }
         return $variable;
     }
-
 
     /**
      * 得到num

@@ -138,7 +138,7 @@ class AssmebleTask
                 $this->_num = $this->_num + 1;
             }
         }else{
-            if($this->_targetNode->getTargetNodeList()['name'] == 'task'){
+            if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
                 $execution = $this->_executionObj->getExecution();
                 $tmpTask = array();
                 $tmpTask['execution_id'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['id'] : $execution['id'];

@@ -59,18 +59,19 @@ class AssmebleExecution
         if($currNode['nodeName'] == 'start'){
             $execution = array_merge($this->_processInsert() , $execution);
         }else{
-
             $executionDel = array_merge($this->_processDel() , $execution);
             if($executionDel){
                 $execution = array_merge($executionDel , $execution);
             }
-            $executionUp = array_merge($this->_processUpdata() , $execution);
-            if($executionUp){
-                $execution = array_merge($executionUp , $execution);
-            }
-            $executionInsert = $this->_processInsert($execution);
-            if($executionInsert){
-                $execution = array_merge($execution , $executionInsert);
+            if($this->_targetNode->getTargetNodeList()['nodeName'] != 'end'){
+                $executionUp = array_merge($this->_processUpdata() , $execution);
+                if($executionUp){
+                    $execution = array_merge($executionUp , $execution);
+                }
+                $executionInsert = $this->_processInsert($execution);
+                if($executionInsert){
+                    $execution = array_merge($execution , $executionInsert);
+                }
             }
         }
         $this->_execution  = $execution;
@@ -100,9 +101,14 @@ class AssmebleExecution
                 if($this->_targetNode->getTargetNodeList()['nodeName'] == 'end' ){
                     $execution['del'][$data['pActive']['dbid']] = $data['pActive']['dbid'];
                 }
-                return $execution;
             }
+        }elseif($this->_targetNode->getTargetNodeList()['nodeName'] == 'end'){
+            $execution['del'][$this->_executionObj->getExecution()['dbid']] = $this->_executionObj->getExecution()['dbid'];
+        }else{
+            $execution = array();
         }
+
+        return $execution;
     }
 
 
