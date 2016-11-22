@@ -50,6 +50,8 @@ class TranslateFactory {
     }
 
     private function _assignTargetClass($varTargetNodeList){
+
+
         if($varTargetNodeList['nodeName'] == 'task'){
             $obj =  new \Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);
@@ -60,6 +62,10 @@ class TranslateFactory {
             $obj->process();
         }elseif($varTargetNodeList['nodeName'] == 'fork'){
             $obj =  new \Org\Jbmp\TargetExecutionClass\ForkTargetExecution();
+            $obj->initi($this->_executionObj ,  $varTargetNodeList);
+            $obj->process();
+        }elseif($varTargetNodeList['nodeName'] == 'join'){
+            $obj = new \Org\Jbmp\TargetExecutionClass\JoinTargetExecution();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);
             $obj->process();
         }else{

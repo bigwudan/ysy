@@ -132,19 +132,23 @@ class AssmebleHisTask
                 );
             }
         }else{
-            $execution = $this->_executionObj->getExecution();
-            $tmpExecution = current($this->_execution['insert'])['id'] ? current($this->_execution['insert'])['id'] : $execution['id'];
-            $hisTask['insert'][current($this->_task['insert'])['dbid']] = array(
-                'dbid' => current($this->_task['insert'])['dbid'],
-                'execution' => $tmpExecution,
-                'outcome' => '',
-                'assignee' => '',
-                'priority' => 0,
-                'state' => 'open',
-                'create' => time(),
-                'end' => 0,
-                'duration' => 0
-            );
+            if($this->_targetNode->getTargetNodeList() == 'task'){
+                $execution = $this->_executionObj->getExecution();
+                $tmpExecution = current($this->_execution['insert'])['id'] ? current($this->_execution['insert'])['id'] : $execution['id'];
+                $hisTask['insert'][current($this->_task['insert'])['dbid']] = array(
+                    'dbid' => current($this->_task['insert'])['dbid'],
+                    'execution' => $tmpExecution,
+                    'outcome' => '',
+                    'assignee' => '',
+                    'priority' => 0,
+                    'state' => 'open',
+                    'create' => time(),
+                    'end' => 0,
+                    'duration' => 0
+                );
+            }else{
+                $hisTask['insert'] = array();
+            }
         }
         return $hisTask;
     }

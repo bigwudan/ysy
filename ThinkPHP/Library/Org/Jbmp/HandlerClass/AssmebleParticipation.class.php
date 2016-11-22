@@ -92,7 +92,9 @@ class AssmebleParticipation
      */
     public function _processDel(){
         $tmpParticipation = $this->_executionObj->getParticipation();
-        $participation['del'][$tmpParticipation[0]['dbid']] = $tmpParticipation[0]['task'];
+        foreach($tmpParticipation as $k => $v){
+            $participation['del'][$v['dbid']] = $v['dbid'];
+        }
         return $participation;
     }
 

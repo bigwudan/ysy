@@ -33,7 +33,7 @@ class ExecutionService
         $obj = new \Org\Jbmp\ProcessDataBase\WriteToDataBase();
         $obj->initi($Translateobj);
         $obj->writeToDataBase();
-        die();
+        die('wudan');
 
     }
 
@@ -117,8 +117,6 @@ class ExecutionService
             'execution' => $data['texecution'],
             'procinst' => $data['tprocinst']
         );
-
-
         $TaskExecutionObj->setProperty($property['value']);
         $TaskExecutionObj->setExecution($execution);
         $TaskExecutionObj->setHistActinst($histActinst);

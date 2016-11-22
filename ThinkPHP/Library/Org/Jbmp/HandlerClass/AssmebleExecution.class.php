@@ -59,6 +59,11 @@ class AssmebleExecution
         if($currNode['nodeName'] == 'start'){
             $execution = array_merge($this->_processInsert() , $execution);
         }else{
+
+            $executionDel = array_merge($this->_processDel() , $execution);
+            if($executionDel){
+                $execution = array_merge($executionDel , $execution);
+            }
             $executionUp = array_merge($this->_processUpdata() , $execution);
             if($executionUp){
                 $execution = array_merge($executionUp , $execution);
@@ -67,10 +72,34 @@ class AssmebleExecution
             if($executionInsert){
                 $execution = array_merge($execution , $executionInsert);
             }
-
         }
         $this->_execution  = $execution;
         return $execution;
+    }
+
+    /**
+     * 删除
+     */
+    private function _processDel(){
+        $execution = array();
+        if(method_exists($this->_targetNode , 'getHasFinishJoin')){
+            if($this->_targetNode->getHasFinishJoin()){
+                $data = $this->_targetNode->getJoinExecution();
+                $data['inActive'];
+                $data['subActiveFork'];
+                if($data['inActive']){
+                    foreach($data['inActive'] as $k => $v){
+                        $execution['del'][$v['dbid']] = $v['dbid'];
+                    }
+                }
+                if($data['subActiveFork']){
+                    foreach($data['subActiveFork'] as $k => $v){
+                        $execution['del'][$v['dbid']] = $v['dbid'];
+                    }
+                }
+                return $execution;
+            }
+        }
     }
 
 
@@ -78,15 +107,35 @@ class AssmebleExecution
      * 处理其他
      */
     private function _processUpdata(){
-        $execution = $this->_executionObj->getExecution();
-        $where = array();
-        $where['dbid'] = $execution['dbid'];
-        $targetNodeList = $this->_targetNode->getTargetNodeList();
-        $upData = array(
-            'activityname' => $targetNodeList['name'],
-            'hisactinst' => 0
-        );
-        $this->_num =$this->_num + 1;
+
+        if(method_exists($this->_targetNode , 'getHasFinishJoin') && $this->_targetNode->getHasFinishJoin()){
+            $data = $this->_targetNode->getJoinExecution()['pActive'];
+            $where = $data['dbid'];
+            $upData = array(
+                'activityname' => $this->_targetNode->getTargetNodeList()['name'],
+                'state' => 'active-root'
+            );
+            $execution['dbid'] = $data['dbid'];
+        }else{
+            $execution = $this->_executionObj->getExecution();
+            $where = array();
+            $where['dbid'] = $execution['dbid'];
+            $targetNodeList = $this->_targetNode->getTargetNodeList();
+            if($targetNodeList['nodeName'] == 'join'){
+                $upData = array(
+                'activityname' => $targetNodeList['name'],
+                    'state' => 'inactive-join'
+                );
+            }else{
+
+                $upData = array(
+                    'activityname' => $targetNodeList['name'],
+                    'hisactinst' => 0
+                );
+
+            }
+        }
+
         $tmpExecution['updata']= array(
             $execution['dbid'] =>
                 array(
@@ -110,7 +159,20 @@ class AssmebleExecution
     private function _processInsert($varExecution = null){
         $hasVars  =  $this->_varsList ? 1 :  0;
         $execution = $varExecution;
-        if($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
+
+        if(method_exists($this->_targetNode , 'getHasFinishJoin')){
+            if($this->_targetNode->getHasFinishJoin()){
+               return array();
+            }
+        }
+
+
+
+        if($this->_targetNode->getTargetNodeList()['nodeName'] == 'join'){
+
+            return array();
+
+        }elseif($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
             if($execution){
                 foreach($execution['updata'] as $k => $v){
                     $execution['updata'][$k]['data']['state'] = 'inactive-concurrent-root';

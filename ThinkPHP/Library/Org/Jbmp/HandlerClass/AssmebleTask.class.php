@@ -85,8 +85,26 @@ class AssmebleTask
      * 删除
      */
     private function _processDel(){
-        $tmpTask = $this->_executionObj->getTask();
-        $task['del'][$tmpTask['dbid']] = $tmpTask['dbid'];
+        if(method_exists($this->_targetNode , 'getHasFinishJoin')){
+            if($this->_targetNode->getHasFinishJoin()){
+                $data = $this->_targetNode->getJoinExecution();
+                $data['inActive'];
+                $data['subActiveFork'];
+                if($data['inActive']){
+                    foreach($data['inActive'] as $k => $v){
+                        $v['texecution'] && $task['del'][$v['texecution']] = $v['texecution'];
+                    }
+                }
+                if($data['subActiveFork']){
+                    foreach($data['subActiveFork'] as $k => $v){
+                        $v['texecution'] && $task['del'][$v['texecution']] = $v['texecution'];
+                    }
+                }
+            }
+        }else{
+            $tmpTask = $this->_executionObj->getTask();
+            $task['del'][$tmpTask['dbid']] = $tmpTask['dbid'];
+        }
         return $task;
     }
 
@@ -120,26 +138,29 @@ class AssmebleTask
                 $this->_num = $this->_num + 1;
             }
         }else{
-            $execution = $this->_executionObj->getExecution();
-            $tmpTask = array();
-            $tmpTask['execution_id'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['id'] : $execution['id'];
-            $tmpTask['execution'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : $execution['dbid'];
-            $tmpTask['procinst'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : $execution['instance'];
-
-            $task['insert'][$this->_num] = array(
-                'dbid' => $this->_num,
-                'name' => $this->_targetNode->getTargetNodeList()['name'],
-                'state' => 'open',
-                'assignee' => '',
-                'priority' => 0,
-                'create' => time(),
-                'execution_id' => $tmpTask['execution_id'],
-                'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
-                'hasvars' => $hasVars,
-                'execution' => $tmpTask['execution'],
-                'procinst' => $tmpTask['procinst']
-            );
-            $this->_num = $this->_num + 1;
+            if($this->_targetNode->getTargetNodeList()['name'] == 'task'){
+                $execution = $this->_executionObj->getExecution();
+                $tmpTask = array();
+                $tmpTask['execution_id'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['id'] : $execution['id'];
+                $tmpTask['execution'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : $execution['dbid'];
+                $tmpTask['procinst'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : $execution['instance'];
+                $task['insert'][$this->_num] = array(
+                    'dbid' => $this->_num,
+                    'name' => $this->_targetNode->getTargetNodeList()['name'],
+                    'state' => 'open',
+                    'assignee' => '',
+                    'priority' => 0,
+                    'create' => time(),
+                    'execution_id' => $tmpTask['execution_id'],
+                    'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
+                    'hasvars' => $hasVars,
+                    'execution' => $tmpTask['execution'],
+                    'procinst' => $tmpTask['procinst']
+                );
+                $this->_num = $this->_num + 1;
+            }else{
+                $task = array();
+            }
         }
         return $task;
     }
