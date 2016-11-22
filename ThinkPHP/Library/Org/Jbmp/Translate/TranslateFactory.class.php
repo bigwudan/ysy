@@ -50,8 +50,6 @@ class TranslateFactory {
     }
 
     private function _assignTargetClass($varTargetNodeList){
-
-
         if($varTargetNodeList['nodeName'] == 'task'){
             $obj =  new \Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);

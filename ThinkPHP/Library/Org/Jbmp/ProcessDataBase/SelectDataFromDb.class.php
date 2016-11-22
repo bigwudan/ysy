@@ -38,9 +38,6 @@ class SelectDataFromDb
      * @param $varExecution int 数组
      */
     public function getDataFromDataBaseByExecution($varExecution){
-
-
-
         $data = M('flow_execution')->alias('e')
             ->field("e.dbid as edbid , e.activityname as eactivityname , e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,
                 ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,

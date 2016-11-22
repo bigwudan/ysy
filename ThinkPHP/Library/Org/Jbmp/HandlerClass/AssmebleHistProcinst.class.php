@@ -61,7 +61,11 @@ class AssmebleHistProcinst
         if($currNode['nodeName'] == 'start'){
             $histProcinst = $this->_processInsert();
         }else{
-            $histProcinst = array();
+            if($this->_targetNode->getTargetNodeList()['nodeName'] == 'end' ){
+                $histProcinst = $this->_processUpdata();
+            }else{
+                $histProcinst = array();
+            }
         }
         $this->_histProcinst  = $histProcinst;
         return $histProcinst;
@@ -73,6 +77,21 @@ class AssmebleHistProcinst
      */
     public function getNum(){
         return $this->_num;
+    }
+
+    /**
+     * 更新
+     */
+    private function _processUpdata(){
+        $data = $this->_executionObj->getExecution();
+        $histProcinst['updata'][$data['instance']] = array(
+            'state' => 'ended',
+            'end' => time(),
+            'duration' => time() - $this->_executionObj->getHistProcinst()['start'],
+            'endactivity' => $this->_targetNode->getTargetNodeList()['name']
+        );
+        return $histProcinst;
+
     }
 
     /**

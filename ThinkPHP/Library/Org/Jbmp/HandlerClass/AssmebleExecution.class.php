@@ -97,6 +97,9 @@ class AssmebleExecution
                         $execution['del'][$v['dbid']] = $v['dbid'];
                     }
                 }
+                if($this->_targetNode->getTargetNodeList()['nodeName'] == 'end' ){
+                    $execution['del'][$data['pActive']['dbid']] = $data['pActive']['dbid'];
+                }
                 return $execution;
             }
         }
@@ -198,8 +201,9 @@ class AssmebleExecution
             $tmpExecution = array();
             $tmpExecution['mainid'] = ($this->_executionObj->getCurrNode()['nodeName'] == 'start') ? current($execution['insert'])['id'] : current($execution['updata'])['where']['dbid'];
             $tmpExecution['parent'] = ($this->_executionObj->getCurrNode()['nodeName'] == 'start') ? current($execution['insert'])['dbid'] : current($execution['updata'])['where']['dbid'];
+            $tmpExecution['instance'] = ($this->_executionObj->getCurrNode()['nodeName'] == 'start') ? $this->_num : $tmpExecution['parent'];
             foreach($this->_targetNode->getForkTargetNodeList() as $k => $v){
-                $tmpExecution['instance'] = ($this->_executionObj->getCurrNode()['nodeName'] == 'start') ? $this->_num : $tmpExecution['parent'];
+
                 $execution['insert'][$this->_num] = array(
                     'dbid' => $this->_num,
                     'activityname'  => $v['name'],
