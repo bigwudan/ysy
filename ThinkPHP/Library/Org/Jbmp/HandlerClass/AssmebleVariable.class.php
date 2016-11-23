@@ -44,8 +44,8 @@ class AssmebleVariable
     /**
      * 初始化
      */
-    public function initi($varExecution  ,  $varTargetNode , $varNum,  $varVars = array() , $varExecution){
-        $this->_executionObj = $varExecution;
+    public function initi($varExecutionObj  ,  $varTargetNode , $varNum,  $varVars = array() , $varExecution){
+        $this->_executionObj = $varExecutionObj;
         $this->_targetNode = $varTargetNode;
         $this->_execution = $varExecution;
         $this->_num = $varNum;
@@ -76,7 +76,19 @@ class AssmebleVariable
      * 更新
      */
     private function _processInsert(){
-        $tmpDbid = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : current($this->_execution['updata'])['where']['dbid'] ;
+        $tmpDbid = 0;
+        if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
+            foreach($this->_execution['insert'] as $k => $v){
+                $tmpDbid = $v['dbid'];
+                break;
+            }
+        }else{
+            foreach($this->_execution['updata'] as $k => $v){
+                $tmpDbid = $v['where']['dbid'];
+                break;
+            }
+        }
+
         foreach($this->_varsList as $k => $v){
             $modelList = array(
                 'dbid' => 0,
@@ -84,7 +96,7 @@ class AssmebleVariable
                 'key' => '',
                 'execution' => 0,
                 'double_value' => 0,
-                'long_value' => 0,
+                'int_value' => 0,
                 'string_value' => '',
                 'text_value' => '',
                 'addtime' => time()
@@ -97,6 +109,7 @@ class AssmebleVariable
             $variable[$this->_num] = $modelList;
             $this->_num = $this->_num +1;
         }
+
         return $variable;
     }
 

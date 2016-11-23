@@ -87,21 +87,18 @@ class AssmebleHisTask
             'end' => time(),
             'duration' =>time() - $hisTask['create']
         );
-
         $hisTask['dbid']  = array(
             'where'=>$where,
             'data'=>$upData
         );
-
         return $hisTask;
     }
-
 
     /**
      * 插入
      */
     private function _processInsert(){
-        if($this->_targetNode->getClassName() == 'join'){
+        if($this->_targetNode->getClassName() == 'fork'){
             $tmp = $this->_targetNode->getForkTargetNodeList();
             $taskList = array();
             foreach($tmp as $k => $v){

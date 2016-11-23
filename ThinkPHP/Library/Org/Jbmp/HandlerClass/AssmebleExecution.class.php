@@ -66,7 +66,7 @@ class AssmebleExecution
                 if($tmp = $this->_processUpdata()){
                     $execution['updata'] = $tmp;
                 }
-                if($tmp = $this->_processInsert()){
+                if($tmp = $this->_processInsert($execution)){
                     $execution['insert'] = $tmp;
                 }
             }
@@ -163,7 +163,7 @@ class AssmebleExecution
     /**
      * 处理开始
      */
-    private function _processInsert(){
+    private function _processInsert($varExecution){
         $hasVars  =  $this->_varsList ? 1 :  0;
         $execution = array();
         if($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
@@ -184,10 +184,23 @@ class AssmebleExecution
                 );
                 $this->_num =$this->_num + 1;
             }
-            $tmpExecution = array();
-            $tmpExecution['mainid'] = ($this->_executionObj->getCurrNode()['nodeName'] == 'start') ? current($execution['insert'])['id'] : current($execution['updata'])['where']['dbid'];
-            $tmpExecution['parent'] = ($this->_executionObj->getCurrNode()['nodeName'] == 'start') ? current($execution['insert'])['dbid'] : current($execution['updata'])['where']['dbid'];
-            $tmpExecution['instance'] = ($this->_executionObj->getCurrNode()['nodeName'] == 'start') ? $this->_num : $tmpExecution['parent'];
+            if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
+                foreach($execution as $k => $v){
+                    $tmpExecution = array();
+                    $tmpExecution['mainid'] = $v['id'];
+                    $tmpExecution['parent'] = $v['dbid'];
+                    $tmpExecution['instance'] = $v['dbid'];
+                    break;
+                }
+            }else{
+                foreach($varExecution['updata'] as $k => $v){
+                    $tmpExecution = array();
+                    $tmpExecution['mainid'] = ['where']['dbid'];
+                    $tmpExecution['parent'] = ['where']['dbid'];
+                    $tmpExecution['instance'] = ['where']['dbid'];
+                    break;
+                }
+            }
             foreach($this->_targetNode->getForkTargetNodeList() as $k => $v){
                 $execution[$this->_num] = array(
                     'dbid' => $this->_num,
@@ -224,6 +237,8 @@ class AssmebleExecution
         }else{
             return array();
         }
+
+
         return $execution;
     }
 

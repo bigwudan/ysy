@@ -99,7 +99,7 @@ class AssmebleTask
 
     private function _processInsert(){
         $hasVars  =  $this->_varsList ? 1 :  0;
-        if($this->_targetNode->getClassName() == 'join'){
+        if($this->_targetNode->getClassName() == 'fork'){
             $tmp = $this->_targetNode->getForkTargetNodeList();
             $taskList = array();
             foreach($tmp as $k => $v){
@@ -107,7 +107,7 @@ class AssmebleTask
             }
         }
         if($taskList){
-            foreach($this->$taskList as $k => $v){
+            foreach($taskList as $k => $v){
                 $tmp = array();
                 foreach($this->_execution['insert'] as $k1 => $v1){
                     if($v['name'] == $v1['activityname']){
@@ -135,9 +135,18 @@ class AssmebleTask
         }else if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
                 $execution = $this->_executionObj->getExecution();//??
                 $tmpTask = array();
-                $tmpTask['execution_id'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['id'] : $execution['id'];
-                $tmpTask['execution'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : $execution['dbid'];
-                $tmpTask['procinst'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : $execution['instance'];
+                if($this->_executionObj->getCurrNode()['nodeName']){
+                    foreach($this->_execution['insert'] as $k => $v){
+                        $tmpTask['execution_id'] = $v['id'];
+                        $tmpTask['execution'] = $v['dbid'];
+                        $tmpTask['procinst'] = $v['dbid'];
+                        break;
+                    }
+                }else{
+                    $tmpTask['execution_id'] = $execution['id'];
+                    $tmpTask['execution'] = $execution['dbid'];
+                    $tmpTask['procinst'] = $execution['instance'];
+                }
                 $task[$this->_num] = array(
                     'dbid' => $this->_num,
                     'name' => $this->_targetNode->getTargetNodeList()['name'],

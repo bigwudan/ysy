@@ -30,7 +30,7 @@ class RbacController extends Controller
 
         );
         $tmp2 = array(
-            'class' => 'text_value',
+            'class' => 'text',
             'key' => 'testtext',
             'value' => 'xxxxx'
 

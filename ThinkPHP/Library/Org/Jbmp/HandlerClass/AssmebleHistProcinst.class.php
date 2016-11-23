@@ -87,10 +87,15 @@ class AssmebleHistProcinst
      * 处理开始
      */
     private function _processInsert(){
-        if($firstExecution = current($this->_execution['insert'])){
-            $histProcinst[$firstExecution['dbid']] = array(
-                'dbid' => $firstExecution['dbid'],
-                'id' => $firstExecution['id'],
+        $tmp = array();
+        foreach($this->_execution['insert'] as $k => $v){
+            $tmp = $v;
+            break;
+        }
+        if($tmp){
+            $histProcinst[$tmp['dbid']] = array(
+                'dbid' => $tmp['dbid'],
+                'id' => $tmp['id'],
                 'procdefid' => $this->_executionObj->getRule()['rulename'],
                 'key' => '',
                 'start' => time(),

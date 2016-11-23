@@ -83,7 +83,7 @@ class AssmebleParticipation
      * 插入
      */
     private function _processInsert(){
-        if($this->_targetNode->getClassName() == 'join'){
+        if($this->_targetNode->getClassName() == 'fork'){
             $tmp = $this->_targetNode->getForkTargetNodeList();
             $taskList = array();
             foreach($tmp as $k => $v){

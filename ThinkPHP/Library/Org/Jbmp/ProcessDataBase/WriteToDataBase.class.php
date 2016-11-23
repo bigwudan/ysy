@@ -44,21 +44,21 @@ class WriteToDataBase
             if($execution['insert']){
                 $flag = M('flow_execution')->addAll(array_merge($execution['insert']));
                 if(!$flag){
-                    new \Exception('error');
+                    new \Exception('executionerror');
                 }
             }
 
             if($histProcinst['insert']){
                 $flag = M('flow_histprocinst')->addAll(array_merge($histProcinst['insert']));
                 if(!$flag){
-                    new \Exception('error');
+                    new \Exception('histProcinsterror');
                 }
             }
 
             if($task['insert']){
                 $flag = M('flow_task')->addAll(array_merge($task['insert']));
                 if(!$flag){
-                    new \Exception('error');
+                    new \Exception('taskerror');
                 }
             }
 
@@ -66,14 +66,14 @@ class WriteToDataBase
             if($participation['insert']){
                 $flag = M('flow_participation')->addAll(array_merge($participation['insert']));
                 if(!$flag){
-                    new \Exception('error');
+                    new \Exception('participationerror');
                 }
             }
 
             if($histActinst['insert']){
                 $flag = M('flow_histactinst')->addAll(array_merge($histActinst['insert']));
                 if(!$flag){
-                    new \Exception('error');
+                    new \Exception('histActinsterror');
                 }
             }
 
@@ -81,7 +81,7 @@ class WriteToDataBase
             if($variable['insert']){
                 $flag = M('flow_variable')->addAll(array_merge($variable['insert']));
                 if(!$flag){
-                    new \Exception('error');
+                    new \Exception('variableerror');
                 }
             }
 
@@ -89,7 +89,7 @@ class WriteToDataBase
             if($histtask['insert']){
                 $flag = M('flow_histtask')->addAll(array_merge($histtask['insert']));
                 if(!$flag){
-                    new \Exception('error');
+                    new \Exception('histtaskerror');
                 }
 
             }
@@ -100,6 +100,7 @@ class WriteToDataBase
             $model->commit();
         }catch (\Exception $e){
             $model->rollback();
+            var_dump($e->getMessage());
         }
         die('over');
     }

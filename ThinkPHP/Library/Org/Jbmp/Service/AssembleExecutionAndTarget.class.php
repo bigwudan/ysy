@@ -53,28 +53,29 @@ class AssembleExecutionAndTarget {
         $this->_histActinst && $TranslateInfoObj->setHistactinst($this->_histActinst);
         $this->_variable && $TranslateInfoObj->setVariable($this->_variable);
         $this->_translateInfoObj = $TranslateInfoObj;
-        //var_dump($this->_execution);die('222');
 
+        //var_dump($this->_execution);die('222');
         //var_dump($this->_histProcinst);die('3333');
         //var_dump($this->_task);die('4444');
         //var_dump($this->_hisTask);die('4444');
         //var_dump($this->_participation);die('555');
-
-
-
         //var_dump($this->_histActinst);die('666');
-        var_dump($this->_variable);
+        //var_dump($this->_variable);die('777');
+        die(__FILE__);
         return $TranslateInfoObj;
     }
 
     public function process(){
         $this->_processExecution();
         $this->_processHistProcinst();
-//        if(method_exists($this->_targetNode , 'getForkTargetNodeList')){
-//            $tmp = $this->_targetNode->getForkTargetNodeList();
-//            $this->_tmpTask = $this->_getTaskByFork($tmp);
-//        }
-        if( $this->_executionObj->getCurrNode()['nodeName'] == 'task'|| $this->_targetNode->getTargetNodeList()['nodeName'] == 'task' || $this->_tmpTask  ){
+        $taskList = array();
+        if($this->_targetNode->getClassName() == 'fork'){
+            $tmp = $this->_targetNode->getForkTargetNodeList();
+            foreach($tmp as $k => $v){
+                $v['nodeName'] == 'task' && array_push($taskList , $v);
+            }
+        }
+        if( $this->_executionObj->getCurrNode()['nodeName'] == 'task'|| $this->_targetNode->getTargetNodeList()['nodeName'] == 'task' || $taskList  ){
             $this->_processTask();
             $this->_processHisTask();
             $this->_processParticipation();
