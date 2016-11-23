@@ -57,7 +57,7 @@ class AssmebleExecution
         $currNode  =  $this->_executionObj->getCurrNode();
         $execution = array();
         if($currNode['nodeName'] == 'start'){
-            $execution = array_merge($this->_processInsert() , $execution);
+            $execution['insert'] = $this->_processInsert();
         }else{
             if($tmp = $this->_processDel()){
                 $execution['del'] = $tmp;

@@ -11,10 +11,6 @@ namespace Org\Jbmp\HandlerClass;
 
 class AssmebleHistProcinst
 {
-    /**
-     *
-     */
-    private $_varsList = null;
 
     /**
      *
@@ -36,10 +32,6 @@ class AssmebleHistProcinst
      */
     private $_num = null;
 
-    /**
-     *
-     */
-    private $_histProcinst = null;
 
 
     /**
@@ -59,15 +51,12 @@ class AssmebleHistProcinst
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
         if($currNode['nodeName'] == 'start'){
-            $histProcinst = $this->_processInsert();
+            $histProcinst['insert'] = $this->_processInsert();
+        }elseif($this->_targetNode->getTargetNodeList()['nodeName'] == 'end') {
+            $histProcinst['updata'] = $this->_processUpdata();
         }else{
-            if($this->_targetNode->getTargetNodeList()['nodeName'] == 'end' ){
-                $histProcinst = $this->_processUpdata();
-            }else{
-                $histProcinst = array();
-            }
+            $histProcinst = array();
         }
-        $this->_histProcinst  = $histProcinst;
         return $histProcinst;
     }
 
@@ -84,7 +73,7 @@ class AssmebleHistProcinst
      */
     private function _processUpdata(){
         $data = $this->_executionObj->getExecution();
-        $histProcinst['updata'][$data['instance']] = array(
+        $histProcinst[$data['instance']] = array(
             'state' => 'ended',
             'end' => time(),
             'duration' => time() - $this->_executionObj->getHistProcinst()['start'],
@@ -99,7 +88,7 @@ class AssmebleHistProcinst
      */
     private function _processInsert(){
         if($firstExecution = current($this->_execution['insert'])){
-            $histProcinst['insert'][$firstExecution['dbid']] = array(
+            $histProcinst[$firstExecution['dbid']] = array(
                 'dbid' => $firstExecution['dbid'],
                 'id' => $firstExecution['id'],
                 'procdefid' => $this->_executionObj->getRule()['rulename'],
@@ -112,7 +101,6 @@ class AssmebleHistProcinst
 
             );
         }
-        $this->_histProcinst = $histProcinst;
         return $histProcinst;
     }
 

@@ -65,10 +65,10 @@ class AssembleExecutionAndTarget {
     public function process(){
         $this->_processExecution();
         $this->_processHistProcinst();
-        if(method_exists($this->_targetNode , 'getForkTargetNodeList')){
-            $tmp = $this->_targetNode->getForkTargetNodeList();
-            $this->_tmpTask = $this->_getTaskByFork($tmp);
-        }
+//        if(method_exists($this->_targetNode , 'getForkTargetNodeList')){
+//            $tmp = $this->_targetNode->getForkTargetNodeList();
+//            $this->_tmpTask = $this->_getTaskByFork($tmp);
+//        }
         if( $this->_executionObj->getCurrNode()['nodeName'] == 'task'|| $this->_targetNode->getTargetNodeList()['nodeName'] == 'task' || $this->_tmpTask  ){
             $this->_processTask();
             $this->_processHisTask();
@@ -81,25 +81,16 @@ class AssembleExecutionAndTarget {
         return $this->getProcessTranslateInfo();
     }
 
-    /**
-     * 从fork得到task
-     */
-    private function _getTaskByFork($varData){
-        $taskList = array();
-        foreach($varData as $k => $v){
-            $v['nodeName'] == 'task' && array_push($taskList , $v);
-        }
-        return $taskList;
-    }
+
 
     private function _processHisTask(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleHisTask();
-        $this->_hisTask = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task , $this->_tmpTask)->process();
+        $this->_hisTask = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
     }
 
     private function _processParticipation(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleParticipation();
-        $this->_participation = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task , $this->_tmpTask)->process();
+        $this->_participation = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
         $this->_num = $obj->getNum();
     }
 

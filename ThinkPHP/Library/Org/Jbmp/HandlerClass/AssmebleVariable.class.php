@@ -58,9 +58,9 @@ class AssmebleVariable
      */
     public function process(){
         if($this->_targetNode->getTargetNodeList()['nodeName'] == 'end'){
-            $variable = $this->_processDel();
+            $variable['del'] = $this->_processDel();
         }else{
-            $variable = $this->_processInsert();
+            $variable['insert'] = $this->_processInsert();
         }
         return $variable;
     }
@@ -69,7 +69,7 @@ class AssmebleVariable
      * 删除
      */
     private function _processDel(){
-        $variable['del'] = $this->_execution['del'];
+        $variable = $this->_execution['del'];
         return $variable;
     }
     /**

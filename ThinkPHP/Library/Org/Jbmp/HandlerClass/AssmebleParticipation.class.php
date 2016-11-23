@@ -14,11 +14,6 @@ class AssmebleParticipation
     /**
      *
      */
-    private $_varsList = null;
-
-    /**
-     *
-     */
     private $_executionObj = null;
 
     /**
@@ -37,35 +32,19 @@ class AssmebleParticipation
     private $_num = null;
 
     /**
-     *
-     */
-    private $_histProcinst = null;
-
-    /**
      * task
      */
     private $_task = null;
 
     /**
-     *
-     */
-    private $_histActinst = null;
-
-    /**
-     *
-     */
-    private $_tmpTask = null;
-
-    /**
      * 初始化
      */
-    public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution , $task , $tmpTask){
+    public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution , $task){
         $this->_executionObj = $varExecution;
         $this->_targetNode = $varTargetNode;
         $this->_num = $varNum;
         $this->_execution = $execution;
         $this->_task = $task;
-        $this->_tmpTask = $tmpTask;
         return $this;
     }
 
@@ -76,13 +55,14 @@ class AssmebleParticipation
         $currNode  =  $this->_executionObj->getCurrNode();
         $participation = array();
         if($currNode['nodeName'] == 'start'){
-            $participation = $this->_processInsert();
+            $participation['insert'] = $this->_processInsert();
         }else{
-            $participationDel = $this->_processDel();
-            $participationDel && ($participation = array_merge($participationDel , $participation));
-            $participationInsert = $this->_processInsert();
-            $participationInsert && $participation = array_merge($participationInsert , $participation);
-
+            if($tmp = $this->_processDel()){
+                $participation['del'] = $tmp;
+            }
+            if($tmp = $this->_processInsert()){
+                $participation['insert'] = $tmp;
+            }
         }
         return $participation;
     }
@@ -93,7 +73,7 @@ class AssmebleParticipation
     public function _processDel(){
         $tmpParticipation = $this->_executionObj->getParticipation();
         foreach($tmpParticipation as $k => $v){
-            $participation['del'][$v['dbid']] = $v['dbid'];
+            $participation[$v['dbid']] = $v['dbid'];
         }
         return $participation;
     }
@@ -103,8 +83,15 @@ class AssmebleParticipation
      * 插入
      */
     private function _processInsert(){
-        if($this->_tmpTask){
-            foreach($this->_tmpTask as $k => $v){
+        if($this->_targetNode->getClassName() == 'join'){
+            $tmp = $this->_targetNode->getForkTargetNodeList();
+            $taskList = array();
+            foreach($tmp as $k => $v){
+                $v['nodeName'] == 'task' && array_push($taskList , $v);
+            }
+        }
+        if($taskList){
+            foreach($taskList as $k => $v){
                 $tmp = array();
                 foreach($this->_task['insert'] as $k1 => $v1){
                     if($v1['name'] == $v['name']){
@@ -121,7 +108,7 @@ class AssmebleParticipation
                             $tmpUserId = $v3;
                             $tmpGroupId = 0;
                         }
-                        $participation['insert'][$this->_num] = array(
+                        $participation[$this->_num] = array(
                             'dbid' => $this->_num,
                             'groupid' => $tmpGroupId,
                             'userid' => $tmpUserId,
@@ -144,7 +131,7 @@ class AssmebleParticipation
                         $tmpUserId = $v1;
                         $tmpGroupId = 0;
                     }
-                    $participation['insert'][$this->_num] = array(
+                    $participation[$this->_num] = array(
                         'dbid' => $this->_num,
                         'groupid' => $tmpGroupId,
                         'userid' => $tmpUserId,

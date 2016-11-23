@@ -37,11 +37,6 @@ class AssmebleTask
     private $_num = null;
 
     /**
-     *
-     */
-    private  $_tmpTask = null;
-
-    /**
      * 初始化
      * @param $varExecution
      * @param $varTargetNode
@@ -50,11 +45,10 @@ class AssmebleTask
      * @param $varTmpTask
      * @return array
      */
-    public function initi($varExecutionObj  ,  $varTargetNode , $varNum, $varExecution ,$varVars = array() , $varTmpTask){
+    public function initi($varExecutionObj  ,  $varTargetNode , $varNum, $varExecution ,$varVars = array()){
         $this->_executionObj = $varExecutionObj;
         $this->_targetNode = $varTargetNode;
         $this->_execution = $varExecution;
-        $this->_tmpTask = $varTmpTask;
         $this->_num = $varNum;
         $varVars && $this->_varsList = $varVars;
         return $this;
@@ -67,15 +61,13 @@ class AssmebleTask
         $currNode  =  $this->_executionObj->getCurrNode();
         $task = array();
         if($currNode['nodeName'] == 'start'){
-            $task = $this->_processInsert();
+            $task['insert'] = $this->_processInsert();
         }else{
-            $taskDel = $this->_processDel();
-            if($taskDel){
-                $task = array_merge($taskDel , $task);
+            if($tmp = $this->_processDel()){
+                $taskDel['del'] = $tmp;
             }
-            $taskInsert = $this->_processInsert();
-            if($taskInsert){
-                $task = array_merge($taskInsert , $task);
+            if($tmp = $this->_processInsert()){
+                $taskDel['insert'] = $tmp;
             }
         }
         return $task;
@@ -85,25 +77,21 @@ class AssmebleTask
      * 删除
      */
     private function _processDel(){
-        if(method_exists($this->_targetNode , 'getHasFinishJoin')){
-            if($this->_targetNode->getHasFinishJoin()){
-                $data = $this->_targetNode->getJoinExecution();
-                $data['inActive'];
-                $data['subActiveFork'];
-                if($data['inActive']){
-                    foreach($data['inActive'] as $k => $v){
-                        $v['texecution'] && $task['del'][$v['texecution']] = $v['texecution'];
-                    }
+        if(($this->_targetNode->getClassName()) == 'join' && ($this->_targetNode->getHasFinishJoin())){
+            $data = $this->_targetNode->getJoinExecution();
+            if($data['inActive']){
+                foreach($data['inActive'] as $k => $v){
+                    $v['texecution'] && $task[$v['texecution']] = $v['texecution'];
                 }
-                if($data['subActiveFork']){
-                    foreach($data['subActiveFork'] as $k => $v){
-                        $v['texecution'] && $task['del'][$v['texecution']] = $v['texecution'];
-                    }
+            }
+            if($data['subActiveFork']){
+                foreach($data['subActiveFork'] as $k => $v){
+                    $v['texecution'] && $task[$v['texecution']] = $v['texecution'];
                 }
             }
         }else{
             $tmpTask = $this->_executionObj->getTask();
-            $task['del'][$tmpTask['dbid']] = $tmpTask['dbid'];
+            $task[$tmpTask['dbid']] = $tmpTask['dbid'];
         }
         return $task;
     }
@@ -111,8 +99,15 @@ class AssmebleTask
 
     private function _processInsert(){
         $hasVars  =  $this->_varsList ? 1 :  0;
-        if($this->_tmpTask){
-            foreach($this->_tmpTask as $k => $v){
+        if($this->_targetNode->getClassName() == 'join'){
+            $tmp = $this->_targetNode->getForkTargetNodeList();
+            $taskList = array();
+            foreach($tmp as $k => $v){
+                $v['nodeName'] == 'task' && array_push($taskList , $v);
+            }
+        }
+        if($taskList){
+            foreach($this->$taskList as $k => $v){
                 $tmp = array();
                 foreach($this->_execution['insert'] as $k1 => $v1){
                     if($v['name'] == $v1['activityname']){
@@ -122,7 +117,7 @@ class AssmebleTask
                         break;
                     }
                 }
-                $task['insert'][$this->_num] = array(
+                $task[$this->_num] = array(
                     'dbid' => $this->_num,
                     'name' => $v['name'],
                     'state' => 'open',
@@ -137,14 +132,13 @@ class AssmebleTask
                 );
                 $this->_num = $this->_num + 1;
             }
-        }else{
-            if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
-                $execution = $this->_executionObj->getExecution();
+        }else if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
+                $execution = $this->_executionObj->getExecution();//??
                 $tmpTask = array();
                 $tmpTask['execution_id'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['id'] : $execution['id'];
                 $tmpTask['execution'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : $execution['dbid'];
                 $tmpTask['procinst'] = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : $execution['instance'];
-                $task['insert'][$this->_num] = array(
+                $task[$this->_num] = array(
                     'dbid' => $this->_num,
                     'name' => $this->_targetNode->getTargetNodeList()['name'],
                     'state' => 'open',
@@ -158,10 +152,10 @@ class AssmebleTask
                     'procinst' => $tmpTask['procinst']
                 );
                 $this->_num = $this->_num + 1;
-            }else{
-                $task = array();
-            }
+        }else{
+            $task = array();
         }
+
         return $task;
     }
 

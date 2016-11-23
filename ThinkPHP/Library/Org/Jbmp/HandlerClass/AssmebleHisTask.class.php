@@ -11,10 +11,6 @@ namespace Org\Jbmp\HandlerClass;
 
 class AssmebleHisTask
 {
-    /**
-     *
-     */
-    private $_varsList = null;
 
     /**
      *
@@ -36,36 +32,25 @@ class AssmebleHisTask
      */
     private $_num = null;
 
-    /**
-     *
-     */
-    private $_histProcinst = null;
+
 
     /**
      * task
      */
     private $_task = null;
 
-    /**
-     *
-     */
-    private $_histActinst = null;
 
-    /**
-     *
-     */
-    private $_tmpTask = null;
+
 
     /**
      * 初始化
      */
-    public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution , $task ,$tmpTask ){
+    public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution , $task){
         $this->_executionObj = $varExecution;
         $this->_targetNode = $varTargetNode;
         $this->_num = $varNum;
         $this->_execution = $execution;
         $this->_task = $task;
-        $this->_tmpTask = $tmpTask;
         return $this;
     }
 
@@ -76,15 +61,13 @@ class AssmebleHisTask
         $currNode  =  $this->_executionObj->getCurrNode();
         $histTask = array();
         if($currNode['nodeName'] == 'start'){
-            $histTask = $this->_processInsert();
+            $histTask['insert'] = $this->_processInsert();
         }else{
-            $histTaskUp = $this->_processUpdata();
-            if($histTaskUp){
-                $histTask = array_merge($histTaskUp , $histTask);
+            if($tmp = $this->_processUpdata()){
+                $histTask['updata'] = $tmp;
             }
-            $histTaskInsert = $this->_processInsert();
-            if($histTaskInsert){
-                $histTask = array_merge($histTaskInsert , $histTask);
+            if($tmp = $this->_processInsert()){
+                $histTask['insert'] = $tmp;
             }
         }
         return $histTask;
@@ -104,12 +87,13 @@ class AssmebleHisTask
             'end' => time(),
             'duration' =>time() - $hisTask['create']
         );
-        $tmpHistTask['updata'] = array(
-            $hisTask['dbid'] =>array(
-                'where'=>$where,
-                'data'=>$upData)
+
+        $hisTask['dbid']  = array(
+            'where'=>$where,
+            'data'=>$upData
         );
-        return $tmpHistTask;
+
+        return $hisTask;
     }
 
 
@@ -117,9 +101,16 @@ class AssmebleHisTask
      * 插入
      */
     private function _processInsert(){
-        if($this->_tmpTask){
+        if($this->_targetNode->getClassName() == 'join'){
+            $tmp = $this->_targetNode->getForkTargetNodeList();
+            $taskList = array();
+            foreach($tmp as $k => $v){
+                $v['nodeName'] == 'task' && array_push($taskList , $v);
+            }
+        }
+        if($taskList){
             foreach($this->_task['insert'] as $k => $v){
-                $hisTask['insert'][$v['dbid']] = array(
+                $hisTask[$v['dbid']] = array(
                     'dbid' => $v['dbid'],
                     'execution' => $v['execution_id'],
                     'outcome' => '',
@@ -131,25 +122,24 @@ class AssmebleHisTask
                     'duration' => 0
                 );
             }
+        }elseif($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
+            $execution = $this->_executionObj->getExecution();
+            $tmpExecution = current($this->_execution['insert'])['id'] ? current($this->_execution['insert'])['id'] : $execution['id'];
+            $hisTask[current($this->_task['insert'])['dbid']] = array(
+                'dbid' => current($this->_task['insert'])['dbid'],
+                'execution' => $tmpExecution,
+                'outcome' => '',
+                'assignee' => '',
+                'priority' => 0,
+                'state' => 'open',
+                'create' => time(),
+                'end' => 0,
+                'duration' => 0
+            );
         }else{
-            if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
-                $execution = $this->_executionObj->getExecution();
-                $tmpExecution = current($this->_execution['insert'])['id'] ? current($this->_execution['insert'])['id'] : $execution['id'];
-                $hisTask['insert'][current($this->_task['insert'])['dbid']] = array(
-                    'dbid' => current($this->_task['insert'])['dbid'],
-                    'execution' => $tmpExecution,
-                    'outcome' => '',
-                    'assignee' => '',
-                    'priority' => 0,
-                    'state' => 'open',
-                    'create' => time(),
-                    'end' => 0,
-                    'duration' => 0
-                );
-            }else{
-                $hisTask = array();
-            }
+            $hisTask = array();
         }
+
         return $hisTask;
     }
 
