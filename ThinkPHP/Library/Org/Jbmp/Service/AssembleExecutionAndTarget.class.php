@@ -53,12 +53,17 @@ class AssembleExecutionAndTarget {
         $this->_histActinst && $TranslateInfoObj->setHistactinst($this->_histActinst);
         $this->_variable && $TranslateInfoObj->setVariable($this->_variable);
         $this->_translateInfoObj = $TranslateInfoObj;
-        //var_dump($this->_execution);
-        //var_dump($this->_histProcinst);
-        //var_dump($this->_task);
-        //var_dump($this->_participation);
-        //var_dump($this->_histActinst);
-        //var_dump($this->_variable);
+        //var_dump($this->_execution);die('222');
+
+        //var_dump($this->_histProcinst);die('3333');
+        //var_dump($this->_task);die('4444');
+        //var_dump($this->_hisTask);die('4444');
+        //var_dump($this->_participation);die('555');
+
+
+
+        //var_dump($this->_histActinst);die('666');
+        var_dump($this->_variable);
         return $TranslateInfoObj;
     }
 

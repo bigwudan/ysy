@@ -45,14 +45,22 @@ class ExecutionService
         $XmlObj = new \Org\Jbmp\ProcessFunction\XmlEngine();
         $obj = $XmlObj->getDbToXmlObj($rule['rule']);
         $StartObj->setXmlObj($obj);
-        $FranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
-        $FranslateObj->initi($StartObj);
-        $obj =  $FranslateObj->translate();
-        $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
-        $AssembleObj->initi($StartObj , $obj , $varVars);
-        $Translateobj = $AssembleObj->process();
+
+        $this->_executionClass = $StartObj;
+        $this->_variable = $varVars;
+        $TranObj = $this->_onTranslate();
+
+//        $FranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
+//        $FranslateObj->initi($StartObj);
+//        $obj =  $FranslateObj->translate();
+//        $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
+//        $AssembleObj->initi($StartObj , $obj , $varVars);
+
+
+
+        die(__CLASS__);
         $obj = new \Org\Jbmp\ProcessDataBase\WriteToDataBase();
-        $obj->initi($Translateobj);
+        $obj->initi($TranObj);
         $obj->writeToDataBase();
         die('wudan');
 
@@ -69,21 +77,8 @@ class ExecutionService
 
         $this->_getDataFromDataBaseByExecution();
         $this->_onTranslate();
-        die();
+        die('xxx');
 
-
-
-        $XmlObj = new \Org\Jbmp\ProcessFunction\XmlEngine();
-        $obj = $XmlObj->getDbToXmlObj($rule['rule']);
-        $TaskExecutionObj->setXmlObj($obj);
-        $FranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
-        $FranslateObj->initi($TaskExecutionObj , $varTranslate);
-        $obj =  $FranslateObj->translate();
-        $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
-        $AssembleObj->initi($TaskExecutionObj , $obj , $varVariable);
-        $Translateobj = $AssembleObj->process();
-        var_dump('1111');
-        die();
     }
 
     /**
@@ -306,6 +301,7 @@ class ExecutionService
         $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
         $AssembleObj->initi($this->_executionClass , $obj , $this->_variable);
         $Translateobj = $AssembleObj->process();
+        return $Translateobj;
 
     }
 

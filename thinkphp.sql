@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
+Source Server         : wwewe
 Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : thinkphp
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2016-11-17 22:57:21
+Date: 2016-11-23 17:55:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -87,14 +87,22 @@ CREATE TABLE `think_flow_execution` (
   KEY `key` (`key`),
   KEY `instance` (`instance`),
   KEY `hisactinst` (`hisactinst`),
-  KEY `pr` (`procdefid`)
+  KEY `parent` (`parent`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_execution
 -- ----------------------------
-INSERT INTO `think_flow_execution` VALUES ('101', 'task1', 'test2', '1', '', 'test2.101', 'active-root', '0', '104', '0', '0', '101');
-INSERT INTO `think_flow_execution` VALUES ('201', 'task1', 'test2', '1', '', 'test2.201', 'active-root', '0', '205', '0', '0', '201');
+INSERT INTO `think_flow_execution` VALUES ('101', 'state1', 'test2', '1', '', 'test2.101', 'active-root', '0', '102', '0', '0', '101');
+INSERT INTO `think_flow_execution` VALUES ('201', 'task1', 'test2', '1', '', 'test2.201', 'active-root', '0', '206', '0', '0', '201');
+INSERT INTO `think_flow_execution` VALUES ('301', '', 'test2', '1', '', 'test2.301', 'inactive-concurrent-root', '0', '0', '0', '0', '301');
+INSERT INTO `think_flow_execution` VALUES ('302', 'state1', 'test2', '1', '', 'test2.301.to state1.302', 'active-concurrent', '0', '307', '301', '0', '302');
+INSERT INTO `think_flow_execution` VALUES ('303', 'task1', 'test2', '1', '', 'test2.301.to task1.303', 'active-concurrent', '0', '308', '301', '0', '303');
+INSERT INTO `think_flow_execution` VALUES ('401', 'task1', 'test2', '1', '', 'test2.401', 'active-root', '0', '405', '0', '0', '401');
+INSERT INTO `think_flow_execution` VALUES ('501', '', 'fork', '1', '', 'fork.501', 'inactive-concurrent-root', '0', '0', '0', '0', '501');
+INSERT INTO `think_flow_execution` VALUES ('502', 'state1', 'fork', '1', '', 'fork.501.to state1.502', 'active-concurrent', '0', '507', '501', '0', '501');
+INSERT INTO `think_flow_execution` VALUES ('503', 'task1', 'fork', '1', '', 'fork.501.to task1.503', 'active-concurrent', '0', '508', '501', '0', '501');
+INSERT INTO `think_flow_execution` VALUES ('601', 'state1', 'test1', '1', '', 'test1.601', 'active-root', '0', '602', '0', '0', '601');
 
 -- ----------------------------
 -- Table structure for `think_flow_histactinst`
@@ -119,8 +127,15 @@ CREATE TABLE `think_flow_histactinst` (
 -- ----------------------------
 -- Records of think_flow_histactinst
 -- ----------------------------
-INSERT INTO `think_flow_histactinst` VALUES ('104', '101', 'task', '101', 'task1', '1479391628', '0', '0', '', '102');
-INSERT INTO `think_flow_histactinst` VALUES ('205', '201', 'task', '201', 'task1', '1479391842', '0', '0', '', '202');
+INSERT INTO `think_flow_histactinst` VALUES ('102', '101', 'state', '101', 'state1', '1479695941', '0', '0', '', '0');
+INSERT INTO `think_flow_histactinst` VALUES ('205', '201', 'decision', '201', 'exclusive1', '1479697004', '1479697004', '0', 'to task1', '0');
+INSERT INTO `think_flow_histactinst` VALUES ('206', '201', 'task', '201', 'task1', '1479697004', '0', '0', '', '202');
+INSERT INTO `think_flow_histactinst` VALUES ('307', '303', 'state', '302', 'state1', '1479697653', '0', '0', '', '0');
+INSERT INTO `think_flow_histactinst` VALUES ('308', '303', 'task', '303', 'task1', '1479697653', '0', '0', '', '304');
+INSERT INTO `think_flow_histactinst` VALUES ('405', '401', 'task', '401', 'task1', '1479698009', '0', '0', '', '402');
+INSERT INTO `think_flow_histactinst` VALUES ('507', '501', 'state', '502', 'state1', '1479780260', '0', '0', '', '0');
+INSERT INTO `think_flow_histactinst` VALUES ('508', '501', 'task', '503', 'task1', '1479780260', '0', '0', '', '504');
+INSERT INTO `think_flow_histactinst` VALUES ('602', '601', 'state', '601', 'state1', '1479866569', '0', '0', '', '0');
 
 -- ----------------------------
 -- Table structure for `think_flow_histprocinst`
@@ -142,8 +157,12 @@ CREATE TABLE `think_flow_histprocinst` (
 -- ----------------------------
 -- Records of think_flow_histprocinst
 -- ----------------------------
-INSERT INTO `think_flow_histprocinst` VALUES ('101', 'test2.101', 'test2', '', '1479391628', '0', '0', 'active', '');
-INSERT INTO `think_flow_histprocinst` VALUES ('201', 'test2.201', 'test2', '', '1479391842', '0', '0', 'active', '');
+INSERT INTO `think_flow_histprocinst` VALUES ('101', 'test2.101', 'test2', '', '1479695941', '0', '0', 'active', '');
+INSERT INTO `think_flow_histprocinst` VALUES ('201', 'test2.201', 'test2', '', '1479697004', '0', '0', 'active', '');
+INSERT INTO `think_flow_histprocinst` VALUES ('301', 'test2.301', 'test2', '', '1479697653', '0', '0', 'active', '');
+INSERT INTO `think_flow_histprocinst` VALUES ('401', 'test2.401', 'test2', '', '1479698009', '0', '0', 'active', '');
+INSERT INTO `think_flow_histprocinst` VALUES ('501', 'fork.501', 'fork', '', '1479780260', '0', '0', 'active', '');
+INSERT INTO `think_flow_histprocinst` VALUES ('601', 'test1.601', 'test1', '', '1479866569', '0', '0', 'active', '');
 
 -- ----------------------------
 -- Table structure for `think_flow_histtask`
@@ -165,8 +184,10 @@ CREATE TABLE `think_flow_histtask` (
 -- ----------------------------
 -- Records of think_flow_histtask
 -- ----------------------------
-INSERT INTO `think_flow_histtask` VALUES ('102', 'test2.101', '', '', '0', '', '1479391628', '0', '0');
-INSERT INTO `think_flow_histtask` VALUES ('202', 'test2.201', '', '', '0', '', '1479391842', '0', '0');
+INSERT INTO `think_flow_histtask` VALUES ('202', 'test2.201', '', '', '0', '', '1479697004', '0', '0');
+INSERT INTO `think_flow_histtask` VALUES ('304', 'test2.301.to task1.303', '', '', '0', '', '1479697653', '0', '0');
+INSERT INTO `think_flow_histtask` VALUES ('402', 'test2.401', '', '', '0', '', '1479698009', '0', '0');
+INSERT INTO `think_flow_histtask` VALUES ('504', 'fork.501.to task1.503', '', '', '0', 'open', '1479780260', '0', '0');
 
 -- ----------------------------
 -- Table structure for `think_flow_modulerule`
@@ -185,8 +206,12 @@ CREATE TABLE `think_flow_modulerule` (
 -- ----------------------------
 -- Records of think_flow_modulerule
 -- ----------------------------
-INSERT INTO `think_flow_modulerule` VALUES ('5', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"369,13,48,48\" name=\"start1\">\r\n      <transition g=\"-52,-22\" name=\"to fork1\" to=\"fork1\"/>\r\n   </start>\r\n   <end g=\"443,543,48,48\" name=\"end1\"/>\r\n   <fork g=\"380,135,48,48\" name=\"fork1\">\r\n      <transition g=\"-56,-22\" name=\"to state1\" to=\"state1\"/>\r\n      <transition g=\"-52,-22\" name=\"to task1\" to=\"task1\"/>\r\n   </fork>\r\n   <state g=\"290,291,92,52\" name=\"state1\">\r\n      <transition g=\"-49,-22\" name=\"to join1\" to=\"join1\"/>\r\n   </state>\r\n   <task candidate-users=\"user1,user2\" g=\"517,299,92,52\" name=\"task1\">\r\n      <transition g=\"-49,-22\" name=\"to join1\" to=\"join1\"/>\r\n   </task>\r\n   <join g=\"461,438,48,48\" name=\"join1\">\r\n      <transition g=\"-50,-22\" name=\"to end1\" to=\"end1\"/>\r\n   </join>\r\n</process>', 'test1', '0', '0');
-INSERT INTO `think_flow_modulerule` VALUES ('6', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"369,13,48,48\" name=\"start1\">\r\n      <transition g=\"-52,-22\" name=\"to task1\" to=\"task1\"/>\r\n   </start>\r\n   <end g=\"443,543,48,48\" name=\"end1\"/>\r\n   <task candidate-users=\"user1,user2\" g=\"395,140,92,52\" name=\"task1\">\r\n      <transition g=\"-56,-22\" name=\"to state1\" to=\"state1\"/>\r\n      <transition name=\"to state2\" to=\"state2\" g=\"-56,-22\"/>\r\n   </task>\r\n   <state g=\"461,315,92,52\" name=\"state1\">\r\n      <transition g=\"-50,-22\" name=\"to end1\" to=\"end1\"/>\r\n   </state>\r\n   <state name=\"state2\" g=\"283,317,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n</process>', 'test2', '0', '0');
+INSERT INTO `think_flow_modulerule` VALUES ('1', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start name=\"start1\" g=\"158,62,48,48\">\r\n      <transition name=\"to 审批\" to=\"审批\" g=\"-45,-22\"/>\r\n   </start>\r\n   <end name=\"end1\" g=\"169,281,48,48\"/>\r\n   <state name=\"审批\" g=\"151,174,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n</process>', 'demo', '0', '0');
+INSERT INTO `think_flow_modulerule` VALUES ('2', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"qingjia2\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start name=\"start1\" g=\"130,19,48,48\">\r\n      <transition name=\"to exclusive1\" to=\"exclusive1\" g=\"-56,-22\"/>\r\n   </start>\r\n   <state name=\"填写请假单\" g=\"108,82,92,52\">\r\n      <transition name=\"to exclusive1\" to=\"exclusive1\" g=\"-79,-22\"/>\r\n   </state>\r\n   <state name=\"经理审批\" g=\"60,208,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n   <state name=\"老板审批\" g=\"199,206,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n   <end name=\"end1\" g=\"126,312,48,48\"/>\r\n   <decision name=\"exclusive1\" g=\"138,146,48,48\">\r\n   <handler class=\"Org\\Jbmp\\TestHander\\testHander\" />\r\n      <transition name=\"to 经理审批\" to=\"经理审批\" g=\"-69,-22\"/>\r\n      <transition name=\"to 老板审批\" to=\"老板审批\" g=\"-69,-22\"/>\r\n   </decision>\r\n</process>', 'decision', '0', '0');
+INSERT INTO `think_flow_modulerule` VALUES ('3', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"task01\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"196,-13,48,48\" name=\"start1\">\r\n      <transition g=\"-52,-22\" name=\"to fork1\" to=\"fork1\"/>\r\n   </start>\r\n   <end g=\"280,342,48,48\" name=\"end1\"/>\r\n   <fork g=\"228,100,48,48\" name=\"fork1\">\r\n      <transition g=\"-56,-22\" name=\"to state1\" to=\"state1\"/>\r\n      <transition g=\"-52,-22\" name=\"to task1\" to=\"task1\"/>\r\n   </fork>\r\n   <join g=\"268,265,48,48\" multiplicity=\"1\" name=\"join1\">\r\n      <transition g=\"-50,-22\" name=\"to end1\" to=\"end1\"/>\r\n   </join>\r\n   <state g=\"128,164,92,52\" name=\"state1\">\r\n      <transition g=\"-49,-22\" name=\"to join1\" to=\"join1\"/>\r\n   </state>\r\n   <task g=\"334,173,92,52\" name=\"task1\" candidate-users=\"user1,user2\">\r\n      <transition g=\"-49,-22\" name=\"to join1\" to=\"join1\"/>\r\n   </task>\r\n</process>', 'fork', '0', '0');
+INSERT INTO `think_flow_modulerule` VALUES ('4', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"task01\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"196,-13,48,48\" name=\"start1\">\r\n      <transition name=\"to state1\" to=\"state1\" g=\"-56,-22\"/>\r\n   </start>\r\n   <end g=\"280,342,48,48\" name=\"end1\"/>\r\n   <state name=\"state1\" g=\"177,143,92,52\">\r\n      <transition name=\"to state2\" to=\"state2\" g=\"-56,-22\"/>\r\n   </state>\r\n   <state name=\"state2\" g=\"219,241,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n</process>', 'test1', '0', '0');
+INSERT INTO `think_flow_modulerule` VALUES ('5', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"task01\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"291,2,48,48\" name=\"start1\">\r\n      <transition g=\"-52,-22\" name=\"to task1\" to=\"task1\"/>\r\n   </start>\r\n   <end g=\"254,299,48,48\" name=\"end1\"/>\r\n   <task candidate-groups=\"team1,team2\" g=\"237,82,92,52\" name=\"task1\">\r\n      <transition name=\"to fork1\" to=\"fork1\" g=\"-52,-22\"/>\r\n   </task>\r\n   <fork name=\"fork1\" g=\"264,161,48,48\">\r\n      <transition name=\"to state1\" to=\"state1\" g=\"-56,-22\"/>\r\n      <transition name=\"to task2\" to=\"task2\" g=\"-52,-22\"/>\r\n   </fork>\r\n   <state name=\"state1\" g=\"177,233,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n   <task name=\"task2\" g=\"335,253,92,52\" candidate-groups=\"team1,team2\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </task>\r\n</process>', 'test2', '0', '0');
+INSERT INTO `think_flow_modulerule` VALUES ('6', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"task01\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start name=\"start1\" g=\"296,34,48,48\">\r\n      <transition name=\"to state1\" to=\"state1\" g=\"-56,-22\"/>\r\n   </start>\r\n   <state name=\"state1\" g=\"287,115,92,52\">\r\n      <transition name=\"to state2\" to=\"state2\" g=\"-56,-22\"/>\r\n   </state>\r\n   <state name=\"state2\" g=\"290,201,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n   <end name=\"end1\" g=\"344,302,48,48\"/>\r\n</process>', 'test', '0', '0');
 
 -- ----------------------------
 -- Table structure for `think_flow_participation`
@@ -205,25 +230,30 @@ CREATE TABLE `think_flow_participation` (
 -- ----------------------------
 -- Records of think_flow_participation
 -- ----------------------------
-INSERT INTO `think_flow_participation` VALUES ('103', '0', 'user1.user2', 'candidate', '102');
-INSERT INTO `think_flow_participation` VALUES ('203', '0', 'user1', 'candidate', '202');
-INSERT INTO `think_flow_participation` VALUES ('204', '0', 'user2', 'candidate', '202');
+INSERT INTO `think_flow_participation` VALUES ('203', 'team1', '0', 'candidate', '202');
+INSERT INTO `think_flow_participation` VALUES ('204', 'team2', '0', 'candidate', '202');
+INSERT INTO `think_flow_participation` VALUES ('305', 'user1', '0', 'candidate', '304');
+INSERT INTO `think_flow_participation` VALUES ('306', 'user2', '0', 'candidate', '304');
+INSERT INTO `think_flow_participation` VALUES ('403', 'team1', '0', 'candidate', '402');
+INSERT INTO `think_flow_participation` VALUES ('404', 'team2', '0', 'candidate', '402');
+INSERT INTO `think_flow_participation` VALUES ('505', 'user1', '0', 'candidate', '504');
+INSERT INTO `think_flow_participation` VALUES ('506', 'user2', '0', 'candidate', '504');
 
 -- ----------------------------
 -- Table structure for `think_flow_property`
 -- ----------------------------
 DROP TABLE IF EXISTS `think_flow_property`;
 CREATE TABLE `think_flow_property` (
-  `keyname` varchar(255) NOT NULL,
+  `key` varchar(255) NOT NULL,
   `version` int(11) NOT NULL,
   `value` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`keyname`)
+  PRIMARY KEY (`key`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_property
 -- ----------------------------
-INSERT INTO `think_flow_property` VALUES ('', '3', '201');
+INSERT INTO `think_flow_property` VALUES ('next.dbid', '7', '601');
 
 -- ----------------------------
 -- Table structure for `think_flow_task`
@@ -247,8 +277,10 @@ CREATE TABLE `think_flow_task` (
 -- ----------------------------
 -- Records of think_flow_task
 -- ----------------------------
-INSERT INTO `think_flow_task` VALUES ('102', 'task1', 'open', '', '0', '1479391628', 'test2.101', 'task1', '1', '101', '101');
-INSERT INTO `think_flow_task` VALUES ('202', 'task1', 'open', '', '0', '1479391842', 'test2.201', 'task1', '1', '201', '201');
+INSERT INTO `think_flow_task` VALUES ('202', 'task1', 'open', '', '0', '1479697004', 'test2.201', 'task1', '1', '201', '201');
+INSERT INTO `think_flow_task` VALUES ('304', 'task1', 'open', '', '0', '1479697653', 'test2.301.to task1.303', 'task1', '1', '303', '303');
+INSERT INTO `think_flow_task` VALUES ('402', 'task1', 'open', '', '0', '1479698009', 'test2.401', 'task1', '1', '401', '401');
+INSERT INTO `think_flow_task` VALUES ('504', 'task1', 'open', '', '0', '1479780260', 'fork.501.to task1.503', 'task1', '1', '503', '503');
 
 -- ----------------------------
 -- Table structure for `think_flow_variable`
@@ -260,19 +292,28 @@ CREATE TABLE `think_flow_variable` (
   `key` varchar(255) NOT NULL,
   `execution` int(10) NOT NULL,
   `double_value` double NOT NULL,
-  `long_value` int(10) NOT NULL,
+  `int_value` int(20) NOT NULL,
   `string_value` varchar(255) NOT NULL,
   `text_value` longtext NOT NULL,
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
   PRIMARY KEY (`dbid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_variable
 -- ----------------------------
-INSERT INTO `think_flow_variable` VALUES ('105', 'string', 'username', '101', '0', '0', 'wudan0', '');
-INSERT INTO `think_flow_variable` VALUES ('106', 'string', 'username', '101', '0', '0', 'wudan1', '');
-INSERT INTO `think_flow_variable` VALUES ('206', 'string', 'username', '201', '0', '0', 'wudan0', '');
-INSERT INTO `think_flow_variable` VALUES ('207', 'string', 'username', '201', '0', '0', 'wudan1', '');
+INSERT INTO `think_flow_variable` VALUES ('103', 'string', 'username', '101', '0', '0', 'wudan0', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('104', 'string', 'username', '101', '0', '0', 'wudan1', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('207', 'string', 'username', '201', '0', '0', 'wudan0', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('208', 'string', 'username', '201', '0', '0', 'wudan1', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('309', 'string', 'username', '303', '0', '0', 'wudan0', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('310', 'string', 'username', '303', '0', '0', 'wudan1', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('406', 'string', 'username', '401', '0', '0', 'wudan0', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('407', 'string', 'username', '401', '0', '0', 'wudan1', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('509', 'string', 'username', '501', '0', '0', 'wudan0', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('510', 'string', 'username', '501', '0', '0', 'wudan1', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('603', 'string', 'username', '601', '0', '0', 'wudan0', '', '0');
+INSERT INTO `think_flow_variable` VALUES ('604', 'string', 'username', '601', '0', '0', 'wudan1', '', '0');
 
 -- ----------------------------
 -- Table structure for `think_log`

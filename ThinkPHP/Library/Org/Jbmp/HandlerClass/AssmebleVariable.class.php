@@ -94,7 +94,7 @@ class AssmebleVariable
             $modelList['key'] = $v['key'];
             $modelList['execution'] =$tmpDbid;
             $modelList[$v['class'].'_value'] = $v['value'];
-            $variable['insert'][$this->_num] = $modelList;
+            $variable[$this->_num] = $modelList;
             $this->_num = $this->_num +1;
         }
         return $variable;

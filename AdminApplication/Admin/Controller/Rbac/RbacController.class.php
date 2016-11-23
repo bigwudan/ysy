@@ -42,7 +42,9 @@ class RbacController extends Controller
 
         );
         $arr = array($tmp1,$tmp2,$tmp3);
-        $obj->completeCommon(601 , 'to state2' , $arr);
+
+        $obj->startProcessInstanceById('test' , $arr);
+//        $obj->completeCommon(601 , 'to state2' , $arr);
     }
 
     public function actionOperationUser(){
