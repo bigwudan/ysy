@@ -77,14 +77,24 @@ class AssmebleVariable
      */
     private function _processInsert(){
         $tmpDbid = current($this->_execution['insert'])['dbid'] ? current($this->_execution['insert'])['dbid'] : current($this->_execution['updata'])['where']['dbid'] ;
-        for($num = 0 ; $num < 2 ; $num++){
-            $variable['insert'][$this->_num] = array(
-                'dbid' => $this->_num,
-                'class' => 'string',
-                'key' => 'username',
-                'execution' => $tmpDbid,
-                'string_value' => 'wudan'.$num
+        foreach($this->_varsList as $k => $v){
+            $modelList = array(
+                'dbid' => 0,
+                'class' => '',
+                'key' => '',
+                'execution' => 0,
+                'double_value' => 0,
+                'long_value' => 0,
+                'string_value' => '',
+                'text_value' => '',
+                'addtime' => time()
             );
+            $modelList['dbid'] = $this->_num;
+            $modelList['class'] =$v['class'];
+            $modelList['key'] = $v['key'];
+            $modelList['execution'] =$tmpDbid;
+            $modelList[$v['class'].'_value'] = $v['value'];
+            $variable['insert'][$this->_num] = $modelList;
             $this->_num = $this->_num +1;
         }
         return $variable;

@@ -22,7 +22,17 @@ class JoinTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
      */
     private $_joinExecution = array();
 
+    /**
+     * 类名称
+     */
+    private $_className = 'join';
 
+    /**
+     * 获得类名
+     */
+    public function getClassName(){
+        return $this->_className;
+    }
 
     public function process()
     {

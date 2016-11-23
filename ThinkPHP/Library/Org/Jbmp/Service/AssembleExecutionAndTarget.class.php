@@ -92,38 +92,6 @@ class AssembleExecutionAndTarget {
         return $taskList;
     }
 
-    /**
-     * 静态公共方法组合数组
-     * @param array $varVarsList 组合insert临时参数
-     * @param int $varTaskId 组合insert临时参数
-     * @return array
-     */
-    private function _constructVarsList($varVarsList){
-        $modelList = array(
-            'execution_id'=>0,
-            'class'=>'',
-            'task_id' => 0,
-            'key' => '',
-            'string_value' => '',
-            'int_value' => 0,
-            'double_value' => 0
-        );
-        $insertVarsList = array();
-        foreach($varVarsList as $k => $v){
-            $tmp = $modelList;
-            $tmp['execution_id'] = $v['execution_id'];
-            $tmp['task_id'] = 0;
-            $tmp['key'] = $v['key'];
-            $tmp[$v['type']."_value"] = $v['value'];
-            $tmp['class'] = str_replace('_value','',$v['type']);
-            $insertVarsList[] = $tmp;
-        }
-        $this->_insertVars = $insertVarsList ;
-
-        return $insertVarsList;
-    }
-
-
     private function _processHisTask(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleHisTask();
         $this->_hisTask = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task , $this->_tmpTask)->process();
@@ -137,7 +105,7 @@ class AssembleExecutionAndTarget {
 
     private function _processVarsList(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleVariable();
-        $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $varVars = array() , $this->_execution);
+        $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_varsList , $this->_execution);
         $this->_variable = $obj->process();
         $this->_num = $obj->getNum();
     }

@@ -20,7 +20,29 @@ class RbacController extends Controller
     public function index(){
         $obj = new \Org\Jbmp\Service\ExecutionService();
         //$obj->startProcessInstanceById('test1' , array('11'));
-        $obj->completeTask("501", "to end1" , array('11'));
+        //$obj->completeTask("501", "to end1" , array('11'));
+
+        $arr = array();
+        $tmp1 = array(
+            'class' => 'string',
+            'key' => 'test1',
+            'value' => 'thisstring'
+
+        );
+        $tmp2 = array(
+            'class' => 'text_value',
+            'key' => 'testtext',
+            'value' => 'xxxxx'
+
+        );
+        $tmp3 = array(
+            'class' => 'int',
+            'key' => 'testint',
+            'value' => 12
+
+        );
+        $arr = array($tmp1,$tmp2,$tmp3);
+        $obj->completeCommon(601 , 'to state2' , $arr);
     }
 
     public function actionOperationUser(){

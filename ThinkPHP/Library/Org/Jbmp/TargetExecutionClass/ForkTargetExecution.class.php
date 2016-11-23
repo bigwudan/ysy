@@ -16,6 +16,17 @@ class ForkTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
      */
     private $_forkTargetNodeList = array();
 
+    /**
+     * 类名称
+     */
+    private $_className = 'fork';
+
+    /**
+     * 获得类名
+     */
+    public function getClassName(){
+        return $this->_className;
+    }
 
     /**
      * 设置

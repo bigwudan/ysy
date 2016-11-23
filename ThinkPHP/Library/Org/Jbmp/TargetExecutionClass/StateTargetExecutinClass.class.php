@@ -11,5 +11,15 @@ namespace Org\Jbmp\TargetExecutionClass;
 
 class StateTargetExecutinClass extends \Org\Jbmp\TargetExecutionClass\CommonTargetExecutionClass
 {
+    /**
+     * 类名称
+     */
+    private $_className = 'state';
 
+    /**
+     * 获得类名
+     */
+    public function getClassName(){
+        return $this->_className;
+    }
 }

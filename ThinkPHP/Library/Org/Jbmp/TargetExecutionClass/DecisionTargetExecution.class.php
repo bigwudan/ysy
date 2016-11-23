@@ -12,6 +12,17 @@ namespace Org\Jbmp\TargetExecutionClass;
 class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExecutionClass
 {
     /**
+     * 类名称
+     */
+    private $_className = 'decision';
+
+    /**
+     * 获得类名
+     */
+    public function getClassName(){
+        return $this->_className;
+    }
+    /**
      * 执行命令
      */
     public function process(){
