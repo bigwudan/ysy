@@ -82,8 +82,10 @@ class ExecutionService
         $this->_executionClass = new \Org\Jbmp\ExecutionClass\TaskExecutionClass();
 
         $this->_getDataFromDataBaseByExecution();
-        $this->_onTranslate();
-
+        $TranObj = $this->_onTranslate();
+        $obj = new \Org\Jbmp\ProcessDataBase\WriteToDataBase();
+        $obj->initi($TranObj);
+        $obj->writeToDataBase();
 
 
 
