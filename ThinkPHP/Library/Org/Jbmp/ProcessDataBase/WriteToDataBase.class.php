@@ -123,7 +123,7 @@ class WriteToDataBase
             }
             if($variable['del']){
                 $tmpDel = implode(',' , array_values($variable['del']));
-                $tmpDel = " dbid in ($tmpDel)";
+                $tmpDel = " execution in ($tmpDel)";
                 $flag = M('flow_variable')->where($tmpDel)->delete();
                 if(!$flag) new \Exception('variableerror-del');
             }
@@ -144,12 +144,10 @@ class WriteToDataBase
             if(!$flag){
                 new \Exception('error');
             }
-
             $model->commit();
         }catch (\Exception $e){
             $model->rollback();
             var_dump($e->getMessage());
-
         }
         die('over');
     }

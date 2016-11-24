@@ -43,9 +43,9 @@ class RbacController extends Controller
         );
         $arr = array($tmp1,$tmp2,$tmp3);
 
-        //$obj->startProcessInstanceById('test' , $arr);
-        //$obj->completeCommon(101 , 'to state1');
-        $obj->completeTask(201 , 'to join1' , $arr);
+        $obj->startProcessInstanceById('test' , $arr);
+        //$obj->completeCommon(201 , 'to join1');
+        //$obj->completeTask(202 , 'to join1');
     }
 
     public function actionOperationUser(){

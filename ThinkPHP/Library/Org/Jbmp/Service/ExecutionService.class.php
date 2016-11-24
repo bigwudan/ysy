@@ -64,7 +64,10 @@ class ExecutionService
         $this->_variable = $varVariable;
         $this->_executionClass = new \Org\Jbmp\ExecutionClass\StateExecutionClass();
         $this->_getDataFromDataBaseByExecution();
-        $this->_onTranslate();
+        $TranObj = $this->_onTranslate();
+        $obj = new \Org\Jbmp\ProcessDataBase\WriteToDataBase();
+        $obj->initi($TranObj);
+        $obj->writeToDataBase();
         die('xxx');
 
     }

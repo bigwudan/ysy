@@ -26,7 +26,7 @@ class SelectDataFromDb
             return $data;
         }else{
             $data['key'] = 'next.dbid';
-            $data['version'] = 1;
+            $data['version'] = 0;
             $data['value'] = 1;
             M('flow_property')->add($data);
             return $data;

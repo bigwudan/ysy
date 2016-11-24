@@ -51,7 +51,7 @@ class AssmebleVariable
      *
      */
     public function process(){
-        if($this->_targetNode->getTargetNodeList()['nodeName'] == 'end'){
+        if($this->_execution['del']){
             $variable['del'] = $this->_processDel();
         }else{
             $variable['insert'] = $this->_processInsert();

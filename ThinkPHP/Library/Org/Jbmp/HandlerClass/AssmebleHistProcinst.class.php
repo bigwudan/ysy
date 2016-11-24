@@ -73,14 +73,18 @@ class AssmebleHistProcinst
      */
     private function _processUpdata(){
         $data = $this->_executionObj->getExecution();
-        $histProcinst[$data['instance']] = array(
+        $upData = array(
             'state' => 'ended',
             'end' => time(),
             'duration' => time() - $this->_executionObj->getHistProcinst()['start'],
             'endactivity' => $this->_targetNode->getTargetNodeList()['name']
         );
+        $where['dbid'] = $data['instance'];
+        $histProcinst[$data['instance']] = array(
+            'where'=>$where,
+            'data'=>$upData
+        );
         return $histProcinst;
-
     }
 
     /**
