@@ -60,7 +60,7 @@ class AssembleExecutionAndTarget {
         //var_dump($this->_participation);die('555');
         //var_dump($this->_histActinst);die('666');
         //var_dump($this->_variable);die('777');
-
+        //die('xxxx');
         return $TranslateInfoObj;
     }
 

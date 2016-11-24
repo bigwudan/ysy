@@ -157,14 +157,10 @@ class AssmebleHistActinst
                             break;
                         }
                     }
-
-
                     foreach($this->_execution['insert'] as $k1 => $v1){
                         $tmpHprocid = $v1['instance'];
                         break;
                     }
-
-
                     $histActinst[$this->_num] = array(
                         'dbid' => $this->_num,
                         'hprocid' => $tmpHprocid,
@@ -180,9 +176,7 @@ class AssmebleHistActinst
                     );
                     $this->_execution['insert'][$k]['hisactinst'] = $this->_num;
                     $this->_num = $this->_num + 1;
-
                 }
-
         }elseif($this->_targetNode->getTargetNodeList()['nodeName'] == 'join'){
             return array();
         }else{
@@ -200,6 +194,23 @@ class AssmebleHistActinst
                 }
             }
             if($this->_targetNode->getClassName() == 'decision'){
+
+
+                $histActinst[$this->_num] = array(
+                    'dbid' => $this->_num,
+                    'hprocid' => $tmpProcid,
+                    'type' => 'decision',
+                    'execution' => $ruleName.".".$tmpExecution,
+                    'activity_name' => $this->_targetNode->getDecision()['name'],
+                    'start' => time(),
+                    'end'  => time(),
+                    'duration' => 0,
+                    'transition' => "to {$this->_targetNode->getTargetNodeList()['name']}",
+                    'htask' => 0
+
+                );
+
+                $this->_num = $this->_num + 1;
                 $histActinst[$this->_num] = array(
                     'dbid' => $this->_num,
                     'hprocid' => $tmpProcid,
@@ -207,13 +218,12 @@ class AssmebleHistActinst
                     'execution' => $ruleName.".".$tmpExecution,
                     'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
                     'start' => time(),
-                    'end'  => time(),
+                    'end'  => 0,
                     'duration' => 0,
                     'transition' => "",
                     'htask' => 0
 
                 );
-                $this->_num = $this->_num + 1;
             }else{
                 $histActinst[$this->_num] = array(
                     'dbid' => $this->_num,
