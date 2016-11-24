@@ -15,7 +15,6 @@ class AssembleExecutionAndTarget {
     private $_targetNode = null;
     private $_num = null;
     private $_varsList = array();
-    private $_insertVars = null;
     private $_execution =  null;
     private $_histProcinst = null;
     private $_histActinst = null;
@@ -56,12 +55,12 @@ class AssembleExecutionAndTarget {
 
         //var_dump($this->_execution);die('222');
         //var_dump($this->_histProcinst);die('3333');
-        //var_dump($this->_task);die('4444');
+        //var_dump($this->_task);
         //var_dump($this->_hisTask);die('4444');
         //var_dump($this->_participation);die('555');
         //var_dump($this->_histActinst);die('666');
-        var_dump($this->_variable);die('777');
-        die(__CLASS__);
+        //var_dump($this->_variable);die('777');
+        die('xxxx');
         return $TranslateInfoObj;
     }
 
@@ -81,7 +80,7 @@ class AssembleExecutionAndTarget {
             $this->_processParticipation();
         }
         $this->_processHistActinst();
-        if($this->_varsList){
+        if($this->_varsList || $this->_targetNode->getTargetNodeList()['nodeName'] == 'end'){
             $this->_processVarsList();
         }
         return $this->getProcessTranslateInfo();

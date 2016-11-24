@@ -32,8 +32,6 @@ class AssmebleHisTask
      */
     private $_num = null;
 
-
-
     /**
      * task
      */
@@ -80,16 +78,16 @@ class AssmebleHisTask
      * 更新
      */
     private function _processUpdata(){
-        $hisTask = $this->_executionObj->getHisTask();
+        $hisTaskFromDb = $this->_executionObj->getHisTask();
         $this->_targetNode->getTargetNodeList();
-        $where['dbid'] = $hisTask['dbid'];
+        $where['dbid'] = $hisTaskFromDb['dbid'];
         $upData = array(
             'outcome' => $this->_targetNode->getTargetNodeList()['name'],
             'state' => 'complete',
             'end' => time(),
-            'duration' =>time() - $hisTask['create']
+            'duration' =>time() - $hisTaskFromDb['create']
         );
-        $hisTask['dbid']  = array(
+        $hisTask[$hisTaskFromDb['dbid']]  = array(
             'where'=>$where,
             'data'=>$upData
         );
@@ -123,18 +121,10 @@ class AssmebleHisTask
             }
         }elseif($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
             $tmpTask = array();
-            if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-                foreach($this->_execution['insert'] as $k => $v){
-                    $tmpTask['execution_id'] = $v['id'];
-                    $tmpTask['execution'] = $v['dbid'];
-                    break;
-                }
-            }else{
-                foreach($this->_task['insert'] as $k => $v){
-                    $tmpTask['execution_id'] = $v['execution_id'];
-                    $tmpTask['execution'] = $v['dbid'];
-                    break;
-                }
+            foreach($this->_task['insert'] as $k => $v){
+                $tmpTask['execution_id'] = $v['execution_id'];
+                $tmpTask['execution'] = $v['dbid'];
+                break;
             }
             $hisTask[$tmpTask['execution']] = array(
                 'dbid' => $tmpTask['execution'],

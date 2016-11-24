@@ -11,12 +11,6 @@ namespace Org\Jbmp\HandlerClass;
 
 class AssmebleVariable
 {
-
-    /**
-     *
-     */
-    private $_variable = null;
-
     /**
      *
      */
@@ -69,7 +63,7 @@ class AssmebleVariable
      * 删除
      */
     private function _processDel(){
-        $variable = $this->_execution['del'];
+        $variable= $this->_execution['del'];
         return $variable;
     }
     /**

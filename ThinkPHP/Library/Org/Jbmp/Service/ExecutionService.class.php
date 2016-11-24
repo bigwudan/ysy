@@ -75,6 +75,20 @@ class ExecutionService
      * @param $varTranslate string
      */
     public function completeTask($varExecution , $varTranslate = null , $varVariable = null){
+
+        $this->_execution = $varExecution;
+        $this->_translate = $varTranslate;
+        $this->_variable = $varVariable;
+        $this->_executionClass = new \Org\Jbmp\ExecutionClass\TaskExecutionClass();
+
+        $this->_getDataFromDataBaseByExecution();
+        $this->_onTranslate();
+
+
+
+
+        die('wwww');
+
         $TaskExecutionObj = new \Org\Jbmp\ExecutionClass\TaskExecutionClass();
         $obj = new \Org\Jbmp\ProcessDataBase\SelectDataFromDb();
         $data = $obj->getDataFromDataBaseByExecution($varExecution);

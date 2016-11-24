@@ -25,11 +25,6 @@ class AssmebleExecution
     private $_targetNode = null;
 
     /**
-     * 结果
-     */
-    private $_execution = null;
-
-    /**
      *
      */
     private $_num = null;
