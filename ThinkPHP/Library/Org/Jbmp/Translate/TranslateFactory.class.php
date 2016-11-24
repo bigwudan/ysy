@@ -35,12 +35,17 @@ class TranslateFactory {
         $currNode =  $this->_executionObj->getCurrNode();
         $target =  null;
         if($this->_transition){
+            $flag = 0;
             foreach($currNode['transitionList'] as $k => $v){
                 if($v['name'] == $this->_transition){
                     $target = $v['to'];
+                    $flag = 1;
                     break;
                 }
             }
+
+            if(!$flag) die('no to');
+
         }else{
             $target = $currNode['transitionList'][0]['to'];
         }

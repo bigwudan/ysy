@@ -60,8 +60,8 @@ class AssembleExecutionAndTarget {
         //var_dump($this->_hisTask);die('4444');
         //var_dump($this->_participation);die('555');
         //var_dump($this->_histActinst);die('666');
-        //var_dump($this->_variable);die('777');
-        die(__FILE__);
+        var_dump($this->_variable);die('777');
+        die(__CLASS__);
         return $TranslateInfoObj;
     }
 
@@ -117,6 +117,7 @@ class AssembleExecutionAndTarget {
         $obj = new \Org\Jbmp\HandlerClass\AssmebleTask();
         $this->_task = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_varsList , $this->_tmpTask)
             ->process();
+
         $this->_num = $obj->getNum();
     }
 

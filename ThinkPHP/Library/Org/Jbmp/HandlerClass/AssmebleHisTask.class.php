@@ -63,8 +63,10 @@ class AssmebleHisTask
         if($currNode['nodeName'] == 'start'){
             $histTask['insert'] = $this->_processInsert();
         }else{
-            if($tmp = $this->_processUpdata()){
-                $histTask['updata'] = $tmp;
+            if($this->_executionObj->getCurrNode()['nodeName'] == 'task'){
+                if($tmp = $this->_processUpdata()){
+                    $histTask['updata'] = $tmp;
+                }
             }
             if($tmp = $this->_processInsert()){
                 $histTask['insert'] = $tmp;
@@ -120,11 +122,23 @@ class AssmebleHisTask
                 );
             }
         }elseif($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
-            $execution = $this->_executionObj->getExecution();
-            $tmpExecution = current($this->_execution['insert'])['id'] ? current($this->_execution['insert'])['id'] : $execution['id'];
-            $hisTask[current($this->_task['insert'])['dbid']] = array(
-                'dbid' => current($this->_task['insert'])['dbid'],
-                'execution' => $tmpExecution,
+            $tmpTask = array();
+            if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
+                foreach($this->_execution['insert'] as $k => $v){
+                    $tmpTask['execution_id'] = $v['id'];
+                    $tmpTask['execution'] = $v['dbid'];
+                    break;
+                }
+            }else{
+                foreach($this->_task['insert'] as $k => $v){
+                    $tmpTask['execution_id'] = $v['execution_id'];
+                    $tmpTask['execution'] = $v['dbid'];
+                    break;
+                }
+            }
+            $hisTask[$tmpTask['execution']] = array(
+                'dbid' => $tmpTask['execution'],
+                'execution' => $tmpTask['execution_id'],
                 'outcome' => '',
                 'assignee' => '',
                 'priority' => 0,
@@ -136,7 +150,6 @@ class AssmebleHisTask
         }else{
             $hisTask = array();
         }
-
         return $hisTask;
     }
 

@@ -64,10 +64,10 @@ class AssmebleTask
             $task['insert'] = $this->_processInsert();
         }else{
             if($tmp = $this->_processDel()){
-                $taskDel['del'] = $tmp;
+                $task['del'] = $tmp;
             }
             if($tmp = $this->_processInsert()){
-                $taskDel['insert'] = $tmp;
+                $task['insert'] = $tmp;
             }
         }
         return $task;
@@ -77,7 +77,7 @@ class AssmebleTask
      * 删除
      */
     private function _processDel(){
-        if(($this->_targetNode->getClassName()) == 'join' && ($this->_targetNode->getHasFinishJoin())){
+        if(($this->_targetNode->getClassName() == 'join') && ($this->_targetNode->getHasFinishJoin())){
             $data = $this->_targetNode->getJoinExecution();
             if($data['inActive']){
                 foreach($data['inActive'] as $k => $v){
@@ -89,7 +89,7 @@ class AssmebleTask
                     $v['texecution'] && $task[$v['texecution']] = $v['texecution'];
                 }
             }
-        }else{
+        }else if($this->_executionObj->getCurrNode()['nodeName'] == 'task'){
             $tmpTask = $this->_executionObj->getTask();
             $task[$tmpTask['dbid']] = $tmpTask['dbid'];
         }
@@ -133,34 +133,34 @@ class AssmebleTask
                 $this->_num = $this->_num + 1;
             }
         }else if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
-                $execution = $this->_executionObj->getExecution();//??
-                $tmpTask = array();
-                if($this->_executionObj->getCurrNode()['nodeName']){
-                    foreach($this->_execution['insert'] as $k => $v){
-                        $tmpTask['execution_id'] = $v['id'];
-                        $tmpTask['execution'] = $v['dbid'];
-                        $tmpTask['procinst'] = $v['dbid'];
-                        break;
-                    }
-                }else{
-                    $tmpTask['execution_id'] = $execution['id'];
-                    $tmpTask['execution'] = $execution['dbid'];
-                    $tmpTask['procinst'] = $execution['instance'];
+            $execution = $this->_executionObj->getExecution();//??
+            $tmpTask = array();
+            if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
+                foreach($this->_execution['insert'] as $k => $v){
+                    $tmpTask['execution_id'] = $v['id'];
+                    $tmpTask['execution'] = $v['dbid'];
+                    $tmpTask['procinst'] = $v['dbid'];
+                    break;
                 }
-                $task[$this->_num] = array(
-                    'dbid' => $this->_num,
-                    'name' => $this->_targetNode->getTargetNodeList()['name'],
-                    'state' => 'open',
-                    'assignee' => '',
-                    'priority' => 0,
-                    'create' => time(),
-                    'execution_id' => $tmpTask['execution_id'],
-                    'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
-                    'hasvars' => $hasVars,
-                    'execution' => $tmpTask['execution'],
-                    'procinst' => $tmpTask['procinst']
-                );
-                $this->_num = $this->_num + 1;
+            }else{
+                $tmpTask['execution_id'] = $execution['id'];
+                $tmpTask['execution'] = $execution['dbid'];
+                $tmpTask['procinst'] = $execution['instance'];
+            }
+            $task[$this->_num] = array(
+                'dbid' => $this->_num,
+                'name' => $this->_targetNode->getTargetNodeList()['name'],
+                'state' => 'open',
+                'assignee' => '',
+                'priority' => 0,
+                'create' => time(),
+                'execution_id' => $tmpTask['execution_id'],
+                'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
+                'hasvars' => $hasVars,
+                'execution' => $tmpTask['execution'],
+                'procinst' => $tmpTask['procinst']
+            );
+            $this->_num = $this->_num + 1;
         }else{
             $task = array();
         }

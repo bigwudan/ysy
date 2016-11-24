@@ -57,9 +57,11 @@ class AssmebleParticipation
         if($currNode['nodeName'] == 'start'){
             $participation['insert'] = $this->_processInsert();
         }else{
+
             if($tmp = $this->_processDel()){
                 $participation['del'] = $tmp;
             }
+
             if($tmp = $this->_processInsert()){
                 $participation['insert'] = $tmp;
             }
@@ -71,10 +73,15 @@ class AssmebleParticipation
      * 删除
      */
     public function _processDel(){
-        $tmpParticipation = $this->_executionObj->getParticipation();
-        foreach($tmpParticipation as $k => $v){
-            $participation[$v['dbid']] = $v['dbid'];
+        if(method_exists($this->_executionObj , 'getParticipation')){
+            $tmpParticipation = $this->_executionObj->getParticipation();
+            foreach($tmpParticipation as $k => $v){
+                $participation[$v['dbid']] = $v['dbid'];
+            }
+        }else{
+            $participation = array();
         }
+
         return $participation;
     }
 

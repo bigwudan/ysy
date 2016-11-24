@@ -163,7 +163,7 @@ class AssmebleExecution
     /**
      * 处理开始
      */
-    private function _processInsert($varExecution){
+    private function _processInsert($varExecution = null){
         $hasVars  =  $this->_varsList ? 1 :  0;
         $execution = array();
         if($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
@@ -195,9 +195,9 @@ class AssmebleExecution
             }else{
                 foreach($varExecution['updata'] as $k => $v){
                     $tmpExecution = array();
-                    $tmpExecution['mainid'] = ['where']['dbid'];
-                    $tmpExecution['parent'] = ['where']['dbid'];
-                    $tmpExecution['instance'] = ['where']['dbid'];
+                    $tmpExecution['mainid'] = $v['where']['dbid'];
+                    $tmpExecution['parent'] = $v['where']['dbid'];
+                    $tmpExecution['instance'] = $v['where']['dbid'];
                     break;
                 }
             }

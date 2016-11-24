@@ -45,16 +45,9 @@ class ExecutionService
         $XmlObj = new \Org\Jbmp\ProcessFunction\XmlEngine();
         $obj = $XmlObj->getDbToXmlObj($rule['rule']);
         $StartObj->setXmlObj($obj);
-
         $this->_executionClass = $StartObj;
         $this->_variable = $varVars;
         $TranObj = $this->_onTranslate();
-
-//        $FranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
-//        $FranslateObj->initi($StartObj);
-//        $obj =  $FranslateObj->translate();
-//        $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
-//        $AssembleObj->initi($StartObj , $obj , $varVars);
         $obj = new \Org\Jbmp\ProcessDataBase\WriteToDataBase();
         $obj->initi($TranObj);
         $obj->writeToDataBase();
@@ -70,7 +63,6 @@ class ExecutionService
         $this->_translate = $varTranslate;
         $this->_variable = $varVariable;
         $this->_executionClass = new \Org\Jbmp\ExecutionClass\StateExecutionClass();
-
         $this->_getDataFromDataBaseByExecution();
         $this->_onTranslate();
         die('xxx');

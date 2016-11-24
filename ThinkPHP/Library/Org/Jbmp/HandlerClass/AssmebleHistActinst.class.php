@@ -121,13 +121,20 @@ class AssmebleHistActinst
      * 处理开始
      */
     private function _processInsert(){
+        $ruleName = $this->_executionObj->getRule()['rulename'];
         if(($this->_targetNode->getClassName() == 'join') && ($this->_targetNode->getHasFinishJoin())){
+            $tmpHistActinst = array();
+            foreach($this->_execution['updata'] as $k => $v){
+                $tmpHistActinst['activity_name'] = $v['data']['activityname'];
+                $tmpHistActinst['execution'] = $v['where']['dbid'];
+                break;
+            }
             $histActinst[$this->_num] = array(
                 'dbid' => $this->_num,
                 'hprocid' => $this->_executionObj->getExecution()['instance'],
                 'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
-                'execution' => current($this->_execution['updata'])['where']['dbid'],
-                'activity_name' => current($this->_execution['updata'])['data']['activityname'],
+                'execution' => $ruleName.".".$tmpHistActinst['execution'],
+                'activity_name' => $tmpHistActinst['activity_name'],
                 'start' => time(),
                 'end'  => 0,
                 'duration' => 0,
@@ -150,11 +157,19 @@ class AssmebleHistActinst
                             break;
                         }
                     }
+
+
+                    foreach($this->_execution['insert'] as $k1 => $v1){
+                        $tmpHprocid = $v1['instance'];
+                        break;
+                    }
+
+
                     $histActinst[$this->_num] = array(
                         'dbid' => $this->_num,
-                        'hprocid' => current($this->_execution['insert'])['instance'],
+                        'hprocid' => $tmpHprocid,
                         'type' => $tmpTarget['nodeName'],
-                        'execution' => $v['dbid'],
+                        'execution' => $ruleName.".".$v['dbid'],
                         'activity_name' => $tmpTarget['name'],
                         'start' => time(),
                         'end' => 0,
@@ -172,51 +187,47 @@ class AssmebleHistActinst
             return array();
         }else{
             if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-
                 foreach($this->_execution['insert'] as $k => $v){
                     $tmpExecution = $v['dbid'];
                     break;
                 }
                 $tmpProcid = $tmpExecution;
             }else{
-
                 $tmpProcid = $this->_executionObj->getHistprocinst()['dbid'];
                 foreach($this->_execution['updata'] as $k => $v){
                     $tmpExecution = $v['where']['dbid'];
                     break;
                 }
             }
-            if($decision = $this->_targetNode->getDecision()){
+            if($this->_targetNode->getClassName() == 'decision'){
                 $histActinst[$this->_num] = array(
                     'dbid' => $this->_num,
                     'hprocid' => $tmpProcid,
-                    'type' => $decision['nodeName'],
-                    'execution' => $tmpExecution,
-                    'activity_name' => $decision['name'],
+                    'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
+                    'execution' => $ruleName.".".$tmpExecution,
+                    'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
                     'start' => time(),
                     'end'  => time(),
                     'duration' => 0,
-                    'transition' => "to {$this->_targetNode->getTargetNodeList()['name']}",
+                    'transition' => "",
                     'htask' => 0
 
                 );
                 $this->_num = $this->_num + 1;
+            }else{
+                $histActinst[$this->_num] = array(
+                    'dbid' => $this->_num,
+                    'hprocid' => $tmpProcid,
+                    'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
+                    'execution' => $ruleName.".".$tmpExecution,
+                    'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
+                    'start' => time(),
+                    'end'  => 0,
+                    'duration' => 0,
+                    'transition' => "",
+                    'htask' => 0
+                );
             }
-
-            $histActinst[$this->_num] = array(
-                'dbid' => $this->_num,
-                'hprocid' => $tmpProcid,
-                'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
-                'execution' => $tmpExecution,
-                'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
-                'start' => time(),
-                'end'  => 0,
-                'duration' => 0,
-                'transition' => "",
-                'htask' => 0
-
-            );
-
             if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
                 foreach($this->_execution['insert'] as $k => $v){
                     $this->_execution['insert'][$k]['hisactinst'] = $this->_num;
@@ -234,191 +245,6 @@ class AssmebleHistActinst
                 foreach($this->_task['insert'] as $k1 => $v1){
                     if($v1['activity_name'] == $v['activity_name']){
                         $histActinst[$k]['htask'] = $v1['dbid'];
-                        break;
-                    }
-                }
-            }
-        }
-        return $histActinst;
-    }
-
-
-
-    /**
-     * 处理开始
-     */
-    private function _processInsertbak(){
-        if(($this->_targetNode->getClassName() == 'join') && ($this->_targetNode->getHasFinishJoin())){
-            $histActinst[$this->_num] = array(
-                'dbid' => $this->_num,
-                'hprocid' => $this->_executionObj->getExecution()['instance'],
-                'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
-                'execution' => current($this->_execution['updata'])['where']['dbid'],
-                'activity_name' => current($this->_execution['updata'])['data']['activityname'],
-                'start' => time(),
-                'end'  => 0,
-                'duration' => 0,
-                'transition' => "",
-                'htask' => 0
-            );
-            $this->_num = $this->_num + 1;
-        }else if($this->_execution['updata'] && current($this->_execution['updata'])){
-            if($this->_targetNode->getClassName() == 'fork'){
-                $histActinst['insert'][$this->_num] = array(
-                    'dbid' => $this->_num,
-                    'hprocid' => $this->_executionObj->getExecution()['instance'],
-                    'type' => 'fork',
-                    'execution' => current($this->_execution['updata'])['where']['dbid'],
-                    'activity_name' => current($this->_execution['updata'])['data']['activityname'],
-                    'start' => time(),
-                    'end'  => 0,
-                    'duration' => 0,
-                    'transition' => "",
-                    'htask' => 0
-                );
-                foreach($this->_execution['updata'] as $k => $v){
-                    $this->_execution['updata'][$k]['data']['hisactinst'] = $this->_num;
-                    break;
-                }
-                $this->_num = $this->_num + 1;
-                $tmpTargetNode = $this->_targetNode->getForkTargetNodeList();
-                foreach($this->_execution['insert'] as $k => $v){
-                    $tmpTarget = array();
-                    foreach($tmpTargetNode as $k1 => $v1){
-                        if($v1['name'] == $v['activityname']){
-                            $tmpTarget = $v1;
-                            break;
-                        }
-                    }
-                    $histActinst['insert'][$this->_num] = array(
-                        'dbid' => $this->_num,
-                        'hprocid' => $this->_executionObj->getExecution()['instance'],
-                        'type' => $tmpTarget['nodeName'],
-                        'execution' => $v['dbid'],
-                        'activity_name' => $tmpTarget['name'],
-                        'start' => time(),
-                        'end'  => 0,
-                        'duration' => 0,
-                        'transition' => "",
-                        'htask' => 0
-
-                    );
-                    $this->_execution['insert'][$k]['hisactinst'] = $this->_num;
-                    $this->_num = $this->_num + 1;
-                }
-
-            }else{
-                if($this->_targetNode->getTargetNodeList()['nodeName'] == 'join'){
-                    $histActinst['insert'] = array();
-                    return $histActinst;
-                }else{
-                    if($decision = $this->_targetNode->getDecision()){
-                        $histActinst['insert'][$this->_num] = array(
-                            'dbid' => $this->_num,
-                            'hprocid' => $this->_executionObj->getHistprocinst()['dbid'],
-                            'type' => $decision['nodeName'],
-                            'execution' => current($this->_execution['updata'])['where']['dbid'],
-                            'activity_name' => $decision['name'],
-                            'start' => time(),
-                            'end'  => time(),
-                            'duration' => 0,
-                            'transition' => "to {$this->_targetNode->getTargetNodeList()['name']}",
-                            'htask' => 0
-
-                        );
-                        $this->_num = $this->_num + 1;
-                    }
-                    $histActinst['insert'][$this->_num] = array(
-                        'dbid' => $this->_num,
-                        'hprocid' => $this->_executionObj->getHistprocinst()['dbid'],
-                        'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
-                        'execution' => current($this->_execution['updata'])['where']['dbid'],
-                        'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
-                        'start' => time(),
-                        'end'  => 0,
-                        'duration' => 0,
-                        'transition' => "",
-                        'htask' => 0
-
-                    );
-                    foreach($this->_execution['updata'] as $k => $v){
-                        $this->_execution['updata'][$k]['data']['hisactinst'] = $this->_num;
-                    }
-                    $this->_num = $this->_num + 1;
-                }
-            }
-        }else if($this->_execution['insert']){
-            if($this->_targetNode->getClassName() == 'fork'){
-                $tmpNum = 0;
-                foreach($this->_execution['insert'] as $k => $v){
-                    $tmpNum++;
-                    if($tmpNum == 1) continue;
-                    $tmpTargetNode = $this->_targetNode->getForkTargetNodeList();
-                    $tmpTarget = array();
-                    foreach($tmpTargetNode as $k1 => $v1){
-                        if($v1['name'] == $v['activityname']){
-                            $tmpTarget = $v1;
-                            break;
-                        }
-                    }
-                    $histActinst['insert'][$this->_num] = array(
-                        'dbid' => $this->_num,
-                        'hprocid' => current($this->_execution['insert'])['instance'],
-                        'type' => $tmpTarget['nodeName'],
-                        'execution' => $v['dbid'],
-                        'activity_name' => $tmpTarget['name'],
-                        'start' => time(),
-                        'end'  => 0,
-                        'duration' => 0,
-                        'transition' => "",
-                        'htask' => 0
-
-                    );
-                    $this->_execution['insert'][$k]['hisactinst'] = $this->_num;
-                    $this->_num = $this->_num + 1;
-                }
-            }else{
-                if($decision = $this->_targetNode->getDecision()){
-                    $histActinst['insert'][$this->_num] = array(
-                        'dbid' => $this->_num,
-                        'hprocid' => current($this->_execution['insert'])['instance'],
-                        'type' => $decision['nodeName'],
-                        'execution' => current($this->_execution['insert'])['dbid'],
-                        'activity_name' => $decision['name'],
-                        'start' => time(),
-                        'end'  => time(),
-                        'duration' => 0,
-                        'transition' => "to {$this->_targetNode->getTargetNodeList()['name']}",
-                        'htask' => 0
-
-                    );
-                    $this->_num = $this->_num + 1;
-                }
-                $histActinst['insert'][$this->_num] = array(
-                    'dbid' => $this->_num,
-                    'hprocid' => current($this->_execution['insert'])['instance'],
-                    'type' => $this->_targetNode->getTargetNodeList()['nodeName'],
-                    'execution' => current($this->_execution['insert'])['dbid'],
-                    'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
-                    'start' => time(),
-                    'end'  => 0,
-                    'duration' => 0,
-                    'transition' => '',
-                    'htask' => 0
-
-                );
-                $this->_execution['insert'][current($this->_execution['insert'])['dbid']]['hisactinst'] = $this->_num;
-                $this->_num = $this->_num + 1;
-            }
-        }
-
-
-
-        if($this->_task['insert']){
-            foreach($histActinst['insert'] as $k => $v){
-                foreach($this->_task['insert'] as $k1 => $v1){
-                    if($v1['activity_name'] == $v['activity_name']){
-                        $histActinst['insert'][$k]['htask'] = $v1['dbid'];
                         break;
                     }
                 }
