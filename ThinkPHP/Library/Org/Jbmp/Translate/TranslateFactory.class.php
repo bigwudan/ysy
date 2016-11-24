@@ -43,9 +43,7 @@ class TranslateFactory {
                     break;
                 }
             }
-
             if(!$flag) die('no to');
-
         }else{
             $target = $currNode['transitionList'][0]['to'];
         }

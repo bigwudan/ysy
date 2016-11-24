@@ -74,7 +74,6 @@ class WriteToDataBase
                 }
             }
 
-
             //task
             if($task['insert']){
                 $flag = M('flow_task')->addAll(array_merge($task['insert']));
@@ -145,12 +144,12 @@ class WriteToDataBase
             if(!$flag){
                 new \Exception('error');
             }
-            die('ok');
+
             $model->commit();
         }catch (\Exception $e){
             $model->rollback();
             var_dump($e->getMessage());
-            die('fail');
+
         }
         die('over');
     }

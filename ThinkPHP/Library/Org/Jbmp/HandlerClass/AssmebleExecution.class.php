@@ -203,7 +203,7 @@ class AssmebleExecution
                     'procdefid' => $this->_executionObj->getRule()['rulename'],
                     'hasvars' => $hasVars,
                     'key' => '',
-                    'id' => "{$tmpExecution['mainid']}.to {$v['name']}.{$this->_num}",
+                    'id' => "{$this->_executionObj->getRule()['rulename']}.{$tmpExecution['mainid']}.to {$v['name']}.{$this->_num}",
                     'state' => 'active-concurrent',
                     'priority' => 0,
                     'hisactinst' => 0,
