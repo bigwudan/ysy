@@ -79,6 +79,7 @@ class AssmebleHisTask
      */
     private function _processUpdata(){
         $hisTaskFromDb = $this->_executionObj->getHisTask();
+
         $this->_targetNode->getTargetNodeList();
         $where['dbid'] = $hisTaskFromDb['dbid'];
         $upData = array(

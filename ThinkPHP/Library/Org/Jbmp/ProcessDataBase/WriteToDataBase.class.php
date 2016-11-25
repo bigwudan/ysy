@@ -127,8 +127,6 @@ class WriteToDataBase
                 $flag = M('flow_variable')->where($tmpDel)->delete();
                 if(!$flag) new \Exception('variableerror-del');
             }
-
-
             //histtask
             if($histtask['insert']){
                 $flag = M('flow_histtask')->addAll(array_merge($histtask['insert']));
@@ -144,10 +142,12 @@ class WriteToDataBase
             if(!$flag){
                 new \Exception('error');
             }
+
             $model->commit();
         }catch (\Exception $e){
             $model->rollback();
             var_dump($e->getMessage());
+      
         }
         die('over');
     }

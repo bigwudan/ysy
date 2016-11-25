@@ -124,6 +124,8 @@ class ExecutionService
             'transition' => $data['hatransition'],
             'htask' => $data['hahtask'],
         );
+
+
         $histProcinst = array(
             'dbid' => $data['hpdbid'],
             'id' => $data['hpid'],
@@ -147,7 +149,6 @@ class ExecutionService
             'end' => $data['htend'],
             'duration' => $data['htduration'],
         );
-
         $rule = array(
             'moduleid' => $data['mrmoduleid'],
             'rule' => $data['mrrule'],

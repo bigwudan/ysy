@@ -48,10 +48,11 @@ class SelectDataFromDb
             ")
             ->join('left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid')
             ->join('left join think_flow_histprocinst AS hp ON e.instance = hp.dbid')
-            ->join('left join think_flow_histtask AS ht ON e.id = ht.execution')
             ->join('left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename')
             ->join('left join think_flow_task AS t ON e.dbid = t.execution')
+            ->join('left join think_flow_histtask AS ht ON t.dbid = ht.dbid')
             ->where("e.dbid = {$varExecution}")->find();
+
         return $data;
 
     }
