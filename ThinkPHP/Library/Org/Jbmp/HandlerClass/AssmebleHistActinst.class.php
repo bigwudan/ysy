@@ -127,6 +127,7 @@ class AssmebleHistActinst
             foreach($this->_execution['updata'] as $k => $v){
                 $tmpHistActinst['activity_name'] = $v['data']['activityname'];
                 $tmpHistActinst['execution'] = $v['where']['dbid'];
+                $this->_execution['updata'][$k]['data']['hisactinst'] = $this->_num;
                 break;
             }
             $histActinst[$this->_num] = array(
@@ -166,7 +167,7 @@ class AssmebleHistActinst
                         'dbid' => $this->_num,
                         'hprocid' => $tmpHprocid,
                         'type' => $tmpTarget['nodeName'],
-                        'execution' => $ruleName.".".$v['dbid'],
+                        'execution' => $v['id'],
                         'activity_name' => $tmpTarget['name'],
                         'start' => time(),
                         'end' => 0,

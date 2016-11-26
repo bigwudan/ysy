@@ -47,6 +47,9 @@ class WriteToDataBase
         $histActinst = $this->_translateInfoObj->getHistActinst();
         $variable = $this->_translateInfoObj->getVariable();
         $histtask = $this->_translateInfoObj->getHisttask();
+
+        var_dump($histActinst);
+        die();
         $model = new \Think\Model();
         $model->startTrans();
         try{
@@ -55,7 +58,6 @@ class WriteToDataBase
                 $flag = M('flow_execution')->addAll(array_merge($execution['insert']));
                 if(!$flag) new \Exception('executionerror-insert');
             }
-
             if($execution['updata']){
                 foreach($execution['updata'] as $k => $v){
                     $flag = M('flow_execution')->where("dbid = {$v['where']['dbid']}")->save($v['data']);
@@ -156,7 +158,7 @@ class WriteToDataBase
             return array();
         }catch (\Exception $e){
             $model->rollback();
-            $e->getMessage();
+            var_dump($e->getMessage());
             return array('error'=>1 , 'errormsg'=>'sql-error');
         }
     }

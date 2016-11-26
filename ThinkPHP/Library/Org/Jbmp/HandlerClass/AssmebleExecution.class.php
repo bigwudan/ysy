@@ -110,10 +110,11 @@ class AssmebleExecution
         $execution = array();
         if(($this->_targetNode->getClassName() == 'join') && $this->_targetNode->getHasFinishJoin()){
             $data = $this->_targetNode->getJoinExecution()['pActive'];
-            $where = $data['dbid'];
+            $where['dbid'] = $data['dbid'];
             $upData = array(
                 'activityname' => $this->_targetNode->getTargetNodeList()['name'],
-                'state' => 'active-root'
+                'state' => 'active-root',
+                'hisactinst' => 0
             );
         }else{
             $execution = $this->_executionObj->getExecution();
