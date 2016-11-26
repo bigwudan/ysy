@@ -17,6 +17,16 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
     private $_className = 'decision';
 
     /**
+     * 需要executionVar
+     */
+    private $_variableExecution = null;
+
+    /**
+     * variable
+     */
+    private $_variable = null;
+
+    /**
      * 获得类名
      */
     public function getClassName(){
@@ -32,6 +42,14 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
     }
 
     /**
+     * 得到variableExecution
+     */
+    public function getVariableExecution(){
+        return $this->_variableExecution;
+    }
+
+
+    /**
      * 执行handler程序
      */
     private function _dealhandler(){
@@ -40,14 +58,40 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
             $testClass = new $className();
             $toName = $testClass->decide($this->_executionObj);
         }
+
+        if($toName['variable']){
+            $this->_variable = $this->_assembleVariable($toName['variable']);
+            $this->_variableExecution = $toName['variable'];
+        }
+
         foreach($this->_targetNodeList['transitionList']  as $k => $v){
-            if($v['name'] === $toName){
+            if($v['name'] === $toName['target']){
                 $transitionList = $v['to'];
                 break;
             }
         }
         if(!$transitionList) die('no decision');
         return $transitionList;
+    }
+
+    /**
+     * 组合variable
+     */
+    private function _assembleVariable($varVariable){
+        $variable = $this->_executionObj->getVariable();
+        $newList = array();
+        foreach($varVariable as $k => $v){
+            $flag = 0;
+            foreach($variable as $k1 => $v1){
+                if($v['key'] == $v1['key']){
+                    $flag = 1;
+                    break;
+                }
+            }
+            $flag == 0 && array_push($newList , $v);
+        }
+        $variable = array_merge($variable , $newList);
+        return $variable;
     }
 
     /**
@@ -76,7 +120,7 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
      */
     private function _taskTarget($varData){
         $TaskObj = new \Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass();
-        $this->_candidate = $TaskObj->processCandidate($varData);
+        $this->_candidate = $TaskObj->processCandidate($varData , $this->_variable);
     }
 
 

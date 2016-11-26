@@ -181,7 +181,7 @@ class ExecutionService
         }
         if($execution['hasvars']){
             $variable = $obj->getVariableFromDataBaseByTask($execution['dbid']);
-            $ExecutionObj->setVariable($variable);
+            $ExecutionObj->setVariable($this->_assembleVariable($variable));
         }
         $XmlObj = new \Org\Jbmp\ProcessFunction\XmlEngine();
         $obj = $XmlObj->getDbToXmlObj($rule['rule']);
@@ -190,14 +190,36 @@ class ExecutionService
     }
 
     /**
+     * 组合参数
+     * @param $varVariable array 数组
+     * @return array
+     */
+    private function _assembleVariable($varVariable){
+        $newVarList = array();
+        foreach($varVariable as $k => $v){
+            $newVarList[] = array(
+                'dbid' => $v['dbid'],
+                'key' => $v['key'],
+                'value' => $v["{$v['class']}_value"]
+            );
+        }
+        return $newVarList;
+    }
+
+
+    /**
      * 启动转换
      */
     private function _onTranslate(){
         $TranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
         $TranslateObj->initi($this->_executionClass , $this->_translate);
         $obj =  $TranslateObj->translate();
+        $vars = $this->_variable;
+        if($obj->getVariableExecution()){
+            $vars = $this->_variable ? array_merge($this->_variable , $obj->getVariableExecution()) : $obj->getVariableExecution();
+        }
         $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
-        $AssembleObj->initi($this->_executionClass , $obj , $this->_variable);
+        $AssembleObj->initi($this->_executionClass , $obj , $vars);
         $Translateobj = $AssembleObj->process();
         return $Translateobj;
 

@@ -128,7 +128,6 @@ class WriteToDataBase
                 if(!$flag) new \Exception('variableerror-del');
             }
 
-
             //histtask
             if($histtask['insert']){
                 $flag = M('flow_histtask')->addAll(array_merge($histtask['insert']));
