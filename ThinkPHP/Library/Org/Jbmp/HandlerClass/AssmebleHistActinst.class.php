@@ -141,7 +141,8 @@ class AssmebleHistActinst
                 'transition' => "",
                 'htask' => 0
             );
-            $this->_num = $this->_num + 1;
+            $this->_num =$this->_executionObj->countNum($this->_num);
+
         }else if($this->_targetNode->getClassName() == 'fork'){
 				$tmpNum = 0;
                 foreach($this->_execution['insert'] as $k => $v) {
@@ -175,7 +176,7 @@ class AssmebleHistActinst
 
                     );
                     $this->_execution['insert'][$k]['hisactinst'] = $this->_num;
-                    $this->_num = $this->_num + 1;
+                    $this->_num =$this->_executionObj->countNum($this->_num);
                 }
         }elseif($this->_targetNode->getTargetNodeList()['nodeName'] == 'join'){
             return array();
@@ -194,8 +195,6 @@ class AssmebleHistActinst
                 }
             }
             if($this->_targetNode->getClassName() == 'decision'){
-
-
                 $histActinst[$this->_num] = array(
                     'dbid' => $this->_num,
                     'hprocid' => $tmpProcid,
@@ -209,8 +208,7 @@ class AssmebleHistActinst
                     'htask' => 0
 
                 );
-
-                $this->_num = $this->_num + 1;
+                $this->_num =$this->_executionObj->countNum($this->_num);
                 $histActinst[$this->_num] = array(
                     'dbid' => $this->_num,
                     'hprocid' => $tmpProcid,
@@ -247,7 +245,7 @@ class AssmebleHistActinst
                     $this->_execution['updata'][$k]['data']['hisactinst'] = $this->_num;
                 }
             }
-            $this->_num = $this->_num + 1;
+            $this->_num =$this->_executionObj->countNum($this->_num);
         }
 
         if($this->_task['insert']){

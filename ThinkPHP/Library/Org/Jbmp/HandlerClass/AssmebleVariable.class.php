@@ -101,7 +101,7 @@ class AssmebleVariable
             $modelList['execution'] =$tmpDbid;
             $modelList[$v['class'].'_value'] = $v['value'];
             $variable[$this->_num] = $modelList;
-            $this->_num = $this->_num +1;
+            $this->_num =$this->_executionObj->countNum($this->_num);
         }
 
         return $variable;

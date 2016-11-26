@@ -20,7 +20,6 @@ class TranslateFactory {
     public function initi($varExecutionObj , $varTransition = null){
         $this->_executionObj = $varExecutionObj;
         $this->_transition = $varTransition;
-
     }
 
     /**

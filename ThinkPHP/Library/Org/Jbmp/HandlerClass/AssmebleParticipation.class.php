@@ -122,7 +122,7 @@ class AssmebleParticipation
                             'type' => 'candidate',
                             'task' => $tmp['task']
                         );
-                        $this->_num = $this->_num + 1;
+                        $this->_num =$this->_executionObj->countNum($this->_num);
                     }
                 }
             }
@@ -145,7 +145,7 @@ class AssmebleParticipation
                         'type' => 'candidate',
                         'task' => current($this->_task['insert'])['dbid']
                     );
-                    $this->_num = $this->_num + 1;
+                    $this->_num =$this->_executionObj->countNum($this->_num);
                 }
             }
         }

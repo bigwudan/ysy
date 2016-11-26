@@ -177,7 +177,7 @@ class AssmebleExecution
                     'parentidx' => 0,
                     'instance' => $this->_num
                 );
-                $this->_num =$this->_num + 1;
+                $this->_num =$this->_executionObj->countNum($this->_num);
             }
             if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
                 foreach($execution as $k => $v){
@@ -211,7 +211,7 @@ class AssmebleExecution
                     'parentidx' => 0,
                     'instance' => $tmpExecution['instance']
                 );
-                $this->_num =$this->_num + 1;
+                $this->_num =$this->_executionObj->countNum($this->_num);
             }
         }elseif($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
             $execution[$this->_num] =  array(
@@ -228,7 +228,7 @@ class AssmebleExecution
                 'parentidx' => 0,
                 'instance' => $this->_num
             );
-            $this->_num =$this->_num + 1;
+            $this->_num =$this->_executionObj->countNum($this->_num);
         }else{
             return array();
         }

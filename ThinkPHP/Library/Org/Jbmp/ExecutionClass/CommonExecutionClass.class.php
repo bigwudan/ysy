@@ -54,6 +54,11 @@ class CommonExecutionClass
     protected $_variable = array();
 
     /**
+     * 设置计数器版本
+     */
+    protected $_versionNum = 1;
+
+    /**
      * 设置rule
      * @param $varRule
      */
@@ -171,6 +176,29 @@ class CommonExecutionClass
     public function getVariable(){
         return $this->_variable;
     }
+
+    /**
+     * 得到计数版本号
+     */
+    public function getVersionNum(){
+        return $this->_versionNum;
+    }
+
+    /**
+     * 计数当前累计数，超过自动扩大空间
+     * @param $varNum int 当前计数器数
+     * @return array
+     */
+    public function countNum($varNum){
+        $varNum = $varNum + 1;
+        $totalSum = \Org\Jbmp\Config\CommonConfig::getProperty()['totalsum'];
+        if(($varNum%$totalSum) == 0){
+            $this->_versionNum++;
+            $varNum = $varNum + $totalSum;
+        }
+        return $varNum;
+    }
+
 
 
 }

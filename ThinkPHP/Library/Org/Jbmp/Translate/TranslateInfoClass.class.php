@@ -12,6 +12,12 @@ namespace Org\Jbmp\Translate;
 class TranslateInfoClass {
 
     /**
+     * _versionNum
+     */
+    private $_versionNum = array();
+
+
+    /**
      * execution
      */
     private $_execution = array();
@@ -170,6 +176,21 @@ class TranslateInfoClass {
      */
     public function getVariable(){
         return $this->_variable;
+    }
+
+    /**
+     * 得到计数版本号
+     */
+    public function getVersionNum(){
+        return $this->_versionNum;
+    }
+
+    /**
+     * 设置计数版本号
+     * @param $varVersionNum int 版本号
+     */
+    public function setVersionNum($varVersionNum){
+        $this->_versionNum = $varVersionNum;
     }
 
 }

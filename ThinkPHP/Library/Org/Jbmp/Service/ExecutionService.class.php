@@ -216,8 +216,10 @@ class ExecutionService
         $TranslateObj->initi($this->_executionClass , $this->_translate);
         $obj =  $TranslateObj->translate();
         $vars = $this->_variable;
-        if($obj->getVariableExecution()){
-            $vars = $this->_variable ? array_merge($this->_variable , $obj->getVariableExecution()) : $obj->getVariableExecution();
+        if($obj->getClassName() == 'decision'){
+            if($obj->getVariableExecution()){
+                $vars = $this->_variable ? array_merge($this->_variable , $obj->getVariableExecution()) : $obj->getVariableExecution();
+            }
         }
         $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
         $AssembleObj->initi($this->_executionClass , $obj , $vars);

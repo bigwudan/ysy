@@ -130,7 +130,7 @@ class AssmebleTask
                     'execution' => $tmp['execution'],
                     'procinst' => $tmp['procinst']
                 );
-                $this->_num = $this->_num + 1;
+                $this->_num =$this->_executionObj->countNum($this->_num);
             }
         }else if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
             $execution = $this->_executionObj->getExecution();//??
@@ -160,7 +160,7 @@ class AssmebleTask
                 'execution' => $tmpTask['execution'],
                 'procinst' => $tmpTask['procinst']
             );
-            $this->_num = $this->_num + 1;
+            $this->_num =$this->_executionObj->countNum($this->_num);
         }else{
             $task = array();
         }

@@ -4865,3 +4865,175 @@ SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,
 NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 136 行.
 SQL: update think_flow_property set version = version + 1 , value = value + 100 [ RunTime:0.0000s ]
 
+[ 2016-11-26T17:36:32+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.008000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.008000s ]
+
+[ 2016-11-26T17:36:38+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionCheckUserInfo.html?username=wudan&password=wd811103
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_user` WHERE ( username = 'wudan' AND password = '883327915c4022331b5abcb9da2a390c' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.108006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T17:36:39+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/actionOperationUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SELECT * FROM `think_user`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-26T17:36:42+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `think_flow_property` (`key`,`version`,`value`) VALUES ('next.dbid','0','1') [ RunTime:0.0020s ]
+NOTIC: [8] Undefined property: Org\Jbmp\ExecutionClass\StartExecutionClass::$_execution D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ExecutionClass\CommonExecutionClass.class.php 第 112 行.
+
+[ 2016-11-26T17:40:02+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined property: Org\Jbmp\ExecutionClass\StartExecutionClass::$_execution D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ExecutionClass\CommonExecutionClass.class.php 第 112 行.
+
+[ 2016-11-26T17:41:13+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined property: Org\Jbmp\ExecutionClass\StartExecutionClass::$_execution D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ExecutionClass\CommonExecutionClass.class.php 第 112 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_execution` (`dbid`,`activityname`,`procdefid`,`hasvars`,`key`,`id`,`state`,`priority`,`hisactinst`,`parent`,`parentidx`,`instance`) VALUES ('101','state1','test','1','','test.101','active-root','0','102','0','0','101') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 59 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 65 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0040s ]
+SQL: INSERT INTO `think_flow_histprocinst` (`dbid`,`id`,`procdefid`,`key`,`start`,`end`,`duration`,`state`,`endactivity`) VALUES ('101','test.101','test','','1480153273','0','0','active','') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 79 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 87 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 93 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 101 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 105 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('102','101','state','test.101','state1','1480153273','0','0','','0') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 119 行.
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0040s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('103','string','test1','101','0','0','thisstring','','1480153273'),('104','text','testtext','101','0','0','','xxxxx','1480153273'),('105','int','testint','101','0','12','','','1480153273') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 133 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 141 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 145 行.
+SQL: update think_flow_property set version = version + 1 , value = value + 100 [ RunTime:0.0000s ]
+

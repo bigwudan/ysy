@@ -37,7 +37,9 @@ class WriteToDataBase
      */
     public function writeToDataBase(){
         $Dao = M();
+        $versionNum = $this->_translateInfoObj->getVersionNum();
         $totalsum = \Org\Jbmp\Config\CommonConfig::getProperty()['totalsum'];
+        $totalsum = $versionNum * $totalsum;
         $execution = $this->_translateInfoObj->getExecution();
         $histProcinst = $this->_translateInfoObj->getHistProcinst();
         $task = $this->_translateInfoObj->getTask();
@@ -146,7 +148,7 @@ class WriteToDataBase
                     if(!$flag) new \Exception('histtaskerror-updata');
                 }
             }
-            $flag = $Dao->execute("update think_flow_property set version = version + 1 , value = value + {$totalsum}");
+            $flag = $Dao->execute("update think_flow_property set version = version + {$versionNum} , value = value + {$totalsum}");
             if(!$flag){
                 new \Exception('error');
             }
