@@ -68,7 +68,7 @@ class ExecutionService
         $obj = new \Org\Jbmp\ProcessDataBase\WriteToDataBase();
         $obj->initi($TranObj);
         $obj->writeToDataBase();
-        die('xxx');
+        die('wudan');
 
     }
 

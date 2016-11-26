@@ -25,8 +25,8 @@ class TaskTargetExecutionClass extends \Org\Jbmp\TargetExecutionClass\CommonTarg
 
     public function process()
     {
-        $this->_executionObj;
-        $this->_candidate = $this->processCandidate($this->_targetNodeList);
+        $variable = $this->_executionObj->getVariable();
+        $this->_candidate = $this->processCandidate($this->_targetNodeList , $variable);
     }
 
     public function processCandidate($varTargetNodeList , $varVariable = null){

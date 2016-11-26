@@ -23,28 +23,65 @@ class RbacController extends Controller
         //$obj->completeTask("501", "to end1" , array('11'));
 
         $arr = array();
-        $tmp1 = array(
+        $arr[] = array(
             'class' => 'string',
             'key' => 'test1',
             'value' => 'thisstring'
 
         );
-        $tmp2 = array(
+        $arr[] = array(
             'class' => 'text',
             'key' => 'testtext',
             'value' => 'xxxxx'
 
         );
-        $tmp3 = array(
+        $arr[] = array(
             'class' => 'int',
             'key' => 'testint',
             'value' => 12
 
         );
-        $arr = array($tmp1,$tmp2,$tmp3);
-        $obj->startProcessInstanceById('test' , $arr);
-        //$obj->completeCommon(101 , 'to exclusive1' , $arr);
-        //$obj->completeTask(101 , 'to end1');
+//        $arr[] = array(
+//            'class' => 'int',
+//            'key' => 'team1',
+//            'value' => 12
+//
+//        );
+//        $arr[] = array(
+//            'class' => 'int',
+//            'key' => 'user1',
+//            'value' => 11
+//
+//        );
+//        $arr[] = array(
+//            'class' => 'int',
+//            'key' => 'user2',
+//            'value' => 33
+//
+//        );
+
+//        $arr[] = array(
+//            'class' => 'string',
+//            'key' => 'test1',
+//            'value' => 'thisstring'
+//
+//        );
+//        $arr[] = array(
+//            'class' => 'text',
+//            'key' => 'testtext',
+//            'value' => 'xxxxx'
+//
+//        );
+//        $arr[] = array(
+//            'class' => 'int',
+//            'key' => 'testint',
+//            'value' => 12
+//
+//        );
+
+        //$obj->startProcessInstanceById('test' , $arr);
+       // $obj->completeCommon(81 , 'to task2' , $arr);
+        $obj->completeTask(81 , 'to end1');
 
     }
 
