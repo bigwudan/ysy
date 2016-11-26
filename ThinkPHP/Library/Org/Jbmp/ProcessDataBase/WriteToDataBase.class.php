@@ -143,10 +143,12 @@ class WriteToDataBase
             if(!$flag){
                 new \Exception('error');
             }
+
             $model->commit();
         }catch (\Exception $e){
             $model->rollback();
             var_dump($e->getMessage());
+      
         }
         die('over');
     }
