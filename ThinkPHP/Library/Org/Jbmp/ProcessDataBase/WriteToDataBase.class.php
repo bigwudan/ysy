@@ -26,6 +26,13 @@ class WriteToDataBase
     }
 
     /**
+     * 得到
+     */
+    public function getTranslateInfoObj(){
+        return $this->_translateInfoObj;
+    }
+
+    /**
      * 写入数据库
      */
     public function writeToDataBase(){
@@ -143,14 +150,13 @@ class WriteToDataBase
             if(!$flag){
                 new \Exception('error');
             }
-
             $model->commit();
+            return array();
         }catch (\Exception $e){
             $model->rollback();
-            var_dump($e->getMessage());
-      
+            $e->getMessage();
+            return array('error'=>1 , 'errormsg'=>'sql-error');
         }
-        die('over');
     }
 
 
