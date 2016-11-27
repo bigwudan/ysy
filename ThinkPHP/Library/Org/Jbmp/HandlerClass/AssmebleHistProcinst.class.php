@@ -13,12 +13,12 @@ class AssmebleHistProcinst
 {
 
     /**
-     *
+     * executionobj对象
      */
     private $_executionObj = null;
 
     /**
-     *
+     * targetNode对象
      */
     private $_targetNode = null;
 
@@ -28,7 +28,7 @@ class AssmebleHistProcinst
     private $_execution = null;
 
     /**
-     *
+     * 累加数
      */
     private $_num = null;
 
@@ -36,6 +36,11 @@ class AssmebleHistProcinst
 
     /**
      * 初始化
+     * @param $varExecution object 对象execution
+     * @param $varTargetNode object 对象targetNode
+     * @param $varNum int 累加数
+     * @param $execution array executin数组
+     * @return array
      */
     public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution ){
         $this->_executionObj = $varExecution;
@@ -46,7 +51,8 @@ class AssmebleHistProcinst
     }
 
     /**
-     *
+     * 执行
+     * @return array
      */
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
@@ -63,6 +69,7 @@ class AssmebleHistProcinst
 
     /**
      * 得到num
+     * @return int
      */
     public function getNum(){
         return $this->_num;
@@ -70,6 +77,7 @@ class AssmebleHistProcinst
 
     /**
      * 更新
+     * @return array
      */
     private function _processUpdata(){
         $data = $this->_executionObj->getExecution();
@@ -89,6 +97,7 @@ class AssmebleHistProcinst
 
     /**
      * 处理开始
+     * @return array
      */
     private function _processInsert(){
         $tmp = array();

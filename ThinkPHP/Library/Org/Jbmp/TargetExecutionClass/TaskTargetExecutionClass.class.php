@@ -18,17 +18,26 @@ class TaskTargetExecutionClass extends \Org\Jbmp\TargetExecutionClass\CommonTarg
 
     /**
      * 获得类名
+     * @return array
      */
     public function getClassName(){
         return $this->_className;
     }
 
+    /**
+     * 执行
+     */
     public function process()
     {
         $variable = $this->_executionObj->getVariable();
         $this->_candidate = $this->processCandidate($this->_targetNodeList , $variable);
     }
 
+    /**
+     * @param $varTargetNodeList array 对象
+     * @param $varVariable null 参数
+     * @return array
+     */
     public function processCandidate($varTargetNodeList , $varVariable = null){
         $attrList = $varTargetNodeList['attributeList'];
         $candidate = array();

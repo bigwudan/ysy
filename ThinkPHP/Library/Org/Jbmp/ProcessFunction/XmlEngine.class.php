@@ -24,7 +24,9 @@ class XmlEngine
 
     /**
      * 判断当前对象
-     * @param string $actionName 获得当前action对象
+     * @param $varXmlObj object 获得当前varXmlObj对象
+     * @param $actionName string 获得当前action对象
+     * @return array
      */
     public function getActionXml($varXmlObj , $actionName = null){
         if($actionName){
@@ -39,6 +41,7 @@ class XmlEngine
     /**
      * 得到源对象
      * @param xml $actionNode 节点对象
+     * @return array
      */
     private function _dealSourceXml($actionNode){
         $nodeName = $actionNode->nodeName;

@@ -18,6 +18,7 @@ class StateTargetExecutinClass extends \Org\Jbmp\TargetExecutionClass\CommonTarg
 
     /**
      * 获得类名
+     * @return array
      */
     public function getClassName(){
         return $this->_className;

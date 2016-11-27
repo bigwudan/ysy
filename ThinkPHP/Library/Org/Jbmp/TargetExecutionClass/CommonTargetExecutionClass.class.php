@@ -19,6 +19,9 @@ class CommonTargetExecutionClass
      */
     protected $_targetNodeList  =  null;
 
+    /**
+     * 候选对象
+     */
     protected $_candidate = null;
 
     /**
@@ -37,28 +40,49 @@ class CommonTargetExecutionClass
         $this->_targetNodeList =  $varTargetNodeList;
     }
 
+    /**
+     * 执行
+     */
     public function process(){
 
     }
 
+    /**
+     * 设置
+     * @param $varDecision
+     */
     public function setDecision($varDecision){
-
         $this->_decision = $varDecision;
     }
 
+    /**
+     * 得到decision
+     * @return null
+     */
     public function getDecision(){
         return $this->_decision;
     }
 
-
+    /**
+     * 得到targetNodelist
+     * @return null
+     */
     public function getTargetNodeList(){
         return $this->_targetNodeList;
     }
 
+    /**
+     * 设置candidate
+     * @param $varCandidate 设置candidate
+     */
     protected function _setCandidate($varCandidate){
         $this->_candidate = $varCandidate;
     }
 
+    /**
+     * 得到candidate
+     * @return null
+     */
     public function getCandidate(){
         return $this->_candidate;
     }

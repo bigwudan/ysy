@@ -12,12 +12,12 @@ namespace Org\Jbmp\HandlerClass;
 class AssmebleParticipation
 {
     /**
-     *
+     * execution对象
      */
     private $_executionObj = null;
 
     /**
-     *
+     * targetNode对象
      */
     private $_targetNode = null;
 
@@ -27,7 +27,7 @@ class AssmebleParticipation
     private $_execution = null;
 
     /**
-     *
+     * 累加数
      */
     private $_num = null;
 
@@ -38,6 +38,12 @@ class AssmebleParticipation
 
     /**
      * 初始化
+     * @param $varExecution object 对象execution
+     * @param $varTargetNode object 对象targetNode
+     * @param $varNum int 累加数
+     * @param $execution array executin数组
+     * @param $task array task数组
+     * @return array
      */
     public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution , $task){
         $this->_executionObj = $varExecution;
@@ -49,7 +55,7 @@ class AssmebleParticipation
     }
 
     /**
-     *
+     * 执行
      */
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
@@ -57,11 +63,9 @@ class AssmebleParticipation
         if($currNode['nodeName'] == 'start'){
             $participation['insert'] = $this->_processInsert();
         }else{
-
             if($tmp = $this->_processDel()){
                 $participation['del'] = $tmp;
             }
-
             if($tmp = $this->_processInsert()){
                 $participation['insert'] = $tmp;
             }

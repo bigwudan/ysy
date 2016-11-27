@@ -10,31 +10,31 @@ namespace Org\Jbmp\HandlerClass;
 class AssmebleExecution
 {
     /**
-     *
+     * 得到varslist
      */
     private $_varsList = null;
 
     /**
-     *
+     *  得到executionobj
      */
     private $_executionObj = null;
 
     /**
-     *
+     * 得到targetNode
      */
     private $_targetNode = null;
 
     /**
-     *
+     * 得到num
      */
     private $_num = null;
 
     /**
      * 初始化
-     * @param $varExecution
-     * @param $varTargetNode
-     * @param $varNum
-     * @param $varVars
+     * @param $varExecution object 对象execution
+     * @param $varTargetNode object 对象targetNode
+     * @param $varNum int 累加数
+     * @param $varVars array 参数
      * @return array
      */
     public function initi($varExecution  ,  $varTargetNode , $varNum,  $varVars = array()){
@@ -46,7 +46,8 @@ class AssmebleExecution
     }
 
     /**
-     *
+     * 执行程序
+     * @return object
      */
     public function process(){
         $currNode  =  $this->_executionObj->getCurrNode();
@@ -71,6 +72,7 @@ class AssmebleExecution
 
     /**
      * 删除
+     * @return array
      */
     private function _processDel(){
         $executionDel = array();
@@ -104,7 +106,7 @@ class AssmebleExecution
 
 
     /**
-     * 处理其他
+     * 处理更新
      */
     private function _processUpdata(){
         $execution = array();
@@ -151,6 +153,7 @@ class AssmebleExecution
 
     /**
      * 得到num
+     * @return int
      */
     public function getNum(){
         return $this->_num;
@@ -158,8 +161,114 @@ class AssmebleExecution
 
     /**
      * 处理开始
+     * @param $varExecution object 对象
+     * @return object
      */
     private function _processInsert($varExecution = null){
+        $execution = array();
+        if($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
+            $execution = $this->_processInsertTargetOfFork($varExecution);
+        }elseif($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
+            $execution = $this->_processInsertTargetOfStart();
+        }
+        return $execution;
+    }
+
+
+    /**
+     * insert处理start
+     * @return object
+     */
+    private function _processInsertTargetOfStart(){
+        $hasVars  =  $this->_varsList ? 1 :  0;
+        $execution[$this->_num] =  array(
+            'dbid' => $this->_num,
+            'activityname'  => $this->_targetNode->getTargetNodeList()['name'],
+            'procdefid' => $this->_executionObj->getRule()['rulename'],
+            'hasvars' => $hasVars,
+            'key' => '',
+            'id' => "{$this->_executionObj->getRule()['rulename']}.{$this->_num}",
+            'state' => 'active-root',
+            'priority' => 0,
+            'hisactinst' => 0,
+            'parent' => 0,
+            'parentidx' => 0,
+            'instance' => $this->_num
+        );
+        $this->_num =$this->_executionObj->countNum($this->_num);
+        return $execution;
+    }
+
+    /**
+     * insert处理fork
+     * @param $varExecution Object 对象
+     * @return object
+     */
+    private function _processInsertTargetOfFork($varExecution = null){
+        $hasVars  =  $this->_varsList ? 1 :  0;
+        if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
+            $execution[$this->_num] = array(
+                'dbid' => $this->_num,
+                'activityname'  => '',
+                'procdefid' => $this->_executionObj->getRule()['rulename'],
+                'hasvars' => $hasVars,
+                'key' => '',
+                'id' => "{$this->_executionObj->getRule()['rulename']}.{$this->_num}",
+                'state' => 'inactive-concurrent-root',
+                'priority' => 0,
+                'hisactinst' => 0,
+                'parent' => 0,
+                'parentidx' => 0,
+                'instance' => $this->_num
+            );
+            $this->_num =$this->_executionObj->countNum($this->_num);
+        }
+        if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
+            foreach($execution as $k => $v){
+                $tmpExecution = array();
+                $tmpExecution['mainid'] = $v['id'];
+                $tmpExecution['parent'] = $v['dbid'];
+                $tmpExecution['instance'] = $v['dbid'];
+                break;
+            }
+        }else{
+            foreach($varExecution['updata'] as $k => $v){
+                $tmpExecution = array();
+                $tmpExecution['mainid'] = $v['where']['dbid'];
+                $tmpExecution['parent'] = $v['where']['dbid'];
+                $tmpExecution['instance'] = $v['where']['dbid'];
+                break;
+            }
+        }
+        foreach($this->_targetNode->getForkTargetNodeList() as $k => $v){
+            $execution[$this->_num] = array(
+                'dbid' => $this->_num,
+                'activityname'  => $v['name'],
+                'procdefid' => $this->_executionObj->getRule()['rulename'],
+                'hasvars' => $hasVars,
+                'key' => '',
+                'id' => "{$this->_executionObj->getRule()['rulename']}.{$tmpExecution['mainid']}.to {$v['name']}.{$this->_num}",
+                'state' => 'active-concurrent',
+                'priority' => 0,
+                'hisactinst' => 0,
+                'parent' => $tmpExecution['parent'],
+                'parentidx' => 0,
+                'instance' => $tmpExecution['instance']
+            );
+            $this->_num =$this->_executionObj->countNum($this->_num);
+        }
+        return $execution;
+
+    }
+
+
+
+    /**
+     * 处理开始备份
+     * @param $varExecution object 对象
+     * @return object
+     */
+    private function _processInsertBak($varExecution = null){
         $hasVars  =  $this->_varsList ? 1 :  0;
         $execution = array();
         if($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
@@ -233,8 +342,6 @@ class AssmebleExecution
         }else{
             return array();
         }
-
-
         return $execution;
     }
 

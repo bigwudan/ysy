@@ -14,12 +14,12 @@ class CommonExecutionClass
     protected $_rule = array();
 
     /**
-     * $property
+     * 获得property
      */
     protected $_property = array();
 
     /**
-     * xmlRuleObj
+     * 得到xmlRuleObj
      */
     protected $_xmlRuleObj = array();
 
@@ -29,9 +29,9 @@ class CommonExecutionClass
     protected $_currNode = array();
 
     /**
-     * executin
+     * 得到executin
      */
-    protected $_executin = array();
+    protected $_execution = array();
 
     /**
      * 得到histactinst
@@ -44,23 +44,23 @@ class CommonExecutionClass
     protected $_histProcinst = array();
 
     /**
-     *
+     * 得到histTask
      */
     protected $_histTask = array();
 
     /**
-     *
+     * 得到参数
      */
     protected $_variable = array();
 
     /**
-     * 设置计数器版本
+     * 设置计数版本
      */
     protected $_versionNum = 1;
 
     /**
      * 设置rule
-     * @param $varRule
+     * @param $varRule string 规则
      */
     public function setRule($varRule){
         $this->_rule = $varRule;
@@ -68,6 +68,7 @@ class CommonExecutionClass
 
     /**
      * 得到rule
+     * @return array
      */
     public function getRule(){
         return $this->_rule;
@@ -83,6 +84,7 @@ class CommonExecutionClass
 
     /**
      * 得到
+     * @return array
      */
     public function getProperty(){
         return $this->_property;
@@ -123,6 +125,7 @@ class CommonExecutionClass
 
     /**
      * 设置execution
+     * @param $varExecution array execution对象
      */
     public function setExecution($varExecution){
         $this->_execution = $varExecution;
@@ -137,6 +140,8 @@ class CommonExecutionClass
 
     /**
      * histactinst
+     * @param $varHistActinst array histactinst数据
+     * @return array
      */
     public function setHistActinst($varHistActinst){
         return $this->_histActinst = $varHistActinst;
@@ -144,13 +149,15 @@ class CommonExecutionClass
 
     /**
      * 得到$varHistactinst
+     * @return array
      */
     public function getHistActinst(){
         return $this->_histActinst;
     }
 
     /**
-     * set$histProcinst
+     * 设置$histProcinst
+     * @param $varHistProcinst array histprocinst数据
      */
     public function setHistProcinst($varHistProcinst){
         $this->_histProcinst = $varHistProcinst;
@@ -158,6 +165,7 @@ class CommonExecutionClass
 
     /**
      * 得到$varHistProcinst
+     * @return array
      */
     public function getHistProcinst(){
         return $this->_histProcinst;
@@ -165,6 +173,7 @@ class CommonExecutionClass
 
     /**
      * 设置参数
+     * @param $varVariable array 参数
      */
     public function setVariable($varVariable){
         $this->_variable =$varVariable;
@@ -172,6 +181,7 @@ class CommonExecutionClass
 
     /**
      * 得到
+     * @return array
      */
     public function getVariable(){
         return $this->_variable;
@@ -179,6 +189,7 @@ class CommonExecutionClass
 
     /**
      * 得到计数版本号
+     * @return array
      */
     public function getVersionNum(){
         return $this->_versionNum;

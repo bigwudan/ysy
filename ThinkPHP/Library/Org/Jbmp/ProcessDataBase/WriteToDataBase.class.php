@@ -20,6 +20,7 @@ class WriteToDataBase
     /**
      * 写入数据库
      * @param $varTranslateInfoObj array 对象
+     * @return array
      */
     public function initi($varTranslateInfoObj){
         $this->_translateInfoObj = $varTranslateInfoObj;
@@ -27,6 +28,7 @@ class WriteToDataBase
 
     /**
      * 得到
+     * @return array
      */
     public function getTranslateInfoObj(){
         return $this->_translateInfoObj;
@@ -34,6 +36,7 @@ class WriteToDataBase
 
     /**
      * 写入数据库
+     * @return array
      */
     public function writeToDataBase(){
         $Dao = M();

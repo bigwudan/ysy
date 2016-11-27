@@ -57,6 +57,9 @@ class ExecutionService
 
     /**
      * 普通方法
+     * @param $varExecution int 数据
+     * @param $varTranslate string 转换数据
+     * @param $varVariable array 参数
      */
     public function completeCommon($varExecution , $varTranslate = null , $varVariable = null){
         $this->_execution = $varExecution;
@@ -69,13 +72,13 @@ class ExecutionService
         $obj->initi($TranObj);
         $obj->writeToDataBase();
         die('wudan');
-
     }
 
     /**
      * 得到task
-     * @param $varExecution int
-     * @param $varTranslate string
+     * @param $varExecution int 数据
+     * @param $varTranslate string 转换数据
+     * @param $varVariable array 参数
      */
     public function completeTask($varExecution , $varTranslate = null , $varVariable = null){
         $this->_execution = $varExecution;
@@ -210,6 +213,7 @@ class ExecutionService
 
     /**
      * 启动转换
+     * @return object
      */
     private function _onTranslate(){
         $TranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
@@ -225,7 +229,6 @@ class ExecutionService
         $AssembleObj->initi($this->_executionClass , $obj , $vars);
         $Translateobj = $AssembleObj->process();
         return $Translateobj;
-
     }
 
 

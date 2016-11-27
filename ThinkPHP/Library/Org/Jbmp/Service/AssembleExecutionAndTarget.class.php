@@ -10,26 +10,77 @@ namespace Org\Jbmp\Service;
 
 
 class AssembleExecutionAndTarget {
+    /**
+     * data
+     */
     private $_translateInfoObj = null;
+
+    /**
+     * data
+     */
     private $_executionObj  =  null;
+
+    /**
+     * data
+     */
     private $_targetNode = null;
+
+    /**
+     * data
+     */
     private $_num = null;
+
+    /**
+     * data
+     */
     private $_varsList = array();
+
+    /**
+     * data
+     */
     private $_execution =  null;
+
+    /**
+     * data
+     */
     private $_histProcinst = null;
+
+    /**
+     * data
+     */
     private $_histActinst = null;
+
+    /**
+     * data
+     */
     private $_variable = null;
+
+    /**
+     * data
+     */
     private $_task = null;
+
+    /**
+     * data
+     */
     private $_hisTask = null;
+
+    /**
+     * data
+     */
     private $_participation = null;
+
+    /**
+     * data
+     */
     private $_tmpTask = array();
 
     /**
      * @param $varExecution
      * @param $varTargetNode
      * @param $varVars
+     * @return array
      */
-
     public function initi($varExecution  ,  $varTargetNode ,  $varVars = array()){
         $this->_executionObj = $varExecution;
         $this->_targetNode = $varTargetNode;
@@ -38,9 +89,9 @@ class AssembleExecutionAndTarget {
         $this->_num =  $this->_num + \Org\Jbmp\Config\CommonConfig::getProperty()['totalsum'];
     }
 
-
     /**
-     *
+     * 得到translateinfo
+     * @return array
      */
     public function getProcessTranslateInfo(){
         $TranslateInfoObj = new \Org\Jbmp\Translate\TranslateInfoClass();
@@ -64,6 +115,10 @@ class AssembleExecutionAndTarget {
         return $TranslateInfoObj;
     }
 
+    /**
+     * 执行
+     * @return array
+     */
     public function process(){
         $this->_processExecution();
         $this->_processHistProcinst();
@@ -87,18 +142,25 @@ class AssembleExecutionAndTarget {
     }
 
 
-
+    /**
+     * 执行
+     */
     private function _processHisTask(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleHisTask();
         $this->_hisTask = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
     }
-
+    /**
+     * 执行
+     */
     private function _processParticipation(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleParticipation();
         $this->_participation = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
         $this->_num = $obj->getNum();
     }
 
+    /**
+     * 执行
+     */
     private function _processVarsList(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleVariable();
         $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_varsList , $this->_execution);
@@ -106,12 +168,18 @@ class AssembleExecutionAndTarget {
         $this->_num = $obj->getNum();
     }
 
+    /**
+     * 执行
+     */
     private function _processExecution(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleExecution();
         $this->_execution = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_varsList)->process();
         $this->_num = $obj->getNum();
     }
 
+    /**
+     * 执行
+     */
     private function _processTask(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleTask();
         $this->_task = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_varsList , $this->_tmpTask)
@@ -120,7 +188,9 @@ class AssembleExecutionAndTarget {
         $this->_num = $obj->getNum();
     }
 
-
+    /**
+     * 执行
+     */
     private function _processHistActinst(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleHistActinst();
         $this->_histActinst = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
@@ -129,6 +199,9 @@ class AssembleExecutionAndTarget {
         $this->_num = $obj->getNum();
     }
 
+    /**
+     * 执行
+     */
     private function _processHistProcinst(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleHistProcinst();
         $this->_histProcinst = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution)->process();

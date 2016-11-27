@@ -47,6 +47,7 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
 
     /**
      * 得到variableExecution
+     * @return array
      */
     public function getVariableExecution(){
         return $this->_variableExecution;

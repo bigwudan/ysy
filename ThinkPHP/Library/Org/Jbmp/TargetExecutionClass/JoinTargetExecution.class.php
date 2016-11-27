@@ -51,11 +51,15 @@ class JoinTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
 
     /**
      * 获得类名
+     * @return array
      */
     public function getClassName(){
         return $this->_className;
     }
 
+    /**
+     * 执行
+     */
     public function process()
     {
         $this->_variable = $this->_executionObj->getVariable();
@@ -106,6 +110,7 @@ class JoinTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
 
     /**
      * 得到active
+     * @return array
      */
     public function getJoinExecution(){
         return $this->_joinExecution;
@@ -116,6 +121,7 @@ class JoinTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
 
     /**
      * 得到是否完成状态
+     * @return array
      */
     public function getHasFinishJoin(){
         return $this->_hasFinishJoin;
@@ -137,9 +143,6 @@ class JoinTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
             $this->_commonTarget($res);
             $res['nodeName'] == 'task' && $this->_taskTarget($res);
         }
-
-
-
     }
 
     /**

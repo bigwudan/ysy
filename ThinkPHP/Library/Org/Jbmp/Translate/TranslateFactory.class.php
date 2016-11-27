@@ -8,12 +8,18 @@ namespace Org\Jbmp\Translate;
  */
 
 class TranslateFactory {
-
+    /**
+     * execuiton对象
+     */
     private $_executionObj= null;
 
+    /**
+     * 转换参数
+     */
     private $_transition =  null;
 
     /**
+     * 初始化
      * @param $varExecutionObj
      * @param $varTransition
      */
@@ -23,13 +29,18 @@ class TranslateFactory {
     }
 
     /**
+     * 转换
+     * @return object
      */
-
     public function translate(){
         $target = $this->_begTranslate();
         return $this->_assignTargetClass($target);
     }
 
+    /**
+     * 开始
+     * @return array
+     */
     private function _begTranslate(){
         $currNode =  $this->_executionObj->getCurrNode();
         $target =  null;
@@ -51,6 +62,11 @@ class TranslateFactory {
         return $targetNodeList;
     }
 
+    /**
+     * 分配对象
+     * @param $varTargetNodeList 对象
+     * @return object
+     */
     private function _assignTargetClass($varTargetNodeList){
         if($varTargetNodeList['nodeName'] == 'task'){
             $obj =  new \Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass();

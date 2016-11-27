@@ -20,6 +20,7 @@ class SelectDataFromDb
 
     /**
      * 得到getProperty
+     * @return array
      */
     public function getProperty(){
         if($data = M('flow_property')->find()){
@@ -36,6 +37,7 @@ class SelectDataFromDb
     /**
      * 得到task
      * @param $varExecution int 数组
+     * @return array
      */
     public function getDataFromDataBaseByExecution($varExecution){
         $data = M('flow_execution')->alias('e')
@@ -52,9 +54,7 @@ class SelectDataFromDb
             ->join('left join think_flow_task AS t ON e.dbid = t.execution')
             ->join('left join think_flow_histtask AS ht ON t.dbid = ht.dbid')
             ->where("e.dbid = {$varExecution}")->find();
-
         return $data;
-
     }
 
     /**

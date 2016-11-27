@@ -13,12 +13,12 @@ class AssmebleHisTask
 {
 
     /**
-     *
+     * execution对象
      */
     private $_executionObj = null;
 
     /**
-     *
+     * targetNode对象
      */
     private $_targetNode = null;
 
@@ -28,7 +28,7 @@ class AssmebleHisTask
     private $_execution = null;
 
     /**
-     *
+     * 累加数
      */
     private $_num = null;
 
@@ -42,6 +42,12 @@ class AssmebleHisTask
 
     /**
      * 初始化
+     * @param $varExecution object 对象execution
+     * @param $varTargetNode object 对象targetNode
+     * @param $varNum int 累加数
+     * @param $execution array executin数组
+     * @param $task array task数组
+     * @return array
      */
     public function initi($varExecution  ,  $varTargetNode , $varNum,  $execution , $task){
         $this->_executionObj = $varExecution;
@@ -78,7 +84,7 @@ class AssmebleHisTask
      * 更新
      */
     private function _processUpdata(){
-        $hisTaskFromDb = $this->_executionObj->getHisTask();
+        $hisTaskFromDb = $this->_executionObj->getHistTask();
         $this->_targetNode->getTargetNodeList();
         $where['dbid'] = $hisTaskFromDb['dbid'];
         $upData = array(
