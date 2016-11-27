@@ -28,7 +28,7 @@ class testHander {
 
         );
         $res['variable'] = array($tmp3 , $tmp4);
-        $res['target'] = 'to task1';
+        $res['target'] = 'to task2';
         return $res;
     }
 

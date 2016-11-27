@@ -47,9 +47,6 @@ class WriteToDataBase
         $histActinst = $this->_translateInfoObj->getHistActinst();
         $variable = $this->_translateInfoObj->getVariable();
         $histtask = $this->_translateInfoObj->getHisttask();
-
-        var_dump($histActinst);
-        die();
         $model = new \Think\Model();
         $model->startTrans();
         try{

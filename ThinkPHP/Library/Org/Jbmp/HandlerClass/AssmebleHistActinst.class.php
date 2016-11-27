@@ -81,24 +81,23 @@ class AssmebleHistActinst
      * 处理其他
      */
     private function _processUpdata(){
-
         if(($this->_targetNode->getClassName() == 'join') && ($this->_targetNode->getHasFinishJoin())){
-                $currNodeObj = $this->_executionObj->getCurrNode();
-                $joinExecution = $this->_targetNode->getJoinExecution();
-                $histActinst = $this->_executionObj->getHistActinst();
-                $tmpHisActinst = 0;
-                foreach($joinExecution['subActiveFork'] as $k => $v){
-                    if($v['activityname'] == $currNodeObj['name']){
-                        $tmpHisActinst = $v['hisactinst'];
-                        break;
-                    }
+            $currNodeObj = $this->_executionObj->getCurrNode();
+            $joinExecution = $this->_targetNode->getJoinExecution();
+            $histActinst = $this->_executionObj->getHistActinst();
+            $tmpHisActinst = 0;
+            foreach($joinExecution['subActiveFork'] as $k => $v){
+                if($v['activityname'] == $currNodeObj['name']){
+                    $tmpHisActinst = $v['hisactinst'];
+                    break;
                 }
-                $where['dbid'] = $tmpHisActinst;
-                $upData = array(
-                    'transition' => "to {$this->_targetNode->getTargetNodeList()['name']}",
-                    'end' => time(),
-                    'duration' => time() - $histActinst['start'],
-                );
+            }
+            $where['dbid'] = $tmpHisActinst;
+            $upData = array(
+                'transition' => "to {$this->_targetNode->getInitialTargetNodeList()['name']}",
+                'end' => time(),
+                'duration' => time() - $histActinst['start'],
+            );
         }else{
             $histActinst = $this->_executionObj->getHistActinst();
             $where = array();
@@ -124,11 +123,27 @@ class AssmebleHistActinst
         $ruleName = $this->_executionObj->getRule()['rulename'];
         if(($this->_targetNode->getClassName() == 'join') && ($this->_targetNode->getHasFinishJoin())){
             $tmpHistActinst = array();
+            $executionK = 0;
             foreach($this->_execution['updata'] as $k => $v){
                 $tmpHistActinst['activity_name'] = $v['data']['activityname'];
                 $tmpHistActinst['execution'] = $v['where']['dbid'];
-                $this->_execution['updata'][$k]['data']['hisactinst'] = $this->_num;
+                $executionK = $k;
                 break;
+            }
+            if($this->_targetNode->getInitialTargetNodeList()['translate']['nodeName'] == 'decision'){
+                $histActinst[$this->_num] = array(
+                    'dbid' => $this->_num,
+                    'hprocid' => $this->_executionObj->getExecution()['instance'],
+                    'type' => $this->_targetNode->getInitialTargetNodeList()['translate']['nodeName'],
+                    'execution' => $ruleName.".".$tmpHistActinst['execution'],
+                    'activity_name' => $this->_targetNode->getInitialTargetNodeList()['translate']['name'],
+                    'start' => time(),
+                    'end'  => time(),
+                    'duration' => 0,
+                    'transition' => "{$tmpHistActinst['activity_name']}",
+                    'htask' => 0
+                );
+                $this->_num =$this->_executionObj->countNum($this->_num);
             }
             $histActinst[$this->_num] = array(
                 'dbid' => $this->_num,
@@ -142,6 +157,7 @@ class AssmebleHistActinst
                 'transition' => "",
                 'htask' => 0
             );
+            $this->_execution['updata'][$executionK]['data']['hisactinst'] = $this->_num;
             $this->_num =$this->_executionObj->countNum($this->_num);
 
         }else if($this->_targetNode->getClassName() == 'fork'){

@@ -11,6 +11,10 @@ namespace Org\Jbmp\TargetExecutionClass;
 
 class JoinTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExecutionClass {
 
+    /**
+     *  参数
+     */
+    private $_variable = null;
 
     /**
      * 是否完成
@@ -28,6 +32,24 @@ class JoinTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
     private $_className = 'join';
 
     /**
+     * 初始的targetNodeList
+     */
+    private $_initialTargetNodeList = null;
+
+    /**
+     *  variableExecution
+     */
+    private $_variableExecution = null;
+
+    /**
+     * 得到初始targetNodeList
+     */
+    public function getInitialTargetNodeList(){
+        return $this->_initialTargetNodeList;
+    }
+
+
+    /**
      * 获得类名
      */
     public function getClassName(){
@@ -36,7 +58,9 @@ class JoinTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
 
     public function process()
     {
+        $this->_variable = $this->_executionObj->getVariable();
         $multiplicityNum = 0;
+        $this->_initialTargetNodeList = $this->_targetNodeList;
         foreach($this->_targetNodeList['attributeList'] as $k => $v){
             if($v['nodeName'] == 'multiplicity'){
                 $multiplicityNum = $v['nodeValue'];
@@ -106,9 +130,34 @@ class JoinTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
         $xmlObj = $this->_executionObj->getXmlObj();
         $XmlEngine = new \Org\Jbmp\ProcessFunction\XmlEngine();
         $res = $XmlEngine->getActionXml( $xmlObj , $varData);
-        $this->_commonTarget($res);
-        $res['nodeName'] == 'task' && $this->_taskTarget($res);
+        $this->_initialTargetNodeList['translate'] = $res;
+        if($res['nodeName'] == 'decision'){
+            $this->_processDecision($res);
+        }else{
+            $this->_commonTarget($res);
+            $res['nodeName'] == 'task' && $this->_taskTarget($res);
+        }
+
+
+
     }
+
+    /**
+     * 处理decision
+     * @param $varData object 对象
+     */
+    public function _processDecision($varData){
+        $DecisionObj = new \Org\Jbmp\TargetExecutionClass\DecisionTargetExecution();
+        $result = $DecisionObj->dealhandler($varData , $this->_executionObj);
+        $this->_variable = $result['variable'];
+        $this->_variableExecution = $result['variableExecution'];
+        $translateList = $DecisionObj->translate($result['transitionList'] , $this->_executionObj , $result['variable']);
+        $this->_targetNodeList = $translateList['targetNodeList'];
+        if($this->_targetNodeList['nodeName'] == 'task'){
+            $this->_candidate = $translateList['candidate'];
+        }
+    }
+
 
     /**
      * 通常的处理
@@ -124,7 +173,14 @@ class JoinTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
      */
     private function _taskTarget($varData){
         $TaskObj = new \Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass();
-        $this->_candidate = $TaskObj->processCandidate($varData);
+        $this->_candidate = $TaskObj->processCandidate($varData , $this->_variable);
+    }
+
+    /**
+     * 得到getVariableExecution
+     */
+    public function getVariableExecution(){
+        return $this->_variableExecution;
     }
 
 

@@ -80,8 +80,8 @@ class RbacController extends Controller
 //        );
 
         //$obj->startProcessInstanceById('test' , $arr);
-        $obj->completeCommon(91 , 'to join1');
-        //$obj->completeTask(92 , 'to state5');
+        //$obj->completeCommon(22 , 'to join1');
+        $obj->completeTask(11 , 'to end1');
 
     }
 

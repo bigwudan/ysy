@@ -216,7 +216,7 @@ class ExecutionService
         $TranslateObj->initi($this->_executionClass , $this->_translate);
         $obj =  $TranslateObj->translate();
         $vars = $this->_variable;
-        if($obj->getClassName() == 'decision'){
+        if($obj->getClassName() == 'decision' || $obj->getClassName() == 'join'){
             if($obj->getVariableExecution()){
                 $vars = $this->_variable ? array_merge($this->_variable , $obj->getVariableExecution()) : $obj->getVariableExecution();
             }

@@ -42,7 +42,6 @@ class AssmebleTask
      * @param $varTargetNode
      * @param $varNum
      * @param $varVars
-     * @param $varTmpTask
      * @return array
      */
     public function initi($varExecutionObj  ,  $varTargetNode , $varNum, $varExecution ,$varVars = array()){
@@ -133,33 +132,51 @@ class AssmebleTask
                 $this->_num =$this->_executionObj->countNum($this->_num);
             }
         }else if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
-            $execution = $this->_executionObj->getExecution();//??
-            $tmpTask = array();
-            if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-                foreach($this->_execution['insert'] as $k => $v){
-                    $tmpTask['execution_id'] = $v['id'];
-                    $tmpTask['execution'] = $v['dbid'];
-                    $tmpTask['procinst'] = $v['dbid'];
-                    break;
-                }
+            if(($this->_targetNode->getClassName()=='join') && $this->_targetNode->getHasFinishJoin()){
+                $tmpTask = array();
+                $tmpTask = $this->_targetNode->getJoinExecution()['pActive'];
+                $task[$this->_num] = array(
+                    'dbid' => $this->_num,
+                    'name' => $this->_targetNode->getTargetNodeList()['name'],
+                    'state' => 'open',
+                    'assignee' => '',
+                    'priority' => 0,
+                    'create' => time(),
+                    'execution_id' => $tmpTask['id'],
+                    'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
+                    'hasvars' => $hasVars,
+                    'execution' => $tmpTask['dbid'],
+                    'procinst' => $tmpTask['instance']
+                );
             }else{
-                $tmpTask['execution_id'] = $execution['id'];
-                $tmpTask['execution'] = $execution['dbid'];
-                $tmpTask['procinst'] = $execution['instance'];
+                $execution = $this->_executionObj->getExecution();//??
+                $tmpTask = array();
+                if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
+                    foreach($this->_execution['insert'] as $k => $v){
+                        $tmpTask['execution_id'] = $v['id'];
+                        $tmpTask['execution'] = $v['dbid'];
+                        $tmpTask['procinst'] = $v['dbid'];
+                        break;
+                    }
+                }else{
+                    $tmpTask['execution_id'] = $execution['id'];
+                    $tmpTask['execution'] = $execution['dbid'];
+                    $tmpTask['procinst'] = $execution['instance'];
+                }
+                $task[$this->_num] = array(
+                    'dbid' => $this->_num,
+                    'name' => $this->_targetNode->getTargetNodeList()['name'],
+                    'state' => 'open',
+                    'assignee' => '',
+                    'priority' => 0,
+                    'create' => time(),
+                    'execution_id' => $tmpTask['execution_id'],
+                    'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
+                    'hasvars' => $hasVars,
+                    'execution' => $tmpTask['execution'],
+                    'procinst' => $tmpTask['procinst']
+                );
             }
-            $task[$this->_num] = array(
-                'dbid' => $this->_num,
-                'name' => $this->_targetNode->getTargetNodeList()['name'],
-                'state' => 'open',
-                'assignee' => '',
-                'priority' => 0,
-                'create' => time(),
-                'execution_id' => $tmpTask['execution_id'],
-                'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
-                'hasvars' => $hasVars,
-                'execution' => $tmpTask['execution'],
-                'procinst' => $tmpTask['procinst']
-            );
             $this->_num =$this->_executionObj->countNum($this->_num);
         }else{
             $task = array();

@@ -37,8 +37,12 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
      */
     public function process(){
         $this->_decision = $this->_targetNodeList;
-        $target = $this->_dealhandler();
-        $this->_translate($target);
+        $result = $this->dealhandler($this->_targetNodeList , $this->_executionObj);
+        $this->_variable = $result['variable'];
+        $this->_variableExecution = $result['variableExecution'];
+        $transalteList = $this->translate($result['transitionList'] , $this->_executionObj , $this->_variable);
+        $this->_targetNodeList = $transalteList['targetNodeList'];
+        $transalteList['candidate'] && $this->_candidate = $transalteList['candidate'];
     }
 
     /**
@@ -51,34 +55,40 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
 
     /**
      * 执行handler程序
+     * @param $varTargetNodeList array 数据
+     * @param $varExecutionObj object 对象
+     * @return array
      */
-    private function _dealhandler(){
-        if($this->_targetNodeList['handler']){
-            $className = $this->_targetNodeList['handler'];
+    public function dealhandler($varTargetNodeList , $varExecutionObj){
+        if($varTargetNodeList['handler']){
+            $className = $varTargetNodeList['handler'];
             $testClass = new $className();
-            $toName = $testClass->decide($this->_executionObj);
+            $toName = $testClass->decide($varExecutionObj);
         }
-
+        $result = array();
         if($toName['variable']){
-            $this->_variable = $this->_assembleVariable($toName['variable']);
-            $this->_variableExecution = $toName['variable'];
+            $result['variable'] = $this->_assembleVariable($toName['variable'] , $varExecutionObj);
+            $result['variableExecution'] = $toName['variable'];
         }
-
-        foreach($this->_targetNodeList['transitionList']  as $k => $v){
+        foreach($varTargetNodeList['transitionList']  as $k => $v){
             if($v['name'] === $toName['target']){
                 $transitionList = $v['to'];
                 break;
             }
         }
+        $result['transitionList'] = $transitionList;
         if(!$transitionList) die('no decision');
-        return $transitionList;
+        return $result;
     }
 
     /**
      * 组合variable
+     * @param $varVariable array 参数
+     * @param $varExecutionObj object 对象
+     * @return array
      */
-    private function _assembleVariable($varVariable){
-        $variable = $this->_executionObj->getVariable();
+    private function _assembleVariable($varVariable , $varExecutionObj){
+        $variable = $varExecutionObj->getVariable();
         $newList = array();
         foreach($varVariable as $k => $v){
             $flag = 0;
@@ -97,30 +107,38 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
     /**
      * 执行跳转
      * @param $varData 数据
+     * @param $varExecutionObj string 数据
+     * @return array
      */
-    private function _translate($varData){
-        $xmlObj = $this->_executionObj->getXmlObj();
+    public function translate($varData , $varExecutionObj , $varVariable = null){
+        $xmlObj = $varExecutionObj->getXmlObj();
         $XmlEngine = new \Org\Jbmp\ProcessFunction\XmlEngine();
         $res = $XmlEngine->getActionXml( $xmlObj , $varData);
-        $this->_commonTarget($res);
-        $res['nodeName'] == 'task' && $this->_taskTarget($res);
+        $result['targetNodeList'] = $this->_commonTarget($res);
+        if($res['nodeName'] == 'task'){
+            $result['candidate'] = $this->_taskTarget($res , $varVariable);
+        }
+        return $result;
     }
 
     /**
      * 通常的处理
      * @param $varData 数据
+     * @return array
      */
     private function _commonTarget($varData){
-        $this->_targetNodeList = $varData;
+        return $varData;
     }
 
     /**
      * 处理task
      * @param $varData 数据
+     * @param $varVariable 数据
+     * @return array
      */
-    private function _taskTarget($varData){
+    private function _taskTarget($varData , $varVariable){
         $TaskObj = new \Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass();
-        $this->_candidate = $TaskObj->processCandidate($varData , $this->_variable);
+        return $TaskObj->processCandidate($varData , $varVariable);
     }
 
 
