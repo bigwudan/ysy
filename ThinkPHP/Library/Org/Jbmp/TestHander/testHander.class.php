@@ -17,18 +17,15 @@ class testHander {
             'class' => 'int',
             'key' => 'user1',
             'value' => 12
-
         );
 
         $tmp4 = array(
             'class' => 'int',
             'key' => 'user2',
             'value' => 233
-
-
         );
         $res['variable'] = array($tmp3 , $tmp4);
-        $res['target'] = 'to task2';
+        $res['target'] = 'to task1';
         return $res;
     }
 

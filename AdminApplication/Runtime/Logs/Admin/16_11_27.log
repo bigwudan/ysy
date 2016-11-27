@@ -7440,3 +7440,1311 @@ SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0120s ]
 SQL: UPDATE `think_flow_histtask` SET `outcome`='end1',`state`='complete',`end`='1480214866',`duration`='97' WHERE ( dbid = 61 ) [ RunTime:0.0000s ]
 SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
 
+[ 2016-11-27T20:38:31+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.032002s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.032002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.148009s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.148009s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-27T20:38:34+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionCheckUserInfo.html?username=wudan&password=wd811103
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_user` WHERE ( username = 'wudan' AND password = '883327915c4022331b5abcb9da2a390c' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.091005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-27T20:38:43+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/actionOperationUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0070s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SELECT * FROM `think_user`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.350020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.350020s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-27T20:40:10+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0010s ]
+SQL: INSERT INTO `think_flow_property` (`key`,`version`,`value`) VALUES ('next.dbid','0','1') [ RunTime:0.0150s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0090s ]
+SQL: INSERT INTO `think_flow_execution` (`dbid`,`activityname`,`procdefid`,`hasvars`,`key`,`id`,`state`,`priority`,`hisactinst`,`parent`,`parentidx`,`instance`) VALUES ('11','state1','test','1','','test.11','active-root','0','12','0','0','11') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0080s ]
+SQL: INSERT INTO `think_flow_histprocinst` (`dbid`,`id`,`procdefid`,`key`,`start`,`end`,`duration`,`state`,`endactivity`) VALUES ('11','test.11','test','','1480250410','0','0','active','') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0090s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('12','11','state','test.11','state1','1480250410','0','0','','0') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0080s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('13','string','test1','11','0','0','thisstring','','1480250410'),('14','text','testtext','11','0','0','','xxxxx','1480250410'),('15','int','testint','11','0','12','','','1480250410') [ RunTime:0.0670s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0810s ]
+
+[ 2016-11-27T20:41:07+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 11 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=11 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined offset: 1 D:\www\myysy\ThinkPHP\Library\Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass.class.php 第 49 行.
+NOTIC: [8] Undefined variable: task D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 96 行.
+SQL: INSERT INTO `think_flow_execution` (`dbid`,`activityname`,`procdefid`,`hasvars`,`key`,`id`,`state`,`priority`,`hisactinst`,`parent`,`parentidx`,`instance`) VALUES ('21','state2','test','0','','test.11.to state2.21','active-concurrent','0','26','11','0','11'),('22','task1','test','0','','test.11.to task1.22','active-concurrent','0','27','11','0','11') [ RunTime:0.0010s ]
+SQL: UPDATE `think_flow_execution` SET `activityname`='fork1',`hisactinst`='0',`state`='inactive-concurrent-root' WHERE ( dbid = 11 ) [ RunTime:0.0160s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0080s ]
+SQL: INSERT INTO `think_flow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('23','task1','open','','0','1480250467','test.11.to task1.22','task1','0','22','11') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_flow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('24','user1','0','candidate','23'),('25','user2','0','candidate','23') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('26','11','state','test.11.to state2.21','state2','1480250467','0','0','','0'),('27','11','task','test.11.to task1.22','task1','1480250467','0','0','','23') [ RunTime:0.0010s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to fork1',`end`='1480250467',`duration`='57' WHERE ( dbid = 12 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0080s ]
+SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('23','test.11.to task1.22','','','0','open','1480250467','0','0') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T20:43:34+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 21 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_flow_execution` SET `activityname`='state3',`hisactinst`='31' WHERE ( dbid = 21 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('31','11','state','test.21','state3','1480250614','0','0','','0') [ RunTime:0.0000s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to state3',`end`='1480250614',`duration`='147' WHERE ( dbid = 26 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T20:43:46+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 21 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT e.*,t.execution as texecution FROM think_flow_execution e left join think_flow_task AS t ON e.dbid = t.execution  WHERE ( e.parent = 11 OR e.dbid = 11 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_flow_execution` SET `activityname`='join1',`state`='inactive-join' WHERE ( dbid = 21 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 115 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0060s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to join1',`end`='1480250626',`duration`='12' WHERE ( dbid = 31 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T20:44:07+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0130s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 22 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_flow_participation` WHERE ( task=23 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 136 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHistActinst.class.php 第 141 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_flow_execution` SET `activityname`='state5',`hisactinst`='51' WHERE ( dbid = 22 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0060s ]
+SQL: DELETE FROM `think_flow_task` WHERE (  dbid in (23) ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+SQL: DELETE FROM `think_flow_participation` WHERE (  dbid in (24,25) ) [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('51','11','state','test.22','state5','1480250647','0','0','','0') [ RunTime:0.0010s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to state5',`end`='1480250647',`duration`='180' WHERE ( dbid = 27 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0060s ]
+SQL: UPDATE `think_flow_histtask` SET `outcome`='state5',`state`='complete',`end`='1480250647',`duration`='180' WHERE ( dbid = 23 ) [ RunTime:0.0000s ]
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T20:44:22+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0070s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0090s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 22 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT e.*,t.execution as texecution FROM think_flow_execution e left join think_flow_task AS t ON e.dbid = t.execution  WHERE ( e.parent = 11 OR e.dbid = 11 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: task D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 96 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_flow_execution` SET `activityname`='task2',`state`='active-root',`hisactinst`='65' WHERE ( dbid = 11 ) [ RunTime:0.0010s ]
+SQL: DELETE FROM `think_flow_execution` WHERE (  dbid in (21,22) ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0080s ]
+SQL: INSERT INTO `think_flow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('61','task2','open','','0','1480250662','test.11','task2','1','11','11') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0110s ]
+SQL: INSERT INTO `think_flow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('62','0','12','candidate','61'),('63','0','233','candidate','61') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0090s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('64','11','decision','test.11','exclusive1','1480250662','1480250662','0','task2','0'),('65','11','task','test.11','task2','1480250662','0','0','','61') [ RunTime:0.0000s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to join1',`end`='1480250662',`duration`='15' WHERE ( dbid = 51 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0070s ]
+SQL: DELETE FROM `think_flow_variable` WHERE (  execution in (21,22) ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('61','test.11','','','0','open','1480250662','0','0') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T20:45:20+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0080s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0070s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 11 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_flow_participation` WHERE ( task=61 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=11 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 136 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+SQL: DELETE FROM `think_flow_execution` WHERE (  dbid in (11) ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0070s ]
+SQL: UPDATE `think_flow_histprocinst` SET `state`='ended',`end`='1480250720',`duration`='310',`endactivity`='end1' WHERE ( dbid = 11 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0070s ]
+SQL: DELETE FROM `think_flow_task` WHERE (  dbid in (61) ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+SQL: DELETE FROM `think_flow_participation` WHERE (  dbid in (62,63) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 115 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0080s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to end1',`end`='1480250720',`duration`='58' WHERE ( dbid = 65 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+SQL: DELETE FROM `think_flow_variable` WHERE (  execution in (11) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0070s ]
+SQL: UPDATE `think_flow_histtask` SET `outcome`='end1',`state`='complete',`end`='1480250720',`duration`='58' WHERE ( dbid = 61 ) [ RunTime:0.0010s ]
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T20:49:16+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0070s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test1' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: transitionList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\TargetExecutionClass\DecisionTargetExecution.class.php 第 80 行.
+NOTIC: [8] Undefined variable: transitionList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\TargetExecutionClass\DecisionTargetExecution.class.php 第 81 行.
+
+[ 2016-11-27T20:49:54+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_execution` (`dbid`,`activityname`,`procdefid`,`hasvars`,`key`,`id`,`state`,`priority`,`hisactinst`,`parent`,`parentidx`,`instance`) VALUES ('81','task1','test1','1','','test1.81','active-root','0','84','0','0','81') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histprocinst` (`dbid`,`id`,`procdefid`,`key`,`start`,`end`,`duration`,`state`,`endactivity`) VALUES ('81','test1.81','test1','','1480250994','0','0','active','') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('82','task1','open','','0','1480250994','test1.81','task1','1','81','81') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('83','81','decision','test1.81','exclusive1','1480250994','1480250994','0','to task1','0'),('84','81','task','test1.81','task1','1480250994','0','0','','82') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('85','string','test1','81','0','0','thisstring','','1480250994'),('86','text','testtext','81','0','0','','xxxxx','1480250994'),('87','int','testint','81','0','12','','','1480250994'),('88','int','team1','81','0','12','','','1480250994'),('89','int','team2','81','0','233','','','1480250994') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('82','test1.81','','','0','open','1480250994','0','0') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 2 , value = value + 20 [ RunTime:0.0010s ]
+
+[ 2016-11-27T20:52:22+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_execution` (`dbid`,`activityname`,`procdefid`,`hasvars`,`key`,`id`,`state`,`priority`,`hisactinst`,`parent`,`parentidx`,`instance`) VALUES ('101','task1','test1','1','','test1.101','active-root','0','106','0','0','101') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histprocinst` (`dbid`,`id`,`procdefid`,`key`,`start`,`end`,`duration`,`state`,`endactivity`) VALUES ('101','test1.101','test1','','1480251142','0','0','active','') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('102','task1','open','','0','1480251142','test1.101','task1','1','101','101') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('103','12','0','candidate','102'),('104','233','0','candidate','102') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('105','101','decision','test1.101','exclusive1','1480251142','1480251142','0','to task1','0'),('106','101','task','test1.101','task1','1480251142','0','0','','102') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('107','string','test1','101','0','0','thisstring','','1480251142'),('108','text','testtext','101','0','0','','xxxxx','1480251142'),('109','int','testint','101','0','12','','','1480251142'),('120','int','user1','101','0','12','','','1480251142'),('121','int','user2','101','0','233','','','1480251142') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('102','test1.101','','','0','open','1480251142','0','0') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 2 , value = value + 20 [ RunTime:0.0000s ]
+
+[ 2016-11-27T20:53:47+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0070s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 101 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_participation` WHERE ( task=102 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=101 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 136 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHistActinst.class.php 第 141 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_flow_execution` SET `activityname`='state1',`hisactinst`='121' WHERE ( dbid = 101 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0050s ]
+SQL: DELETE FROM `think_flow_task` WHERE (  dbid in (102) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+SQL: DELETE FROM `think_flow_participation` WHERE (  dbid in (103,104) ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('121','101','state','test1.101','state1','1480251227','0','0','','0') [ RunTime:0.0000s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to state1',`end`='1480251227',`duration`='85' WHERE ( dbid = 106 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0060s ]
+SQL: UPDATE `think_flow_histtask` SET `outcome`='state1',`state`='complete',`end`='1480251227',`duration`='85' WHERE ( dbid = 102 ) [ RunTime:0.0000s ]
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T20:54:55+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 11 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [2] DOMDocument::loadXML(): Empty string supplied as input D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessFunction\XmlEngine.class.php 第 18 行.
+
+[ 2016-11-27T20:55:11+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 101 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=101 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+SQL: DELETE FROM `think_flow_execution` WHERE (  dbid in (101) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histprocinst` SET `state`='ended',`end`='1480251311',`duration`='169',`endactivity`='end1' WHERE ( dbid = 101 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 115 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0060s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to end1',`end`='1480251311',`duration`='84' WHERE ( dbid = 121 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+SQL: DELETE FROM `think_flow_variable` WHERE (  execution in (101) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:03:42+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0120s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_flow_execution` (`dbid`,`activityname`,`procdefid`,`hasvars`,`key`,`id`,`state`,`priority`,`hisactinst`,`parent`,`parentidx`,`instance`) VALUES ('141','task1','test1','1','','test1.141','active-root','0','146','0','0','141') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_flow_histprocinst` (`dbid`,`id`,`procdefid`,`key`,`start`,`end`,`duration`,`state`,`endactivity`) VALUES ('141','test1.141','test1','','1480251822','0','0','active','') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_flow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('142','task1','open','','0','1480251822','test1.141','task1','1','141','141') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_flow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('143','0','12','candidate','142'),('144','0','233','candidate','142') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('145','141','decision','test1.141','exclusive1','1480251822','1480251822','0','to task1','0'),('146','141','task','test1.141','task1','1480251822','0','0','','142') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('147','string','test1','141','0','0','thisstring','','1480251822'),('148','text','testtext','141','0','0','','xxxxx','1480251822'),('149','int','testint','141','0','12','','','1480251822'),('160','int','user1','141','0','12','','','1480251822'),('161','int','user2','141','0','233','','','1480251822') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0080s ]
+SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('142','test1.141','','','0','open','1480251822','0','0') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 2 , value = value + 20 [ RunTime:0.0010s ]
+
+[ 2016-11-27T21:06:17+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 141 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_participation` WHERE ( task=142 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=141 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: variable D:\www\myysy\ThinkPHP\Library\Org\Jbmp\TargetExecutionClass\DecisionTargetExecution.class.php 第 70 行.
+NOTIC: [8] Undefined index: variable D:\www\myysy\ThinkPHP\Library\Org\Jbmp\TargetExecutionClass\DecisionTargetExecution.class.php 第 41 行.
+NOTIC: [8] Undefined index: variableExecution D:\www\myysy\ThinkPHP\Library\Org\Jbmp\TargetExecutionClass\DecisionTargetExecution.class.php 第 42 行.
+NOTIC: [8] Undefined index: candidate D:\www\myysy\ThinkPHP\Library\Org\Jbmp\TargetExecutionClass\DecisionTargetExecution.class.php 第 45 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 136 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHistActinst.class.php 第 141 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_flow_execution` SET `activityname`='state1',`hisactinst`='162' WHERE ( dbid = 141 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0050s ]
+SQL: DELETE FROM `think_flow_task` WHERE (  dbid in (142) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+SQL: DELETE FROM `think_flow_participation` WHERE (  dbid in (143,144) ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('161','141','decision','test1.141','exclusive2','1480251977','1480251977','0','to state1','0'),('162','141','state','test1.141','state1','1480251977','0','0','','0') [ RunTime:0.0000s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to state1',`end`='1480251977',`duration`='155' WHERE ( dbid = 146 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histtask` SET `outcome`='state1',`state`='complete',`end`='1480251977',`duration`='155' WHERE ( dbid = 142 ) [ RunTime:0.0010s ]
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:08:07+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0070s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0080s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 101 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2] DOMDocument::loadXML(): Empty string supplied as input D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessFunction\XmlEngine.class.php 第 18 行.
+
+[ 2016-11-27T21:08:23+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 141 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=141 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+SQL: DELETE FROM `think_flow_execution` WHERE (  dbid in (141) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histprocinst` SET `state`='ended',`end`='1480252103',`duration`='281',`endactivity`='end1' WHERE ( dbid = 141 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 115 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to end1',`end`='1480252103',`duration`='126' WHERE ( dbid = 162 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+SQL: DELETE FROM `think_flow_variable` WHERE (  execution in (141) ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:10:34+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_execution` (`dbid`,`activityname`,`procdefid`,`hasvars`,`key`,`id`,`state`,`priority`,`hisactinst`,`parent`,`parentidx`,`instance`) VALUES ('181','task1','test1','1','','test1.181','active-root','0','186','0','0','181') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histprocinst` (`dbid`,`id`,`procdefid`,`key`,`start`,`end`,`duration`,`state`,`endactivity`) VALUES ('181','test1.181','test1','','1480252234','0','0','active','') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('182','task1','open','','0','1480252234','test1.181','task1','1','181','181') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('183','0','12','candidate','182'),('184','0','233','candidate','182') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('185','181','decision','test1.181','exclusive1','1480252234','1480252234','0','to task1','0'),('186','181','task','test1.181','task1','1480252234','0','0','','182') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('187','string','test1','181','0','0','thisstring','','1480252234'),('188','text','testtext','181','0','0','','xxxxx','1480252234'),('189','int','testint','181','0','12','','','1480252234'),('200','int','user1','181','0','12','','','1480252234'),('201','int','user2','181','0','233','','','1480252234') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('182','test1.181','','','0','open','1480252234','0','0') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 2 , value = value + 20 [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:11:06+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0050s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 181 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:11:26+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0050s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 181 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_flow_participation` WHERE ( task=182 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=181 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: candidate D:\www\myysy\ThinkPHP\Library\Org\Jbmp\TargetExecutionClass\DecisionTargetExecution.class.php 第 45 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 136 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHistActinst.class.php 第 141 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 62 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_flow_execution` SET `activityname`='state1',`hisactinst`='202' WHERE ( dbid = 181 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0060s ]
+SQL: DELETE FROM `think_flow_task` WHERE (  dbid in (182) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+SQL: DELETE FROM `think_flow_participation` WHERE (  dbid in (183,184) ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('201','181','decision','test1.181','exclusive2','1480252286','1480252286','0','to state1','0'),('202','181','state','test1.181','state1','1480252286','0','0','','0') [ RunTime:0.0000s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to state1',`end`='1480252286',`duration`='52' WHERE ( dbid = 186 ) [ RunTime:0.0000s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('203','int','team1','181','0','12','','','1480252286') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histtask` SET `outcome`='state1',`state`='complete',`end`='1480252286',`duration`='52' WHERE ( dbid = 182 ) [ RunTime:0.0000s ]
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0010s ]
+
+[ 2016-11-27T21:14:07+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0050s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 181 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=181 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+SQL: DELETE FROM `think_flow_execution` WHERE (  dbid in (181) ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histprocinst` SET `state`='ended',`end`='1480252447',`duration`='213',`endactivity`='end1' WHERE ( dbid = 181 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 115 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to end1',`end`='1480252447',`duration`='161' WHERE ( dbid = 202 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+SQL: DELETE FROM `think_flow_variable` WHERE (  execution in (181) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:16:44+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_execution` (`dbid`,`activityname`,`procdefid`,`hasvars`,`key`,`id`,`state`,`priority`,`hisactinst`,`parent`,`parentidx`,`instance`) VALUES ('221','task1','test1','1','','test1.221','active-root','0','226','0','0','221') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histprocinst` (`dbid`,`id`,`procdefid`,`key`,`start`,`end`,`duration`,`state`,`endactivity`) VALUES ('221','test1.221','test1','','1480252604','0','0','active','') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('222','task1','open','','0','1480252604','test1.221','task1','1','221','221') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_flow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('223','0','12','candidate','222'),('224','0','233','candidate','222') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('225','221','decision','test1.221','exclusive1','1480252604','1480252604','0','to task1','0'),('226','221','task','test1.221','task1','1480252604','0','0','','222') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('227','string','test1','221','0','0','thisstring','','1480252604'),('228','text','testtext','221','0','0','','xxxxx','1480252604'),('229','int','testint','221','0','12','','','1480252604'),('240','int','user1','221','0','12','','','1480252604'),('241','int','user2','221','0','233','','','1480252604') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('222','test1.221','','','0','open','1480252604','0','0') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 2 , value = value + 20 [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:17:03+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 221 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_participation` WHERE ( task=222 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=221 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 62 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_flow_execution` SET `activityname`='task2',`hisactinst`='244' WHERE ( dbid = 221 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_flow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('241','task2','open','','0','1480252623','test1.221','task2','1','221','221') [ RunTime:0.0000s ]
+SQL: DELETE FROM `think_flow_task` WHERE (  dbid in (222) ) [ RunTime:0.0000s ]
+SQL: INSERT INTO `think_flow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('242','12','0','candidate','241') [ RunTime:0.0000s ]
+SQL: DELETE FROM `think_flow_participation` WHERE (  dbid in (223,224) ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('243','221','decision','test1.221','exclusive2','1480252623','1480252623','0','to task2','0'),('244','221','task','test1.221','task2','1480252623','0','0','','241') [ RunTime:0.0000s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to task2',`end`='1480252623',`duration`='19' WHERE ( dbid = 226 ) [ RunTime:0.0000s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('245','int','team1','221','0','12','','','1480252623') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('241','test1.221','','','0','open','1480252623','0','0') [ RunTime:0.0000s ]
+SQL: UPDATE `think_flow_histtask` SET `outcome`='task2',`state`='complete',`end`='1480252623',`duration`='19' WHERE ( dbid = 222 ) [ RunTime:0.0000s ]
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:18:50+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0080s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0080s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 221 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_participation` WHERE ( task=241 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=221 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 136 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+SQL: DELETE FROM `think_flow_execution` WHERE (  dbid in (221) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histprocinst` SET `state`='ended',`end`='1480252730',`duration`='126',`endactivity`='end1' WHERE ( dbid = 221 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0050s ]
+SQL: DELETE FROM `think_flow_task` WHERE (  dbid in (241) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+SQL: DELETE FROM `think_flow_participation` WHERE (  dbid in (242) ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 115 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to end1',`end`='1480252730',`duration`='107' WHERE ( dbid = 244 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+SQL: DELETE FROM `think_flow_variable` WHERE (  execution in (221) ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0040s ]
+SQL: UPDATE `think_flow_histtask` SET `outcome`='end1',`state`='complete',`end`='1480252730',`duration`='107' WHERE ( dbid = 241 ) [ RunTime:0.0000s ]
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:20:54+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_modulerule` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_modulerule` WHERE ( rulename = 'test1' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_execution` (`dbid`,`activityname`,`procdefid`,`hasvars`,`key`,`id`,`state`,`priority`,`hisactinst`,`parent`,`parentidx`,`instance`) VALUES ('261','task1','test1','1','','test1.261','active-root','0','266','0','0','261') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histprocinst` (`dbid`,`id`,`procdefid`,`key`,`start`,`end`,`duration`,`state`,`endactivity`) VALUES ('261','test1.261','test1','','1480252854','0','0','active','') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('262','task1','open','','0','1480252854','test1.261','task1','1','261','261') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('263','0','12','candidate','262'),('264','0','233','candidate','262') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('265','261','decision','test1.261','exclusive1','1480252854','1480252854','0','to task1','0'),('266','261','task','test1.261','task1','1480252854','0','0','','262') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('267','string','test1','261','0','0','thisstring','','1480252854'),('268','text','testtext','261','0','0','','xxxxx','1480252854'),('269','int','testint','261','0','12','','','1480252854'),('280','int','user1','261','0','12','','','1480252854'),('281','int','user2','261','0','233','','','1480252854') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('262','test1.261','','','0','open','1480252854','0','0') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_flow_property set version = version + 2 , value = value + 20 [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:22:10+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 261 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_flow_participation` WHERE ( task=262 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=261 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleVariable.class.php 第 62 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_flow_execution` SET `activityname`='task2',`hisactinst`='284' WHERE ( dbid = 261 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('281','task2','open','','0','1480252930','test1.261','task2','1','261','261') [ RunTime:0.0000s ]
+SQL: DELETE FROM `think_flow_task` WHERE (  dbid in (262) ) [ RunTime:0.0000s ]
+SQL: INSERT INTO `think_flow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('282','team22','0','candidate','281') [ RunTime:0.0000s ]
+SQL: DELETE FROM `think_flow_participation` WHERE (  dbid in (263,264) ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histactinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`) VALUES ('283','261','decision','test1.261','exclusive2','1480252930','1480252930','0','to task2','0'),('284','261','task','test1.261','task2','1480252930','0','0','','281') [ RunTime:0.0000s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to task2',`end`='1480252930',`duration`='76' WHERE ( dbid = 266 ) [ RunTime:0.0000s ]
+SQL: INSERT INTO `think_flow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('285','string','team1','261','0','0','team22','','1480252930') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_flow_histtask` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('281','test1.261','','','0','open','1480252930','0','0') [ RunTime:0.0000s ]
+SQL: UPDATE `think_flow_histtask` SET `outcome`='task2',`state`='complete',`end`='1480252930',`duration`='76' WHERE ( dbid = 262 ) [ RunTime:0.0000s ]
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2016-11-27T21:22:36+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_flow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_flow_execution e left join think_flow_histactinst AS ha ON e.hisactinst = ha.dbid left join think_flow_histprocinst AS hp ON e.instance = hp.dbid left join think_flow_modulerule AS mr ON e.procdefid = mr.rulename left join think_flow_task AS t ON e.dbid = t.execution left join think_flow_histtask AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 261 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_flow_property` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_property` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_participation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_participation` WHERE ( task=281 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_flow_variable` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_flow_variable` WHERE ( execution=261 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleTask.class.php 第 112 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleHisTask.class.php 第 114 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 104 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\www\myysy\ThinkPHP\Library\Org\Jbmp\HandlerClass\AssmebleParticipation.class.php 第 136 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 57 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 61 行.
+SQL: DELETE FROM `think_flow_execution` WHERE (  dbid in (261) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `think_flow_histprocinst` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histprocinst` SET `state`='ended',`end`='1480252956',`duration`='102',`endactivity`='end1' WHERE ( dbid = 261 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_flow_task` [ RunTime:0.0050s ]
+SQL: DELETE FROM `think_flow_task` WHERE (  dbid in (281) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 103 行.
+SQL: DELETE FROM `think_flow_participation` WHERE (  dbid in (282) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 115 行.
+SQL: SHOW COLUMNS FROM `think_flow_histactinst` [ RunTime:0.0050s ]
+SQL: UPDATE `think_flow_histactinst` SET `transition`='to end1',`end`='1480252956',`duration`='26' WHERE ( dbid = 284 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 129 行.
+SQL: DELETE FROM `think_flow_variable` WHERE (  execution in (261) ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Org\Jbmp\ProcessDataBase\WriteToDataBase.class.php 第 143 行.
+SQL: SHOW COLUMNS FROM `think_flow_histtask` [ RunTime:0.0060s ]
+SQL: UPDATE `think_flow_histtask` SET `outcome`='end1',`state`='complete',`end`='1480252956',`duration`='26' WHERE ( dbid = 281 ) [ RunTime:0.0000s ]
+SQL: update think_flow_property set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
