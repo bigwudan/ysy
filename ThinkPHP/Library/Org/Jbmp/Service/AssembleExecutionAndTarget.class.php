@@ -182,7 +182,7 @@ class AssembleExecutionAndTarget {
      */
     private function _processTask(){
         $obj = new \Org\Jbmp\HandlerClass\AssmebleTask();
-        $this->_task = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_varsList , $this->_tmpTask)
+        $this->_task = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_varsList)
             ->process();
 
         $this->_num = $obj->getNum();

@@ -44,3 +44,4 @@
 
 
 20161127 join decision 没有写
+20161128 修改join decsision 完成跳转

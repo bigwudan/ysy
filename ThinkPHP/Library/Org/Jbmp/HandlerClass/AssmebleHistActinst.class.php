@@ -220,6 +220,21 @@ class AssmebleHistActinst
                 $tmpHprocid = $v1['instance'];
                 break;
             }
+            if($tmpTarget['beforeTransalet']){
+                $histActinst[$this->_num] = array(
+                    'dbid' => $this->_num,
+                    'hprocid' => $tmpHprocid,
+                    'type' => $tmpTarget['beforeTransalet']['nodeName'],
+                    'execution' => $v['id'],
+                    'activity_name' => $tmpTarget['beforeTransalet']['name'],
+                    'start' => time(),
+                    'end' => time(),
+                    'duration' => 0,
+                    'transition' => "to {$tmpTarget['name']}",
+                    'htask' => 0
+                );
+                $this->_num =$this->_executionObj->countNum($this->_num);
+            }
             $histActinst[$this->_num] = array(
                 'dbid' => $this->_num,
                 'hprocid' => $tmpHprocid,

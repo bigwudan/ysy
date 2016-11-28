@@ -109,6 +109,7 @@ class DecisionTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTarge
      * 执行跳转
      * @param $varData 数据
      * @param $varExecutionObj string 数据
+     * @param $varVariable string 数据
      * @return array
      */
     public function translate($varData , $varExecutionObj , $varVariable = null){

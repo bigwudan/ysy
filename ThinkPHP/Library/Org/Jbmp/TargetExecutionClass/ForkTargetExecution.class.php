@@ -70,7 +70,19 @@ class ForkTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
         $xmlObj = $this->_executionObj->getXmlObj();
         $XmlEngine = new \Org\Jbmp\ProcessFunction\XmlEngine();
         $res = $XmlEngine->getActionXml( $xmlObj , $varDataName);
-        $res['nodeName'] == 'task' && $res['candidate'] = $this->_taskTarget($res);
+        if($res['nodeName'] == 'task'){
+            $res['candidate'] = $this->_taskTarget($res);
+        }else if($res['nodeName'] == 'decision'){
+            $DecisionObj = new \Org\Jbmp\TargetExecutionClass\DecisionTargetExecution();
+            $DescisionResult = $DecisionObj->dealhandler($res , $this->_executionObj);
+            $transalteList = $DecisionObj->translate($DescisionResult['transitionList'] , $this->_executionObj , $DescisionResult['variable']);
+            $tranList = $transalteList['targetNodeList'];
+            if(!empty($transalteList['candidate'])){
+                $tranList['candidate'] = $transalteList['candidate'];
+            }
+            $tranList['beforeTransalet'] = $res;
+            $res = $tranList;
+        }
         return $res;
     }
 
