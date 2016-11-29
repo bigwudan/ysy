@@ -36,6 +36,7 @@ class ExecutionService
      * @param $varVars array 参数
      */
     public function startProcessInstanceById($varModelName , $varVars = null){
+        $this->_variable = $varVars;
         $obj = new \Org\Jbmp\ProcessDataBase\SelectDataFromDb();
         $rule = $obj->getRuleByModuleName($varModelName);
         $property = $obj->getProperty();
@@ -46,7 +47,6 @@ class ExecutionService
         $obj = $XmlObj->getDbToXmlObj($rule['rule']);
         $StartObj->setXmlObj($obj);
         $this->_executionClass = $StartObj;
-        $this->_variable = $varVars;
         $TranObj = $this->_onTranslate();
         $obj = new \Org\Jbmp\ProcessDataBase\WriteToDataBase();
         $obj->initi($TranObj);
@@ -216,21 +216,57 @@ class ExecutionService
      * @return object
      */
     private function _onTranslate(){
+        $this->_executionClass->setVariable($this->_processVariable());
         $TranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
         $TranslateObj->initi($this->_executionClass , $this->_translate);
         $obj =  $TranslateObj->translate();
-        $vars = $this->_variable;
-        if($obj->getClassName() == 'decision' || $obj->getClassName() == 'join'){
-            if($obj->getVariableExecution()){
-                $vars = $this->_variable ? array_merge($this->_variable , $obj->getVariableExecution()) : $obj->getVariableExecution();
-            }
-        }
         $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
-        $AssembleObj->initi($this->_executionClass , $obj , $vars);
+        $AssembleObj->initi($this->_executionClass , $obj , $this->_variable);
         $Translateobj = $AssembleObj->process();
         return $Translateobj;
     }
 
+    /**
+     * 加入varabile
+     */
+    private function _processVariable(){
+        $tmp = null;
+        if($this->_executionClass->getVariable()){
+            $tmp = $this->_executionClass->getVariable();
+        }
+        if($this->_variable){
+            $tmp = $this->_toRepeatVariable($this->_variable , $tmp);
+        }
+        return $tmp;
+    }
+
+
+
+    /**
+     * 组合variable
+     * @param $varVariable array 参数
+     * @param $varExecutionObj object 对象
+     * @return array
+     */
+    private function _toRepeatVariable($varVariable , $varVarDb = null){
+        $newList = array();
+        if($varVarDb){
+            foreach($varVariable as $k => $v){
+                $flag = 0;
+                foreach($varVarDb as $k1 => $v1){
+                    if($v['key'] == $v1['key']){
+                        $flag = 1;
+                        break;
+                    }
+                }
+                $flag == 0 && array_push($newList , $v);
+            }
+            $variable = array_merge($varVariable , $newList);
+        }else{
+            $variable = $varVariable;
+        }
+        return $variable;
+    }
 
 
 }

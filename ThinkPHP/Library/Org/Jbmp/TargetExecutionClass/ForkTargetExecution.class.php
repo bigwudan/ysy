@@ -91,7 +91,7 @@ class ForkTargetExecution extends \Org\Jbmp\TargetExecutionClass\CommonTargetExe
      */
     private function _taskTarget($varData){
         $TaskObj = new \Org\Jbmp\TargetExecutionClass\TaskTargetExecutionClass();
-        return $TaskObj->processCandidate($varData);
+        return $TaskObj->processCandidate($varData , $this->_beforeAssembleVariable);
     }
 
 }

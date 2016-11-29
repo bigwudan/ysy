@@ -29,13 +29,18 @@ class CommonTargetExecutionClass
      */
     protected $_decision = null;
 
+    /**
+     * 得到组合后的参数数据
+     */
+    protected $_beforeAssembleVariable = null;
+
 
     /**
      * @param $varExecutionObj
      * @param null $varTargetNodeList
      */
 
-    public function initi( $varExecutionObj , $varTargetNodeList = null){
+    public function initi( $varExecutionObj , $varTargetNodeList = null ){
         $this->_executionObj =  $varExecutionObj;
         $this->_targetNodeList =  $varTargetNodeList;
     }
@@ -86,4 +91,8 @@ class CommonTargetExecutionClass
     public function getCandidate(){
         return $this->_candidate;
     }
+
+
+
+
 }

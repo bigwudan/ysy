@@ -20,8 +20,9 @@ class TranslateFactory {
 
     /**
      * 初始化
-     * @param $varExecutionObj
-     * @param $varTransition
+     * @param $varExecutionObj execution
+     * @param $varTransition 转换参数
+     * @param $varVars 参数
      */
     public function initi($varExecutionObj , $varTransition = null){
         $this->_executionObj = $varExecutionObj;

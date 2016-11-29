@@ -20,9 +20,16 @@ class test2Hander
         $tmp3 = array(
             'class' => 'string',
             'key' => 'team1',
-            'value' => 'team22'
+            'value' => 't111'
         );
-        $res['variable'] = array($tmp3);
+
+        $tmp1 = array(
+            'class' => 'string',
+            'key' => 'team2',
+            'value' => 't222'
+        );
+
+        $res['variable'] = array($tmp3 , $tmp1);
         $res['target'] = 'to task2';
         return $res;
     }
