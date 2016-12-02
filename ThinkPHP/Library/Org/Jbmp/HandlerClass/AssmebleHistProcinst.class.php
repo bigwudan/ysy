@@ -101,10 +101,7 @@ class AssmebleHistProcinst
      */
     private function _processInsert(){
         $tmp = array();
-        foreach($this->_execution['insert'] as $k => $v){
-            $tmp = $v;
-            break;
-        }
+        $tmp = reset($this->_execution['insert']);
         if($tmp){
             $histProcinst[$tmp['dbid']] = array(
                 'dbid' => $tmp['dbid'],
@@ -116,7 +113,6 @@ class AssmebleHistProcinst
                 'duration' =>0,
                 'state' => 'active',
                 'endactivity' => ''
-
             );
         }
         return $histProcinst;

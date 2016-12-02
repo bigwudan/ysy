@@ -224,21 +224,15 @@ class AssmebleExecution
             $this->_num =$this->_executionObj->countNum($this->_num);
         }
         if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-            foreach($execution as $k => $v){
-                $tmpExecution = array();
-                $tmpExecution['mainid'] = $v['id'];
-                $tmpExecution['parent'] = $v['dbid'];
-                $tmpExecution['instance'] = $v['dbid'];
-                break;
-            }
+            $tmpExecution = array();
+            $tmpExecution['mainid'] = reset($execution)['id'];
+            $tmpExecution['parent'] = reset($execution)['dbid'];
+            $tmpExecution['instance'] = reset($execution)['dbid'];
         }else{
-            foreach($varExecution['updata'] as $k => $v){
-                $tmpExecution = array();
-                $tmpExecution['mainid'] = $v['where']['dbid'];
-                $tmpExecution['parent'] = $v['where']['dbid'];
-                $tmpExecution['instance'] = $v['where']['dbid'];
-                break;
-            }
+            $tmpExecution = array();
+            $tmpExecution['mainid'] = reset($varExecution['updata'])['where']['dbid'];
+            $tmpExecution['parent'] = reset($varExecution['updata'])['where']['dbid'];
+            $tmpExecution['instance'] = reset($varExecution['updata'])['where']['dbid'];
         }
         foreach($this->_targetNode->getForkTargetNodeList() as $k => $v){
             $execution[$this->_num] = array(
@@ -261,88 +255,5 @@ class AssmebleExecution
 
     }
 
-
-
-    /**
-     * 处理开始备份
-     * @param $varExecution object 对象
-     * @return object
-     */
-    private function _processInsertBak($varExecution = null){
-        $hasVars  =  $this->_varsList ? 1 :  0;
-        $execution = array();
-        if($this->_targetNode->getTargetNodeList()['nodeName'] == 'fork'){
-            if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-                $execution[$this->_num] = array(
-                    'dbid' => $this->_num,
-                    'activityname'  => '',
-                    'procdefid' => $this->_executionObj->getRule()['rulename'],
-                    'hasvars' => $hasVars,
-                    'key' => '',
-                    'id' => "{$this->_executionObj->getRule()['rulename']}.{$this->_num}",
-                    'state' => 'inactive-concurrent-root',
-                    'priority' => 0,
-                    'hisactinst' => 0,
-                    'parent' => 0,
-                    'parentidx' => 0,
-                    'instance' => $this->_num
-                );
-                $this->_num =$this->_executionObj->countNum($this->_num);
-            }
-            if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-                foreach($execution as $k => $v){
-                    $tmpExecution = array();
-                    $tmpExecution['mainid'] = $v['id'];
-                    $tmpExecution['parent'] = $v['dbid'];
-                    $tmpExecution['instance'] = $v['dbid'];
-                    break;
-                }
-            }else{
-                foreach($varExecution['updata'] as $k => $v){
-                    $tmpExecution = array();
-                    $tmpExecution['mainid'] = $v['where']['dbid'];
-                    $tmpExecution['parent'] = $v['where']['dbid'];
-                    $tmpExecution['instance'] = $v['where']['dbid'];
-                    break;
-                }
-            }
-            foreach($this->_targetNode->getForkTargetNodeList() as $k => $v){
-                $execution[$this->_num] = array(
-                    'dbid' => $this->_num,
-                    'activityname'  => $v['name'],
-                    'procdefid' => $this->_executionObj->getRule()['rulename'],
-                    'hasvars' => $hasVars,
-                    'key' => '',
-                    'id' => "{$this->_executionObj->getRule()['rulename']}.{$tmpExecution['mainid']}.to {$v['name']}.{$this->_num}",
-                    'state' => 'active-concurrent',
-                    'priority' => 0,
-                    'hisactinst' => 0,
-                    'parent' => $tmpExecution['parent'],
-                    'parentidx' => 0,
-                    'instance' => $tmpExecution['instance']
-                );
-                $this->_num =$this->_executionObj->countNum($this->_num);
-            }
-        }elseif($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-            $execution[$this->_num] =  array(
-                'dbid' => $this->_num,
-                'activityname'  => $this->_targetNode->getTargetNodeList()['name'],
-                'procdefid' => $this->_executionObj->getRule()['rulename'],
-                'hasvars' => $hasVars,
-                'key' => '',
-                'id' => "{$this->_executionObj->getRule()['rulename']}.{$this->_num}",
-                'state' => 'active-root',
-                'priority' => 0,
-                'hisactinst' => 0,
-                'parent' => 0,
-                'parentidx' => 0,
-                'instance' => $this->_num
-            );
-            $this->_num =$this->_executionObj->countNum($this->_num);
-        }else{
-            return array();
-        }
-        return $execution;
-    }
 
 }

@@ -96,7 +96,7 @@ class CommonExecutionClass
      */
     public function setXmlObj($varXmlObj){
         $this->_xmlRuleObj = $varXmlObj;
-        $this->setNode();
+        return $this->setNode();
     }
 
     /**
@@ -113,7 +113,13 @@ class CommonExecutionClass
         $obj =  new \Org\Jbmp\ProcessFunction\XmlEngine();
         (!$this->_execution) && ($this->_execution['activityname'] = null);
         $res =  $obj->getActionXml($this->_xmlRuleObj , $this->_execution['activityname']);
-        $this->_currNode = $res;
+        if($res){
+            $this->_currNode = $res;
+            return $res;
+        }else{
+            return array('error'=>1 , 'errormsg'=>'setNode-error');
+        }
+
     }
 
     /**

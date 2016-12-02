@@ -33,21 +33,30 @@ class ExecutionService
     /**
      * 启动模板
      * @param $varModelName string 模板名称
-     * @param $varVars array 参数
+     * @param $varVars array 输入传入参数
      */
     public function startProcessInstanceById($varModelName , $varVars = null){
         $this->_variable = $varVars;
         $obj = new \Org\Jbmp\ProcessDataBase\SelectDataFromDb();
         $rule = $obj->getRuleByModuleName($varModelName);
+        if(!$rule) return array('error'=>1 , 'errormsg'=>'read-rule-error');
         $property = $obj->getProperty();
+        if(!$property) return array('error'=>1 , 'errormsg'=>'read-property-error');
         $StartObj = new \Org\Jbmp\ExecutionClass\StartExecutionClass();
         $StartObj->setRule($rule);
         $StartObj->setProperty($property['value']);
         $XmlObj = new \Org\Jbmp\ProcessFunction\XmlEngine();
         $obj = $XmlObj->getDbToXmlObj($rule['rule']);
-        $StartObj->setXmlObj($obj);
+        if(!$obj) return array('error'=>1 , 'errormsg'=>'getDbToXmlObj(-error');
+        $res =  $StartObj->setXmlObj($obj);
+        if($res['error'] == 1){
+            return $res;
+        }
         $this->_executionClass = $StartObj;
         $TranObj = $this->_onTranslate();
+        if($TranObj['error'] == 1){
+            return $TranObj;
+        }
         $obj = new \Org\Jbmp\ProcessDataBase\WriteToDataBase();
         $obj->initi($TranObj);
         $obj->writeToDataBase();
@@ -220,6 +229,9 @@ class ExecutionService
         $TranslateObj = new \Org\Jbmp\Translate\TranslateFactory();
         $TranslateObj->initi($this->_executionClass , $this->_translate);
         $obj =  $TranslateObj->translate();
+        if($obj['error'] == 1){
+            return $obj;
+        }
         $AssembleObj = new \Org\Jbmp\Service\AssembleExecutionAndTarget();
         $AssembleObj->initi($this->_executionClass , $obj , $this->_variable);
         $Translateobj = $AssembleObj->process();
@@ -231,12 +243,8 @@ class ExecutionService
      */
     private function _processVariable(){
         $tmp = null;
-        if($this->_executionClass->getVariable()){
-            $tmp = $this->_executionClass->getVariable();
-        }
-        if($this->_variable){
-            $tmp = $this->_toRepeatVariable($this->_variable , $tmp);
-        }
+        $this->_executionClass->getVariable() && $tmp = $this->_executionClass->getVariable();
+        $this->_variable && $this->_toRepeatVariable($this->_variable , $tmp);
         return $tmp;
     }
 

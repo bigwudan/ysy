@@ -83,15 +83,9 @@ class AssmebleVariable
     private function _processInsert(){
         $tmpDbid = 0;
         if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-            foreach($this->_execution['insert'] as $k => $v){
-                $tmpDbid = $v['dbid'];
-                break;
-            }
+            $tmpDbid = reset($this->_execution['insert'])['dbid'];
         }else{
-            foreach($this->_execution['updata'] as $k => $v){
-                $tmpDbid = $v['where']['dbid'];
-                break;
-            }
+            $tmpDbid = reset($this->_execution['updata'])['where']['dbid'];
         }
         foreach($this->_varsList as $k => $v){
             $modelList = array(

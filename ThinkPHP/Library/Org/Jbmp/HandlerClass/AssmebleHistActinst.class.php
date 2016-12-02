@@ -198,7 +198,7 @@ class AssmebleHistActinst
     }
 
     /**
-     * insert 对象完成fork
+     * insert 对象fork
      * @return object
      */
     private function _processInsertTargetOfFinishFork(){
@@ -216,10 +216,7 @@ class AssmebleHistActinst
                     break;
                 }
             }
-            foreach($this->_execution['insert'] as $k1 => $v1){
-                $tmpHprocid = $v1['instance'];
-                break;
-            }
+            $tmpHprocid = reset($this->_execution['insert'])['instance'];
             if($tmpTarget['beforeTransalet']){
                 $histActinst[$this->_num] = array(
                     'dbid' => $this->_num,
@@ -261,17 +258,11 @@ class AssmebleHistActinst
     private function _processInsertTargetOfCommon(){
         $ruleName = $this->_executionObj->getRule()['rulename'];
         if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-            foreach($this->_execution['insert'] as $k => $v){
-                $tmpExecution = $v['dbid'];
-                break;
-            }
+            $tmpExecution = reset($this->_execution['insert'])['dbid'];
             $tmpProcid = $tmpExecution;
         }else{
             $tmpProcid = $this->_executionObj->getHistprocinst()['dbid'];
-            foreach($this->_execution['updata'] as $k => $v){
-                $tmpExecution = $v['where']['dbid'];
-                break;
-            }
+            $tmpExecution = reset($this->_execution['updata'])['where']['dbid'];
         }
         if($this->_targetNode->getClassName() == 'decision'){
             $histActinst[$this->_num] = array(

@@ -127,11 +127,8 @@ class AssmebleHisTask
             }
         }elseif($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
             $tmpTask = array();
-            foreach($this->_task['insert'] as $k => $v){
-                $tmpTask['execution_id'] = $v['execution_id'];
-                $tmpTask['execution'] = $v['dbid'];
-                break;
-            }
+            $tmpTask['execution_id'] = reset($this->_task['insert'])['execution_id'];
+            $tmpTask['execution'] = reset($this->_task['insert'])['dbid'];
             $hisTask[$tmpTask['execution']] = array(
                 'dbid' => $tmpTask['execution'],
                 'execution' => $tmpTask['execution_id'],

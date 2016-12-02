@@ -35,7 +35,11 @@ class TranslateFactory {
      */
     public function translate(){
         $target = $this->_begTranslate();
-        return $this->_assignTargetClass($target);
+        if($target['error'] == 1){
+            return $target;
+        }else{
+            return $this->_assignTargetClass($target);
+        }
     }
 
     /**
@@ -54,7 +58,7 @@ class TranslateFactory {
                     break;
                 }
             }
-            if(!$flag) die('no to');
+            if(!$flag) return array('error' =>1 , 'errormsg'=>'transition-error');
         }else{
             $target = $currNode['transitionList'][0]['to'];
         }

@@ -103,7 +103,7 @@ class AssmebleTask
     private function _processInsert(){
         if($this->_targetNode->getClassName() == 'fork'){
             $tmp = $this->_targetNode->getForkTargetNodeList();
-            $taskList = array();
+            $taskList = null;
             foreach($tmp as $k => $v){
                 $v['nodeName'] == 'task' && array_push($taskList , $v);
             }
@@ -179,12 +179,9 @@ class AssmebleTask
             $execution = $this->_executionObj->getExecution();//??
             $tmpTask = array();
             if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-                foreach($this->_execution['insert'] as $k => $v){
-                    $tmpTask['execution_id'] = $v['id'];
-                    $tmpTask['execution'] = $v['dbid'];
-                    $tmpTask['procinst'] = $v['dbid'];
-                    break;
-                }
+                $tmpTask['execution_id'] = reset($this->_execution['insert'])['id'];
+                $tmpTask['execution'] = reset($this->_execution['insert'])['dbid'];
+                $tmpTask['procinst'] = reset($this->_execution['insert'])['dbid'];
             }else{
                 $tmpTask['execution_id'] = $execution['id'];
                 $tmpTask['execution'] = $execution['dbid'];
