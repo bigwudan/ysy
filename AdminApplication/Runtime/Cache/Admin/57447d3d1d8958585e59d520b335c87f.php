@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 <div id="container" style="min-width:400px;height:400px;"></div>
 
 <script>
-    var jsonData = {$jsonData};
+    var jsonData = <?php echo ($jsonData); ?>;
 
     var newList = [];
     var num = 0;

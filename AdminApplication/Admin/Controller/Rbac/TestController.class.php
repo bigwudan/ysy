@@ -17,7 +17,16 @@ class TestController extends Controller
     }
 
     public function index(){
-        $this->display('/Rbac/Rbac');
+//        $this->display('/Rbac/test');die();
+        $CustimerObj = new \CommonClass\Statistics\CustomerStatis();
+        $list = [1,2];
+        $CustimerObj->initi($list);
+        $data = $CustimerObj->factoryModel('salesman' , 'goodsnum');
+
+        $jsonData = json_encode($data , JSON_UNESCAPED_UNICODE);
+
+        $this->assign('jsonData' , $jsonData);
+        $this->display('/Rbac/test');
     }
 
 

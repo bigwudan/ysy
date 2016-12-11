@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2016-11-27 19:02:08
+Date: 2016-12-11 22:42:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -117,13 +117,13 @@ CREATE TABLE `think_flow_histactinst` (
 -- ----------------------------
 -- Records of think_flow_histactinst
 -- ----------------------------
-INSERT INTO `think_flow_histactinst` VALUES ('12', '11', 'state', 'test.11', 'state1', '1480213340', '1480213365', '25', 'to fork1', '0');
-INSERT INTO `think_flow_histactinst` VALUES ('26', '11', 'state', 'test.11.to state2.21', 'state2', '1480213365', '1480213384', '19', 'to state3', '0');
-INSERT INTO `think_flow_histactinst` VALUES ('27', '11', 'task', 'test.11.to task1.22', 'task1', '1480213365', '1480213432', '67', 'to state5', '23');
-INSERT INTO `think_flow_histactinst` VALUES ('31', '11', 'state', 'test.21', 'state3', '1480213384', '1480213410', '26', 'to join1', '0');
-INSERT INTO `think_flow_histactinst` VALUES ('51', '11', 'state', 'test.22', 'state5', '1480213432', '1480214769', '1337', 'to join1', '0');
-INSERT INTO `think_flow_histactinst` VALUES ('64', '11', 'decision', 'test.11', 'exclusive1', '1480214769', '1480214769', '0', 'task2', '0');
-INSERT INTO `think_flow_histactinst` VALUES ('65', '11', 'task', 'test.11', 'task2', '1480214769', '1480214866', '97', 'to end1', '61');
+INSERT INTO `think_flow_histactinst` VALUES ('15', '11', 'decision', 'test1.11', 'exclusive1', '1480339736', '1480339736', '0', 'to task1', '0');
+INSERT INTO `think_flow_histactinst` VALUES ('16', '11', 'task', 'test1.11', 'task1', '1480339736', '1480343777', '4041', 'to fork1', '12');
+INSERT INTO `think_flow_histactinst` VALUES ('35', '11', 'state', 'test1.11.to state1.31', 'state1', '1480343777', '1480344004', '227', 'to join1', '0');
+INSERT INTO `think_flow_histactinst` VALUES ('36', '11', 'decision', 'test1.11.to task2.32', 'exclusive2', '1480343777', '1480343777', '0', 'to task2', '0');
+INSERT INTO `think_flow_histactinst` VALUES ('37', '11', 'task', 'test1.11.to task2.32', 'task2', '1480343777', '1480343969', '192', 'to state2', '33');
+INSERT INTO `think_flow_histactinst` VALUES ('41', '11', 'state', 'test1.32', 'state2', '1480343969', '1480343990', '21', 'to join1', '0');
+INSERT INTO `think_flow_histactinst` VALUES ('61', '11', 'state', 'test1.11', 'state3', '1480344004', '1480344036', '32', 'to end1', '0');
 
 -- ----------------------------
 -- Table structure for `think_flow_histprocinst`
@@ -145,7 +145,7 @@ CREATE TABLE `think_flow_histprocinst` (
 -- ----------------------------
 -- Records of think_flow_histprocinst
 -- ----------------------------
-INSERT INTO `think_flow_histprocinst` VALUES ('11', 'test.11', 'test', '', '1480213340', '1480214866', '1526', 'ended', 'end1');
+INSERT INTO `think_flow_histprocinst` VALUES ('11', 'test1.11', 'test1', '', '1480339736', '1480344036', '4300', 'ended', 'end1');
 
 -- ----------------------------
 -- Table structure for `think_flow_histtask`
@@ -168,8 +168,8 @@ CREATE TABLE `think_flow_histtask` (
 -- ----------------------------
 -- Records of think_flow_histtask
 -- ----------------------------
-INSERT INTO `think_flow_histtask` VALUES ('23', 'test.11.to task1.22', 'state5', '', '0', 'complete', '1480213365', '1480213432', '67');
-INSERT INTO `think_flow_histtask` VALUES ('61', 'test.11', 'end1', '', '0', 'complete', '1480214769', '1480214866', '97');
+INSERT INTO `think_flow_histtask` VALUES ('12', 'test1.11', 'fork1', '', '0', 'complete', '1480339736', '1480343777', '4041');
+INSERT INTO `think_flow_histtask` VALUES ('33', 'test1.11.to task2.32', 'state2', '', '0', 'complete', '1480343777', '1480343969', '192');
 
 -- ----------------------------
 -- Table structure for `think_flow_modulerule`
@@ -183,12 +183,13 @@ CREATE TABLE `think_flow_modulerule` (
   `creater` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建人',
   PRIMARY KEY (`moduleid`),
   UNIQUE KEY `rulename` (`rulename`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_flow_modulerule
 -- ----------------------------
 INSERT INTO `think_flow_modulerule` VALUES ('7', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"369,13,48,48\" name=\"start1\">\r\n      <transition g=\"-56,-22\" name=\"to state1\" to=\"state1\"/>\r\n   </start>\r\n   <end g=\"637,650,48,48\" name=\"end1\"/>\r\n   <state g=\"342,102,92,52\" name=\"state1\">\r\n      <transition g=\"-52,-22\" name=\"to fork1\" to=\"fork1\"/>\r\n   </state>\r\n   <fork g=\"354,206,48,48\" name=\"fork1\">\r\n      <transition g=\"-56,-22\" name=\"to state2\" to=\"state2\"/>\r\n      <transition g=\"-52,-22\" name=\"to task1\" to=\"task1\"/>\r\n   </fork>\r\n   <state g=\"194,341,92,52\" name=\"state2\">\r\n      <transition g=\"-56,-22\" name=\"to state3\" to=\"state3\"/>\r\n   </state>\r\n   <state g=\"227,429,92,52\" name=\"state3\">\r\n      <transition g=\"-49,-22\" name=\"to join1\" to=\"join1\"/>\r\n   </state>\r\n   <task candidate-groups=\"user1,user2\" g=\"450,322,92,52\" name=\"task1\">\r\n      <transition g=\"-56,-22\" name=\"to state5\" to=\"state5\"/>\r\n   </task>\r\n   <state g=\"495,422,9,5\" name=\"state4\"/>\r\n   <state g=\"508,409,92,52\" name=\"state5\">\r\n      <transition g=\"-49,-22\" name=\"to join1\" to=\"join1\"/>\r\n   </state>\r\n   <join g=\"394,474,48,48\" name=\"join1\">\r\n      <transition name=\"to exclusive1\" to=\"exclusive1\" g=\"-79,-22\"/>\r\n   </join>\r\n   <decision name=\"exclusive1\" g=\"418,549,48,48\">\r\n   <handler class=\"\\Org\\Jbmp\\TestHander\\testHander\" />\r\n      <transition name=\"to task2\" to=\"task2\" g=\"-52,-22\"/>\r\n   </decision>\r\n   <task name=\"task2\" g=\"493,618,92,52\" candidate-users=\"#{user1,user2}\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </task>\r\n</process>', 'test', '0', '0');
+INSERT INTO `think_flow_modulerule` VALUES ('8', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"383,-4,48,48\" name=\"start1\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive1\" to=\"exclusive1\"/>\r\n   </start>\r\n   <state g=\"495,422,9,5\" name=\"state4\"/>\r\n   <decision g=\"385,75,48,48\" name=\"exclusive1\">\r\n   <handler class=\"\\Org\\Jbmp\\TestHander\\testHander\" />\r\n      <transition g=\"-52,-22\" name=\"to task1\" to=\"task1\"/>\r\n   </decision>\r\n   <task candidate-users=\"#{user1,user2}\" g=\"385,163,92,52\" name=\"task1\">\r\n      <transition name=\"to fork1\" to=\"fork1\" g=\"-52,-22\"/>\r\n   </task>\r\n   <fork name=\"fork1\" g=\"398,264,48,48\">\r\n      <transition name=\"to state1\" to=\"state1\" g=\"-56,-22\"/>\r\n      <transition name=\"to exclusive2\" to=\"exclusive2\" g=\"-79,-22\"/>\r\n   </fork>\r\n   <state name=\"state1\" g=\"232,363,92,52\">\r\n      <transition name=\"to join1\" to=\"join1\" g=\"-49,-22\"/>\r\n   </state>\r\n   <decision name=\"exclusive2\" g=\"553,277,48,48\">\r\n   <handler class=\"\\Org\\Jbmp\\TestHander\\test2Hander\" />\r\n      <transition name=\"to task2\" to=\"task2\" g=\"-52,-22\"/>\r\n      <transition name=\"to task3\" to=\"task3\" g=\"-52,-22\"/>\r\n   </decision>\r\n   <task name=\"task2\" g=\"425,455,92,52\" candidate-groups=\"#{team1}\">\r\n      <transition name=\"to state2\" to=\"state2\" g=\"-56,-22\"/>\r\n   </task>\r\n   <task name=\"task3\" g=\"544,455,92,52\" candidate-users=\"#{user1}\">\r\n      <transition name=\"to state2\" to=\"state2\" g=\"-56,-22\"/>\r\n   </task>\r\n   <state name=\"state2\" g=\"473,543,92,52\">\r\n      <transition name=\"to join1\" to=\"join1\" g=\"-49,-22\"/>\r\n   </state>\r\n   <join name=\"join1\" g=\"294,543,48,48\">\r\n      <transition name=\"to state3\" to=\"state3\" g=\"-56,-22\"/>\r\n   </join>\r\n   <end name=\"end1\" g=\"379,730,48,48\"/>\r\n   <state name=\"state3\" g=\"293,640,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n</process>', 'test1', '0', '0');
 
 -- ----------------------------
 -- Table structure for `think_flow_participation`
@@ -339,6 +340,37 @@ INSERT INTO `think_node` VALUES ('23', 'rbac', '单个权限', '1', '', '0', '2'
 INSERT INTO `think_node` VALUES ('24', 'index', 'testindex', '1', '', '1', '15', '4', '');
 INSERT INTO `think_node` VALUES ('25', 'index', 'rbacindex', '1', '', '1', '23', '4', '');
 INSERT INTO `think_node` VALUES ('26', 'index', '管理用户', '1', '', '1', '11', '4', '');
+
+-- ----------------------------
+-- Table structure for `think_order`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_order`;
+CREATE TABLE `think_order` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `approveid` int(30) unsigned NOT NULL DEFAULT '0' COMMENT '审批号',
+  `title` varchar(255) NOT NULL COMMENT '标题',
+  `salesman` char(30) NOT NULL COMMENT '业务员名字',
+  `department` char(30) NOT NULL COMMENT '部门名称',
+  `ordertime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '下单时间',
+  `channel` char(30) NOT NULL COMMENT '订单渠道',
+  `customerfresh` char(30) NOT NULL,
+  `customername` char(30) NOT NULL COMMENT '客户名称',
+  `goodsname` char(30) NOT NULL COMMENT '商品名称',
+  `goodsstyle` char(30) NOT NULL COMMENT '商品规格',
+  `goodprice` decimal(10,2) unsigned NOT NULL DEFAULT '0.00' COMMENT '单价',
+  `goodsnum` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '商品数量',
+  `totalprice` decimal(10,2) unsigned DEFAULT '0.00' COMMENT '总价格',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_order
+-- ----------------------------
+INSERT INTO `think_order` VALUES ('1', '0', '', '吴丹', '', '1479571200', '', '', '', '', '', '0.00', '10', '23.00');
+INSERT INTO `think_order` VALUES ('2', '0', '', '高欢', '', '1454860800', '', '', '', '', '', '0.00', '20', '40.00');
+INSERT INTO `think_order` VALUES ('3', '0', '', '吴俊汐', '', '1472659200', '', '', '', '', '', '0.00', '2', '4.00');
+INSERT INTO `think_order` VALUES ('4', '0', '', '吴丹', '', '1478534400', '', '', '', '', '', '0.00', '2', '3.00');
+INSERT INTO `think_order` VALUES ('5', '0', '', '高欢', '', '1456761600', '', '', '', '', '', '0.00', '22', '11.00');
 
 -- ----------------------------
 -- Table structure for `think_role`

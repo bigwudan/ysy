@@ -15,7 +15,7 @@
     <div class="row">
         <?php echo ($body['sider']); ?>
         <div class="col-md-10">
-        
+
         </div>
     </div>
 
