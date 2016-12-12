@@ -86,9 +86,7 @@ class RbacController extends Controller
     }
 
     public function actionOperationUser(){
-
         $userInfoDataDB = M('user')->select();
-
         $this->assign('userInfoDataDB' , $userInfoDataDB);
         $this->display('/Rbac/Rbac');
     }

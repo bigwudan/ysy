@@ -1,10 +1,15 @@
 <?php
-namespace Admin\Controller;
+/**
+ * Created by PhpStorm.
+ * User: 丹
+ * Date: 2016/12/12
+ * Time: 15:46
+ */
 
+namespace Admin\Controller;
 use Think\Controller;
 
-class RbacController extends Controller
-{
+class StatisticsController extends Controller {
     /**
      * 初始化
      */
@@ -18,10 +23,7 @@ class RbacController extends Controller
 
     public function index()
     {
-        $this->display('/Rbac/Rbac');
-    }
-
-    public function actionWudan(){
+        $this->display('/Statistics/Statistics');
     }
 
 }

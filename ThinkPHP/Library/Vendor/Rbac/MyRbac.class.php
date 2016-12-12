@@ -138,7 +138,6 @@ class MyRbac implements IRbac{
             ->join('think_node AS n ON a.node_id = n.id')
             ->where("ru.user_id = {$varUid}")->select();
         $moduleArr = array();
-
         if($data){
             foreach($data as $k => $v){
                 if($v['level'] == 1){
@@ -146,7 +145,6 @@ class MyRbac implements IRbac{
                 }
             }
         }
-
         $controll_1_Arr = array();
         if($moduleArr){
             foreach($moduleArr as $k => $v){
@@ -157,7 +155,6 @@ class MyRbac implements IRbac{
                 }
             }
         }
-
         $controll_2_Arr = array();
         if($controll_1_Arr){
             foreach($controll_1_Arr as $k => $v){
@@ -170,7 +167,6 @@ class MyRbac implements IRbac{
                 }
             }
         }
-
         $actionArr = array();
         if($controll_2_Arr){
             foreach($controll_2_Arr as $k => $v){
@@ -185,6 +181,7 @@ class MyRbac implements IRbac{
                 }
             }
         }
+
         $res = array(
             'module' => $moduleArr,
             'controller_1' => $controll_1_Arr,
