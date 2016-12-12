@@ -9,28 +9,49 @@ class TestController extends Controller
      * 初始化
      */
     protected function _initialize(){
-        $obj = new \Admin\Common\AdminAuthor();
-        $obj->init();
-        $user = new \Admin\Controller\Body\BodyController();
-        $body = $user->bodyFactory($obj->getAuthorList());
-        $this->assign('body' , $body);
+//        $obj = new \Admin\Common\AdminAuthor();
+//        $obj->init();
+//        $user = new \Admin\Controller\Body\BodyController();
+//        $body = $user->bodyFactory($obj->getAuthorList());
+//        $this->assign('body' , $body);
     }
 
     public function index(){
+
+
+
+        $GoodsStyle = new \CommonClass\Statistics\GoodsStyleStatis();
+
+        $GoodsStyle->initi();
+        $goodStyle = $GoodsStyle->getGoodStyle();
+        $this->assign('goodStyle' , $goodStyle);
+        $this->display('/Rbac/testgoodstyle');
+        die('');
+
+
 //        $this->display('/Rbac/test');die();
         $CustimerObj = new \CommonClass\Statistics\CustomerStatis();
         $list = [1,2];
-        $CustimerObj->initi($list);
-        $data = $CustimerObj->factoryModel('salesman' , 'goodsnum');
-
+        $CustimerObj->initi();
+        $data = $CustimerObj->factoryModel('customername' , 'totalprice');
         $jsonData = json_encode($data , JSON_UNESCAPED_UNICODE);
-
         $this->assign('jsonData' , $jsonData);
         $this->display('/Rbac/test');
     }
 
-
-
+    /**
+     * ajax请求
+     */
+    public function goodStyleAjax(){
+        $str = I('data');
+        $str = htmlspecialchars_decode($str);
+        $data = json_decode($str,true);
+        $GoodsStyle = new \CommonClass\Statistics\GoodsStyleStatis();
+        $GoodsStyle->getDataByGoodStyle($data);
+        $data = $GoodsStyle->factoryModel('goodsstyle' , 'totalprice');
+        $jsonData = json_encode($data , JSON_UNESCAPED_UNICODE);
+        die($jsonData);
+    }
 
 
 }

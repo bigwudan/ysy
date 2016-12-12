@@ -19,9 +19,8 @@ abstract class StatisAbstract
 
     /**
      * 初始化
-     * @param $varData 原始数据
      */
-    abstract function initi($varData);
+    abstract function initi();
 
     /**
      * 执行程序

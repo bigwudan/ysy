@@ -10,10 +10,9 @@ class CustomerStatis extends \CommonClass\Statistics\StatisAbstract
 {
     /**
      * 初始化
-     * @param $varData array 参数
      * @return array
      */
-    public function initi($varData){
+    public function initi(){
         $Model = new \Think\Model();
         $data = $Model->db()->query("select * from think_order");
         $this->_dataInfo = $data;
