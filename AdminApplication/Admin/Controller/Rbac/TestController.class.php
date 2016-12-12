@@ -44,11 +44,13 @@ class TestController extends Controller
      */
     public function goodStyleAjax(){
         $str = I('data');
+        $type = I('type');
         $str = htmlspecialchars_decode($str);
         $data = json_decode($str,true);
         $GoodsStyle = new \CommonClass\Statistics\GoodsStyleStatis();
         $GoodsStyle->getDataByGoodStyle($data);
-        $data = $GoodsStyle->factoryModel('goodsstyle' , 'totalprice');
+        $typeStr = $type == 0 ? 'goodsnum' : 'totalprice';
+        $data = $GoodsStyle->factoryModel('goodsstyle' , $typeStr);
         $jsonData = json_encode($data , JSON_UNESCAPED_UNICODE);
         die($jsonData);
     }
