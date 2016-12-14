@@ -14,7 +14,7 @@ class CustomerStatis extends \CommonClass\Statistics\StatisAbstract
      */
     public function initi(){
         $Model = new \Think\Model();
-        $data = $Model->db()->query("select * from think_order");
+        $data = $Model->db()->query("select * from think_order where ordertime != 0");
         $this->_dataInfo = $data;
         if(empty($data)){
             return array('error' => 1 , 'msg' => 'sql is null');

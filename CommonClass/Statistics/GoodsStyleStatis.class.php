@@ -27,7 +27,7 @@ class GoodsStyleStatis extends \CommonClass\Statistics\StatisAbstract {
         $data = $Model->db()->query("select goodsname ,goodsstyle from think_order GROUP BY goodsstyle");
         if(empty($data)) return array('error' => 1 , 'msg' => 'sql null');
         $this->_goodStyle = $data;
-        $data = $Model->db()->query("select * from think_order");
+        $data = $Model->db()->query("select * from think_order where ordertime !=0");
         $this->_dataInfo = $data;
         if(empty($data)){
             return array('error' => 1 , 'msg' => 'sql is null');
@@ -58,7 +58,7 @@ class GoodsStyleStatis extends \CommonClass\Statistics\StatisAbstract {
             }
             $tmp = implode(',' , $newData);
             $Model = new \Think\Model();
-            $data = $Model->db()->query("select * from think_order where goodsstyle in ($tmp)");
+            $data = $Model->db()->query("select * from think_order where goodsstyle in ($tmp) AND ordertime !=0");
             if(empty($data)){
                 return array('error' => 1 , 'msg' => 'no sql');
             }else{

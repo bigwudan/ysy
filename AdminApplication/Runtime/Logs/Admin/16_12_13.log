@@ -1,0 +1,607 @@
+[ 2016-12-13T10:15:35+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/actionOperationUser
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.014360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012772s ]
+NOTIC: [8] Undefined index: controller_2 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 55 行.
+
+[ 2016-12-13T10:15:35+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.071739s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.071831s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.203211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.203263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.029462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.029508s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.037583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.037640s ]
+
+[ 2016-12-13T10:15:45+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionCheckUserInfo.html?username=wudan&password=wd811103
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0900s ]
+SQL: SELECT * FROM `think_user` WHERE ( username = 'wudan' AND password = '883327915c4022331b5abcb9da2a390c' ) LIMIT 1   [ RunTime:0.0128s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011780s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000704s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2016-12-13T10:15:47+08:00 ] 127.0.0.1 /myysy/admin.php/Rbac/Rbac/actionOperationUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0061s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.3513s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SELECT * FROM `think_user`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041269s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041345s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000750s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000920s ]
+
+[ 2016-12-13T10:15:50+08:00 ] 127.0.0.1 /myysy/admin.php/statistics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000818s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0058s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010583s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010640s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2016-12-13T10:15:55+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0058s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: select * from think_order [ RunTime:0.0584s ]
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-2 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-3 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-9 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017437s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017490s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000742s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2016-12-13T10:15:59+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Customerstatistics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000789s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0054s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: select * from think_order [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-2 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-9 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-3 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006886s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007021s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000722s ]
+
+[ 2016-12-13T10:16:04+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Customerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000801s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0059s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: select * from think_order [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-2 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-9 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-3 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008366s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008423s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2016-12-13T10:16:08+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Customerstatistics.html?type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000716s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0054s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: select * from think_order [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-2 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-9 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-3 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007248s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007295s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000710s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000746s ]
+
+[ 2016-12-13T10:16:10+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000719s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0054s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: select * from think_order [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-2 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-3 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-9 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006671s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006718s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000488s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2016-12-13T10:16:13+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000597s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000819s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0056s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: select * from think_order [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-11 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-2 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-3 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+NOTIC: [8] Undefined index: 2016-9 D:\phpStudy\WWW\myysy\CommonClass\Statistics\StatisAbstract.class.php 第 53 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006199s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006249s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000734s ]
+
+[ 2016-12-13T10:18:15+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000660s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0067s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+
+[ 2016-12-13T10:18:21+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000670s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0066s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+
+[ 2016-12-13T10:20:40+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000804s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0014s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+
+[ 2016-12-13T10:20:45+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000755s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0364s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+
+[ 2016-12-13T10:23:02+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0057s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+
+[ 2016-12-13T10:25:43+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000924s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0073s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+
+[ 2016-12-13T10:27:05+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000791s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0068s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [2] explode() expects parameter 2 to be string, array given D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Statistics\SalerstatisticsController.class.php 第 29 行.
+
+[ 2016-12-13T10:27:40+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0066s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Statistics\SalerstatisticsController.class.php 第 29 行.
+
+[ 2016-12-13T10:27:44+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000809s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0065s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Statistics\SalerstatisticsController.class.php 第 29 行.
+
+[ 2016-12-13T10:27:57+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000832s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0070s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Statistics\SalerstatisticsController.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Statistics\SalerstatisticsController.class.php 第 31 行.
+
+[ 2016-12-13T10:27:59+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000764s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0078s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Statistics\SalerstatisticsController.class.php 第 29 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Statistics\SalerstatisticsController.class.php 第 31 行.
+
+[ 2016-12-13T10:28:04+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0054s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Statistics\SalerstatisticsController.class.php 第 29 行.
+
+[ 2016-12-13T10:28:16+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0215s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Statistics\SalerstatisticsController.class.php 第 29 行.
+
+[ 2016-12-13T10:28:33+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000717s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0069s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined offset: 0 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Statistics\SalerstatisticsController.class.php 第 29 行.
+
+[ 2016-12-13T10:29:18+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002042s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0067s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+
+[ 2016-12-13T10:29:39+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000736s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0065s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+
+[ 2016-12-13T10:29:46+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000874s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0065s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+
+[ 2016-12-13T10:34:12+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000828s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0053s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+
+[ 2016-12-13T10:34:20+08:00 ] 127.0.0.1 /myysy/admin.php/statistics/Salerstatistics.html?type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0059s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+

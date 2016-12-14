@@ -29,12 +29,12 @@
     <div class="row">
         <?php echo ($body['sider']); ?>
         <div class="col-md-10">
-            <button name="btn-input" type="button" class="btn btn-info pull-right">搜索</button>
             <div class="btn-group" data-toggle="buttons">
                 <?php if(is_array($goodStyle)): foreach($goodStyle as $k=>$vo): ?><label class="btn btn-primary">
                         <input name="goodstyle" value="<?php echo ($vo['goodsstyle']); ?>"  type="checkbox" autocomplete="off" ><?php echo ($vo['goodsname']); ?>-<?php echo ($vo['goodsstyle']); ?>
                     </label><?php endforeach; endif; ?>
             </div>
+            <button name="btn-input" type="button" class="btn btn-info pull-right">搜索</button>
             <select name="type" class="select-type">
                 <option value="1">销量</option>
                 <option value="0">销售额</option>

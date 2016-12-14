@@ -29,7 +29,6 @@
     <div class="row">
         {$body['sider']}
         <div class="col-md-10">
-            <button name="btn-input" type="button" class="btn btn-info pull-right">搜索</button>
             <div class="btn-group" data-toggle="buttons">
                 <foreach name="goodStyle" item="vo" key="k" >
                     <label class="btn btn-primary">
@@ -37,6 +36,7 @@
                     </label>
                 </foreach>
             </div>
+            <button name="btn-input" type="button" class="btn btn-info pull-right">搜索</button>
             <select name="type" class="select-type">
                 <option value="1">销量</option>
                 <option value="0">销售额</option>
