@@ -67,4 +67,5 @@ class GoodsStyleStatis extends \CommonClass\Statistics\StatisAbstract {
             }
         }
     }
+
 }

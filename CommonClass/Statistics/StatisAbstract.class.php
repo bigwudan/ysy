@@ -37,7 +37,7 @@ abstract class StatisAbstract
     protected function _processDataByType($varType){
         $newData = array();
         foreach($this->_dataInfo as $k => $v){
-            $newData[$v[$varType]][] = $v;
+            $v[$varType] && $newData[$v[$varType]][] = $v;
         }
         return $newData;
     }

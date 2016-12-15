@@ -25,6 +25,8 @@ class GoodsstylestatisticsController extends Controller
     }
 
     public function index(){
+
+
         $GoodsStyle = new \CommonClass\Statistics\GoodsStyleStatis();
         $GoodsStyle->initi();
         $goodStyle = $GoodsStyle->getGoodStyle();
@@ -41,6 +43,30 @@ class GoodsstylestatisticsController extends Controller
         $data = $GoodsStyle->factoryModel('goodsstyle' , 'totalprice');
         $jsonData = json_encode($data , JSON_UNESCAPED_UNICODE);
         die($jsonData);
+    }
+
+    /**
+     * 单个商品
+     */
+    public function singerGood(){
+        $Good = new \CommonClass\Statistics\GoodStatis();
+        $Good->getGoodsNumByGood('月饼');
+
+        $data = $Good->factoryModel('goodsstyle' , 'goodsnum');
+
+        var_dump($data);
+        die();
+    }
+
+    /**
+     * 渠道
+     */
+    public function ChannelGood(){
+        $Channel = new \CommonClass\Statistics\ChannelStatis();
+        $Channel->initi();
+        $data = $Channel->factoryModel('channel' , 'totalprice');
+        var_dump($data);
+        die();
     }
 
 }
