@@ -12,9 +12,15 @@ class CustomerStatis extends \CommonClass\Statistics\StatisAbstract
      * 初始化
      * @return array
      */
-    public function initi(){
+    public function initi($varCustomer = null){
+
+        $where = "";
+        if($varCustomer){
+            $where = "AND customername = '{$varCustomer}'";
+        }
+
         $Model = new \Think\Model();
-        $data = $Model->db()->query("select * from think_order where ordertime != 0");
+        $data = $Model->db()->query("select * from think_order where ordertime != 0 {$where}");
         $this->_dataInfo = $data;
         if(empty($data)){
             return array('error' => 1 , 'msg' => 'sql is null');

@@ -69,45 +69,43 @@
     };
 
     var MyChart = function(){
-
-
         var _research = function(){
             var goodsName = $('select[name="goodsname"]').val();
-
             var url = '<?php echo U('Statistics/Singlegoodstatistics/actionAjaxFactory') ?>';
 
-            $.get(url , {mode:1,data:goodsName} , function(data){
+            var mode = 2;
+
+            $.get(url , {mode:mode,data:goodsName} , function(data){
                 var dataJson = JSON.parse(data);
                 var category = [];
                 var seriesData = [];
                 for(var k in dataJson){
                     if(dataJson.hasOwnProperty(k)){
-                        category.push(dataJson[k].customername);
+                        var tmpCate = mode == 1 ?  dataJson[k].customername : dataJson[k].goodprice;
+                        category.push(tmpCate);
                         seriesData.push(parseInt(dataJson[k].goodsum));
                     }
                 }
-
-                console.log(seriesData);
-
                 chart.xAxis[0].setCategories(category);
-
                 chart.series[0].update({
                     name:goodsName,
                     data: seriesData
                 });
 
+                var tmp = mode == 1 ?  '销售排名' : '价格和销量';
+
+                chart.setTitle({ text: tmp });
+
             });
-
-
         };
-
         var _initi = function(){
             $('.pull-right').on('click' , _research)
 
         }();
-
-
     }();
+
+
+
 
 
 

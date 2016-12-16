@@ -41,10 +41,28 @@ class SinglegoodstatisticsController extends Controller {
     public function actionAjaxFactory(){
         if(!I('data')) return array('error'=>1 , 'msg' => 'worry');
         $data = trim(I('data'));
-        $data = $this->_getRankOfGoodsName($data);
+        $mode = intval(I('mode'));
+
+        if($mode == 1){
+            $data = $this->_getRankOfGoodsName($data);
+        }else{
+            $data = $this->_getRankOfPriceAndNum($data);
+        }
         if(empty($data)) return array('error' => 1);
         $data = json_encode($data);
         die($data);
+    }
+
+    /**
+     * 获得销量和单价
+     */
+    private function _getRankOfPriceAndNum($varGoodsName){
+        if(!$varGoodsName){
+            return array('error'=>1 , 'msg' => 'no var');
+        }
+        $Model = new \Think\Model();
+        $data = $Model->db()->query("select goodprice , max(goodsnum) AS goodsum from think_order where customername != '' AND  goodsname = '{$varGoodsName}' AND goodprice != 0.00 Group By goodprice");
+        return $data;
     }
 
     /**

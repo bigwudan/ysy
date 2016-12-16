@@ -11,45 +11,42 @@
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
 <body>
+
+<style>
+
+    .select-type{
+        display: inline-block;
+        height: 34px;
+
+
+    }
+
+
+</style>
+
 <?php echo ($body['head']); ?>
 <div class="container-fluid">
     <div class="row">
         <?php echo ($body['sider']); ?>
         <div class="col-md-10">
-            <?php if($flag == 0 ): ?><a href="<?php echo U('statistics/Customerstatistics') ?>?type=1" type="button" class="btn btn-info pull-right">显示销售额</a>
-            <?php else: ?>
-                <a href="<?php echo U('statistics/Customerstatistics') ?>?type=0" type="button" class="btn btn-info pull-right">显示销量</a><?php endif; ?>
+            <select name="goodsname">
+                <?php if(is_array($goodsname)): foreach($goodsname as $k=>$vo): ?><option value="<?php echo ($vo['goodsname']); ?>"><?php echo ($vo['goodsname']); ?></option><?php endforeach; endif; ?>
+            </select>
+            <button name="btn-input" type="button" class="btn btn-info pull-right">搜索</button>
             <div id="container" style="min-width:400px;height:400px;"></div>
         </div>
     </div>
 
 </div>
 <script>
-    var jsonData = <?php echo ($jsonData); ?>;
-    var newList = [];
-    var num = 0;
-    for(var k in jsonData){
-        if(jsonData.hasOwnProperty(k)){
-            var tmpList = [];
-            for(var k1 in jsonData[k]){
-                if(jsonData[k].hasOwnProperty(k1)){
-                    var tmpK1List = k1.split('-');
-                    tmpK1List = Date.UTC(tmpK1List[0],tmpK1List[1]-1,1);
-                    tmpList.push([tmpK1List , jsonData[k][k1]]);
-                }
-            }
-            num ++;
-            newList.push({name:k,data:tmpList});
-        }
-    }
-    // create the chart
-    $('#container').highcharts({
+    var chart = Highcharts.chart('container', {
         chart: {
-
+            type: 'column'
         },
         title: {
-            text: '客户统计'
+            text: '销售排名'
         },
+
         xAxis:{
             title:{
                 text:'时间'
@@ -67,31 +64,55 @@
                 year:"%Y"
             }
         },
-
-        yAxis:{
-            title:{
-            <?php if($flag == 0 ): ?>text:'销量'
-            <?php else: ?>
-                text:'销售额'<?php endif; ?>
-
-            },
-
-        } ,
-        tooltip:{
-            dateTimeLabelFormats:{
-                millisecond:"%H:%M:%S.%L",
-                second:"%H:%M:%S",
-                minute:"%H:%M",
-                hour:"4%H:4%M",
-                day:"%Y-%m-%d",
-                week:"%m-%d",
-                month:"%Y-%m",
-                year:"%Y"
-            }
-
+        yAxis: {
         },
-        series:newList
+        series: [{
+            name:'wudan',
+            data: [2, 3, 4]
+        }]
     });
+
+    var testFun = function(){
+
+        var jsonData = <?php echo ($jsonData); ?>;
+        var tmpList = [];
+        for(var k1 in jsonData){
+            if(jsonData.hasOwnProperty(k1)){
+                var tmpK1List = k1.split('-');
+                tmpK1List = Date.UTC(tmpK1List[0],tmpK1List[1]-1,1);
+                tmpList.push([tmpK1List , jsonData[k1]]);
+            }
+        }
+
+        console.log(tmpList);
+
+        chart.series[0].setData(tmpList);
+        return jsonData;
+        //chart.series[0].setData([7, 8, 9,10]);
+    };
+
+    var MyChart = function(){
+        var _research = function(){
+            var goodsName = $('select[name="goodsname"]').val();
+            var url = '<?php echo U('Statistics/Singlegoodstatistics/actionAjaxFactory') ?>';
+
+            var mode = 2;
+            var jsonData = <?php echo ($jsonData); ?>;
+            chart.series[0].update({
+                name:goodsName,
+                data: seriesData
+            });
+        };
+        var _initi = function(){
+            $('.pull-right').on('click' , _research)
+
+        }();
+    }();
+
+
+
+
+
 
 </script>
 

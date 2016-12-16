@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2016-12-14 16:25:27
+Date: 2016-12-16 17:49:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -72,6 +72,9 @@ INSERT INTO `think_access` VALUES ('2', '31', '0', null);
 INSERT INTO `think_access` VALUES ('2', '33', '0', null);
 INSERT INTO `think_access` VALUES ('2', '32', '0', null);
 INSERT INTO `think_access` VALUES ('2', '34', '0', null);
+INSERT INTO `think_access` VALUES ('2', '35', '0', null);
+INSERT INTO `think_access` VALUES ('2', '36', '0', null);
+INSERT INTO `think_access` VALUES ('2', '37', '0', null);
 
 -- ----------------------------
 -- Table structure for `think_flow_execution`
@@ -317,7 +320,7 @@ CREATE TABLE `think_node` (
   KEY `pid` (`pid`),
   KEY `status` (`status`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_node
@@ -352,6 +355,9 @@ INSERT INTO `think_node` VALUES ('31', 'index', 'index', '1', '', '0', '29', '4'
 INSERT INTO `think_node` VALUES ('32', 'Goodsstylestatistics', '规格统计', '1', '', '0', '27', '3', '');
 INSERT INTO `think_node` VALUES ('33', 'index', 'index', '1', '', '0', '32', '4', '');
 INSERT INTO `think_node` VALUES ('34', 'goodStyleAjax', 'goodStyleAjax', '1', '', '0', '32', '4', '');
+INSERT INTO `think_node` VALUES ('35', 'Singlegoodstatistics', '单商品统计', '1', '', '0', '27', '3', '');
+INSERT INTO `think_node` VALUES ('36', 'index', 'index', '1', '', '0', '35', '4', '');
+INSERT INTO `think_node` VALUES ('37', 'actionAjaxFactory', 'actionAjaxFactory', '1', '', '0', '35', '4', '');
 
 -- ----------------------------
 -- Table structure for `think_order`
