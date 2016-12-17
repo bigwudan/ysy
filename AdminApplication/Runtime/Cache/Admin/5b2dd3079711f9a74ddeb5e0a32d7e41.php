@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 </head>
 <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<script src="__ROOT__/Public/Js/jquery-ui-1.10.3.min.js"></script>
+<script src="/myysy/Public/Js/jquery-ui-1.10.3.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
 <body>
@@ -24,25 +24,14 @@
 
 </style>
 
-{$body['head']}
+<?php echo ($body['head']); ?>
 <div class="container-fluid">
     <div class="row">
-        {$body['sider']}
+        <?php echo ($body['sider']); ?>
         <div class="col-md-10">
-            <select name="customer">
-                <foreach name="customerList" item="vo" key="k" >
-                    <option value="{$vo['customername']}">{$vo['customername']}</option>
-                </foreach>
+            <select name="goodsname">
+                <?php if(is_array($goodsname)): foreach($goodsname as $k=>$vo): ?><option value="<?php echo ($vo['goodsname']); ?>"><?php echo ($vo['goodsname']); ?></option><?php endforeach; endif; ?>
             </select>
-            <div class="btn-group" data-toggle="buttons">
-                <label class="btn btn-primary active">
-                    <input type="radio" value="0" name="mode" id="option1" autocomplete="off" checked>销售
-                </label>
-                <label class="btn btn-primary">
-                    <input type="radio" value="1" name="mode" id="option2" autocomplete="off">销量
-                </label>
-            </div>
-
             <button name="btn-input" type="button" class="btn btn-info pull-right">搜索</button>
             <div id="container" style="min-width:400px;height:400px;"></div>
         </div>
@@ -63,17 +52,37 @@
             return tmpList;
         };
         var _research = function(){
-            var customer = $('select[name="customer"]').val();
-            var url = '<?php echo U('Statistics/Customerstatistics/actionAjaxFactory') ?>';
-            var mode = $('input[name="mode"]:checked').val();
-            var yTitle = mode==0 ? '销售' : '销量';
-            $.get( url , {mode:mode,customer:customer} , function(data){
-                data = JSON.parse(data);
-                data = _changeFun(data);
-                _chart.yAxis[0].setTitle({
-                    text: yTitle
-                });
-                _chart.series[0].update({name:customer,data:data});
+            var goodsname = $('select[name="goodsname"]').val();
+            var url = '<?php echo U('Statistics/Channelstatistics/actionAjaxFactory') ?>';
+            $.get( url , {goodsname:goodsname} , function(data){
+
+                var channelList = JSON.parse(data);
+//                channelList['个人']
+//                channelList['团购']
+//                channelList['渠道']
+                var tmp = null;
+
+                if(channelList['渠道']){
+                    tmp = _changeFun(channelList['渠道']);
+                    _chart.get('series-1').setData(tmp);
+                }else{
+                    _chart.get('series-1').setData([]);
+                }
+
+                if(channelList['个人']){
+                    tmp = _changeFun(channelList['个人']);
+                    _chart.get('series-2').setData(tmp);
+                }else{
+                    _chart.get('series-2').setData([]);
+                }
+
+                if(channelList['团购']){
+                    tmp = _changeFun(channelList['团购']);
+                    _chart.get('series-3').setData(tmp);
+                }else{
+                    _chart.get('series-3').setData([]);
+                }
+
             });
         };
         var _initi = function(){
@@ -83,7 +92,7 @@
                     type: 'column'
                 },
                 title: {
-                    text: '销售排名'
+                    text: '销售占比'
                 },
                 xAxis:{
                     title:{
@@ -103,9 +112,30 @@
                     }
                 },
                 yAxis: {
+                    title:{
+                        text:'销售'
+                    }
+                },
+                plotOptions: {
+                    column: {
+                        stacking: 'percent'
+                    }
+                },
+                tooltip: {
+                    pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+                    shared: true
                 },
                 series: [{
-                    name:'请选择',
+                    id:'series-1',
+                    name: '渠道',
+                    data: []
+                }, {
+                    id:'series-2',
+                    name: '个人',
+                    data: []
+                }, {
+                    id:'series-3',
+                    name: '团购',
                     data: []
                 }]
             });

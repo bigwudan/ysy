@@ -13,12 +13,10 @@ class CustomerStatis extends \CommonClass\Statistics\StatisAbstract
      * @return array
      */
     public function initi($varCustomer = null){
-
         $where = "";
         if($varCustomer){
             $where = "AND customername = '{$varCustomer}'";
         }
-
         $Model = new \Think\Model();
         $data = $Model->db()->query("select * from think_order where ordertime != 0 {$where}");
         $this->_dataInfo = $data;

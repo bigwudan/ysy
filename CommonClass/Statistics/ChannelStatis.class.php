@@ -15,9 +15,9 @@ class ChannelStatis extends \CommonClass\Statistics\StatisAbstract
      * 初始化
      * @return array
      */
-    public function initi(){
+    public function initi($varGoodsName = null){
         $Model = new \Think\Model();
-        $data = $Model->db()->query("select * from think_order where ordertime != 0 AND channel in ('个人','团购','渠道')");
+        $data = $Model->db()->query("select * from think_order where ordertime != 0 AND ordertime != 0 AND goodsname = '{$varGoodsName}' AND channel in ('个人','团购','渠道')");
         $this->_dataInfo = $data;
         if(empty($data)){
             return array('error' => 1 , 'msg' => 'sql is null');

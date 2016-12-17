@@ -28,34 +28,34 @@ class CustomerstatisticsController extends Controller {
         }else{
             $typeStr = 'goodsnum';
         }
-        $data = M('order')->field('customername')->group('customername')->where('customername != ""')->select();
-
-
+        $customerList = M('order')->field('customername')->group('customername')->where('customername != ""')->select();
         $CustimerObj = new \CommonClass\Statistics\CustomerStatis();
         $customList = $CustimerObj->initi('个人');
         $data = $CustimerObj->factoryModel('customername' , $typeStr);
 
 
         $jsonData = json_encode(reset($data));
+        $this->assign('customerList' , $customerList);
         $this->assign('jsonData' , $jsonData);
         $this->assign('flag' , $flag);
         $this->display('/Statistics/Customerstatistics');
-        die();
 
-        $this->assign('goodsname' , $data);
-
-
-
-        $CustimerObj = new \CommonClass\Statistics\CustomerStatis();
-        $CustimerObj->initi();
-        $data = $CustimerObj->factoryModel('customername' , $typeStr);
-        $jsonData = json_encode($data , JSON_UNESCAPED_UNICODE);
-
-        $this->assign('jsonData' , $jsonData);
-        $this->assign('flag' , $flag);
-        $this->display('/Statistics/Customerstatistics');
     }
 
-    public function actionTest(){
+    /**
+     * actionAjaxFactory
+     */
+    public function actionAjaxFactory(){
+        $mode = intval(I('mode'));
+        $customername = trim(I('customer'));
+        if(!$customername){
+            return array('error'=>1 , 'msg'=>'no customername');
+        }
+        $typeStr = $mode == 1 ? 'totalprice' : 'goodsnum';
+        $CustimerObj = new \CommonClass\Statistics\CustomerStatis();
+        $customList = $CustimerObj->initi($customername);
+        $data = $CustimerObj->factoryModel('customername' , $typeStr);
+        $jsonData = json_encode(reset($data));
+        die($jsonData);
     }
 }
