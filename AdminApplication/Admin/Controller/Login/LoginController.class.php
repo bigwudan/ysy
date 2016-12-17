@@ -30,7 +30,7 @@ class LoginController extends Controller
         $userFromDb = M('user')->where("username = '{$userName}' AND password = '{$passWord}'")->find();
         if($userFromDb){
             session('uid',$userFromDb['id']);
-            $url = U('/Rbac/Rbac/actionOperationUser');
+            $url = U('/statistics');
             $this->success('登陆成功', $url);
         }else{
             $this->error('登陆失败','actionLogin');

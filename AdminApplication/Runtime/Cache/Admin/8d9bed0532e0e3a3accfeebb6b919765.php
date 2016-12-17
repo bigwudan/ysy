@@ -32,6 +32,14 @@
             <select name="goodsname">
             <?php if(is_array($goodsname)): foreach($goodsname as $k=>$vo): ?><option value="<?php echo ($vo['goodsname']); ?>"><?php echo ($vo['goodsname']); ?></option><?php endforeach; endif; ?>
             </select>
+            <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary active">
+                    <input type="radio" value="0" name="mode" id="option1" autocomplete="off" checked>价格和销量
+                </label>
+                <label class="btn btn-primary">
+                    <input type="radio" value="1" name="mode" id="option2" autocomplete="off">销售排名
+                </label>
+            </div>
             <button name="btn-input" type="button" class="btn btn-info pull-right">搜索</button>
             <div id="container" style="min-width:400px;height:400px;"></div>
         </div>
@@ -44,17 +52,17 @@
             type: 'column'
         },
         title: {
-            text: '销售排名'
+            text: ''
         },
 
         xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
+            categories: []
         },
         yAxis: {
         },
         series: [{
-            name:'wudan',
-            data: [2, 3, 4]
+            name:'',
+            data: []
         }]
     });
 
@@ -72,8 +80,7 @@
         var _research = function(){
             var goodsName = $('select[name="goodsname"]').val();
             var url = '<?php echo U('Statistics/Singlegoodstatistics/actionAjaxFactory') ?>';
-
-            var mode = 2;
+            var mode = $('input[name="mode"]:checked').val();
 
             $.get(url , {mode:mode,data:goodsName} , function(data){
                 var dataJson = JSON.parse(data);
@@ -91,11 +98,18 @@
                     name:goodsName,
                     data: seriesData
                 });
-
-                var tmp = mode == 1 ?  '销售排名' : '价格和销量';
+                var tmp = '价格和销量';
+                var yTitle = '销量';
+                if(mode == 1){
+                    tmp = '销售排名';
+                    yTitle = '销售';
+                }
 
                 chart.setTitle({ text: tmp });
 
+                chart.yAxis[0].setTitle({
+                    text: yTitle
+                });
             });
         };
         var _initi = function(){

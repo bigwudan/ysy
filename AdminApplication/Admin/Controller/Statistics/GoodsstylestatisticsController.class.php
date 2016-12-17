@@ -41,7 +41,7 @@ class GoodsstylestatisticsController extends Controller
         $GoodsStyle = new \CommonClass\Statistics\GoodsStyleStatis();
         $GoodsStyle->getDataByGoodStyle($data);
         $data = $GoodsStyle->factoryModel('goodsstyle' , 'totalprice');
-        $jsonData = json_encode($data , JSON_UNESCAPED_UNICODE);
+        $jsonData = json_encode($data);
         die($jsonData);
     }
 

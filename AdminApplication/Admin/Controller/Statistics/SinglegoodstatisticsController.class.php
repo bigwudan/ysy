@@ -25,12 +25,6 @@ class SinglegoodstatisticsController extends Controller {
     public function index(){
         $data = M('order')->field('goodsname')->group('goodsname')->select();
 
-        $goodList = $this->_getRankOfGoodsName('月饼');
-
-        $goodList = json_encode($goodList);
-
-
-        $this->assign('goodList' , $goodList);
         $this->assign('goodsname' , $data);
         $this->display('/Statistics/Singlegoodstatistics');
     }

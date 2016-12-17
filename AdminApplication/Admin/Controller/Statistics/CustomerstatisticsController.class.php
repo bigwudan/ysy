@@ -32,8 +32,6 @@ class CustomerstatisticsController extends Controller {
         $CustimerObj = new \CommonClass\Statistics\CustomerStatis();
         $customList = $CustimerObj->initi('个人');
         $data = $CustimerObj->factoryModel('customername' , $typeStr);
-
-
         $jsonData = json_encode(reset($data));
         $this->assign('customerList' , $customerList);
         $this->assign('jsonData' , $jsonData);

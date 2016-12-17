@@ -31,7 +31,7 @@ class SalerstatisticsController extends Controller {
         $CustimerObj = new \CommonClass\Statistics\CustomerStatis();
         $CustimerObj->initi();
         $data = $CustimerObj->factoryModel('salesman' , $typeStr);
-        $jsonData = json_encode($data , JSON_UNESCAPED_UNICODE);
+        $jsonData = json_encode($data);
 
         $this->assign('jsonData' , $jsonData);
         $this->assign('flag' , $flag);
