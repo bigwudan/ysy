@@ -1,4 +1,4 @@
-
+<?php if (!defined('THINK_PATH')) exit();?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -405,7 +405,7 @@
 
 <div class="container">
     <div class="header">
-        <img src="__ROOT__/Public/Img/loge.png">
+        <img src="/myysy/Public/Img/loge.png">
 
 
     </div>
@@ -424,7 +424,7 @@
     </form>
 
     <div class="foot">
-        <img src="__ROOT__/Public/Img/alarm.png">
+        <img src="/myysy/Public/Img/alarm.png">
     </div>
 </div>
 

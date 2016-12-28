@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 </head>
 <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<!--<script src="__ROOT__/Public/Js/bootstrap/bootstrap.min.js"></script>-->
+<!--<script src="/myysy/Public/Js/bootstrap/bootstrap.min.js"></script>-->
 <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <body>
 <style>
@@ -100,10 +100,10 @@
     <div class="rect5"></div>
 </div>
 
-{$body['head']}
+<?php echo ($body['head']); ?>
 <div class="container-fluid">
     <div class="row">
-        {$body['sider']}
+        <?php echo ($body['sider']); ?>
         <div class="col-md-10">
             <form class="form-inline" method="get" action="<?php echo U('/ticket/EditTicket') ?>">
                 <div class="form-group form-group-sm">
@@ -163,11 +163,11 @@
                 </tr>
                 </thead>
                 <tbody>
-                {$html}
+                <?php echo ($html); ?>
                 </tbody>
             </table>
             <div style="font-size: 20px">
-                {$show}
+                <?php echo ($show); ?>
             </div>
         </div>
     </div>

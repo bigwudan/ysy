@@ -1,4 +1,4 @@
-
+<?php if (!defined('THINK_PATH')) exit();?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -149,12 +149,12 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="__ROOT__/Public/Img/loge.png">
+            <img src="/myysy/Public/Img/loge.png">
         </div>
         <form action="<?php echo U('Ticket/Ticket/actionSucess') ?>">
         <div class="body">
-            <input type="hidden"  name="token" value="{$token}">
-            <input type="hidden"  name="id" value="{$id}">
+            <input type="hidden"  name="token" value="<?php echo ($token); ?>">
+            <input type="hidden"  name="id" value="<?php echo ($id); ?>">
             <div class="alert alert-danger" role="alert" style="display: none">
                 <strong>错误:</strong><span>提货卷和验证码有错</span>
             </div>
@@ -204,4 +204,4 @@ $('.btn-success').on('click' , function(){
 </script>
 
 </body>
-</html> 
+</html>
