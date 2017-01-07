@@ -154,7 +154,8 @@
         <form action="<?php echo U('Ticket/Ticket/actionSucess') ?>">
         <div class="body">
             <input type="hidden"  name="token" value="<?php echo ($token); ?>">
-            <input type="hidden"  name="id" value="<?php echo ($id); ?>">
+            <input type="hidden"  name="number" value="<?php echo ($num); ?>">
+            <input name="category" value="<?php echo ($code); ?>" type="hidden" >
             <div class="alert alert-danger" role="alert" style="display: none">
                 <strong>错误:</strong><span>提货卷和验证码有错</span>
             </div>

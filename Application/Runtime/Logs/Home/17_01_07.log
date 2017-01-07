@@ -1,0 +1,2874 @@
+[ 2017-01-07T15:23:03+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.028002s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:23:09+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:24:07+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:26:13+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:30:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T15:30:46+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:32:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ticket` (`id`,`category`) VALUES ('1','398'),('2','398'),('3','398'),('4','398'),('5','398'),('6','398'),('7','398'),('8','398'),('9','398'),('10','398'),('11','398'),('12','398'),('13','398'),('14','398'),('15','398'),('16','398'),('17','398'),('18','398'),('19','398'),('20','398'),('21','398'),('22','398'),('23','398'),('24','398'),('25','398'),('26','398'),('27','398'),('28','398'),('29','398'),('30','398'),('31','398'),('32','398'),('33','398'),('34','398'),('35','398'),('36','398'),('37','398'),('38','398'),('39','398'),('40','398'),('41','398'),('42','398'),('43','398'),('44','398'),('45','398'),('46','398'),('47','398'),('48','398'),('49','398'),('50','398'),('51','398'),('52','398'),('53','398'),('54','398'),('55','398'),('56','398'),('57','398'),('58','398'),('59','398'),('60','398'),('61','398'),('62','398'),('63','398'),('64','398'),('65','398'),('66','398'),('67','398'),('68','398'),('69','398'),('70','398'),('71','398'),('72','398'),('73','398'),('74','398'),('75','398'),('76','398'),('77','398'),('78','398'),('79','398'),('80','398'),('81','398'),('82','398'),('83','398'),('84','398'),('85','398'),('86','398'),('87','398'),('88','398'),('89','398'),('90','398'),('91','398'),('92','398'),('93','398'),('94','398'),('95','398'),('96','398'),('97','398'),('98','398'),('99','398'),('100','398'),('101','398'),('102','398'),('103','398'),('104','398'),('105','398'),('106','398'),('107','398'),('108','398'),('109','398'),('110','398'),('111','398'),('112','398'),('113','398'),('114','398'),('115','398'),('116','398'),('117','398'),('118','398'),('119','398'),('120','398'),('121','398'),('122','398'),('123','398'),('124','398'),('125','398'),('126','398'),('127','398'),('128','398'),('129','398'),('130','398'),('131','398'),('132','398'),('133','398'),('134','398'),('135','398'),('136','398'),('137','398'),('138','398'),('139','398'),('140','398'),('141','398'),('142','398'),('143','398'),('144','398'),('145','398'),('146','398'),('147','398'),('148','398'),('149','398'),('150','398'),('151','398'),('152','398'),('153','398'),('154','398'),('155','398'),('156','398'),('157','398'),('158','398'),('159','398'),('160','398'),('161','398'),('162','398'),('163','398'),('164','398'),('165','398'),('166','398'),('167','398'),('168','398'),('169','398'),('170','398'),('171','398'),('172','398'),('173','398'),('174','398'),('175','398'),('176','398'),('177','398'),('178','398'),('179','398'),('180','398'),('181','398'),('182','398'),('183','398'),('184','398'),('185','398'),('186','398'),('187','398'),('188','398'),('189','398'),('190','398'),('191','398'),('192','398'),('193','398'),('194','398'),('195','398'),('196','398'),('197','398'),('198','398'),('199','398'),('200','398') [ RunTime:0.0040s ]
+
+[ 2017-01-07T15:33:43+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ticket` (`id`,`category`) VALUES ('1','398'),('2','398'),('3','398'),('4','398'),('5','398'),('6','398'),('7','398'),('8','398'),('9','398'),('10','398'),('11','398'),('12','398'),('13','398'),('14','398'),('15','398'),('16','398'),('17','398'),('18','398'),('19','398'),('20','398'),('21','398'),('22','398'),('23','398'),('24','398'),('25','398'),('26','398'),('27','398'),('28','398'),('29','398'),('30','398'),('31','398'),('32','398'),('33','398'),('34','398'),('35','398'),('36','398'),('37','398'),('38','398'),('39','398'),('40','398'),('41','398'),('42','398'),('43','398'),('44','398'),('45','398'),('46','398'),('47','398'),('48','398'),('49','398'),('50','398'),('51','398'),('52','398'),('53','398'),('54','398'),('55','398'),('56','398'),('57','398'),('58','398'),('59','398'),('60','398'),('61','398'),('62','398'),('63','398'),('64','398'),('65','398'),('66','398'),('67','398'),('68','398'),('69','398'),('70','398'),('71','398'),('72','398'),('73','398'),('74','398'),('75','398'),('76','398'),('77','398'),('78','398'),('79','398'),('80','398'),('81','398'),('82','398'),('83','398'),('84','398'),('85','398'),('86','398'),('87','398'),('88','398'),('89','398'),('90','398'),('91','398'),('92','398'),('93','398'),('94','398'),('95','398'),('96','398'),('97','398'),('98','398'),('99','398'),('100','398'),('101','398'),('102','398'),('103','398'),('104','398'),('105','398'),('106','398'),('107','398'),('108','398'),('109','398'),('110','398'),('111','398'),('112','398'),('113','398'),('114','398'),('115','398'),('116','398'),('117','398'),('118','398'),('119','398'),('120','398'),('121','398'),('122','398'),('123','398'),('124','398'),('125','398'),('126','398'),('127','398'),('128','398'),('129','398'),('130','398'),('131','398'),('132','398'),('133','398'),('134','398'),('135','398'),('136','398'),('137','398'),('138','398'),('139','398'),('140','398'),('141','398'),('142','398'),('143','398'),('144','398'),('145','398'),('146','398'),('147','398'),('148','398'),('149','398'),('150','398'),('151','398'),('152','398'),('153','398'),('154','398'),('155','398'),('156','398'),('157','398'),('158','398'),('159','398'),('160','398'),('161','398'),('162','398'),('163','398'),('164','398'),('165','398'),('166','398'),('167','398'),('168','398'),('169','398'),('170','398'),('171','398'),('172','398'),('173','398'),('174','398'),('175','398'),('176','398'),('177','398'),('178','398'),('179','398'),('180','398'),('181','398'),('182','398'),('183','398'),('184','398'),('185','398'),('186','398'),('187','398'),('188','398'),('189','398'),('190','398'),('191','398'),('192','398'),('193','398'),('194','398'),('195','398'),('196','398'),('197','398'),('198','398'),('199','398'),('200','398') [ RunTime:0.0040s ]
+ERR: 1062:Duplicate entry '1' for key 'id'
+ [ SQL语句 ] : INSERT INTO `think_ticket` (`id`,`category`) VALUES ('1','598'),('2','598'),('3','598'),('4','598'),('5','598'),('6','598'),('7','598'),('8','598'),('9','598'),('10','598'),('11','598'),('12','598'),('13','598'),('14','598'),('15','598'),('16','598'),('17','598'),('18','598'),('19','598'),('20','598'),('21','598'),('22','598'),('23','598'),('24','598'),('25','598'),('26','598'),('27','598'),('28','598'),('29','598'),('30','598'),('31','598'),('32','598'),('33','598'),('34','598'),('35','598'),('36','598'),('37','598'),('38','598'),('39','598'),('40','598'),('41','598'),('42','598'),('43','598'),('44','598'),('45','598'),('46','598'),('47','598'),('48','598'),('49','598'),('50','598'),('51','598'),('52','598'),('53','598'),('54','598'),('55','598'),('56','598'),('57','598'),('58','598'),('59','598'),('60','598'),('61','598'),('62','598'),('63','598'),('64','598'),('65','598'),('66','598'),('67','598'),('68','598'),('69','598'),('70','598'),('71','598'),('72','598'),('73','598'),('74','598'),('75','598'),('76','598'),('77','598'),('78','598'),('79','598'),('80','598'),('81','598'),('82','598'),('83','598'),('84','598'),('85','598'),('86','598'),('87','598'),('88','598'),('89','598'),('90','598'),('91','598'),('92','598'),('93','598'),('94','598'),('95','598'),('96','598'),('97','598'),('98','598'),('99','598'),('100','598'),('101','598'),('102','598'),('103','598'),('104','598'),('105','598'),('106','598'),('107','598'),('108','598'),('109','598'),('110','598'),('111','598'),('112','598'),('113','598'),('114','598'),('115','598'),('116','598'),('117','598'),('118','598'),('119','598'),('120','598'),('121','598'),('122','598'),('123','598'),('124','598'),('125','598'),('126','598'),('127','598'),('128','598'),('129','598'),('130','598'),('131','598'),('132','598'),('133','598'),('134','598'),('135','598'),('136','598'),('137','598'),('138','598'),('139','598'),('140','598'),('141','598'),('142','598'),('143','598'),('144','598'),('145','598'),('146','598'),('147','598'),('148','598'),('149','598'),('150','598'),('151','598'),('152','598'),('153','598'),('154','598'),('155','598'),('156','598'),('157','598'),('158','598'),('159','598'),('160','598'),('161','598'),('162','598'),('163','598'),('164','598'),('165','598'),('166','598'),('167','598'),('168','598'),('169','598'),('170','598'),('171','598'),('172','598'),('173','598'),('174','598'),('175','598'),('176','598'),('177','598'),('178','598'),('179','598'),('180','598'),('181','598'),('182','598'),('183','598'),('184','598'),('185','598'),('186','598'),('187','598'),('188','598'),('189','598'),('190','598'),('191','598'),('192','598'),('193','598'),('194','598'),('195','598'),('196','598'),('197','598'),('198','598'),('199','598'),('200','598')
+ERR: 1062:Duplicate entry '1' for key 'id'
+ [ SQL语句 ] : INSERT INTO `think_ticket` (`id`,`category`) VALUES ('1','598'),('2','598'),('3','598'),('4','598'),('5','598'),('6','598'),('7','598'),('8','598'),('9','598'),('10','598'),('11','598'),('12','598'),('13','598'),('14','598'),('15','598'),('16','598'),('17','598'),('18','598'),('19','598'),('20','598'),('21','598'),('22','598'),('23','598'),('24','598'),('25','598'),('26','598'),('27','598'),('28','598'),('29','598'),('30','598'),('31','598'),('32','598'),('33','598'),('34','598'),('35','598'),('36','598'),('37','598'),('38','598'),('39','598'),('40','598'),('41','598'),('42','598'),('43','598'),('44','598'),('45','598'),('46','598'),('47','598'),('48','598'),('49','598'),('50','598'),('51','598'),('52','598'),('53','598'),('54','598'),('55','598'),('56','598'),('57','598'),('58','598'),('59','598'),('60','598'),('61','598'),('62','598'),('63','598'),('64','598'),('65','598'),('66','598'),('67','598'),('68','598'),('69','598'),('70','598'),('71','598'),('72','598'),('73','598'),('74','598'),('75','598'),('76','598'),('77','598'),('78','598'),('79','598'),('80','598'),('81','598'),('82','598'),('83','598'),('84','598'),('85','598'),('86','598'),('87','598'),('88','598'),('89','598'),('90','598'),('91','598'),('92','598'),('93','598'),('94','598'),('95','598'),('96','598'),('97','598'),('98','598'),('99','598'),('100','598'),('101','598'),('102','598'),('103','598'),('104','598'),('105','598'),('106','598'),('107','598'),('108','598'),('109','598'),('110','598'),('111','598'),('112','598'),('113','598'),('114','598'),('115','598'),('116','598'),('117','598'),('118','598'),('119','598'),('120','598'),('121','598'),('122','598'),('123','598'),('124','598'),('125','598'),('126','598'),('127','598'),('128','598'),('129','598'),('130','598'),('131','598'),('132','598'),('133','598'),('134','598'),('135','598'),('136','598'),('137','598'),('138','598'),('139','598'),('140','598'),('141','598'),('142','598'),('143','598'),('144','598'),('145','598'),('146','598'),('147','598'),('148','598'),('149','598'),('150','598'),('151','598'),('152','598'),('153','598'),('154','598'),('155','598'),('156','598'),('157','598'),('158','598'),('159','598'),('160','598'),('161','598'),('162','598'),('163','598'),('164','598'),('165','598'),('166','598'),('167','598'),('168','598'),('169','598'),('170','598'),('171','598'),('172','598'),('173','598'),('174','598'),('175','598'),('176','598'),('177','598'),('178','598'),('179','598'),('180','598'),('181','598'),('182','598'),('183','598'),('184','598'),('185','598'),('186','598'),('187','598'),('188','598'),('189','598'),('190','598'),('191','598'),('192','598'),('193','598'),('194','598'),('195','598'),('196','598'),('197','598'),('198','598'),('199','598'),('200','598')
+
+[ 2017-01-07T15:34:20+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0040s ]
+SQL: INSERT INTO `think_ticket` (`id`,`category`) VALUES ('1','398'),('2','398'),('3','398'),('4','398'),('5','398'),('6','398'),('7','398'),('8','398'),('9','398'),('10','398'),('11','398'),('12','398'),('13','398'),('14','398'),('15','398'),('16','398'),('17','398'),('18','398'),('19','398'),('20','398'),('21','398'),('22','398'),('23','398'),('24','398'),('25','398'),('26','398'),('27','398'),('28','398'),('29','398'),('30','398'),('31','398'),('32','398'),('33','398'),('34','398'),('35','398'),('36','398'),('37','398'),('38','398'),('39','398'),('40','398'),('41','398'),('42','398'),('43','398'),('44','398'),('45','398'),('46','398'),('47','398'),('48','398'),('49','398'),('50','398'),('51','398'),('52','398'),('53','398'),('54','398'),('55','398'),('56','398'),('57','398'),('58','398'),('59','398'),('60','398'),('61','398'),('62','398'),('63','398'),('64','398'),('65','398'),('66','398'),('67','398'),('68','398'),('69','398'),('70','398'),('71','398'),('72','398'),('73','398'),('74','398'),('75','398'),('76','398'),('77','398'),('78','398'),('79','398'),('80','398'),('81','398'),('82','398'),('83','398'),('84','398'),('85','398'),('86','398'),('87','398'),('88','398'),('89','398'),('90','398'),('91','398'),('92','398'),('93','398'),('94','398'),('95','398'),('96','398'),('97','398'),('98','398'),('99','398'),('100','398'),('101','398'),('102','398'),('103','398'),('104','398'),('105','398'),('106','398'),('107','398'),('108','398'),('109','398'),('110','398'),('111','398'),('112','398'),('113','398'),('114','398'),('115','398'),('116','398'),('117','398'),('118','398'),('119','398'),('120','398'),('121','398'),('122','398'),('123','398'),('124','398'),('125','398'),('126','398'),('127','398'),('128','398'),('129','398'),('130','398'),('131','398'),('132','398'),('133','398'),('134','398'),('135','398'),('136','398'),('137','398'),('138','398'),('139','398'),('140','398'),('141','398'),('142','398'),('143','398'),('144','398'),('145','398'),('146','398'),('147','398'),('148','398'),('149','398'),('150','398'),('151','398'),('152','398'),('153','398'),('154','398'),('155','398'),('156','398'),('157','398'),('158','398'),('159','398'),('160','398'),('161','398'),('162','398'),('163','398'),('164','398'),('165','398'),('166','398'),('167','398'),('168','398'),('169','398'),('170','398'),('171','398'),('172','398'),('173','398'),('174','398'),('175','398'),('176','398'),('177','398'),('178','398'),('179','398'),('180','398'),('181','398'),('182','398'),('183','398'),('184','398'),('185','398'),('186','398'),('187','398'),('188','398'),('189','398'),('190','398'),('191','398'),('192','398'),('193','398'),('194','398'),('195','398'),('196','398'),('197','398'),('198','398'),('199','398'),('200','398') [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ticket` (`id`,`category`) VALUES ('1','598'),('2','598'),('3','598'),('4','598'),('5','598'),('6','598'),('7','598'),('8','598'),('9','598'),('10','598'),('11','598'),('12','598'),('13','598'),('14','598'),('15','598'),('16','598'),('17','598'),('18','598'),('19','598'),('20','598'),('21','598'),('22','598'),('23','598'),('24','598'),('25','598'),('26','598'),('27','598'),('28','598'),('29','598'),('30','598'),('31','598'),('32','598'),('33','598'),('34','598'),('35','598'),('36','598'),('37','598'),('38','598'),('39','598'),('40','598'),('41','598'),('42','598'),('43','598'),('44','598'),('45','598'),('46','598'),('47','598'),('48','598'),('49','598'),('50','598'),('51','598'),('52','598'),('53','598'),('54','598'),('55','598'),('56','598'),('57','598'),('58','598'),('59','598'),('60','598'),('61','598'),('62','598'),('63','598'),('64','598'),('65','598'),('66','598'),('67','598'),('68','598'),('69','598'),('70','598'),('71','598'),('72','598'),('73','598'),('74','598'),('75','598'),('76','598'),('77','598'),('78','598'),('79','598'),('80','598'),('81','598'),('82','598'),('83','598'),('84','598'),('85','598'),('86','598'),('87','598'),('88','598'),('89','598'),('90','598'),('91','598'),('92','598'),('93','598'),('94','598'),('95','598'),('96','598'),('97','598'),('98','598'),('99','598'),('100','598'),('101','598'),('102','598'),('103','598'),('104','598'),('105','598'),('106','598'),('107','598'),('108','598'),('109','598'),('110','598'),('111','598'),('112','598'),('113','598'),('114','598'),('115','598'),('116','598'),('117','598'),('118','598'),('119','598'),('120','598'),('121','598'),('122','598'),('123','598'),('124','598'),('125','598'),('126','598'),('127','598'),('128','598'),('129','598'),('130','598'),('131','598'),('132','598'),('133','598'),('134','598'),('135','598'),('136','598'),('137','598'),('138','598'),('139','598'),('140','598'),('141','598'),('142','598'),('143','598'),('144','598'),('145','598'),('146','598'),('147','598'),('148','598'),('149','598'),('150','598'),('151','598'),('152','598'),('153','598'),('154','598'),('155','598'),('156','598'),('157','598'),('158','598'),('159','598'),('160','598'),('161','598'),('162','598'),('163','598'),('164','598'),('165','598'),('166','598'),('167','598'),('168','598'),('169','598'),('170','598'),('171','598'),('172','598'),('173','598'),('174','598'),('175','598'),('176','598'),('177','598'),('178','598'),('179','598'),('180','598'),('181','598'),('182','598'),('183','598'),('184','598'),('185','598'),('186','598'),('187','598'),('188','598'),('189','598'),('190','598'),('191','598'),('192','598'),('193','598'),('194','598'),('195','598'),('196','598'),('197','598'),('198','598'),('199','598'),('200','598') [ RunTime:0.0040s ]
+SQL: INSERT INTO `think_ticket` (`id`,`category`) VALUES ('1','888'),('2','888'),('3','888'),('4','888'),('5','888'),('6','888'),('7','888'),('8','888'),('9','888'),('10','888'),('11','888'),('12','888'),('13','888'),('14','888'),('15','888'),('16','888'),('17','888'),('18','888'),('19','888'),('20','888'),('21','888'),('22','888'),('23','888'),('24','888'),('25','888'),('26','888'),('27','888'),('28','888'),('29','888'),('30','888'),('31','888'),('32','888'),('33','888'),('34','888'),('35','888'),('36','888'),('37','888'),('38','888'),('39','888'),('40','888'),('41','888'),('42','888'),('43','888'),('44','888'),('45','888'),('46','888'),('47','888'),('48','888'),('49','888'),('50','888'),('51','888'),('52','888'),('53','888'),('54','888'),('55','888'),('56','888'),('57','888'),('58','888'),('59','888'),('60','888'),('61','888'),('62','888'),('63','888'),('64','888'),('65','888'),('66','888'),('67','888'),('68','888'),('69','888'),('70','888'),('71','888'),('72','888'),('73','888'),('74','888'),('75','888'),('76','888'),('77','888'),('78','888'),('79','888'),('80','888'),('81','888'),('82','888'),('83','888'),('84','888'),('85','888'),('86','888'),('87','888'),('88','888'),('89','888'),('90','888'),('91','888'),('92','888'),('93','888'),('94','888'),('95','888'),('96','888'),('97','888'),('98','888'),('99','888'),('100','888'),('101','888'),('102','888'),('103','888'),('104','888'),('105','888'),('106','888'),('107','888'),('108','888'),('109','888'),('110','888'),('111','888'),('112','888'),('113','888'),('114','888'),('115','888'),('116','888'),('117','888'),('118','888'),('119','888'),('120','888'),('121','888'),('122','888'),('123','888'),('124','888'),('125','888'),('126','888'),('127','888'),('128','888'),('129','888'),('130','888'),('131','888'),('132','888'),('133','888'),('134','888'),('135','888'),('136','888'),('137','888'),('138','888'),('139','888'),('140','888'),('141','888'),('142','888'),('143','888'),('144','888'),('145','888'),('146','888'),('147','888'),('148','888'),('149','888'),('150','888'),('151','888'),('152','888'),('153','888'),('154','888'),('155','888'),('156','888'),('157','888'),('158','888'),('159','888'),('160','888'),('161','888'),('162','888'),('163','888'),('164','888'),('165','888'),('166','888'),('167','888'),('168','888'),('169','888'),('170','888'),('171','888'),('172','888'),('173','888'),('174','888'),('175','888'),('176','888'),('177','888'),('178','888'),('179','888'),('180','888'),('181','888'),('182','888'),('183','888'),('184','888'),('185','888'),('186','888'),('187','888'),('188','888'),('189','888'),('190','888'),('191','888'),('192','888'),('193','888'),('194','888'),('195','888'),('196','888'),('197','888'),('198','888'),('199','888'),('200','888') [ RunTime:0.0040s ]
+
+[ 2017-01-07T15:35:03+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:35:15+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:40:03+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:40:47+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T15:41:00+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T15:42:03+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:44:08+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:47:33+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionIndex
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T15:47:40+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionIndex&code=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+ERR: 非法操作:actionIndex&code=1
+
+[ 2017-01-07T15:48:04+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionIndex?code=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-07T15:48:33+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionIndex?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:49:14+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionIndex?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T15:51:33+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:54:28+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:55:28+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:55:28+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: token D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 156 行.
+NOTIC: [8] Undefined variable: id D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 157 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T15:56:27+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T15:56:29+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&checknum=undefined
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0070s ]
+ERR: 1054:Unknown column 'checknum' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `think_ticket` WHERE ( number = '567' AND checknum = 'undefined' ) LIMIT 1  
+ERR: 1054:Unknown column 'checknum' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `think_ticket` WHERE ( number = '567' AND checknum = 'undefined' ) LIMIT 1  
+
+[ 2017-01-07T15:56:31+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T15:57:09+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:13:19+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:13:22+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:13:32+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:21:57+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:21:59+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:21+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:22+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:22+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:22+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:22+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:22+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:22:31+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:32+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:22:32+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:22:32+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:33+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:33+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:22:45+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:22:45+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:22:45+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:46+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:46+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:46+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:46+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:22:46+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:47+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:47+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:22:47+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:22:47+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:58+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:58+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:58+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:22:58+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:23:06+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:28+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:30+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:39+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:23:40+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:23:40+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:23:40+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:23:40+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:41+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:41+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:41+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:41+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:23:41+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:23:41+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:23:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:23:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:23:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:43+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:23:43+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:28:11+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-07T16:28:11+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:28:12+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:28:12+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:28:12+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:28:12+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:28:13+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:28:13+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:28:13+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:28:13+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:28:13+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/initiSql
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:33:39+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:33:45+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 40 行.
+
+[ 2017-01-07T16:33:59+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:05+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:15+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:15+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:15+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:16+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:16+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:23+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:24+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:24+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:24+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:24+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:25+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-07T16:34:25+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:25+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-01-07T16:34:25+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:25+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:25+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:26+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:26+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:26+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:26+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:26+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:27+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:27+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:27+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:27+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:27+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:27+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:28+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:41+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:41+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:41+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:58+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:59+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:34:59+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:59+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:34:59+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:35:22+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:23+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:23+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:35:23+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:23+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:24+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:35:49+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:35:50+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:50+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-01-07T16:35:50+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:35:50+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:35:51+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:35:51+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:35:51+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:51+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:51+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:51+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:57+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:57+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:35:57+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:35:58+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:36:02+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:02+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:02+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:02+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:36:03+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:03+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:36:03+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:36:03+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=5454&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:36:07+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=12345678&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:11+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:15+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: token D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 156 行.
+NOTIC: [8] Undefined variable: id D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 157 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:23+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:23+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:28+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=232&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:36:34+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=1&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:36:41+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:43+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=1&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:36:46+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=1&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:36:47+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=1&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-07T16:36:49+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:36:53+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:37:02+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:37:04+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:37:04+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:37:05+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:37:08+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:37:09+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:37:10+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:37:11+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:37:14+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=567&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:37:19+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=000&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-07T16:37:33+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:37:37+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:38:02+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 1 D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 39 行.
+
+[ 2017-01-07T16:38:22+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:38:29+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000021&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-07T16:38:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000021&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:38:53+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:39:20+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:42:00+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:42:05+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: token D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 156 行.
+NOTIC: [8] Undefined variable: id D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 157 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:42:10+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: token D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 156 行.
+NOTIC: [8] Undefined variable: id D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 157 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:43:12+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=00000023&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:43:23+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000002&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '2' AND category = '398' ) LIMIT 1   [ RunTime:0.0410s ]
+
+[ 2017-01-07T16:43:32+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000002&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '2' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T16:43:32+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: token D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 156 行.
+NOTIC: [8] Undefined variable: id D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 157 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:43:35+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=00000022&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-07T16:43:36+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=00000022&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:43:40+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: token D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 156 行.
+NOTIC: [8] Undefined variable: id D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 157 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:43:45+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=00001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:43:57+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=00001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:43:59+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=000010&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:44:00+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000100&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '100' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T16:44:00+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: token D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 156 行.
+NOTIC: [8] Undefined variable: id D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 157 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:44:12+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000100&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '100' AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-07T16:44:12+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: token D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 156 行.
+NOTIC: [8] Undefined variable: id D:\www\myysy\Application\Runtime\Cache\Home\514c68d5c147dfc155ca275b0730f45f.php 第 157 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:53:05+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:53:06+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:53:06+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:53:06+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:53:11+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T16:53:18+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:53:59+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:54:02+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T16:54:08+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 69 行.
+
+[ 2017-01-07T17:06:32+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-07T17:06:40+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:06:46+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T17:07:03+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T17:07:35+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T17:07:56+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-07T17:07:56+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: category D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 46 行.
+
+[ 2017-01-07T17:08:12+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:08:13+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:08:13+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:08:15+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T17:08:15+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 46 行.
+
+[ 2017-01-07T17:08:31+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-07T17:08:31+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 46 行.
+
+[ 2017-01-07T17:08:34+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:08:34+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:08:35+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T17:08:35+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T17:08:39+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T17:08:39+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 46 行.
+
+[ 2017-01-07T17:08:53+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-07T17:08:53+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: category D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 46 行.
+
+[ 2017-01-07T17:08:55+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:08:55+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T17:08:56+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:08:56+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:08:58+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-07T17:08:58+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 46 行.
+
+[ 2017-01-07T17:09:20+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: category D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 46 行.
+
+[ 2017-01-07T17:09:59+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T17:09:59+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: category D:\www\myysy\Application\Home\Controller\Ticket\TicketController.class.php 第 46 行.
+
+[ 2017-01-07T17:10:20+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T17:10:20+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:10:37+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000001&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T17:10:37+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:22:55+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSucess.html?token=12e1de7566a5e9baee750916a475fc75&number=0000001&category=398&rec_name=123&rec_addr=123&rec_tel=123&remark=123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-07T17:23:22+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSucess.html?token=12e1de7566a5e9baee750916a475fc75&number=0000001&category=398&rec_name=123&rec_addr=123&rec_tel=13996117824&remark=123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `think_ticket` SET `rec_name`='123',`rec_addr`='123',`rec_tel`='2147483647',`remark`='123',`rec_province`='',`ip`='127.0.0.1',`is_spend`='1',`time`='1483781002' WHERE ( number = '1' AND category = '398' ) LIMIT 1  [ RunTime:0.1510s ]
+
+[ 2017-01-07T17:23:49+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSucess.html?token=12e1de7566a5e9baee750916a475fc75&number=0000001&category=398&rec_name=123&rec_addr=123&rec_tel=13996117824&remark=123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '1' AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-07T17:23:58+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000002&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '2' AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-01-07T17:23:58+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '2' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T17:24:22+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSucess.html?token=d15efd0070dae32076b11f42819a58b2&number=0000002&category=398&rec_name=234&rec_addr=324&rec_tel=13996117824&remark=123123123123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '2' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `think_ticket` SET `rec_name`='234',`rec_addr`='324',`rec_tel`='2147483647',`remark`='123123123123',`rec_province`='',`ip`='127.0.0.1',`is_spend`='1',`time`='1483781062' WHERE ( number = '2' AND category = '398' ) LIMIT 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T17:25:36+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSucess.html?token=d15efd0070dae32076b11f42819a58b2&number=0000002&category=398&rec_name=234&rec_addr=324&rec_tel=13996117824&remark=123123123123
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '2' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T17:25:39+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionShowTicket?code=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-07T17:25:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionCheckTicketAjax.html?num=0000003&category=398
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '3' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-01-07T17:25:42+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSubmit.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '3' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T17:25:49+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSucess.html?token=735b66e530278f14e5a91051376cbb23&number=0000003&category=398&rec_name=567&rec_addr=567&rec_tel=13996117824&remark=53453
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '3' AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `think_ticket` SET `rec_name`='567',`rec_addr`='567',`rec_tel`='2147483647',`remark`='53453',`rec_province`='',`ip`='127.0.0.1',`is_spend`='1',`time`='1483781149' WHERE ( number = '3' AND category = '398' ) LIMIT 1  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-07T17:25:53+08:00 ] 127.0.0.1 /myysy/index.php/Ticket/Ticket/actionSucess.html?token=735b66e530278f14e5a91051376cbb23&number=0000003&category=398&rec_name=567&rec_addr=567&rec_tel=13996117824&remark=53453
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( number = '3' AND category = '398' ) LIMIT 1   [ RunTime:0.0000s ]
+

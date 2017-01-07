@@ -415,7 +415,7 @@
                 <strong>错误:</strong><span>提货卷和验证码有错</span>
             </div>
             <input name="number" class="form-control input-lg" type="number" placeholder="提货卷号">
-            <input name="checknum" class="form-control input-lg" type="number" placeholder="提货验证码">
+            <input name="category" value="<?php echo ($code); ?>" type="hidden" >
             <div class="button-container">
                 <button type="button" class="btn btn-success" style="margin-right: 40px;">提交</button>
                 <button type="button" class="btn btn btn-danger">重设</button>
@@ -436,10 +436,9 @@
 
         var _check = function(){
             var num = $('input[name="number"]').val();
-            var checkNum = $('input[name="checknum"]').val();
-            if(!num || !checkNum){
+            if(!num){
                 $('.alert-danger').show();
-                $('.alert-danger span').html('提货卷和验证码不能为空');
+                $('.alert-danger span').html('提货卷');
                 return false;
             }
             return true;
@@ -448,23 +447,22 @@
 
             $('.btn-danger').on('click' , function(){
                 $('input[name="number"]').val('');
-                $('input[name="checknum"]').val('');
             });
 
             $('.btn-success').on('click' , function(){
                 var status = {
-                    1:'填写正确卷号或验证码',
-                    2:'填写正确卷号或验证码',
-                    3:'该卷号已经消费',
-                    4:'正确',
+                    1:'填写正确卷号',
+                    2:'该卷号已经消费',
+                    3:'异常，请联系客服',
+                    4:'正确'
                 };
                 var flag = _check();
                 if(flag){
                     var num = $('input[name="number"]').val();
-                    var checkNum = $('input[name="checknum"]').val();
+                    var category = $('input[name="category"]').val();
                     $('.cover').show();
                     $('.spinner').show();
-                    $.get('<?php echo U('Ticket/Ticket/actionCheckTicketAjax') ?>',{num : num , checknum : checkNum},function(data){
+                    $.get('<?php echo U('Ticket/Ticket/actionCheckTicketAjax') ?>',{num : num , category : category},function(data){
                         var statNum = parseInt(data);
                         if(statNum == 4){
                             $('form').submit();
@@ -475,8 +473,6 @@
                         $('.alert-danger').show();
                     });
                 }
-
-                // $("form").submit();
             });
         }();
     }();
