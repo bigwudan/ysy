@@ -108,37 +108,40 @@
             <form class="form-inline" method="get" action="<?php echo U('/ticket/EditTicket') ?>">
                 <div class="form-group form-group-sm">
                     <label for="exampleInputName2">卷号</label>
-                    <input name="number" type="text" class="form-control" id="exampleInputName2" placeholder="">
+                    <input value="<?php echo ($whereConditionList['number']); ?>" name="number" type="text" class="form-control" id="" placeholder="">
                 </div>
                 <div class="form-group form-group-sm">
                     <label for="exampleInputName2">状态</label>
                     <select name="is_spend" class="form-control">
                         <option value="">全部</option>
-                        <option value="0">未确认</option>
-                        <option value="1">已确认</option>
+                        <?php
+ for($i = 0 ; $i < 2 ; $i++){ if($i == 0){ $tmp = '未确认'; }else{ $tmp = '已确认'; } if($whereConditionList['is_spend'] == $i ){ $tmpStatus = 'selected'; }else{ $tmpStatus = ''; } echo "<option value='".$i."'".$tmpStatus.">".$tmp."</option>"; } ?>
+
+
                     </select>
                 </div>
                 <div class="form-group form-group-sm">
                     <label for="exampleInputName2">款式</label>
-                    <select name="style" class="form-control">
+                    <select name="category" class="form-control">
                         <option value="">全部</option>
-                        <option value="0">海上明月</option>
-                        <option value="1">秋月明辉</option>
+                        <option value="398" <?php if($whereConditionList['category'] == '398'): ?>selected<?php endif; ?>  >398</option>
+                        <option value="598" <?php if($whereConditionList['category'] == '598'): ?>selected<?php endif; ?>>598</option>
+                        <option value="888" <?php if($whereConditionList['category'] == '888'): ?>selected<?php endif; ?>>888</option>
                     </select>
                 </div>
                 <div class="form-group form-group-sm">
                     <label for="exampleInputName2">姓名</label>
-                    <input name="rec_name" type="text" class="form-control" id="exampleInputName2" placeholder="">
+                    <input value="<?php echo ($whereConditionList['rec_name']); ?>" name="rec_name" type="text" class="form-control" id="" placeholder="">
                 </div>
 
                 <div class="form-group form-group-sm">
                     <label for="exampleInputName2">地址</label>
-                    <input name="rec_addr" type="text" class="form-control" id="exampleInputName2" placeholder="">
+                    <input value="<?php echo ($whereConditionList['rec_addr']); ?>" name="rec_addr" type="text" class="form-control" id="" placeholder="">
                 </div>
 
                 <div class="form-group form-group-sm">
                     <label for="exampleInputName2">电话</label>
-                    <input name="rec_tel" type="text" class="form-control" id="exampleInputName2" placeholder="">
+                    <input value="<?php echo ($whereConditionList['rec_tel']); ?>" name="rec_tel" type="text" class="form-control" id="" placeholder="">
                 </div>
 
                 <button type="submit" class="btn btn-default">查询</button>
@@ -150,7 +153,6 @@
                     <th>id</th>
                     <th>卷号</th>
                     <th>款式</th>
-                    <th>验证码</th>
                     <th>收货人名</th>
                     <th>收货人省</th>
                     <th>收货人地址</th>

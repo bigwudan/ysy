@@ -25,8 +25,8 @@ class EditTicketController extends Controller {
 
     private function _getWhere(){
         $where = '';
-        if(($style = I('style'))){
-            $where .= ($style == 0) ? " AND id <= 1000" : " AND id > 1000";
+        if(($category = I('category'))){
+            $where .= " AND category = '{$category}'";
         }
 
         if(($number = I('number'))){
@@ -57,8 +57,9 @@ class EditTicketController extends Controller {
     public function index(){
         $where = $this->_getWhere();
         $count      = M('ticket')->where("1 = 1 {$where}")->count();// 查询满足要求的总记录数
-        $Page       = new \Think\Page($count,25);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+        $Page       = new \Think\NewPage($count,25);// 实例化分页类 传入总记录数和每页显示的记录数(25)
         $show       = $Page->show();// 分页显示输出
+
         $ticketData = M('ticket')->where("1 = 1 {$where}")->limit($Page->firstRow.','.$Page->listRows)->select();
         $html = '';
         $count = array(
@@ -66,17 +67,14 @@ class EditTicketController extends Controller {
             'spend' => 0,
         );
         $count['remain']      = M('ticket')->where("is_spend = 0")->count();
-
         $count['styleqiuyueremain']      = M('ticket')->where("is_spend = 0 AND id <= 1000")->count();
         $count['stylehaishangremain']      = M('ticket')->where("is_spend = 0 AND id > 1000")->count();
         $count['spend']      = M('ticket')->where("is_spend = 1")->count();
         $count['wuliuNum'] = $count['spend'] - M('ticket')->where("wuliunum != ''")->count();
         foreach($ticketData as $k => $v){
             if($v['is_spend'] == 0){
-
                 $v['is_spend'] = '未消费';
             }else{
-
                 $v['is_spend'] = '已经消费';
             }
             if($sessAdminInfo['username'] == 'view'){
@@ -92,14 +90,13 @@ class EditTicketController extends Controller {
                 $curlHtml = "<a class=\"modify\" data-id=\"{$v['id']}\"  >[修改]</a>";
             }
 
-            $styleName = $this->_checkStyle($v['id']);
+
 
             $html .=<<<EOT
 <tr>
     <th scope="row">{$v['id']}</th>
     <td>{$v['number']}</td>
-	<td>{$styleName}</td>
-    <td>{$v['checknum']}</td>
+	<td>{$v['category']}</td>
     <td>{$v['rec_name']}</td>
     <td>{$v['rec_province']}</td>
     <td>{$v['rec_addr']}</td>
@@ -112,21 +109,27 @@ class EditTicketController extends Controller {
 </tr>
 EOT;
         }
+
+        $whereConditionList = array(
+            'number' => (I('number') || I('number') != '') ? I('number') : '',
+            'is_spend' => (I('is_spend') || I('is_spend') != '') ? I('is_spend') : '',
+            'category' => (I('category') || I('category') != '') ? I('category') : '',
+            'rec_name' => I('rec_name') ? I('rec_name') : '',
+            'rec_addr' => I('rec_addr') ? I('rec_addr') : '',
+            'rec_tel' => I('rec_tel') ? I('rec_tel') : '',
+        );
+
+
         $this->assign('loginName' , $sessAdminInfo['username']);
         $this->assign('count' , $count);
         $this->assign('show' , $show);
         $this->assign('html' ,  $html);
+        $this->assign('whereConditionList' ,  $whereConditionList);
 //        $this->display('/Admin/showorder');
 
 
         $this->display('/Ticket/ViewTicket');
     }
-
-    //判断款式
-    private function _checkStyle($varId){
-        return $varId <= 1000 ? '海上明月' : '秋月明辉' ;
-    }
-
 
 
     public function actionFactoryCenter(){
@@ -181,19 +184,21 @@ EOT;
 </div>
 EOT;
             }else if($sessArr['level'] == 1){
+                $tmpSelect = array();
+                if($ticketData['is_spend']){
+                    $tmpSelect = array('selected' , '');
+                }else{
+                    $tmpSelect = array('' , 'selected');
+                }
                 $html =<<<EOT
 <input value={$id} name="modifyid" type="hidden">
 <div class="form-group">
-    <label  class="control-label">卷号</label>
-    <input value="{$ticketData['number']}" name="number" type="text" class="form-control" >
-</div>
-<div class="form-group">
-    <label  class="control-label">验证号</label>
-    <input value="{$ticketData['checknum']}" name="checknum" type="text" class="form-control" >
-</div>
-<div class="form-group">
     <label  class="control-label">是否消费</label>
-    <input value="{$ticketData['is_spend']}" name="is_spend" type="text" class="form-control" >
+    <select name="is_spend" class="form-control">
+      <option value='0' {$tmpSelect[0]}>未消费</option>
+      <option value='1' {$tmpSelect[1]}>已消费</option>
+    </select>
+
 </div>
 <div class="form-group">
     <label  class="control-label">收货人姓名</label>

@@ -1,0 +1,1692 @@
+[ 2017-01-08T00:00:12+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=1&category=&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 0,25   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tmpStatus D:\www\myysy\AdminApplication\Runtime\Cache\Admin\33a6a13f7bc680cc28cb082fb0f0e832.php 第 118 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:00:34+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=1&category=&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tmpStatus D:\www\myysy\AdminApplication\Runtime\Cache\Admin\33a6a13f7bc680cc28cb082fb0f0e832.php 第 118 行.
+NOTIC: [8] Undefined variable: tmpStatus D:\www\myysy\AdminApplication\Runtime\Cache\Admin\33a6a13f7bc680cc28cb082fb0f0e832.php 第 118 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:00:42+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=0&category=&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0040s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 0 ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tmpStatus D:\www\myysy\AdminApplication\Runtime\Cache\Admin\33a6a13f7bc680cc28cb082fb0f0e832.php 第 118 行.
+NOTIC: [8] Undefined variable: tmpStatus D:\www\myysy\AdminApplication\Runtime\Cache\Admin\33a6a13f7bc680cc28cb082fb0f0e832.php 第 118 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:03:06+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=0&category=&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 0 ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:03:08+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=0&category=&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 0 ) LIMIT 0,25   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:03:11+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=1&category=&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-08T00:03:21+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=1&category=&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 0,25   [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:03:24+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=0&category=&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 0 ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:03:27+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=1&category=&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:07:24+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=1&category=&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND is_spend = 1 ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:07:27+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=1&category=398&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 1 ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-01-08T00:07:29+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=1&category=598&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND category = '598' AND is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND category = '598' AND is_spend = 1 ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:07:38+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=&category=598&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0040s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND category = '598' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND category = '598' ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:07:40+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=0&category=398&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 0 ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-08T00:08:32+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=0&category=398&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 0 ) LIMIT 0,25   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:08:33+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=0&category=398&rec_name=&rec_addr=&rec_tel=678
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 0 AND rec_tel = '678' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 0 AND rec_tel = '678' ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-01-08T00:08:35+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=0&category=398&rec_name=&rec_addr=&rec_tel=678
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 0 AND rec_tel = '678' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 0 AND rec_tel = '678' ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:08:36+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=0&category=398&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 0 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' AND is_spend = 0 ) LIMIT 0,25   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-01-08T00:08:44+08:00 ] 127.0.0.1 /myysy/admin.php/ticket/EditTicket.html?number=&is_spend=&category=398&rec_name=&rec_addr=&rec_tel=
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 162 行.
+SQL: SHOW COLUMNS FROM `think_ticket` [ RunTime:0.0050s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ticket` WHERE ( 1 = 1  AND category = '398' ) LIMIT 0,25   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id <= 1000 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 0 AND id > 1000 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( is_spend = 1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ticket` WHERE ( wuliunum != '' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 80 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 85 行.
+NOTIC: [8] Undefined variable: sessAdminInfo D:\www\myysy\AdminApplication\Admin\Controller\Ticket\EditTicketController.class.php 第 123 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
