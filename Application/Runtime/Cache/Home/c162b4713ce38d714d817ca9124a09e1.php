@@ -35,6 +35,6 @@
 </style>
 
 <body>
-<a href="http://localhost/myysy/index.php/Ticket/Ticket/actionShowTicket"><div class="container"></div></a>
+<a href="http://weidian.com/?userid=342020454"><div class="container"></div></a>
 </body>
 </html>

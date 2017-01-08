@@ -87,13 +87,11 @@ class TicketController extends Controller
     public function actionSucess(){
         $token = I('token');
         $sessToken = session('token');
-//        if($sessToken !== $token || !$sessToken){
-//            die('登录异常');
-//        }
-
+        if(!$sessToken || $sessToken !== $token ){
+            die('登录异常');
+        }
         $num = trim(I('number'));
         $category = trim(I('category'));
-
         $res = $this->_checkNumAndCate($num , $category);
         if($res['error'] !== 0){
             die("异常");

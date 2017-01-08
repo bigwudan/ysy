@@ -90,7 +90,7 @@ class EditTicketController extends Controller {
                 $curlHtml = "<a class=\"modify\" data-id=\"{$v['id']}\"  >[修改]</a>";
             }
 
-
+            $v['number'] = sprintf('%07d' , $v['number']);
 
             $html .=<<<EOT
 <tr>
@@ -125,9 +125,6 @@ EOT;
         $this->assign('show' , $show);
         $this->assign('html' ,  $html);
         $this->assign('whereConditionList' ,  $whereConditionList);
-//        $this->display('/Admin/showorder');
-
-
         $this->display('/Ticket/ViewTicket');
     }
 
@@ -186,9 +183,9 @@ EOT;
             }else if($sessArr['level'] == 1){
                 $tmpSelect = array();
                 if($ticketData['is_spend']){
-                    $tmpSelect = array('selected' , '');
-                }else{
                     $tmpSelect = array('' , 'selected');
+                }else{
+                    $tmpSelect = array('selected' , '');
                 }
                 $html =<<<EOT
 <input value={$id} name="modifyid" type="hidden">
@@ -261,7 +258,7 @@ EOT;
                 'remark' => json_encode($data)
             );
             $ticketData = M('ticket')->where("id =  {$id}")->limit(1)->save($upData);
-            M('log')->add($upLog);
+            $ticketData && M('ticketlog')->add($upLog);
             return true;
         }
         return false;

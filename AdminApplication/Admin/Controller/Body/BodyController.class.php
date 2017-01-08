@@ -112,6 +112,10 @@ EOT;
      * 组合整个html
      */
     private function _buildMainHtml($headHtml){
+
+
+        $logout = U('Login/Login/actionClearSession');
+
 $html =<<<EOT
 <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -129,6 +133,7 @@ $html =<<<EOT
                 {$headHtml}
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="{$logout}">注销</a></li>
                 <li><a href="#">首页</a></li>
             </ul>
         </div>
