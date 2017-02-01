@@ -54,13 +54,10 @@ class CheckinController extends Controller
         $ProcessStockObj = new \CommonClass\Stockandsale\ProcessStock();
         $ProcessStockObj->initi($checkDataList);
         $stockList = $ProcessStockObj->processData();
-
         $CheckInUpdataObj = new \CommonClass\Stockandsale\CheckInUpdata();
-
         $CheckInUpdataObj->initi($checkDataList , $stockList);
-        $CheckInUpdataObj->processData();
-
-        die('xxx');
+        $flag = $CheckInUpdataObj->processData();
+        return $flag;
     }
 
 

@@ -37,26 +37,24 @@ class CheckInUpdata
      * 组合数据
      */
     public function processData(){
-
-        $Model = new \Think\Model();
-        $Model->db()->startTrans();
-        $flag = M('ysy_checkin')->add($this->_checkInGoods['checkin']);
-        //checkingoods
-        $flag = M('ysy_checkingoods')->addAll($this->_checkInGoods['checkingoods']);
-        foreach($this->_stockList as $k => $v){
-
-            //$flag = M('ysy_stock')->where('format_id='.$v['where']['format_id'])->setInc('goods_num',$v['data']['goods_num']);
-            //$data = $Model->db()->query("select * from think_order where ordertime != 0 AND ordertime != 0 AND goodsname = '{$varGoodsName}' AND channel in ('个人','团购','渠道')");
-
-            var_dump($flag);
-            die();
+        $flag = true;
+        try{
+            $Model = new \Think\Model();
+            $Model->db()->startTrans();
+            $flag = M('ysy_checkin')->add($this->_checkInGoods['checkin']);
+            if(!$flag) E('新增失败');
+            $flag = M('ysy_checkingoods')->addAll($this->_checkInGoods['checkingoods']);
+            if(!$flag) E('新增失败');
+            foreach($this->_stockList as $k => $v){
+                $flag = $Model->db()->execute("update think_ysy_stock SET goods_num = goods_num + {$v['data']['goods_num']} , goods_weight = goods_weight + {$v['data']['goods_weight']} where format_id = {$v['where']['format_id']}");
+                if(!$flag) E('新增失败');
+            }
+            $Model->db()->commit();
+        }catch (\Exception $e){
+            $Model->db()->rollback();
+            $flag = false;
         }
-
-        die();
-
-
-
-
+        return $flag;
     }
 
 

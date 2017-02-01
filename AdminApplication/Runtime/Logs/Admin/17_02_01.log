@@ -7036,3 +7036,731 @@ SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,
 SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0070s ]
 SQL: UPDATE `think_ysy_stock` SET `goods_num`=goods_num+11 WHERE ( format_id=3 ) [ RunTime:0.0000s ]
 
+[ 2017-02-01T18:15:26+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944125','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0010s ]
+
+[ 2017-02-01T18:15:27+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944127','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0010s ]
+
+[ 2017-02-01T18:15:38+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944138','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:16:28+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944187','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0010s ]
+SQL: UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3 [ RunTime:0.0000s ]
+ERR: :
+ [ SQL语句 ] : UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+ERR: :
+ [ SQL语句 ] : UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+
+[ 2017-02-01T18:16:29+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944189','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3 [ RunTime:0.0010s ]
+ERR: :
+ [ SQL语句 ] : UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+ERR: :
+ [ SQL语句 ] : UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+
+[ 2017-02-01T18:16:38+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944198','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0010s ]
+
+[ 2017-02-01T18:16:43+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944203','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:16:55+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944215','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:17:04+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0040s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944224','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:17:33+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944253','1') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3 [ RunTime:0.0000s ]
+ERR: :
+ [ SQL语句 ] : UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+ERR: :
+ [ SQL语句 ] : UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+
+[ 2017-02-01T18:17:35+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944255','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3 [ RunTime:0.0000s ]
+ERR: :
+ [ SQL语句 ] : UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+ERR: :
+ [ SQL语句 ] : UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+
+[ 2017-02-01T18:18:48+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944328','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0010s ]
+SQL: UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3 [ RunTime:0.0000s ]
+ERR: :
+ [ SQL语句 ] : UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+ERR: :
+ [ SQL语句 ] : UPDATE think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+
+[ 2017-02-01T18:19:03+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0040s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944343','1') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0040s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0010s ]
+SQL: update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3 [ RunTime:0.0000s ]
+ERR: :
+ [ SQL语句 ] : update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+ERR: :
+ [ SQL语句 ] : update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3
+
+[ 2017-02-01T18:19:14+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944354','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3; [ RunTime:0.0010s ]
+ERR: :
+ [ SQL语句 ] : update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3;
+ERR: :
+ [ SQL语句 ] : update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3;
+
+[ 2017-02-01T18:19:15+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944354','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0010s ]
+SQL: update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3; [ RunTime:0.0000s ]
+ERR: :
+ [ SQL语句 ] : update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3;
+ERR: :
+ [ SQL语句 ] : update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3;
+
+[ 2017-02-01T18:20:03+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944402','1') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: select * from think_ysy_stock [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:20:05+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944405','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: select * from think_ysy_stock [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:20:20+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944420','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: select * from think_ysy_stock [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:20:20+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944420','1') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: select * from think_ysy_stock [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:20:20+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944420','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: select * from think_ysy_stock [ RunTime:0.0010s ]
+
+[ 2017-02-01T18:20:20+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944420','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: select * from think_ysy_stock [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:20:21+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944421','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: select * from think_ysy_stock [ RunTime:0.0010s ]
+
+[ 2017-02-01T18:21:28+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944488','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0040s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11' at line 1
+ [ SQL语句 ] : 11
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11' at line 1
+ [ SQL语句 ] : 11
+
+[ 2017-02-01T18:21:29+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944489','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11' at line 1
+ [ SQL语句 ] : 11
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '11' at line 1
+ [ SQL语句 ] : 11
+
+[ 2017-02-01T18:22:12+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0070s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944532','1') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'updata think_ysy_stock set goods_num = 1' at line 1
+ [ SQL语句 ] : updata think_ysy_stock set goods_num = 1
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'updata think_ysy_stock set goods_num = 1' at line 1
+ [ SQL语句 ] : updata think_ysy_stock set goods_num = 1
+
+[ 2017-02-01T18:22:33+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0090s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0080s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944553','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: update think_ysy_stock set goods_num = 1 [ RunTime:0.0000s ]
+ERR: :
+ [ SQL语句 ] : update think_ysy_stock set goods_num = 1
+ERR: :
+ [ SQL语句 ] : update think_ysy_stock set goods_num = 1
+
+[ 2017-02-01T18:23:32+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0070s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485944612','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3 [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:26:39+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0040s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+
+[ 2017-02-01T18:26:48+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+
+[ 2017-02-01T18:26:57+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0040s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+
+[ 2017-02-01T18:27:28+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0040s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+
+[ 2017-02-01T18:27:51+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+
+[ 2017-02-01T18:28:14+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+
+[ 2017-02-01T18:28:31+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+
+[ 2017-02-01T18:32:10+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0050s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485945130','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3 [ RunTime:0.0020s ]
+SQL: update think_ysy_stock SET goods_num = goods_num + 66 , goods_weight = goods_weight + 88 where format_id = 4 [ RunTime:0.0000s ]
+
+[ 2017-02-01T18:33:12+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&data%5B0%5D%5Bname%5D=format_id%5B%5D&data%5B0%5D%5Bvalue%5D=3&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=11&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=22&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=33&data%5B4%5D%5Bname%5D=format_id%5B%5D&data%5B4%5D%5Bvalue%5D=4&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=66&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=77&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=88
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0040s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('2147483647','1485945192','1') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0040s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`format_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('3','11','22','33','2147483647'),('4','66','77','88','2147483647') [ RunTime:0.0000s ]
+SQL: update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 33 where format_id = 3 [ RunTime:0.0010s ]
+SQL: update think_ysy_stock SET goods_num = goods_num + 66 , goods_weight = goods_weight + 88 where format_id = 4 [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
