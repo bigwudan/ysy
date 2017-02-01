@@ -17,12 +17,20 @@ class CheckIn
     private $_dataFromClient = null;
 
     /**
+     * checkIn
+     */
+    private $_checkIn = null;
+
+    /**
      * 初始化
      * @param $varData array
+     * @param $varCheckIn array
      * @return array
      */
-    public function initi($varData){
+    public function initi($varData , $varCheckIn){
+
         $this->_dataFromClient = $varData;
+        $this->_checkIn = $varCheckIn;
 
     }
 
@@ -33,27 +41,51 @@ class CheckIn
         if(!$count = count($this->_dataFromClient)){
             return false;
         }
-        $checkId = date('Ymdhis');
-        $dataList =array();
-        $data = $this->_dataFromClient;
-        for($num = 0 ; $num < $count ; $num = $num + 4){
-            array_push($dataList , array(
-                'format_id' => $data[$num]['value'],
-                'goodsnum' => $data[$num+1]['value'],
-                'grossweight' => $data[$num+2]['value'],
-                'weight' => $data[$num+3]['value'],
-                'checkin_id' => $checkId
-            ));
-        }
 
-        $list = array(
-            'checkin' => array(
-                'checkin_id' => $checkId,
-                'addtime' => time(),
-                'uid' =>session('uid')
-            ),
-            'checkingoods' =>$dataList
-        );
+        if($this->_checkIn){
+            $checkId =  $this->_checkIn;
+            $dataList =array();
+            $data = $this->_dataFromClient;
+            for($num = 0 ; $num < $count ; $num = $num + 4){
+                array_push($dataList , array(
+                    'format_id' => $data[$num]['value'],
+                    'goodsnum' => $data[$num+1]['value'],
+                    'grossweight' => $data[$num+2]['value'],
+                    'weight' => $data[$num+3]['value'],
+                    'checkin_id' => $checkId
+                ));
+            }
+            $list = array(
+                'checkInUp' => array(
+                    'checkin_id' => $checkId,
+                    'addtime' => time(),
+                    'uid' =>session('uid')
+                ),
+                'checkingoods' =>$dataList
+            );
+
+        }else{
+            $checkId =  date('Ymdhis');
+            $dataList =array();
+            $data = $this->_dataFromClient;
+            for($num = 0 ; $num < $count ; $num = $num + 4){
+                array_push($dataList , array(
+                    'format_id' => $data[$num]['value'],
+                    'goodsnum' => $data[$num+1]['value'],
+                    'grossweight' => $data[$num+2]['value'],
+                    'weight' => $data[$num+3]['value'],
+                    'checkin_id' => $checkId
+                ));
+            }
+            $list = array(
+                'checkInAdd' => array(
+                    'checkin_id' => $checkId,
+                    'addtime' => time(),
+                    'uid' =>session('uid')
+                ),
+                'checkingoods' =>$dataList
+            );
+        }
         return $list;
     }
 

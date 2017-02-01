@@ -41,6 +41,8 @@
     var CheckIn = function(){
         var unit = {$dataListFromService['unit']};
         var format = {$dataListFromService['format']};
+        var checkId = {$checkId};
+        var checkInJson = {$checkInJson};
 
         var _assembSelectHtml = function( nameVal , dataList , selectedVal){
             var html = '';
@@ -68,8 +70,31 @@
                     '</tr>';
             $('.checkin-table tbody').append(html);
         };
+
+        var _editByCheckIn = function(){
+            var html = '';
+            for(var k in checkInJson){
+                if(checkInJson.hasOwnProperty(k)){
+                    var tmpFormatOfSelectHtml = _assembSelectHtml('format' , format , checkInJson[k]['format_id']);
+                    html += '<tr>' +
+                            '<td>'+tmpFormatOfSelectHtml+'</td>' +
+
+                            '<td><input class="form-control" value="'+checkInJson[k]['goodsnum']+'" name="goodsnum[]"></td>' +
+                            '<td><input class="form-control" value="'+checkInJson[k]['grossweight']+'" name="grossweight[]"></td>' +
+                            '<td><input class="form-control" value="'+checkInJson[k]['weight']+'" name="weight[]"></td>' +
+                            '<td><a class="btn btn-info" href="#" >增加</a> <a class="btn btn-danger" href="#" >删除</a></td>' +
+                            '</tr>';
+                }
+            }
+            $('.checkin-table tbody').append(html);
+        };
+
         var _initi = function(){
-            _assemCheckInGoods();
+            if(checkId == 0){
+                _assemCheckInGoods();
+            }else{
+                _editByCheckIn();
+            }
             $('.checkin-table tbody').on('click' , function(event){
                 var targetObj = $(event.target);
                 if(targetObj.hasClass('btn-info')){
@@ -82,7 +107,7 @@
             $('.checkin-btn').on('click' , function(){
                 var dataStrFromForm = $("form").serializeArray();
                 var url = '<?php echo U('stockandsale/Checkin/actionRequestService') ?>';
-                $.get(url , {type:'checkin',data:dataStrFromForm} , function(data){
+                $.get(url , {type:'checkin',checkin:checkId,data:dataStrFromForm} , function(data){
 
                     console.log(data);
                 });

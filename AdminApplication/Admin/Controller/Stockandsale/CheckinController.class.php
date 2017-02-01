@@ -22,13 +22,45 @@ class CheckinController extends Controller
         $this->assign('body' , $body);
     }
 
+    /**
+     * 显示历史信息
+     */
     public function index(){
+        $where = '';
+        $count = M('ysy_checkin')->where("1 = 1 {$where}")->count();
+        $Page       = new \Think\NewPage($count,25);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+        $showPage       = $Page->show();// 分页显示输出
+        $checkInFromDb = M('ysy_checkin')->where("1 = 1 {$where}")->limit($Page->firstRow.','.$Page->listRows)->select();
+        $this->assign('showPage' , $showPage);
+
+        $this->assign('checkInFromDb' , $checkInFromDb);
+
+        $this->display('/Stockandsale/CheckInList');
+    }
+
+
+    /**
+     * 新增入库单
+     */
+    public function actionEditCheckIn(){
+        $checkInJson = 0;
+        if($checkId = intval(I('checkin'))){
+            $checkInListFromDb = M('ysy_checkin')
+                ->alias('c')
+                ->join('RIGHT JOIN think_ysy_checkingoods AS cg ON c.checkin_id = cg.checkin_id')
+                ->where("c.checkin_id={$checkId}")
+                ->select();
+            $checkInJson = json_encode($checkInListFromDb , JSON_UNESCAPED_UNICODE);
+        }
+
         $unitDataFromDb = M('ysy_unit')->select();
         $formatDataFromDb = M('ysy_format')->select();
         $dataListFromService = array(
             'unit' => json_encode($unitDataFromDb , JSON_UNESCAPED_UNICODE),
             'format' => json_encode($formatDataFromDb , JSON_UNESCAPED_UNICODE),
         );
+        $this->assign('checkId' , $checkId);
+        $this->assign('checkInJson' , $checkInJson);
         $this->assign('dataListFromService' , $dataListFromService);
         $this->display('/Stockandsale/Checkin');
     }
@@ -48,11 +80,12 @@ class CheckinController extends Controller
      * 入库单
      */
     private function _checkIn(){
+        $checkin = intval(I('checkin'));
         $CheckInObj = new \CommonClass\Stockandsale\CheckIn();
-        $CheckInObj->initi(I('data'));
+        $CheckInObj->initi(I('data'),$checkin);
         $checkDataList = $CheckInObj->processData();
         $ProcessStockObj = new \CommonClass\Stockandsale\ProcessStock();
-        $ProcessStockObj->initi($checkDataList);
+        $ProcessStockObj->initi($checkDataList,$checkin);
         $stockList = $ProcessStockObj->processData();
         $CheckInUpdataObj = new \CommonClass\Stockandsale\CheckInUpdata();
         $CheckInUpdataObj->initi($checkDataList , $stockList);

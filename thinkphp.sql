@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-01-08 12:03:47
+Date: 2017-02-02 00:13:46
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -97,6 +97,11 @@ INSERT INTO `think_access` VALUES ('3', '6', '0', null);
 INSERT INTO `think_access` VALUES ('3', '42', '0', null);
 INSERT INTO `think_access` VALUES ('3', '43', '0', null);
 INSERT INTO `think_access` VALUES ('3', '3', '0', null);
+INSERT INTO `think_access` VALUES ('2', '44', '0', null);
+INSERT INTO `think_access` VALUES ('2', '45', '0', null);
+INSERT INTO `think_access` VALUES ('2', '46', '0', null);
+INSERT INTO `think_access` VALUES ('2', '47', '0', null);
+INSERT INTO `think_access` VALUES ('2', '48', '0', null);
 
 -- ----------------------------
 -- Table structure for `think_flow_execution`
@@ -342,7 +347,7 @@ CREATE TABLE `think_node` (
   KEY `pid` (`pid`),
   KEY `status` (`status`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_node
@@ -386,6 +391,11 @@ INSERT INTO `think_node` VALUES ('40', 'index', 'index', '1', '', '0', '39', '4'
 INSERT INTO `think_node` VALUES ('41', 'actionAjaxFactory', 'actionAjaxFactory', '1', '', '0', '39', '4', '');
 INSERT INTO `think_node` VALUES ('42', 'index', 'index', '1', '', '1', '6', '4', '');
 INSERT INTO `think_node` VALUES ('43', 'actionFactoryCenter', 'actionFactoryCenter', '1', '', '0', '6', '4', '');
+INSERT INTO `think_node` VALUES ('44', 'stockandsale', '进销存', '1', '', '0', '1', '2', '/Statistics/Salerstatistics/actionTest');
+INSERT INTO `think_node` VALUES ('45', 'Checkin', '入库', '1', '', '0', '44', '3', '');
+INSERT INTO `think_node` VALUES ('46', 'index', 'index', '1', '', '0', '45', '4', '');
+INSERT INTO `think_node` VALUES ('47', 'actionRequestService', 'actionRequestService', '1', '', '0', '45', '4', '');
+INSERT INTO `think_node` VALUES ('48', 'actionEditCheckIn', 'actionEditCheckIn', '1', '', '0', '45', '4', '');
 
 -- ----------------------------
 -- Table structure for `think_order`
@@ -1142,606 +1152,6 @@ CREATE TABLE `think_ticket` (
 -- ----------------------------
 -- Records of think_ticket
 -- ----------------------------
-INSERT INTO `think_ticket` VALUES ('1', '1', '1483781002', '127.0.0.1', '收货人姓名', '收货人地址', '11111', '123', '0', '客服备注', '物流号', '收货人省', '398', '1');
-INSERT INTO `think_ticket` VALUES ('2', '1', '1483781062', '127.0.0.1', '234', '324', '2147483647', '123123123123', '0', '', '', '', '398', '2');
-INSERT INTO `think_ticket` VALUES ('3', '1', '1483781149', '127.0.0.1', '567', '567', '2147483647', '53453', '0', '', '', '', '398', '3');
-INSERT INTO `think_ticket` VALUES ('4', '1', '1483840303', '127.0.0.1', '姓名', '地址', '2147483647', '用户备注', '0', '客服备注', '物流号', '收货人省', '398', '4');
-INSERT INTO `think_ticket` VALUES ('5', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '5');
-INSERT INTO `think_ticket` VALUES ('6', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '6');
-INSERT INTO `think_ticket` VALUES ('7', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '7');
-INSERT INTO `think_ticket` VALUES ('8', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '8');
-INSERT INTO `think_ticket` VALUES ('9', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '9');
-INSERT INTO `think_ticket` VALUES ('10', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '10');
-INSERT INTO `think_ticket` VALUES ('11', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '11');
-INSERT INTO `think_ticket` VALUES ('12', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '12');
-INSERT INTO `think_ticket` VALUES ('13', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '13');
-INSERT INTO `think_ticket` VALUES ('14', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '14');
-INSERT INTO `think_ticket` VALUES ('15', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '15');
-INSERT INTO `think_ticket` VALUES ('16', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '16');
-INSERT INTO `think_ticket` VALUES ('17', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '17');
-INSERT INTO `think_ticket` VALUES ('18', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '18');
-INSERT INTO `think_ticket` VALUES ('19', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '19');
-INSERT INTO `think_ticket` VALUES ('20', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '20');
-INSERT INTO `think_ticket` VALUES ('21', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '21');
-INSERT INTO `think_ticket` VALUES ('22', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '22');
-INSERT INTO `think_ticket` VALUES ('23', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '23');
-INSERT INTO `think_ticket` VALUES ('24', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '24');
-INSERT INTO `think_ticket` VALUES ('25', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '25');
-INSERT INTO `think_ticket` VALUES ('26', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '26');
-INSERT INTO `think_ticket` VALUES ('27', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '27');
-INSERT INTO `think_ticket` VALUES ('28', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '28');
-INSERT INTO `think_ticket` VALUES ('29', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '29');
-INSERT INTO `think_ticket` VALUES ('30', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '30');
-INSERT INTO `think_ticket` VALUES ('31', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '31');
-INSERT INTO `think_ticket` VALUES ('32', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '32');
-INSERT INTO `think_ticket` VALUES ('33', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '33');
-INSERT INTO `think_ticket` VALUES ('34', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '34');
-INSERT INTO `think_ticket` VALUES ('35', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '35');
-INSERT INTO `think_ticket` VALUES ('36', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '36');
-INSERT INTO `think_ticket` VALUES ('37', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '37');
-INSERT INTO `think_ticket` VALUES ('38', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '38');
-INSERT INTO `think_ticket` VALUES ('39', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '39');
-INSERT INTO `think_ticket` VALUES ('40', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '40');
-INSERT INTO `think_ticket` VALUES ('41', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '41');
-INSERT INTO `think_ticket` VALUES ('42', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '42');
-INSERT INTO `think_ticket` VALUES ('43', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '43');
-INSERT INTO `think_ticket` VALUES ('44', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '44');
-INSERT INTO `think_ticket` VALUES ('45', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '45');
-INSERT INTO `think_ticket` VALUES ('46', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '46');
-INSERT INTO `think_ticket` VALUES ('47', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '47');
-INSERT INTO `think_ticket` VALUES ('48', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '48');
-INSERT INTO `think_ticket` VALUES ('49', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '49');
-INSERT INTO `think_ticket` VALUES ('50', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '50');
-INSERT INTO `think_ticket` VALUES ('51', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '51');
-INSERT INTO `think_ticket` VALUES ('52', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '52');
-INSERT INTO `think_ticket` VALUES ('53', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '53');
-INSERT INTO `think_ticket` VALUES ('54', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '54');
-INSERT INTO `think_ticket` VALUES ('55', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '55');
-INSERT INTO `think_ticket` VALUES ('56', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '56');
-INSERT INTO `think_ticket` VALUES ('57', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '57');
-INSERT INTO `think_ticket` VALUES ('58', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '58');
-INSERT INTO `think_ticket` VALUES ('59', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '59');
-INSERT INTO `think_ticket` VALUES ('60', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '60');
-INSERT INTO `think_ticket` VALUES ('61', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '61');
-INSERT INTO `think_ticket` VALUES ('62', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '62');
-INSERT INTO `think_ticket` VALUES ('63', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '63');
-INSERT INTO `think_ticket` VALUES ('64', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '64');
-INSERT INTO `think_ticket` VALUES ('65', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '65');
-INSERT INTO `think_ticket` VALUES ('66', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '66');
-INSERT INTO `think_ticket` VALUES ('67', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '67');
-INSERT INTO `think_ticket` VALUES ('68', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '68');
-INSERT INTO `think_ticket` VALUES ('69', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '69');
-INSERT INTO `think_ticket` VALUES ('70', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '70');
-INSERT INTO `think_ticket` VALUES ('71', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '71');
-INSERT INTO `think_ticket` VALUES ('72', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '72');
-INSERT INTO `think_ticket` VALUES ('73', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '73');
-INSERT INTO `think_ticket` VALUES ('74', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '74');
-INSERT INTO `think_ticket` VALUES ('75', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '75');
-INSERT INTO `think_ticket` VALUES ('76', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '76');
-INSERT INTO `think_ticket` VALUES ('77', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '77');
-INSERT INTO `think_ticket` VALUES ('78', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '78');
-INSERT INTO `think_ticket` VALUES ('79', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '79');
-INSERT INTO `think_ticket` VALUES ('80', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '80');
-INSERT INTO `think_ticket` VALUES ('81', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '81');
-INSERT INTO `think_ticket` VALUES ('82', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '82');
-INSERT INTO `think_ticket` VALUES ('83', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '83');
-INSERT INTO `think_ticket` VALUES ('84', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '84');
-INSERT INTO `think_ticket` VALUES ('85', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '85');
-INSERT INTO `think_ticket` VALUES ('86', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '86');
-INSERT INTO `think_ticket` VALUES ('87', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '87');
-INSERT INTO `think_ticket` VALUES ('88', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '88');
-INSERT INTO `think_ticket` VALUES ('89', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '89');
-INSERT INTO `think_ticket` VALUES ('90', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '90');
-INSERT INTO `think_ticket` VALUES ('91', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '91');
-INSERT INTO `think_ticket` VALUES ('92', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '92');
-INSERT INTO `think_ticket` VALUES ('93', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '93');
-INSERT INTO `think_ticket` VALUES ('94', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '94');
-INSERT INTO `think_ticket` VALUES ('95', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '95');
-INSERT INTO `think_ticket` VALUES ('96', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '96');
-INSERT INTO `think_ticket` VALUES ('97', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '97');
-INSERT INTO `think_ticket` VALUES ('98', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '98');
-INSERT INTO `think_ticket` VALUES ('99', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '99');
-INSERT INTO `think_ticket` VALUES ('100', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '100');
-INSERT INTO `think_ticket` VALUES ('101', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '101');
-INSERT INTO `think_ticket` VALUES ('102', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '102');
-INSERT INTO `think_ticket` VALUES ('103', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '103');
-INSERT INTO `think_ticket` VALUES ('104', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '104');
-INSERT INTO `think_ticket` VALUES ('105', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '105');
-INSERT INTO `think_ticket` VALUES ('106', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '106');
-INSERT INTO `think_ticket` VALUES ('107', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '107');
-INSERT INTO `think_ticket` VALUES ('108', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '108');
-INSERT INTO `think_ticket` VALUES ('109', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '109');
-INSERT INTO `think_ticket` VALUES ('110', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '110');
-INSERT INTO `think_ticket` VALUES ('111', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '111');
-INSERT INTO `think_ticket` VALUES ('112', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '112');
-INSERT INTO `think_ticket` VALUES ('113', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '113');
-INSERT INTO `think_ticket` VALUES ('114', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '114');
-INSERT INTO `think_ticket` VALUES ('115', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '115');
-INSERT INTO `think_ticket` VALUES ('116', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '116');
-INSERT INTO `think_ticket` VALUES ('117', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '117');
-INSERT INTO `think_ticket` VALUES ('118', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '118');
-INSERT INTO `think_ticket` VALUES ('119', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '119');
-INSERT INTO `think_ticket` VALUES ('120', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '120');
-INSERT INTO `think_ticket` VALUES ('121', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '121');
-INSERT INTO `think_ticket` VALUES ('122', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '122');
-INSERT INTO `think_ticket` VALUES ('123', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '123');
-INSERT INTO `think_ticket` VALUES ('124', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '124');
-INSERT INTO `think_ticket` VALUES ('125', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '125');
-INSERT INTO `think_ticket` VALUES ('126', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '126');
-INSERT INTO `think_ticket` VALUES ('127', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '127');
-INSERT INTO `think_ticket` VALUES ('128', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '128');
-INSERT INTO `think_ticket` VALUES ('129', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '129');
-INSERT INTO `think_ticket` VALUES ('130', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '130');
-INSERT INTO `think_ticket` VALUES ('131', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '131');
-INSERT INTO `think_ticket` VALUES ('132', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '132');
-INSERT INTO `think_ticket` VALUES ('133', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '133');
-INSERT INTO `think_ticket` VALUES ('134', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '134');
-INSERT INTO `think_ticket` VALUES ('135', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '135');
-INSERT INTO `think_ticket` VALUES ('136', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '136');
-INSERT INTO `think_ticket` VALUES ('137', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '137');
-INSERT INTO `think_ticket` VALUES ('138', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '138');
-INSERT INTO `think_ticket` VALUES ('139', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '139');
-INSERT INTO `think_ticket` VALUES ('140', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '140');
-INSERT INTO `think_ticket` VALUES ('141', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '141');
-INSERT INTO `think_ticket` VALUES ('142', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '142');
-INSERT INTO `think_ticket` VALUES ('143', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '143');
-INSERT INTO `think_ticket` VALUES ('144', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '144');
-INSERT INTO `think_ticket` VALUES ('145', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '145');
-INSERT INTO `think_ticket` VALUES ('146', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '146');
-INSERT INTO `think_ticket` VALUES ('147', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '147');
-INSERT INTO `think_ticket` VALUES ('148', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '148');
-INSERT INTO `think_ticket` VALUES ('149', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '149');
-INSERT INTO `think_ticket` VALUES ('150', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '150');
-INSERT INTO `think_ticket` VALUES ('151', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '151');
-INSERT INTO `think_ticket` VALUES ('152', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '152');
-INSERT INTO `think_ticket` VALUES ('153', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '153');
-INSERT INTO `think_ticket` VALUES ('154', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '154');
-INSERT INTO `think_ticket` VALUES ('155', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '155');
-INSERT INTO `think_ticket` VALUES ('156', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '156');
-INSERT INTO `think_ticket` VALUES ('157', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '157');
-INSERT INTO `think_ticket` VALUES ('158', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '158');
-INSERT INTO `think_ticket` VALUES ('159', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '159');
-INSERT INTO `think_ticket` VALUES ('160', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '160');
-INSERT INTO `think_ticket` VALUES ('161', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '161');
-INSERT INTO `think_ticket` VALUES ('162', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '162');
-INSERT INTO `think_ticket` VALUES ('163', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '163');
-INSERT INTO `think_ticket` VALUES ('164', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '164');
-INSERT INTO `think_ticket` VALUES ('165', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '165');
-INSERT INTO `think_ticket` VALUES ('166', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '166');
-INSERT INTO `think_ticket` VALUES ('167', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '167');
-INSERT INTO `think_ticket` VALUES ('168', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '168');
-INSERT INTO `think_ticket` VALUES ('169', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '169');
-INSERT INTO `think_ticket` VALUES ('170', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '170');
-INSERT INTO `think_ticket` VALUES ('171', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '171');
-INSERT INTO `think_ticket` VALUES ('172', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '172');
-INSERT INTO `think_ticket` VALUES ('173', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '173');
-INSERT INTO `think_ticket` VALUES ('174', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '174');
-INSERT INTO `think_ticket` VALUES ('175', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '175');
-INSERT INTO `think_ticket` VALUES ('176', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '176');
-INSERT INTO `think_ticket` VALUES ('177', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '177');
-INSERT INTO `think_ticket` VALUES ('178', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '178');
-INSERT INTO `think_ticket` VALUES ('179', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '179');
-INSERT INTO `think_ticket` VALUES ('180', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '180');
-INSERT INTO `think_ticket` VALUES ('181', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '181');
-INSERT INTO `think_ticket` VALUES ('182', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '182');
-INSERT INTO `think_ticket` VALUES ('183', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '183');
-INSERT INTO `think_ticket` VALUES ('184', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '184');
-INSERT INTO `think_ticket` VALUES ('185', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '185');
-INSERT INTO `think_ticket` VALUES ('186', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '186');
-INSERT INTO `think_ticket` VALUES ('187', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '187');
-INSERT INTO `think_ticket` VALUES ('188', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '188');
-INSERT INTO `think_ticket` VALUES ('189', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '189');
-INSERT INTO `think_ticket` VALUES ('190', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '190');
-INSERT INTO `think_ticket` VALUES ('191', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '191');
-INSERT INTO `think_ticket` VALUES ('192', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '192');
-INSERT INTO `think_ticket` VALUES ('193', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '193');
-INSERT INTO `think_ticket` VALUES ('194', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '194');
-INSERT INTO `think_ticket` VALUES ('195', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '195');
-INSERT INTO `think_ticket` VALUES ('196', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '196');
-INSERT INTO `think_ticket` VALUES ('197', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '197');
-INSERT INTO `think_ticket` VALUES ('198', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '198');
-INSERT INTO `think_ticket` VALUES ('199', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '199');
-INSERT INTO `think_ticket` VALUES ('200', '0', '0', '', '', '', '0', '', '0', '', '', '', '398', '200');
-INSERT INTO `think_ticket` VALUES ('1', '1', '1483840837', '127.0.0.1', '姓名', '1212', '2147483647', '121212', '0', '', '', '', '598', '201');
-INSERT INTO `think_ticket` VALUES ('2', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '202');
-INSERT INTO `think_ticket` VALUES ('3', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '203');
-INSERT INTO `think_ticket` VALUES ('4', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '204');
-INSERT INTO `think_ticket` VALUES ('5', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '205');
-INSERT INTO `think_ticket` VALUES ('6', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '206');
-INSERT INTO `think_ticket` VALUES ('7', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '207');
-INSERT INTO `think_ticket` VALUES ('8', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '208');
-INSERT INTO `think_ticket` VALUES ('9', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '209');
-INSERT INTO `think_ticket` VALUES ('10', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '210');
-INSERT INTO `think_ticket` VALUES ('11', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '211');
-INSERT INTO `think_ticket` VALUES ('12', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '212');
-INSERT INTO `think_ticket` VALUES ('13', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '213');
-INSERT INTO `think_ticket` VALUES ('14', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '214');
-INSERT INTO `think_ticket` VALUES ('15', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '215');
-INSERT INTO `think_ticket` VALUES ('16', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '216');
-INSERT INTO `think_ticket` VALUES ('17', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '217');
-INSERT INTO `think_ticket` VALUES ('18', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '218');
-INSERT INTO `think_ticket` VALUES ('19', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '219');
-INSERT INTO `think_ticket` VALUES ('20', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '220');
-INSERT INTO `think_ticket` VALUES ('21', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '221');
-INSERT INTO `think_ticket` VALUES ('22', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '222');
-INSERT INTO `think_ticket` VALUES ('23', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '223');
-INSERT INTO `think_ticket` VALUES ('24', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '224');
-INSERT INTO `think_ticket` VALUES ('25', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '225');
-INSERT INTO `think_ticket` VALUES ('26', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '226');
-INSERT INTO `think_ticket` VALUES ('27', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '227');
-INSERT INTO `think_ticket` VALUES ('28', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '228');
-INSERT INTO `think_ticket` VALUES ('29', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '229');
-INSERT INTO `think_ticket` VALUES ('30', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '230');
-INSERT INTO `think_ticket` VALUES ('31', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '231');
-INSERT INTO `think_ticket` VALUES ('32', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '232');
-INSERT INTO `think_ticket` VALUES ('33', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '233');
-INSERT INTO `think_ticket` VALUES ('34', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '234');
-INSERT INTO `think_ticket` VALUES ('35', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '235');
-INSERT INTO `think_ticket` VALUES ('36', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '236');
-INSERT INTO `think_ticket` VALUES ('37', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '237');
-INSERT INTO `think_ticket` VALUES ('38', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '238');
-INSERT INTO `think_ticket` VALUES ('39', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '239');
-INSERT INTO `think_ticket` VALUES ('40', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '240');
-INSERT INTO `think_ticket` VALUES ('41', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '241');
-INSERT INTO `think_ticket` VALUES ('42', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '242');
-INSERT INTO `think_ticket` VALUES ('43', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '243');
-INSERT INTO `think_ticket` VALUES ('44', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '244');
-INSERT INTO `think_ticket` VALUES ('45', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '245');
-INSERT INTO `think_ticket` VALUES ('46', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '246');
-INSERT INTO `think_ticket` VALUES ('47', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '247');
-INSERT INTO `think_ticket` VALUES ('48', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '248');
-INSERT INTO `think_ticket` VALUES ('49', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '249');
-INSERT INTO `think_ticket` VALUES ('50', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '250');
-INSERT INTO `think_ticket` VALUES ('51', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '251');
-INSERT INTO `think_ticket` VALUES ('52', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '252');
-INSERT INTO `think_ticket` VALUES ('53', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '253');
-INSERT INTO `think_ticket` VALUES ('54', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '254');
-INSERT INTO `think_ticket` VALUES ('55', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '255');
-INSERT INTO `think_ticket` VALUES ('56', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '256');
-INSERT INTO `think_ticket` VALUES ('57', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '257');
-INSERT INTO `think_ticket` VALUES ('58', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '258');
-INSERT INTO `think_ticket` VALUES ('59', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '259');
-INSERT INTO `think_ticket` VALUES ('60', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '260');
-INSERT INTO `think_ticket` VALUES ('61', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '261');
-INSERT INTO `think_ticket` VALUES ('62', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '262');
-INSERT INTO `think_ticket` VALUES ('63', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '263');
-INSERT INTO `think_ticket` VALUES ('64', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '264');
-INSERT INTO `think_ticket` VALUES ('65', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '265');
-INSERT INTO `think_ticket` VALUES ('66', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '266');
-INSERT INTO `think_ticket` VALUES ('67', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '267');
-INSERT INTO `think_ticket` VALUES ('68', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '268');
-INSERT INTO `think_ticket` VALUES ('69', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '269');
-INSERT INTO `think_ticket` VALUES ('70', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '270');
-INSERT INTO `think_ticket` VALUES ('71', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '271');
-INSERT INTO `think_ticket` VALUES ('72', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '272');
-INSERT INTO `think_ticket` VALUES ('73', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '273');
-INSERT INTO `think_ticket` VALUES ('74', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '274');
-INSERT INTO `think_ticket` VALUES ('75', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '275');
-INSERT INTO `think_ticket` VALUES ('76', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '276');
-INSERT INTO `think_ticket` VALUES ('77', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '277');
-INSERT INTO `think_ticket` VALUES ('78', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '278');
-INSERT INTO `think_ticket` VALUES ('79', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '279');
-INSERT INTO `think_ticket` VALUES ('80', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '280');
-INSERT INTO `think_ticket` VALUES ('81', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '281');
-INSERT INTO `think_ticket` VALUES ('82', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '282');
-INSERT INTO `think_ticket` VALUES ('83', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '283');
-INSERT INTO `think_ticket` VALUES ('84', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '284');
-INSERT INTO `think_ticket` VALUES ('85', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '285');
-INSERT INTO `think_ticket` VALUES ('86', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '286');
-INSERT INTO `think_ticket` VALUES ('87', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '287');
-INSERT INTO `think_ticket` VALUES ('88', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '288');
-INSERT INTO `think_ticket` VALUES ('89', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '289');
-INSERT INTO `think_ticket` VALUES ('90', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '290');
-INSERT INTO `think_ticket` VALUES ('91', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '291');
-INSERT INTO `think_ticket` VALUES ('92', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '292');
-INSERT INTO `think_ticket` VALUES ('93', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '293');
-INSERT INTO `think_ticket` VALUES ('94', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '294');
-INSERT INTO `think_ticket` VALUES ('95', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '295');
-INSERT INTO `think_ticket` VALUES ('96', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '296');
-INSERT INTO `think_ticket` VALUES ('97', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '297');
-INSERT INTO `think_ticket` VALUES ('98', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '298');
-INSERT INTO `think_ticket` VALUES ('99', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '299');
-INSERT INTO `think_ticket` VALUES ('100', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '300');
-INSERT INTO `think_ticket` VALUES ('101', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '301');
-INSERT INTO `think_ticket` VALUES ('102', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '302');
-INSERT INTO `think_ticket` VALUES ('103', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '303');
-INSERT INTO `think_ticket` VALUES ('104', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '304');
-INSERT INTO `think_ticket` VALUES ('105', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '305');
-INSERT INTO `think_ticket` VALUES ('106', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '306');
-INSERT INTO `think_ticket` VALUES ('107', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '307');
-INSERT INTO `think_ticket` VALUES ('108', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '308');
-INSERT INTO `think_ticket` VALUES ('109', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '309');
-INSERT INTO `think_ticket` VALUES ('110', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '310');
-INSERT INTO `think_ticket` VALUES ('111', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '311');
-INSERT INTO `think_ticket` VALUES ('112', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '312');
-INSERT INTO `think_ticket` VALUES ('113', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '313');
-INSERT INTO `think_ticket` VALUES ('114', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '314');
-INSERT INTO `think_ticket` VALUES ('115', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '315');
-INSERT INTO `think_ticket` VALUES ('116', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '316');
-INSERT INTO `think_ticket` VALUES ('117', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '317');
-INSERT INTO `think_ticket` VALUES ('118', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '318');
-INSERT INTO `think_ticket` VALUES ('119', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '319');
-INSERT INTO `think_ticket` VALUES ('120', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '320');
-INSERT INTO `think_ticket` VALUES ('121', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '321');
-INSERT INTO `think_ticket` VALUES ('122', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '322');
-INSERT INTO `think_ticket` VALUES ('123', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '323');
-INSERT INTO `think_ticket` VALUES ('124', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '324');
-INSERT INTO `think_ticket` VALUES ('125', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '325');
-INSERT INTO `think_ticket` VALUES ('126', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '326');
-INSERT INTO `think_ticket` VALUES ('127', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '327');
-INSERT INTO `think_ticket` VALUES ('128', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '328');
-INSERT INTO `think_ticket` VALUES ('129', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '329');
-INSERT INTO `think_ticket` VALUES ('130', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '330');
-INSERT INTO `think_ticket` VALUES ('131', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '331');
-INSERT INTO `think_ticket` VALUES ('132', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '332');
-INSERT INTO `think_ticket` VALUES ('133', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '333');
-INSERT INTO `think_ticket` VALUES ('134', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '334');
-INSERT INTO `think_ticket` VALUES ('135', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '335');
-INSERT INTO `think_ticket` VALUES ('136', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '336');
-INSERT INTO `think_ticket` VALUES ('137', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '337');
-INSERT INTO `think_ticket` VALUES ('138', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '338');
-INSERT INTO `think_ticket` VALUES ('139', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '339');
-INSERT INTO `think_ticket` VALUES ('140', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '340');
-INSERT INTO `think_ticket` VALUES ('141', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '341');
-INSERT INTO `think_ticket` VALUES ('142', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '342');
-INSERT INTO `think_ticket` VALUES ('143', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '343');
-INSERT INTO `think_ticket` VALUES ('144', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '344');
-INSERT INTO `think_ticket` VALUES ('145', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '345');
-INSERT INTO `think_ticket` VALUES ('146', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '346');
-INSERT INTO `think_ticket` VALUES ('147', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '347');
-INSERT INTO `think_ticket` VALUES ('148', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '348');
-INSERT INTO `think_ticket` VALUES ('149', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '349');
-INSERT INTO `think_ticket` VALUES ('150', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '350');
-INSERT INTO `think_ticket` VALUES ('151', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '351');
-INSERT INTO `think_ticket` VALUES ('152', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '352');
-INSERT INTO `think_ticket` VALUES ('153', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '353');
-INSERT INTO `think_ticket` VALUES ('154', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '354');
-INSERT INTO `think_ticket` VALUES ('155', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '355');
-INSERT INTO `think_ticket` VALUES ('156', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '356');
-INSERT INTO `think_ticket` VALUES ('157', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '357');
-INSERT INTO `think_ticket` VALUES ('158', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '358');
-INSERT INTO `think_ticket` VALUES ('159', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '359');
-INSERT INTO `think_ticket` VALUES ('160', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '360');
-INSERT INTO `think_ticket` VALUES ('161', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '361');
-INSERT INTO `think_ticket` VALUES ('162', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '362');
-INSERT INTO `think_ticket` VALUES ('163', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '363');
-INSERT INTO `think_ticket` VALUES ('164', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '364');
-INSERT INTO `think_ticket` VALUES ('165', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '365');
-INSERT INTO `think_ticket` VALUES ('166', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '366');
-INSERT INTO `think_ticket` VALUES ('167', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '367');
-INSERT INTO `think_ticket` VALUES ('168', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '368');
-INSERT INTO `think_ticket` VALUES ('169', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '369');
-INSERT INTO `think_ticket` VALUES ('170', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '370');
-INSERT INTO `think_ticket` VALUES ('171', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '371');
-INSERT INTO `think_ticket` VALUES ('172', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '372');
-INSERT INTO `think_ticket` VALUES ('173', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '373');
-INSERT INTO `think_ticket` VALUES ('174', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '374');
-INSERT INTO `think_ticket` VALUES ('175', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '375');
-INSERT INTO `think_ticket` VALUES ('176', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '376');
-INSERT INTO `think_ticket` VALUES ('177', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '377');
-INSERT INTO `think_ticket` VALUES ('178', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '378');
-INSERT INTO `think_ticket` VALUES ('179', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '379');
-INSERT INTO `think_ticket` VALUES ('180', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '380');
-INSERT INTO `think_ticket` VALUES ('181', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '381');
-INSERT INTO `think_ticket` VALUES ('182', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '382');
-INSERT INTO `think_ticket` VALUES ('183', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '383');
-INSERT INTO `think_ticket` VALUES ('184', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '384');
-INSERT INTO `think_ticket` VALUES ('185', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '385');
-INSERT INTO `think_ticket` VALUES ('186', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '386');
-INSERT INTO `think_ticket` VALUES ('187', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '387');
-INSERT INTO `think_ticket` VALUES ('188', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '388');
-INSERT INTO `think_ticket` VALUES ('189', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '389');
-INSERT INTO `think_ticket` VALUES ('190', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '390');
-INSERT INTO `think_ticket` VALUES ('191', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '391');
-INSERT INTO `think_ticket` VALUES ('192', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '392');
-INSERT INTO `think_ticket` VALUES ('193', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '393');
-INSERT INTO `think_ticket` VALUES ('194', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '394');
-INSERT INTO `think_ticket` VALUES ('195', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '395');
-INSERT INTO `think_ticket` VALUES ('196', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '396');
-INSERT INTO `think_ticket` VALUES ('197', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '397');
-INSERT INTO `think_ticket` VALUES ('198', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '398');
-INSERT INTO `think_ticket` VALUES ('199', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '399');
-INSERT INTO `think_ticket` VALUES ('200', '0', '0', '', '', '', '0', '', '0', '', '', '', '598', '400');
-INSERT INTO `think_ticket` VALUES ('1', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '401');
-INSERT INTO `think_ticket` VALUES ('2', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '402');
-INSERT INTO `think_ticket` VALUES ('3', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '403');
-INSERT INTO `think_ticket` VALUES ('4', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '404');
-INSERT INTO `think_ticket` VALUES ('5', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '405');
-INSERT INTO `think_ticket` VALUES ('6', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '406');
-INSERT INTO `think_ticket` VALUES ('7', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '407');
-INSERT INTO `think_ticket` VALUES ('8', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '408');
-INSERT INTO `think_ticket` VALUES ('9', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '409');
-INSERT INTO `think_ticket` VALUES ('10', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '410');
-INSERT INTO `think_ticket` VALUES ('11', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '411');
-INSERT INTO `think_ticket` VALUES ('12', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '412');
-INSERT INTO `think_ticket` VALUES ('13', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '413');
-INSERT INTO `think_ticket` VALUES ('14', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '414');
-INSERT INTO `think_ticket` VALUES ('15', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '415');
-INSERT INTO `think_ticket` VALUES ('16', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '416');
-INSERT INTO `think_ticket` VALUES ('17', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '417');
-INSERT INTO `think_ticket` VALUES ('18', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '418');
-INSERT INTO `think_ticket` VALUES ('19', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '419');
-INSERT INTO `think_ticket` VALUES ('20', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '420');
-INSERT INTO `think_ticket` VALUES ('21', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '421');
-INSERT INTO `think_ticket` VALUES ('22', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '422');
-INSERT INTO `think_ticket` VALUES ('23', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '423');
-INSERT INTO `think_ticket` VALUES ('24', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '424');
-INSERT INTO `think_ticket` VALUES ('25', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '425');
-INSERT INTO `think_ticket` VALUES ('26', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '426');
-INSERT INTO `think_ticket` VALUES ('27', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '427');
-INSERT INTO `think_ticket` VALUES ('28', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '428');
-INSERT INTO `think_ticket` VALUES ('29', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '429');
-INSERT INTO `think_ticket` VALUES ('30', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '430');
-INSERT INTO `think_ticket` VALUES ('31', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '431');
-INSERT INTO `think_ticket` VALUES ('32', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '432');
-INSERT INTO `think_ticket` VALUES ('33', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '433');
-INSERT INTO `think_ticket` VALUES ('34', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '434');
-INSERT INTO `think_ticket` VALUES ('35', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '435');
-INSERT INTO `think_ticket` VALUES ('36', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '436');
-INSERT INTO `think_ticket` VALUES ('37', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '437');
-INSERT INTO `think_ticket` VALUES ('38', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '438');
-INSERT INTO `think_ticket` VALUES ('39', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '439');
-INSERT INTO `think_ticket` VALUES ('40', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '440');
-INSERT INTO `think_ticket` VALUES ('41', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '441');
-INSERT INTO `think_ticket` VALUES ('42', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '442');
-INSERT INTO `think_ticket` VALUES ('43', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '443');
-INSERT INTO `think_ticket` VALUES ('44', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '444');
-INSERT INTO `think_ticket` VALUES ('45', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '445');
-INSERT INTO `think_ticket` VALUES ('46', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '446');
-INSERT INTO `think_ticket` VALUES ('47', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '447');
-INSERT INTO `think_ticket` VALUES ('48', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '448');
-INSERT INTO `think_ticket` VALUES ('49', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '449');
-INSERT INTO `think_ticket` VALUES ('50', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '450');
-INSERT INTO `think_ticket` VALUES ('51', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '451');
-INSERT INTO `think_ticket` VALUES ('52', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '452');
-INSERT INTO `think_ticket` VALUES ('53', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '453');
-INSERT INTO `think_ticket` VALUES ('54', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '454');
-INSERT INTO `think_ticket` VALUES ('55', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '455');
-INSERT INTO `think_ticket` VALUES ('56', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '456');
-INSERT INTO `think_ticket` VALUES ('57', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '457');
-INSERT INTO `think_ticket` VALUES ('58', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '458');
-INSERT INTO `think_ticket` VALUES ('59', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '459');
-INSERT INTO `think_ticket` VALUES ('60', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '460');
-INSERT INTO `think_ticket` VALUES ('61', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '461');
-INSERT INTO `think_ticket` VALUES ('62', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '462');
-INSERT INTO `think_ticket` VALUES ('63', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '463');
-INSERT INTO `think_ticket` VALUES ('64', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '464');
-INSERT INTO `think_ticket` VALUES ('65', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '465');
-INSERT INTO `think_ticket` VALUES ('66', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '466');
-INSERT INTO `think_ticket` VALUES ('67', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '467');
-INSERT INTO `think_ticket` VALUES ('68', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '468');
-INSERT INTO `think_ticket` VALUES ('69', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '469');
-INSERT INTO `think_ticket` VALUES ('70', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '470');
-INSERT INTO `think_ticket` VALUES ('71', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '471');
-INSERT INTO `think_ticket` VALUES ('72', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '472');
-INSERT INTO `think_ticket` VALUES ('73', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '473');
-INSERT INTO `think_ticket` VALUES ('74', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '474');
-INSERT INTO `think_ticket` VALUES ('75', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '475');
-INSERT INTO `think_ticket` VALUES ('76', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '476');
-INSERT INTO `think_ticket` VALUES ('77', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '477');
-INSERT INTO `think_ticket` VALUES ('78', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '478');
-INSERT INTO `think_ticket` VALUES ('79', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '479');
-INSERT INTO `think_ticket` VALUES ('80', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '480');
-INSERT INTO `think_ticket` VALUES ('81', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '481');
-INSERT INTO `think_ticket` VALUES ('82', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '482');
-INSERT INTO `think_ticket` VALUES ('83', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '483');
-INSERT INTO `think_ticket` VALUES ('84', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '484');
-INSERT INTO `think_ticket` VALUES ('85', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '485');
-INSERT INTO `think_ticket` VALUES ('86', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '486');
-INSERT INTO `think_ticket` VALUES ('87', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '487');
-INSERT INTO `think_ticket` VALUES ('88', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '488');
-INSERT INTO `think_ticket` VALUES ('89', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '489');
-INSERT INTO `think_ticket` VALUES ('90', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '490');
-INSERT INTO `think_ticket` VALUES ('91', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '491');
-INSERT INTO `think_ticket` VALUES ('92', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '492');
-INSERT INTO `think_ticket` VALUES ('93', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '493');
-INSERT INTO `think_ticket` VALUES ('94', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '494');
-INSERT INTO `think_ticket` VALUES ('95', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '495');
-INSERT INTO `think_ticket` VALUES ('96', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '496');
-INSERT INTO `think_ticket` VALUES ('97', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '497');
-INSERT INTO `think_ticket` VALUES ('98', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '498');
-INSERT INTO `think_ticket` VALUES ('99', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '499');
-INSERT INTO `think_ticket` VALUES ('100', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '500');
-INSERT INTO `think_ticket` VALUES ('101', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '501');
-INSERT INTO `think_ticket` VALUES ('102', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '502');
-INSERT INTO `think_ticket` VALUES ('103', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '503');
-INSERT INTO `think_ticket` VALUES ('104', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '504');
-INSERT INTO `think_ticket` VALUES ('105', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '505');
-INSERT INTO `think_ticket` VALUES ('106', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '506');
-INSERT INTO `think_ticket` VALUES ('107', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '507');
-INSERT INTO `think_ticket` VALUES ('108', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '508');
-INSERT INTO `think_ticket` VALUES ('109', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '509');
-INSERT INTO `think_ticket` VALUES ('110', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '510');
-INSERT INTO `think_ticket` VALUES ('111', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '511');
-INSERT INTO `think_ticket` VALUES ('112', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '512');
-INSERT INTO `think_ticket` VALUES ('113', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '513');
-INSERT INTO `think_ticket` VALUES ('114', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '514');
-INSERT INTO `think_ticket` VALUES ('115', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '515');
-INSERT INTO `think_ticket` VALUES ('116', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '516');
-INSERT INTO `think_ticket` VALUES ('117', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '517');
-INSERT INTO `think_ticket` VALUES ('118', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '518');
-INSERT INTO `think_ticket` VALUES ('119', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '519');
-INSERT INTO `think_ticket` VALUES ('120', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '520');
-INSERT INTO `think_ticket` VALUES ('121', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '521');
-INSERT INTO `think_ticket` VALUES ('122', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '522');
-INSERT INTO `think_ticket` VALUES ('123', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '523');
-INSERT INTO `think_ticket` VALUES ('124', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '524');
-INSERT INTO `think_ticket` VALUES ('125', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '525');
-INSERT INTO `think_ticket` VALUES ('126', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '526');
-INSERT INTO `think_ticket` VALUES ('127', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '527');
-INSERT INTO `think_ticket` VALUES ('128', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '528');
-INSERT INTO `think_ticket` VALUES ('129', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '529');
-INSERT INTO `think_ticket` VALUES ('130', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '530');
-INSERT INTO `think_ticket` VALUES ('131', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '531');
-INSERT INTO `think_ticket` VALUES ('132', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '532');
-INSERT INTO `think_ticket` VALUES ('133', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '533');
-INSERT INTO `think_ticket` VALUES ('134', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '534');
-INSERT INTO `think_ticket` VALUES ('135', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '535');
-INSERT INTO `think_ticket` VALUES ('136', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '536');
-INSERT INTO `think_ticket` VALUES ('137', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '537');
-INSERT INTO `think_ticket` VALUES ('138', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '538');
-INSERT INTO `think_ticket` VALUES ('139', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '539');
-INSERT INTO `think_ticket` VALUES ('140', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '540');
-INSERT INTO `think_ticket` VALUES ('141', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '541');
-INSERT INTO `think_ticket` VALUES ('142', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '542');
-INSERT INTO `think_ticket` VALUES ('143', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '543');
-INSERT INTO `think_ticket` VALUES ('144', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '544');
-INSERT INTO `think_ticket` VALUES ('145', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '545');
-INSERT INTO `think_ticket` VALUES ('146', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '546');
-INSERT INTO `think_ticket` VALUES ('147', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '547');
-INSERT INTO `think_ticket` VALUES ('148', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '548');
-INSERT INTO `think_ticket` VALUES ('149', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '549');
-INSERT INTO `think_ticket` VALUES ('150', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '550');
-INSERT INTO `think_ticket` VALUES ('151', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '551');
-INSERT INTO `think_ticket` VALUES ('152', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '552');
-INSERT INTO `think_ticket` VALUES ('153', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '553');
-INSERT INTO `think_ticket` VALUES ('154', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '554');
-INSERT INTO `think_ticket` VALUES ('155', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '555');
-INSERT INTO `think_ticket` VALUES ('156', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '556');
-INSERT INTO `think_ticket` VALUES ('157', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '557');
-INSERT INTO `think_ticket` VALUES ('158', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '558');
-INSERT INTO `think_ticket` VALUES ('159', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '559');
-INSERT INTO `think_ticket` VALUES ('160', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '560');
-INSERT INTO `think_ticket` VALUES ('161', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '561');
-INSERT INTO `think_ticket` VALUES ('162', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '562');
-INSERT INTO `think_ticket` VALUES ('163', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '563');
-INSERT INTO `think_ticket` VALUES ('164', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '564');
-INSERT INTO `think_ticket` VALUES ('165', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '565');
-INSERT INTO `think_ticket` VALUES ('166', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '566');
-INSERT INTO `think_ticket` VALUES ('167', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '567');
-INSERT INTO `think_ticket` VALUES ('168', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '568');
-INSERT INTO `think_ticket` VALUES ('169', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '569');
-INSERT INTO `think_ticket` VALUES ('170', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '570');
-INSERT INTO `think_ticket` VALUES ('171', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '571');
-INSERT INTO `think_ticket` VALUES ('172', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '572');
-INSERT INTO `think_ticket` VALUES ('173', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '573');
-INSERT INTO `think_ticket` VALUES ('174', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '574');
-INSERT INTO `think_ticket` VALUES ('175', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '575');
-INSERT INTO `think_ticket` VALUES ('176', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '576');
-INSERT INTO `think_ticket` VALUES ('177', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '577');
-INSERT INTO `think_ticket` VALUES ('178', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '578');
-INSERT INTO `think_ticket` VALUES ('179', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '579');
-INSERT INTO `think_ticket` VALUES ('180', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '580');
-INSERT INTO `think_ticket` VALUES ('181', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '581');
-INSERT INTO `think_ticket` VALUES ('182', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '582');
-INSERT INTO `think_ticket` VALUES ('183', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '583');
-INSERT INTO `think_ticket` VALUES ('184', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '584');
-INSERT INTO `think_ticket` VALUES ('185', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '585');
-INSERT INTO `think_ticket` VALUES ('186', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '586');
-INSERT INTO `think_ticket` VALUES ('187', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '587');
-INSERT INTO `think_ticket` VALUES ('188', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '588');
-INSERT INTO `think_ticket` VALUES ('189', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '589');
-INSERT INTO `think_ticket` VALUES ('190', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '590');
-INSERT INTO `think_ticket` VALUES ('191', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '591');
-INSERT INTO `think_ticket` VALUES ('192', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '592');
-INSERT INTO `think_ticket` VALUES ('193', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '593');
-INSERT INTO `think_ticket` VALUES ('194', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '594');
-INSERT INTO `think_ticket` VALUES ('195', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '595');
-INSERT INTO `think_ticket` VALUES ('196', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '596');
-INSERT INTO `think_ticket` VALUES ('197', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '597');
-INSERT INTO `think_ticket` VALUES ('198', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '598');
-INSERT INTO `think_ticket` VALUES ('199', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '599');
-INSERT INTO `think_ticket` VALUES ('200', '0', '0', '', '', '', '0', '', '0', '', '', '', '888', '600');
 
 -- ----------------------------
 -- Table structure for `think_ticketlog`
@@ -1787,3 +1197,98 @@ INSERT INTO `think_user` VALUES ('2', 'admin', '883327915c4022331b5abcb9da2a390c
 INSERT INTO `think_user` VALUES ('3', '34545', 'd41d8cd98f00b204e9800998ecf8427e', '1471740719', '12', '0', '');
 INSERT INTO `think_user` VALUES ('4', 'w1212', 'c20ad4d76fe97759aa27a0c99bff6710', '1471740719', '1433', '0', '');
 INSERT INTO `think_user` VALUES ('5', 'lvwei', '883327915c4022331b5abcb9da2a390c', '0', '', '0', '');
+
+-- ----------------------------
+-- Table structure for `think_ysy_checkin`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_checkin`;
+CREATE TABLE `think_ysy_checkin` (
+  `checkin_id` int(10) unsigned NOT NULL,
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '加入时间',
+  `uid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建人',
+  PRIMARY KEY (`checkin_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_checkin
+-- ----------------------------
+INSERT INTO `think_ysy_checkin` VALUES ('2147483647', '1485965580', '1');
+
+-- ----------------------------
+-- Table structure for `think_ysy_checkingoods`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_checkingoods`;
+CREATE TABLE `think_ysy_checkingoods` (
+  `cg_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `checkin_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `format_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `goodsnum` int(10) unsigned NOT NULL DEFAULT '0',
+  `grossweight` int(10) unsigned NOT NULL DEFAULT '0',
+  `weight` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`cg_id`),
+  UNIQUE KEY `checkin_id` (`checkin_id`,`format_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_checkingoods
+-- ----------------------------
+INSERT INTO `think_ysy_checkingoods` VALUES ('121', '2147483647', '3', '11', '22', '33');
+INSERT INTO `think_ysy_checkingoods` VALUES ('122', '2147483647', '4', '66', '77', '88');
+
+-- ----------------------------
+-- Table structure for `think_ysy_format`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_format`;
+CREATE TABLE `think_ysy_format` (
+  `format_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '规格id',
+  `format_name` char(20) NOT NULL,
+  `format_remark` varchar(255) NOT NULL,
+  `format_pid` int(10) unsigned NOT NULL DEFAULT '0',
+  `unit_id` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`format_id`),
+  KEY `format_pid` (`format_pid`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_format
+-- ----------------------------
+INSERT INTO `think_ysy_format` VALUES ('1', '苹果', '', '0', '0');
+INSERT INTO `think_ysy_format` VALUES ('2', '梨', '', '0', '0');
+INSERT INTO `think_ysy_format` VALUES ('3', '苹果50G', '', '1', '0');
+INSERT INTO `think_ysy_format` VALUES ('4', '梨10G', '', '2', '0');
+
+-- ----------------------------
+-- Table structure for `think_ysy_stock`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_stock`;
+CREATE TABLE `think_ysy_stock` (
+  `format_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `goods_num` int(10) unsigned NOT NULL DEFAULT '0',
+  `goods_weight` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`format_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_stock
+-- ----------------------------
+INSERT INTO `think_ysy_stock` VALUES ('3', '31', '63');
+INSERT INTO `think_ysy_stock` VALUES ('4', '76', '128');
+
+-- ----------------------------
+-- Table structure for `think_ysy_unit`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_unit`;
+CREATE TABLE `think_ysy_unit` (
+  `unit_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `unit_name` char(20) NOT NULL COMMENT '单位名称',
+  `unit_remark` varchar(255) NOT NULL COMMENT '备注',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '加入时间',
+  PRIMARY KEY (`unit_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_unit
+-- ----------------------------
+INSERT INTO `think_ysy_unit` VALUES ('1', '个', '', '0');
+INSERT INTO `think_ysy_unit` VALUES ('2', '箱', '', '0');
+INSERT INTO `think_ysy_unit` VALUES ('3', '斤', '', '0');
