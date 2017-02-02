@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-02-02 00:13:46
+Date: 2017-02-02 22:59:08
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -102,6 +102,10 @@ INSERT INTO `think_access` VALUES ('2', '45', '0', null);
 INSERT INTO `think_access` VALUES ('2', '46', '0', null);
 INSERT INTO `think_access` VALUES ('2', '47', '0', null);
 INSERT INTO `think_access` VALUES ('2', '48', '0', null);
+INSERT INTO `think_access` VALUES ('2', '49', '0', null);
+INSERT INTO `think_access` VALUES ('2', '50', '0', null);
+INSERT INTO `think_access` VALUES ('2', '51', '0', null);
+INSERT INTO `think_access` VALUES ('2', '52', '0', null);
 
 -- ----------------------------
 -- Table structure for `think_flow_execution`
@@ -347,7 +351,7 @@ CREATE TABLE `think_node` (
   KEY `pid` (`pid`),
   KEY `status` (`status`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_node
@@ -396,6 +400,10 @@ INSERT INTO `think_node` VALUES ('45', 'Checkin', '入库', '1', '', '0', '44', 
 INSERT INTO `think_node` VALUES ('46', 'index', 'index', '1', '', '0', '45', '4', '');
 INSERT INTO `think_node` VALUES ('47', 'actionRequestService', 'actionRequestService', '1', '', '0', '45', '4', '');
 INSERT INTO `think_node` VALUES ('48', 'actionEditCheckIn', 'actionEditCheckIn', '1', '', '0', '45', '4', '');
+INSERT INTO `think_node` VALUES ('49', 'Goodspackage', '组合商品', '1', '', '0', '44', '3', '');
+INSERT INTO `think_node` VALUES ('50', 'index', 'index', '1', '', '0', '49', '4', '');
+INSERT INTO `think_node` VALUES ('51', 'actionEditGoodsPackage', 'actionEditGoodsPackage', '1', '', '0', '49', '4', '');
+INSERT INTO `think_node` VALUES ('52', 'actionRequestService', 'actionRequestService', '0', '', '0', '49', '4', '');
 
 -- ----------------------------
 -- Table structure for `think_order`
@@ -1147,7 +1155,7 @@ CREATE TABLE `think_ticket` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`),
   KEY `id` (`number`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=601 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of think_ticket
@@ -1186,17 +1194,18 @@ CREATE TABLE `think_user` (
   `loginip` varchar(30) NOT NULL,
   `status` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `realname` varchar(255) NOT NULL,
+  `depid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '所属部门',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_user
 -- ----------------------------
-INSERT INTO `think_user` VALUES ('1', 'wudan', '883327915c4022331b5abcb9da2a390c', '1471740719', '123.23', '0', '');
-INSERT INTO `think_user` VALUES ('2', 'admin', '883327915c4022331b5abcb9da2a390c', '1471740719', '121', '0', '');
-INSERT INTO `think_user` VALUES ('3', '34545', 'd41d8cd98f00b204e9800998ecf8427e', '1471740719', '12', '0', '');
-INSERT INTO `think_user` VALUES ('4', 'w1212', 'c20ad4d76fe97759aa27a0c99bff6710', '1471740719', '1433', '0', '');
-INSERT INTO `think_user` VALUES ('5', 'lvwei', '883327915c4022331b5abcb9da2a390c', '0', '', '0', '');
+INSERT INTO `think_user` VALUES ('1', 'wudan', '883327915c4022331b5abcb9da2a390c', '1471740719', '123.23', '0', '', '0');
+INSERT INTO `think_user` VALUES ('2', 'admin', '883327915c4022331b5abcb9da2a390c', '1471740719', '121', '0', '', '0');
+INSERT INTO `think_user` VALUES ('3', '34545', 'd41d8cd98f00b204e9800998ecf8427e', '1471740719', '12', '0', '', '0');
+INSERT INTO `think_user` VALUES ('4', 'w1212', 'c20ad4d76fe97759aa27a0c99bff6710', '1471740719', '1433', '0', '', '0');
+INSERT INTO `think_user` VALUES ('5', 'lvwei', '883327915c4022331b5abcb9da2a390c', '0', '', '0', '', '0');
 
 -- ----------------------------
 -- Table structure for `think_ysy_checkin`
@@ -1236,6 +1245,22 @@ INSERT INTO `think_ysy_checkingoods` VALUES ('121', '2147483647', '3', '11', '22
 INSERT INTO `think_ysy_checkingoods` VALUES ('122', '2147483647', '4', '66', '77', '88');
 
 -- ----------------------------
+-- Table structure for `think_ysy_department`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_department`;
+CREATE TABLE `think_ysy_department` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `depname` char(30) NOT NULL,
+  `leader` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '领导人',
+  `pid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '父级部门',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_department
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for `think_ysy_format`
 -- ----------------------------
 DROP TABLE IF EXISTS `think_ysy_format`;
@@ -1256,6 +1281,66 @@ INSERT INTO `think_ysy_format` VALUES ('1', '苹果', '', '0', '0');
 INSERT INTO `think_ysy_format` VALUES ('2', '梨', '', '0', '0');
 INSERT INTO `think_ysy_format` VALUES ('3', '苹果50G', '', '1', '0');
 INSERT INTO `think_ysy_format` VALUES ('4', '梨10G', '', '2', '0');
+
+-- ----------------------------
+-- Table structure for `think_ysy_goodspackage`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_goodspackage`;
+CREATE TABLE `think_ysy_goodspackage` (
+  `id` int(10) unsigned NOT NULL COMMENT '包id',
+  `packagename` char(30) NOT NULL,
+  `remark` varchar(255) NOT NULL,
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+  `uid` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_goodspackage
+-- ----------------------------
+INSERT INTO `think_ysy_goodspackage` VALUES ('2147483647', '1', '22', '1486047515', '0');
+
+-- ----------------------------
+-- Table structure for `think_ysy_goodspackageinfo`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_goodspackageinfo`;
+CREATE TABLE `think_ysy_goodspackageinfo` (
+  `packageid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '包id',
+  `format_id` int(11) unsigned NOT NULL DEFAULT '0',
+  `num` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '数量',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '时间',
+  UNIQUE KEY `packageid` (`packageid`,`format_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_goodspackageinfo
+-- ----------------------------
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('2147483647', '1', '12', '1486047515');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('2147483647', '3', '4444', '1486047515');
+
+-- ----------------------------
+-- Table structure for `think_ysy_packageprice`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_packageprice`;
+CREATE TABLE `think_ysy_packageprice` (
+  `packageid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '组合商品id',
+  `ordertype` int(10) unsigned NOT NULL COMMENT '订单类型',
+  `price` decimal(10,2) unsigned NOT NULL DEFAULT '0.00' COMMENT '价格',
+  `addtime` int(10) unsigned NOT NULL,
+  `bonus` decimal(5,2) unsigned NOT NULL DEFAULT '0.00' COMMENT '提成',
+  UNIQUE KEY `package` (`packageid`,`ordertype`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_packageprice
+-- ----------------------------
+INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '0', '2.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '1', '3.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '2', '4.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '3', '5.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '4', '6.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '5', '7.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '6', '1.00', '0', '0.00');
 
 -- ----------------------------
 -- Table structure for `think_ysy_stock`

@@ -24,7 +24,7 @@
 
         <?php echo ($body['sider']); ?>
         <div class="col-md-10">
-            <div><a href="<?php echo U('stockandsale/Checkin/actionEditCheckIn') ?>" type="button" class="btn btn-info">新增入库单</a></div>
+            <div><a href="<?php echo U('stockandsale/Goodspackage/actionEditGoodsPackage') ?>" type="button" class="btn btn-info">新增组合商品</a></div>
             <table class="table table-condensed checkin-table">
                 <thead>
                 <tr>
