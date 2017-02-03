@@ -60,56 +60,35 @@
                 </div>
                 <div class="weui-cell__bd">
                     <select class="weui-select" name="select2">
-                        <option value="0">自提</option>
-                        <option value="1">物流</option>
+                        <foreach name="sendType" item="v" key="k" >
+                            <option value="{$k}">{$v}</option>
+                        </foreach>
                     </select>
                 </div>
             </div>
         </div>
 
-        <div class="weui-cells" style="margin-top:0">
-            <div class="weui-cell weui-cell_select weui-cell_select-after">
-                <div class="weui-cell__hd">
-                    <label for="" class="weui-label">商品</label>
-                </div>
-                <div class="weui-cell__bd">
-                    <select class="weui-select" name="select2">
-                        <option value="1">xx</option>
-                        <option value="2">xxx</option>
-                        <option value="3">xxxxx</option>
-                    </select>
-                </div>
-            </div>
-        </div>
 
         <div class="weui-cells" style="margin-top:0">
-            <div class="weui-cell weui-cell_select weui-cell_select-after">
-                <div class="weui-cell__hd">
-                    <label for="" class="weui-label">订单类别</label>
-                </div>
-                <div class="weui-cell__bd">
-                    <select class="weui-select" name="select2">
-                        <option value="1">xx</option>
-                        <option value="2">xxx</option>
-                        <option value="3">xxxxx</option>
-                    </select>
-                </div>
+            <div class="page__bd page__bd_spacing">
+                <a href="javascript:;" class="addgoodsinfo-a weui-btn weui-btn_primary">+增加商品</a>
             </div>
         </div>
-        <div class="weui-cells" style="margin-top:0">
-            <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">数量(库存20)</label></div>
-                <div class="weui-cell__bd">
-                    <input class="weui-input" type="number"  placeholder="必填">
-                </div>
-            </div>
-        </div>
-
-
-
-
-
     </div>
+
+<style>
+    .page__bd .del-a{
+        color: #0BB20C;
+        float: right;
+    }
+
+
+</style>
+
+
+
+
+
     <div class="fixed fix-position bgfff pt10 pb10 pr20 pl20 w100">
         <a href="javascript:;" class="bgblue cfff block w100 round5 ft16 ftc pad5">提交</a>
     </div>
@@ -139,6 +118,75 @@
         });
     });
 
+
+    var OrderApporve = function(){
+
+        var _goodsPackageListJson = {$goodsPackageList};
+        var _config = {$configList};
+
+        //增加商品
+        var _addPackageHtml = function(){
+            var html = '';
+            for(var k in _goodsPackageListJson){
+                if(_goodsPackageListJson.hasOwnProperty(k)){
+                    html += '<option value="'+_goodsPackageListJson[k]['id']+'">'+_goodsPackageListJson[k]['packagename']+'</option>';
+                }
+            }
+            html = '<select onchange="OrderApporve.onChange(this)" name="package_id[]" class="weui-select">'+html+'</select>';
+            return html;
+        };
+
+        var _addGoodsInfo = function(){
+            var packageHtml = _addPackageHtml();
+            var html = '<div class="page__bd"><div class="weui-cells__title">商品明细<a onclick="OrderApporve.delPackage(this)" class="del-a">删除</a></div>'+
+                    '<div class="weui-cells" style="margin-top:0"><div class="weui-cell weui-cell_select weui-cell_select-after"><div class="weui-cell__hd"><label for="" class="weui-label">商品</label></div><div class="weui-cell__bd">'+packageHtml+'</div></div></div>'+
+                    '<div class="weui-cells" style="margin-top:0"><div class="weui-cell weui-cell_select weui-cell_select-after"><div class="weui-cell__hd"><label for="" class="weui-label">订单类别</label></div><div class="weui-cell__bd"><select class="weui-select" name="ordertype[]"><option value="1">请选择商品</option></select></div></div></div>'+
+                    '<div class="weui-cells" style="margin-top:0"><div class="weui-cell"><div class="weui-cell__hd"><label class="weui-label num-label">数量(库存0)</label></div><div class="weui-cell__bd"><input name="num[]" class="weui-input" type="number"  placeholder="必填"></div></div></div>'+
+                    '</div>';
+            return html;
+        };
+
+        var _onChangePackage = function(obj){
+            $.get('<?php echo U('OrderProcess/OrderApprove/actionRequestService') ?>',{type:'changepackage',id:$(obj).val()},function(data){
+                var dataJson = JSON.parse(data);
+                var min = dataJson['min'];
+                var dataJson = dataJson['priceList'];
+                var parentObj = $(obj).parent().parent().parent().parent();
+                parentObj.find('.num-label').html('数量(库存'+min+')');
+                html = '';
+                for(var k in dataJson){
+                    if(dataJson.hasOwnProperty(k)){
+                        var tmpName = _config['orderType'][dataJson[k]['ordertype']];
+                        var tmpPrice = dataJson[k]['price'];
+                        html += '<option value="'+dataJson[k]['ordertype']+'">'+tmpName+'(价格'+tmpPrice+')</option>';
+                    }
+                }
+                parentObj.find('select[name="ordertype[]"]').html(html);
+            });
+
+        };
+
+        var _delPackage = function(obj){
+            console.log($(obj).parent().parent().remove());
+        };
+
+        var _initi = function(){
+
+            $('.addgoodsinfo-a').on('click',function(){
+                var html = _addGoodsInfo();
+                $('.page').append(html);
+                console.log('wudan');
+
+            });
+
+        }();
+
+        return {
+            delPackage:_delPackage,
+            onChange:_onChangePackage
+        }
+
+    }();
 
 </script>
 

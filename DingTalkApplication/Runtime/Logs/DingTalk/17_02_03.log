@@ -903,3 +903,3218 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2017-02-03T14:39:30+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T14:50:44+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T14:52:48+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T14:55:13+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T14:55:47+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T14:56:17+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T15:04:22+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T15:04:26+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T15:05:02+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T15:05:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T15:05:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T15:05:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T15:08:04+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+
+[ 2017-02-03T15:08:32+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T15:10:45+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T15:11:01+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T15:11:40+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T15:12:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-03T15:12:07+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T17:53:21+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0610s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T17:55:15+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T17:55:53+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T17:56:00+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T17:58:51+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T17:59:02+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T17:59:23+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T18:00:01+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:00:05+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:00:57+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T18:01:36+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:01:52+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:02:12+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:03:57+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:05:20+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:05:34+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:07:09+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:11:41+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:12:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T18:14:08+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:15:07+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T18:19:57+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T18:21:56+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T18:23:08+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T18:50:05+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-03T18:51:05+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T18:52:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:10:18+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:11:52+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:15:41+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:16:14+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-02-03T19:16:15+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:16:15+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:16:15+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:16:15+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:17:10+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:17:26+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:17:26+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-03T19:17:26+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:17:26+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:17:27+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:17:27+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:19:37+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:19:40+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:19:53+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:19:54+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:20:09+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:20:31+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:21:59+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:22:18+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0490s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:22:58+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:23:24+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:28:31+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:28:34+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:28:39+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:35:42+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:35:49+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:35:50+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:35:55+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:35:58+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-03T19:36:01+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T19:36:02+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T19:50:21+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:02:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+
+[ 2017-02-03T20:03:44+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:06:18+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:10:29+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-03T20:15:52+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:24:40+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:25:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:27:44+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-03T20:27:46+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:32:43+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:34:04+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:34:05+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:34:11+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:35:48+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:35:51+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:42:34+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:42:37+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:42:58+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:43:00+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:43:56+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T20:43:59+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:44:16+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T20:44:20+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-03T20:45:13+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:45:15+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:45:27+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:45:29+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:51:53+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T20:51:56+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-03T20:54:39+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:54:41+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-03T20:55:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:55:05+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:55:22+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T20:55:24+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:56:14+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:56:16+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T20:56:19+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:57:16+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:57:25+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T20:57:28+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:02:32+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T21:02:34+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-02-03T21:03:07+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:03:09+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:07:40+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T21:07:42+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:10:30+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Array to string conversion D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:12:01+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:13:05+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T21:13:08+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:14:07+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T21:14:09+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:15:35+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:15:37+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:24:37+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-03T21:24:46+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:26:31+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:26:33+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:26:43+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:26:46+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:27:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:27:05+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:27:17+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:27:19+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:28:13+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:28:15+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:29:13+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:29:15+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:29:21+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-02-03T21:33:46+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:34:09+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:34:28+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T21:34:33+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:34:34+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:34:34+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:34:34+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+NOTIC: [2] Illegal string offset 'orderType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 89 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:35:31+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:35:50+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:35:51+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:35:51+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T21:35:51+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'sendType' D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\edbffca098de2301525df12126dbf36e.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-03T21:37:22+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-03T21:37:26+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 2147483647 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=3 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( format_id=4 ) LIMIT 1   [ RunTime:0.0000s ]
+

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-02-02 22:59:08
+Date: 2017-02-03 21:54:43
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1292,13 +1292,15 @@ CREATE TABLE `think_ysy_goodspackage` (
   `remark` varchar(255) NOT NULL,
   `addtime` int(10) unsigned NOT NULL DEFAULT '0',
   `uid` int(10) unsigned NOT NULL,
+  `status` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '0正常1删除2不显示',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_ysy_goodspackage
 -- ----------------------------
-INSERT INTO `think_ysy_goodspackage` VALUES ('2147483647', '1', '22', '1486047515', '0');
+INSERT INTO `think_ysy_goodspackage` VALUES ('2', '212', '232', '1232', '0', '0');
+INSERT INTO `think_ysy_goodspackage` VALUES ('2147483647', '商品', '22', '1486047515', '0', '0');
 
 -- ----------------------------
 -- Table structure for `think_ysy_goodspackageinfo`
@@ -1315,8 +1317,49 @@ CREATE TABLE `think_ysy_goodspackageinfo` (
 -- ----------------------------
 -- Records of think_ysy_goodspackageinfo
 -- ----------------------------
-INSERT INTO `think_ysy_goodspackageinfo` VALUES ('2147483647', '1', '12', '1486047515');
-INSERT INTO `think_ysy_goodspackageinfo` VALUES ('2147483647', '3', '4444', '1486047515');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('2147483647', '3', '2', '1486047515');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('2147483647', '4', '1', '1486047515');
+
+-- ----------------------------
+-- Table structure for `think_ysy_order`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_order`;
+CREATE TABLE `think_ysy_order` (
+  `order_id` int(10) unsigned NOT NULL,
+  `order_user` int(10) unsigned NOT NULL DEFAULT '0',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '加入时间',
+  `isOlder` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `order_type` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `requireddeliverytime` int(10) unsigned NOT NULL DEFAULT '0',
+  `deliveryttpe` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `money` decimal(10,2) unsigned NOT NULL DEFAULT '0.00',
+  `remark` varchar(255) NOT NULL,
+  `belonger` int(10) unsigned NOT NULL DEFAULT '0',
+  `rece_name` char(20) NOT NULL,
+  `rece_addr` char(30) NOT NULL,
+  `rece_tel` char(30) NOT NULL,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_order
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `think_ysy_ordergoods`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_ordergoods`;
+CREATE TABLE `think_ysy_ordergoods` (
+  `package_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `order_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `num` int(10) unsigned NOT NULL DEFAULT '0',
+  `ordertype` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  UNIQUE KEY `package_id` (`package_id`,`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_ordergoods
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `think_ysy_packageprice`
