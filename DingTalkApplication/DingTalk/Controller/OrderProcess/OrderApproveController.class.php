@@ -6,16 +6,16 @@
  * Time: 15:03
  */
 
-namespace DingTalk\Controller\Entrance;
+namespace DingTalk\Controller\OrderProcess;
 use Think\Controller;
 
-class EntranceController extends Controller
+class OrderApproveController extends Controller
 {
     /**
      * 主页
      */
     public function index(){
+        $this->display('/orderprocess/orderapprove');
 
-        die('111');
     }
 }

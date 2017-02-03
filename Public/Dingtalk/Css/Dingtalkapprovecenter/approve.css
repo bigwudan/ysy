@@ -1,0 +1,228 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;}
+body{font-size:16px;font-family:"Microsoft Yahei",tahoma,arial; background:#f5f5f5;line-height:20px;min-width:320px;}  
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,i,b,label{margin: 0; padding: 0;}
+a {color:#333; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+.main{ max-width:640px;margin:auto;}
+.w100{ width:100%;}
+.ct{margin:0 auto;}
+.ftc{ text-align:center;}
+.ftr{ text-align:right;}
+.ftleft{ text-align:left;}
+.bold{ font-weight:bold;} 
+.clearfix:before,.clearfix:after{display:table;content:" ";}
+.clearfix:after{clear:both;}
+.clear{clear:both;}
+.ft12{ font-size:.75rem;}
+.ft13{ font-size:.8125rem;}
+.ft14{ font-size:.875rem;}
+.ft15{ font-size:.9375rem;}
+.ft16{ font-size:1rem;}
+.ft18{ font-size:1.125rem;}
+.ft20{ font-size:1.25rem;}
+.ft24{ font-size:1.5rem;} 
+.ft30{ font-size:1.875rem;}
+.block{display: block;}
+.dib{display: inline-block;}
+/*color*/
+.c000{color:#000;}
+.cfff{ color:#fff;}
+.c333{ color:#333;}
+.c666{ color:#666;}
+.c999{ color:#999;}
+.cred{color: #f03e3e;}
+.cblue{color: #38adff;}
+.cgreen{color: #82c95f;}
+.orange{color: #ff7055;}
+/*bgcolor*/
+.bgblue{background-color: #38adff;}
+.bge0{background: #e0e0e0;}
+
+.mt3{margin-top:3px;} 
+.mt5{ margin-top:5px;}
+.mt6{ margin-top:6px;}
+.mt10{ margin-top:10px;}
+.mt15{ margin-top:15px;}
+.mt20{margin-top:20px;}
+
+.mr3{margin-right:3px;} 
+.mr5{ margin-right:5px;}
+.mr6{ margin-right:6px;}
+.mr10{ margin-right:10px;}
+.mr15{ margin-right:15px;}
+.mr20{margin-right:20px;}
+ 
+.mb5{ margin-bottom:5px;}
+.mb10{ margin-bottom:10px;}
+.mb15{ margin-bottom:15px;}
+.mb20{margin-bottom:20px;}
+.mb25{margin-bottom: 25px;}
+.ml5{ margin-left:5px;}
+.ml10{ margin-left:10px;}
+.ml15{ margin-left:15px;}
+.ml20{margin-left:20px;}
+
+.pt5{ padding-top:5px;}
+.pt10{ padding-top:10px;}
+.pt15{ padding-top:15px;}
+.pt20{ padding-top:20px;}
+
+.pr5{ padding-right:5px;}
+.pr10{ padding-right:10px;}
+.pr15{ padding-right:15px;}
+.pr20{ padding-right:20px;}
+
+.pb5{ padding-bottom:5px;}
+.pb10{ padding-bottom:10px;}
+.pb15{ padding-bottom:15px;}
+.pb20{ padding-bottom:20px;}
+
+.pl5{ padding-left:5px;}
+.pl10{ padding-left:10px;}
+.pl15{ padding-left:15px;}
+.pl20{ padding-left:20px;}
+
+.pad5{padding: 5px;}
+.pad10{padding: 10px;}
+.pad15{padding: 15px;}
+.italic{font-style: italic;}
+.fl{float: left;}
+.fr{float: right;}
+.w25{width: 25%;}
+.hide{display: none;}
+.rela{position: relative;}
+.abs{position: absolute;}
+.bgfff{background: white;}
+.bbt{border-bottom: solid 1px #dedede;}
+.bleft{border-left: solid 1px #dedede;}
+.b-all{border: solid 1px #dedede;}
+.btop{border-top: solid 1px #dedede;}
+.w50{width: 50%;}
+.ell{white-space: nowrap;overflow: hidden; text-overflow: ellipsis;}
+.round30{border-radius: 30px;}
+.round5{border-radius: 5px;}
+/*审批首页*/
+.w33{width: 33.3%;}
+.apply-icon{margin-bottom: 5px;width: 42px;height: 42px;}
+.ai1{background-position: 0 0;background: url(__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/indexico.png);background-size: 100% 360%;}
+.ai2{background: url(__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/indexico.png);background-size: 100% 360%;background-position: 0 45%;}
+.ai3{background: url(__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/indexico.png);background-size: 100% 360%;background-position: 0 92%;}
+.c949f{color: #8c949f;}
+.blockflame{border-top: solid 1px #dedede; border-right: solid 1px #dedede;}
+.blockflame:nth-child(3n){border-top: solid 1px #dedede; border-right:none;}
+.tabblue{color: #38adff;border-bottom: #38adff solid 2px;}
+.ell-width{width: 70%;}
+.information{margin-left: 70px;}
+.ml60{margin-left: 60px;}
+.typeico{top: 25px;left: -10px;}
+.lh40{line-height: 40px;}
+.fixed{position: fixed;}
+.fix-position{bottom: 0;left: 0;}
+.mb60{margin-bottom: 60px;}
+
+textarea::-webkit-input-placeholder{color: #999;}
+.search-flame::-webkit-input-placeholder{text-align: center;color: #666;}
+.thistext{outline: none;height: 150px;resize: none;border:none;}
+.search-btn:last-child{border-bottom: none;}
+.search-flame{border: none;line-height: 26px; outline: none;}
+.glass{top: 15px;}
+.ml100{margin-left: 100px;}
+.input-border{outline: none;border: none;line-height: 20px;}
+.write-flame{display: -webkit-box;}
+.info-tip{width: 80px;line-height: 20px;}
+.input-flex{-webkit-box-flex: 1;}
+.input-flex::-webkit-input-placeholder{font-size: 12px;color: #ccc;}
+.arrow{width: 12px;height: 12px;border-top: 2px solid #ccc;border-right: 2px solid #ccc;transform: rotate(45deg); top: 14px;right: 8px;}
+.text-height{height: 60px;}
+.upload{top: 10px;right: 10px;}
+.cancel{width: 16px;height: 16px;background: #f03e3e;line-height: 16px;}
+.ccc{color: #ccc;}
+
+.text-align-right-10padding{
+  text-align: right;padding-right: 10px
+}
+
+/*icheck*/
+.modal{
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  opacity: 1;
+}
+.modal-backdrop{
+  opacity: .5;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+}
+.modal-dialog{
+  margin: 30px auto;
+  background-color: #fff;
+  position:relative;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.list-group {
+  padding-left: 0;
+
+}
+.list-group-item:first-child {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.iradio_square-green.hover {
+  background-position: -144px 0;
+}
+
+.iradio_square-green {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  background: url(/static/images/icheck/blue.png) no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.iradio_square-green.checked {
+  background-position: -168px 0;
+}
+
+@media(min-width:768px){
+  .modal-dialog{
+    width:600px;
+    margin:30px auto;
+  }
+}
+
+
+@media(max-width:768px){
+  .modal-dialog{
+    width:300px;
+    margin:30px auto;
+  }
+}
+
