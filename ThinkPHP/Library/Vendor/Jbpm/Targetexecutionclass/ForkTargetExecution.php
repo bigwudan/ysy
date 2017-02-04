@@ -4,7 +4,7 @@ namespace Vendor\Jbpm\Targetexecutionclass;
  * wudan 吴丹 创建于 2016-11-29 17:40:47
 ForkTargetExecution
  */
-class ForkTargetExecution extends \epet\hr\workuserflower\targetexecutionclass\CommonTargetExecutionClass{
+class ForkTargetExecution extends \Vendor\Jbpm\Targetexecutionclass\CommonTargetExecutionClass{
     /**
 
      * fork
@@ -117,12 +117,12 @@ class ForkTargetExecution extends \epet\hr\workuserflower\targetexecutionclass\C
 
     private function _translate($varDataName){
         $xmlObj = $this->_executionObj->getXmlObj();
-        $XmlEngine = new \epet\hr\workuserflower\processfunction\XmlEngine();
+        $XmlEngine = new \Vendor\Jbpm\Processfunction\XmlEngine();
         $res = $XmlEngine->getActionXml( $xmlObj , $varDataName);
         if($res['nodeName'] == 'task'){
             $res['candidate'] = $this->_taskTarget($res);
         }else if($res['nodeName'] == 'decision'){
-            $DecisionObj = new \epet\hr\workuserflower\targetexecutionclass\DecisionTargetExecution();
+            $DecisionObj = new \Vendor\Jbpm\Targetexecutionclass\DecisionTargetExecution();
             $DescisionResult = $DecisionObj->dealhandler($res , $this->_executionObj);
             $transalteList = $DecisionObj->translate($DescisionResult['transitionList'] , $this->_executionObj , $DescisionResult['variable']);
             $tranList = $transalteList['targetNodeList'];
@@ -144,7 +144,7 @@ class ForkTargetExecution extends \epet\hr\workuserflower\targetexecutionclass\C
      */
 
     private function _taskTarget($varData){
-        $TaskObj = new \epet\hr\workuserflower\targetexecutionclass\TaskTargetExecutionClass();
+        $TaskObj = new \Vendor\Jbpm\Targetexecutionclass\TaskTargetExecutionClass();
         return $TaskObj->processCandidate($varData , $this->_beforeAssembleVariable);
     }
 

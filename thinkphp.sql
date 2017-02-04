@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-02-03 21:54:43
+Date: 2017-02-04 23:53:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -108,10 +108,10 @@ INSERT INTO `think_access` VALUES ('2', '51', '0', null);
 INSERT INTO `think_access` VALUES ('2', '52', '0', null);
 
 -- ----------------------------
--- Table structure for `think_flow_execution`
+-- Table structure for `think_flow_execution1`
 -- ----------------------------
-DROP TABLE IF EXISTS `think_flow_execution`;
-CREATE TABLE `think_flow_execution` (
+DROP TABLE IF EXISTS `think_flow_execution1`;
+CREATE TABLE `think_flow_execution1` (
   `dbid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '主键id',
   `activityname` varchar(255) NOT NULL,
   `procdefid` varchar(255) NOT NULL COMMENT '模板名称',
@@ -133,14 +133,14 @@ CREATE TABLE `think_flow_execution` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of think_flow_execution
+-- Records of think_flow_execution1
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `think_flow_histactinst`
+-- Table structure for `think_flow_histactinst1`
 -- ----------------------------
-DROP TABLE IF EXISTS `think_flow_histactinst`;
-CREATE TABLE `think_flow_histactinst` (
+DROP TABLE IF EXISTS `think_flow_histactinst1`;
+CREATE TABLE `think_flow_histactinst1` (
   `dbid` int(10) unsigned NOT NULL,
   `hprocid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '历史procid',
   `type` varchar(255) NOT NULL COMMENT '状态实例state',
@@ -157,17 +157,17 @@ CREATE TABLE `think_flow_histactinst` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of think_flow_histactinst
+-- Records of think_flow_histactinst1
 -- ----------------------------
-INSERT INTO `think_flow_histactinst` VALUES ('14', '11', 'decision', 'test1.11', 'exclusive1', '1480410246', '1480410246', '0', 'to task1', '0');
-INSERT INTO `think_flow_histactinst` VALUES ('15', '11', 'task', 'test1.11', 'task1', '1480410246', '1480410570', '324', 'to task2', '12');
-INSERT INTO `think_flow_histactinst` VALUES ('24', '11', 'task', 'test1.11', 'task2', '1480410570', '1480410636', '66', 'to end1', '21');
+INSERT INTO `think_flow_histactinst1` VALUES ('14', '11', 'decision', 'test1.11', 'exclusive1', '1480410246', '1480410246', '0', 'to task1', '0');
+INSERT INTO `think_flow_histactinst1` VALUES ('15', '11', 'task', 'test1.11', 'task1', '1480410246', '1480410570', '324', 'to task2', '12');
+INSERT INTO `think_flow_histactinst1` VALUES ('24', '11', 'task', 'test1.11', 'task2', '1480410570', '1480410636', '66', 'to end1', '21');
 
 -- ----------------------------
--- Table structure for `think_flow_histprocinst`
+-- Table structure for `think_flow_histprocinst1`
 -- ----------------------------
-DROP TABLE IF EXISTS `think_flow_histprocinst`;
-CREATE TABLE `think_flow_histprocinst` (
+DROP TABLE IF EXISTS `think_flow_histprocinst1`;
+CREATE TABLE `think_flow_histprocinst1` (
   `dbid` int(10) NOT NULL,
   `id` varchar(255) NOT NULL,
   `procdefid` varchar(255) NOT NULL,
@@ -181,15 +181,15 @@ CREATE TABLE `think_flow_histprocinst` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of think_flow_histprocinst
+-- Records of think_flow_histprocinst1
 -- ----------------------------
-INSERT INTO `think_flow_histprocinst` VALUES ('11', 'test1.11', 'test1', '', '1480410241', '1480410636', '395', 'ended', 'end1');
+INSERT INTO `think_flow_histprocinst1` VALUES ('11', 'test1.11', 'test1', '', '1480410241', '1480410636', '395', 'ended', 'end1');
 
 -- ----------------------------
--- Table structure for `think_flow_histtask`
+-- Table structure for `think_flow_histtask1`
 -- ----------------------------
-DROP TABLE IF EXISTS `think_flow_histtask`;
-CREATE TABLE `think_flow_histtask` (
+DROP TABLE IF EXISTS `think_flow_histtask1`;
+CREATE TABLE `think_flow_histtask1` (
   `dbid` int(10) NOT NULL,
   `execution` varchar(255) NOT NULL COMMENT 'execution+id',
   `outcome` varchar(255) NOT NULL COMMENT '结束节点',
@@ -204,16 +204,16 @@ CREATE TABLE `think_flow_histtask` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of think_flow_histtask
+-- Records of think_flow_histtask1
 -- ----------------------------
-INSERT INTO `think_flow_histtask` VALUES ('12', 'test1.11', 'task2', '', '0', 'complete', '1480410243', '1480410570', '327');
-INSERT INTO `think_flow_histtask` VALUES ('21', 'test1.11', 'end1', '', '0', 'complete', '1480410570', '1480410636', '66');
+INSERT INTO `think_flow_histtask1` VALUES ('12', 'test1.11', 'task2', '', '0', 'complete', '1480410243', '1480410570', '327');
+INSERT INTO `think_flow_histtask1` VALUES ('21', 'test1.11', 'end1', '', '0', 'complete', '1480410570', '1480410636', '66');
 
 -- ----------------------------
--- Table structure for `think_flow_modulerule`
+-- Table structure for `think_flow_modulerule1`
 -- ----------------------------
-DROP TABLE IF EXISTS `think_flow_modulerule`;
-CREATE TABLE `think_flow_modulerule` (
+DROP TABLE IF EXISTS `think_flow_modulerule1`;
+CREATE TABLE `think_flow_modulerule1` (
   `moduleid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '模板id',
   `rule` text NOT NULL,
   `rulename` varchar(255) NOT NULL,
@@ -224,16 +224,16 @@ CREATE TABLE `think_flow_modulerule` (
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of think_flow_modulerule
+-- Records of think_flow_modulerule1
 -- ----------------------------
-INSERT INTO `think_flow_modulerule` VALUES ('7', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"160,16,48,48\" name=\"start1\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive1\" to=\"exclusive1\"/>\r\n   </start>\r\n   <state g=\"495,422,9,5\" name=\"state4\"/>\r\n   <end g=\"336,385,48,48\" name=\"end1\"/>\r\n   <decision g=\"267,106,48,48\" name=\"exclusive1\">\r\n   <handler class=\"\\Org\\Jbmp\\TestHander\\testHander\" />\r\n      <transition g=\"-52,-22\" name=\"to task1\" to=\"task1\"/>\r\n   </decision>\r\n   <task candidate-users=\"#{user1}\" g=\"114,129,92,52\" name=\"task1\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive2\" to=\"exclusive2\"/>\r\n   </task>\r\n   <decision g=\"89,202,48,48\" name=\"exclusive2\">\r\n   <handler class=\"Org\\Jbmp\\TestHander\\test2Hander\" />\r\n      <transition g=\"-52,-22\" name=\"to task2\" to=\"task2\"/>\r\n   </decision>\r\n   <task candidate-groups=\"#{team1,team2}\" g=\"57,280,92,52\" name=\"task2\">\r\n      <transition g=\"-50,-22\" name=\"to end1\" to=\"end1\"/>\r\n   </task>\r\n</process>', 'test', '0', '0');
-INSERT INTO `think_flow_modulerule` VALUES ('8', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"178,-11,48,48\" name=\"start1\">\r\n      <transition name=\"to exclusive1\" to=\"exclusive1\" g=\"-79,-22\"/>\r\n   </start>\r\n   <state g=\"495,422,9,5\" name=\"state4\"/>\r\n   <end g=\"155,397,48,48\" name=\"end1\"/>\r\n   <decision name=\"exclusive1\" g=\"203,88,48,48\">\r\n   <handler class=\"Org\\Jbmp\\TestHander\\testHander\" />\r\n      <transition name=\"to state1\" to=\"state1\" g=\"-56,-22\"/>\r\n      <transition name=\"to task1\" to=\"task1\" g=\"-52,-22\"/>\r\n   </decision>\r\n   <state name=\"state1\" g=\"73,208,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n   <task name=\"task1\" g=\"241,204,92,52\" candidate-users=\"#{user1}\">\r\n      <transition name=\"to task2\" to=\"task2\" g=\"-52,-22\"/>\r\n   </task>\r\n   <task name=\"task2\" g=\"254,315,92,52\" candidate-groups=\"#{team1,team2}\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </task>\r\n</process>', 'test1', '0', '0');
+INSERT INTO `think_flow_modulerule1` VALUES ('7', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"160,16,48,48\" name=\"start1\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive1\" to=\"exclusive1\"/>\r\n   </start>\r\n   <state g=\"495,422,9,5\" name=\"state4\"/>\r\n   <end g=\"336,385,48,48\" name=\"end1\"/>\r\n   <decision g=\"267,106,48,48\" name=\"exclusive1\">\r\n   <handler class=\"\\Org\\Jbmp\\TestHander\\testHander\" />\r\n      <transition g=\"-52,-22\" name=\"to task1\" to=\"task1\"/>\r\n   </decision>\r\n   <task candidate-users=\"#{user1}\" g=\"114,129,92,52\" name=\"task1\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive2\" to=\"exclusive2\"/>\r\n   </task>\r\n   <decision g=\"89,202,48,48\" name=\"exclusive2\">\r\n   <handler class=\"Org\\Jbmp\\TestHander\\test2Hander\" />\r\n      <transition g=\"-52,-22\" name=\"to task2\" to=\"task2\"/>\r\n   </decision>\r\n   <task candidate-groups=\"#{team1,team2}\" g=\"57,280,92,52\" name=\"task2\">\r\n      <transition g=\"-50,-22\" name=\"to end1\" to=\"end1\"/>\r\n   </task>\r\n</process>', 'test', '0', '0');
+INSERT INTO `think_flow_modulerule1` VALUES ('8', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"178,-11,48,48\" name=\"start1\">\r\n      <transition name=\"to exclusive1\" to=\"exclusive1\" g=\"-79,-22\"/>\r\n   </start>\r\n   <state g=\"495,422,9,5\" name=\"state4\"/>\r\n   <end g=\"155,397,48,48\" name=\"end1\"/>\r\n   <decision name=\"exclusive1\" g=\"203,88,48,48\">\r\n   <handler class=\"Org\\Jbmp\\TestHander\\testHander\" />\r\n      <transition name=\"to state1\" to=\"state1\" g=\"-56,-22\"/>\r\n      <transition name=\"to task1\" to=\"task1\" g=\"-52,-22\"/>\r\n   </decision>\r\n   <state name=\"state1\" g=\"73,208,92,52\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </state>\r\n   <task name=\"task1\" g=\"241,204,92,52\" candidate-users=\"#{user1}\">\r\n      <transition name=\"to task2\" to=\"task2\" g=\"-52,-22\"/>\r\n   </task>\r\n   <task name=\"task2\" g=\"254,315,92,52\" candidate-groups=\"#{team1,team2}\">\r\n      <transition name=\"to end1\" to=\"end1\" g=\"-50,-22\"/>\r\n   </task>\r\n</process>', 'test1', '0', '0');
 
 -- ----------------------------
--- Table structure for `think_flow_participation`
+-- Table structure for `think_flow_participation1`
 -- ----------------------------
-DROP TABLE IF EXISTS `think_flow_participation`;
-CREATE TABLE `think_flow_participation` (
+DROP TABLE IF EXISTS `think_flow_participation1`;
+CREATE TABLE `think_flow_participation1` (
   `dbid` int(10) NOT NULL,
   `groupid` varchar(255) NOT NULL,
   `userid` varchar(255) NOT NULL,
@@ -246,14 +246,14 @@ CREATE TABLE `think_flow_participation` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of think_flow_participation
+-- Records of think_flow_participation1
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `think_flow_property`
+-- Table structure for `think_flow_property1`
 -- ----------------------------
-DROP TABLE IF EXISTS `think_flow_property`;
-CREATE TABLE `think_flow_property` (
+DROP TABLE IF EXISTS `think_flow_property1`;
+CREATE TABLE `think_flow_property1` (
   `key` varchar(255) NOT NULL,
   `version` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '版本',
   `value` varchar(255) DEFAULT NULL,
@@ -261,15 +261,15 @@ CREATE TABLE `think_flow_property` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of think_flow_property
+-- Records of think_flow_property1
 -- ----------------------------
-INSERT INTO `think_flow_property` VALUES ('next.dbid', '3', '31');
+INSERT INTO `think_flow_property1` VALUES ('next.dbid', '3', '31');
 
 -- ----------------------------
--- Table structure for `think_flow_task`
+-- Table structure for `think_flow_task1`
 -- ----------------------------
-DROP TABLE IF EXISTS `think_flow_task`;
-CREATE TABLE `think_flow_task` (
+DROP TABLE IF EXISTS `think_flow_task1`;
+CREATE TABLE `think_flow_task1` (
   `dbid` int(10) unsigned NOT NULL DEFAULT '0',
   `name` varchar(255) NOT NULL,
   `state` varchar(255) NOT NULL,
@@ -287,14 +287,14 @@ CREATE TABLE `think_flow_task` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of think_flow_task
+-- Records of think_flow_task1
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `think_flow_variable`
+-- Table structure for `think_flow_variable1`
 -- ----------------------------
-DROP TABLE IF EXISTS `think_flow_variable`;
-CREATE TABLE `think_flow_variable` (
+DROP TABLE IF EXISTS `think_flow_variable1`;
+CREATE TABLE `think_flow_variable1` (
   `dbid` int(10) NOT NULL,
   `class` varchar(255) NOT NULL,
   `key` varchar(255) NOT NULL,
@@ -309,7 +309,7 @@ CREATE TABLE `think_flow_variable` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of think_flow_variable
+-- Records of think_flow_variable1
 -- ----------------------------
 
 -- ----------------------------
@@ -1208,6 +1208,225 @@ INSERT INTO `think_user` VALUES ('4', 'w1212', 'c20ad4d76fe97759aa27a0c99bff6710
 INSERT INTO `think_user` VALUES ('5', 'lvwei', '883327915c4022331b5abcb9da2a390c', '0', '', '0', '', '0');
 
 -- ----------------------------
+-- Table structure for `think_workflow_deployment`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_workflow_deployment`;
+CREATE TABLE `think_workflow_deployment` (
+  `moduleid` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '模板id',
+  `rule` text NOT NULL COMMENT '规则',
+  `rulename` varchar(255) NOT NULL COMMENT '规则名称',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `creater` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建人',
+  PRIMARY KEY (`moduleid`),
+  UNIQUE KEY `rulename` (`rulename`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='模版';
+
+-- ----------------------------
+-- Records of think_workflow_deployment
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `think_workflow_execution`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_workflow_execution`;
+CREATE TABLE `think_workflow_execution` (
+  `dbid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '主键id',
+  `activityname` varchar(255) NOT NULL COMMENT '当前活动节点名称',
+  `procdefid` varchar(255) NOT NULL COMMENT '模板名称',
+  `hasvars` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '是否有参数',
+  `key` varchar(255) NOT NULL COMMENT '实例的表的名称+id',
+  `id` varchar(255) NOT NULL COMMENT '模版+dbid',
+  `state` varchar(255) NOT NULL COMMENT '状态active-root,inactive-concurrent-root,inactive-join,active-concurrent',
+  `priority` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '优先级',
+  `hisactinst` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '历史实例',
+  `parent` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '父级execution,dbid',
+  `parentidx` tinyint(1) unsigned NOT NULL COMMENT '父级execution,dbid',
+  `instance` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '历史实例id',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  PRIMARY KEY (`dbid`),
+  UNIQUE KEY `id` (`id`),
+  KEY `key` (`key`),
+  KEY `instance` (`instance`),
+  KEY `hisactinst` (`hisactinst`),
+  KEY `parent` (`parent`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='运行实例';
+
+-- ----------------------------
+-- Records of think_workflow_execution
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `think_workflow_hist_actinst`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_workflow_hist_actinst`;
+CREATE TABLE `think_workflow_hist_actinst` (
+  `dbid` int(10) unsigned NOT NULL COMMENT '主键dbid',
+  `hprocid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '历史procid',
+  `type` varchar(255) NOT NULL COMMENT '状态实例state',
+  `execution` varchar(255) NOT NULL COMMENT 'execution id',
+  `activity_name` varchar(255) NOT NULL COMMENT '当前活动名称',
+  `start` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '开始时间',
+  `end` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '结束时间',
+  `duration` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '持续时间',
+  `transition` varchar(255) NOT NULL COMMENT '转换方向',
+  `htask` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '任务历史',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  PRIMARY KEY (`dbid`),
+  KEY `hprocid` (`hprocid`),
+  KEY `htask` (`htask`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='历史实例';
+
+-- ----------------------------
+-- Records of think_workflow_hist_actinst
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `think_workflow_hist_procinst`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_workflow_hist_procinst`;
+CREATE TABLE `think_workflow_hist_procinst` (
+  `dbid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '主键id',
+  `id` varchar(255) NOT NULL COMMENT '主键',
+  `procdefid` varchar(255) NOT NULL COMMENT '规则名称',
+  `key` varchar(255) NOT NULL COMMENT '业务实例',
+  `start` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '开始时间',
+  `end` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '结束时间',
+  `duration` int(10) unsigned NOT NULL COMMENT '间隔时间',
+  `state` varchar(255) NOT NULL COMMENT '状态',
+  `endactivity` varchar(255) NOT NULL COMMENT '结束的节点名称',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '开始时间',
+  PRIMARY KEY (`dbid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='历史运行个例';
+
+-- ----------------------------
+-- Records of think_workflow_hist_procinst
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `think_workflow_hist_task`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_workflow_hist_task`;
+CREATE TABLE `think_workflow_hist_task` (
+  `dbid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '主键id',
+  `execution` varchar(255) NOT NULL COMMENT 'execution+id',
+  `outcome` varchar(255) NOT NULL COMMENT '结束节点',
+  `assignee` varchar(255) NOT NULL COMMENT '分配人',
+  `priority` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '优先级',
+  `state` varchar(255) NOT NULL COMMENT '完成状态complete',
+  `create` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `end` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '结束时间',
+  `duration` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '持续时间',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '开始时间',
+  PRIMARY KEY (`dbid`),
+  KEY `execution` (`execution`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='历史任务';
+
+-- ----------------------------
+-- Records of think_workflow_hist_task
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `think_workflow_num`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_workflow_num`;
+CREATE TABLE `think_workflow_num` (
+  `key` varchar(255) NOT NULL COMMENT '版本id',
+  `version` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '版本',
+  `value` varchar(255) NOT NULL COMMENT '当前累计值',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '开始时间',
+  PRIMARY KEY (`key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='计时器';
+
+-- ----------------------------
+-- Records of think_workflow_num
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `think_workflow_participation`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_workflow_participation`;
+CREATE TABLE `think_workflow_participation` (
+  `dbid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '主键id',
+  `groupid` varchar(255) NOT NULL COMMENT '部门id',
+  `userid` varchar(255) NOT NULL COMMENT 'uid',
+  `type` varchar(255) NOT NULL COMMENT '类型candidate',
+  `task` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '任务id',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '开始时间',
+  PRIMARY KEY (`dbid`),
+  KEY `FK_PART_TASK` (`task`),
+  KEY `groupid` (`groupid`),
+  KEY `userid` (`userid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='参与者';
+
+-- ----------------------------
+-- Records of think_workflow_participation
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `think_workflow_task`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_workflow_task`;
+CREATE TABLE `think_workflow_task` (
+  `dbid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '主键id',
+  `name` varchar(255) NOT NULL COMMENT '姓名',
+  `state` varchar(255) NOT NULL COMMENT '类型',
+  `assignee` varchar(255) NOT NULL COMMENT '分配人',
+  `priority` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '优先级',
+  `create` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `execution_id` varchar(255) NOT NULL COMMENT 'executionid',
+  `activity_name` varchar(255) NOT NULL COMMENT '当前名称',
+  `hasvars` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '是否有参数',
+  `execution` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'execution',
+  `procinst` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '历史procinstid',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '开始时间',
+  PRIMARY KEY (`dbid`),
+  KEY `execution` (`execution`),
+  KEY `execution_id` (`execution_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='任务例子';
+
+-- ----------------------------
+-- Records of think_workflow_task
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `think_workflow_variable`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_workflow_variable`;
+CREATE TABLE `think_workflow_variable` (
+  `dbid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '主键id',
+  `class` varchar(255) NOT NULL COMMENT '类型',
+  `key` varchar(255) NOT NULL COMMENT '键',
+  `execution` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'execution',
+  `double_value` double NOT NULL DEFAULT '0' COMMENT 'double数量',
+  `int_value` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '整型',
+  `string_value` varchar(255) NOT NULL COMMENT '字符型',
+  `text_value` longtext NOT NULL COMMENT '文本型',
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  PRIMARY KEY (`dbid`),
+  KEY `execution` (`execution`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='流程参数';
+
+-- ----------------------------
+-- Records of think_workflow_variable
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `think_ysy_address`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_address`;
+CREATE TABLE `think_ysy_address` (
+  `tel` char(20) NOT NULL DEFAULT '0',
+  `addr` char(30) NOT NULL,
+  `name` char(10) NOT NULL,
+  PRIMARY KEY (`tel`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_address
+-- ----------------------------
+INSERT INTO `think_ysy_address` VALUES ('1', '2', '3');
+
+-- ----------------------------
 -- Table structure for `think_ysy_checkin`
 -- ----------------------------
 DROP TABLE IF EXISTS `think_ysy_checkin`;
@@ -1254,7 +1473,7 @@ CREATE TABLE `think_ysy_department` (
   `leader` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '领导人',
   `pid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '父级部门',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_ysy_department
@@ -1329,7 +1548,6 @@ CREATE TABLE `think_ysy_order` (
   `order_user` int(10) unsigned NOT NULL DEFAULT '0',
   `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '加入时间',
   `isOlder` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `order_type` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `requireddeliverytime` int(10) unsigned NOT NULL DEFAULT '0',
   `deliveryttpe` tinyint(3) unsigned NOT NULL DEFAULT '0',
   `money` decimal(10,2) unsigned NOT NULL DEFAULT '0.00',
@@ -1338,12 +1556,14 @@ CREATE TABLE `think_ysy_order` (
   `rece_name` char(20) NOT NULL,
   `rece_addr` char(30) NOT NULL,
   `rece_tel` char(30) NOT NULL,
+  `status` char(20) NOT NULL,
   PRIMARY KEY (`order_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_ysy_order
 -- ----------------------------
+INSERT INTO `think_ysy_order` VALUES ('2147483647', '0', '1486217319', '0', '1089907200', '1', '0.00', '', '1', '3', '2', '1', '');
 
 -- ----------------------------
 -- Table structure for `think_ysy_ordergoods`
@@ -1354,12 +1574,15 @@ CREATE TABLE `think_ysy_ordergoods` (
   `order_id` int(10) unsigned NOT NULL DEFAULT '0',
   `num` int(10) unsigned NOT NULL DEFAULT '0',
   `ordertype` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  UNIQUE KEY `package_id` (`package_id`,`order_id`)
+  `price` decimal(10,2) unsigned NOT NULL DEFAULT '0.00',
+  UNIQUE KEY `package_id` (`package_id`,`order_id`,`ordertype`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_ysy_ordergoods
 -- ----------------------------
+INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '2147483647', '10', '2', '4.00');
+INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '2147483647', '20', '5', '7.00');
 
 -- ----------------------------
 -- Table structure for `think_ysy_packageprice`
@@ -1399,8 +1622,8 @@ CREATE TABLE `think_ysy_stock` (
 -- ----------------------------
 -- Records of think_ysy_stock
 -- ----------------------------
-INSERT INTO `think_ysy_stock` VALUES ('3', '31', '63');
-INSERT INTO `think_ysy_stock` VALUES ('4', '76', '128');
+INSERT INTO `think_ysy_stock` VALUES ('3', '146', '63');
+INSERT INTO `think_ysy_stock` VALUES ('4', '273', '128');
 
 -- ----------------------------
 -- Table structure for `think_ysy_unit`

@@ -35,8 +35,8 @@ class ProcessOrderInfoService
      */
     public function process(){
         $res['order'] = $this->_dealOrderInfo($this->_data['order'] , $this->_orderId);
-        $res['OrderGoods']['insert'] = $this->_dealOrderGoods($this->_data['goodsPack']);
-        $res['stock']['dec'] = $this->_dealPackageFactory($this->_data['goodsPack'] , $this->_orderId);
+        $res['orderGoods'] = $this->_dealOrderGoods($this->_data['goodsPack']);
+        $res['stock'] = $this->_dealPackageFactory($this->_data['goodsPack'] , $this->_orderId);
         return $res;
     }
 
@@ -52,7 +52,12 @@ class ProcessOrderInfoService
      * @param $varOrderData array
      */
     private function _dealOrderInfo($varOrderData , $varOrderId){
-        $res['insert'] = $varOrderData;
+        if($varOrderId){
+            $res['update']['where'] = array('order_id' => $varOrderId);
+            $res['update']['data'] = $varOrderData;
+        }else{
+            $res['insert'] = $varOrderData;
+        }
         return $res;
     }
 

@@ -4,7 +4,7 @@ namespace Vendor\Jbpm\Targetexecutionclass;
  * wudan 吴丹 创建于 2016-11-29 17:39:52
 DecisionTargetExecution
  */
-class DecisionTargetExecution extends \epet\hr\workuserflower\targetexecutionclass\CommonTargetExecutionClass{
+class DecisionTargetExecution extends \Vendor\Jbpm\Targetexecutionclass\CommonTargetExecutionClass{
     /**
 
      * 类名称
@@ -107,38 +107,6 @@ class DecisionTargetExecution extends \epet\hr\workuserflower\targetexecutioncla
 
 
 
-//    /**
-//
-//     * 组合variable
-//
-//     * @param $varVariable array 参数
-//
-//     * @param $varExecutionObj object 对象
-//
-//     * @return array
-//
-//     */
-//
-//    private function _assembleVariable($varVariable , $varExecutionObj){
-//        $variable = $varExecutionObj->getVariable();
-//        $newList = array();
-//        foreach($varVariable as $k => $v){
-//            $flag = 0;
-//            foreach($variable as $k1 => $v1){
-//                if($v['key'] == $v1['key']){
-//                    $flag = 1;
-//                    break;
-//                }
-//            }
-//            $flag == 0 && array_push($newList , $v);
-//
-//        }
-//        $variable = array_merge($variable , $newList);
-//        return $variable;
-//
-//    }
-
-
 
     /**
 
@@ -156,7 +124,7 @@ class DecisionTargetExecution extends \epet\hr\workuserflower\targetexecutioncla
 
     public function translate($varData , $varExecutionObj){
         $xmlObj = $varExecutionObj->getXmlObj();
-        $XmlEngine = new \epet\hr\workuserflower\processfunction\XmlEngine();
+        $XmlEngine = new \Vendor\Jbpm\Processfunction\XmlEngine();
         $res = $XmlEngine->getActionXml( $xmlObj , $varData);
         if(!$res) return false;
         $result['targetNodeList'] = $this->_commonTarget($res);
@@ -199,7 +167,7 @@ class DecisionTargetExecution extends \epet\hr\workuserflower\targetexecutioncla
      */
 
     private function _taskTarget($varData , $varExecutionObj){
-        $TaskObj = new \epet\hr\workuserflower\targetexecutionclass\TaskTargetExecutionClass();
+        $TaskObj = new \Vendor\Jbpm\Targetexecutionclass\TaskTargetExecutionClass();
         return $TaskObj->processCandidate($varData , $varExecutionObj);
     }
 

@@ -135,7 +135,8 @@ class AssembleExecutionAndTarget{
         $this->_executionObj = $varExecution;
         $this->_targetNode = $varTargetNode;
         $this->_num  =  $this->_executionObj->getProperty();
-        $this->_num =  $this->_num + \epet\hr\workuserflower\config\CommonConfig::getProperty()['totalsum'];
+        $this->_num =  $this->_num + \Vendor\Jbpm\Config\CommonConfig::getProperty()['totalsum'];
+
     }
 
 
@@ -149,7 +150,8 @@ class AssembleExecutionAndTarget{
      */
 
     public function getProcessTranslateInfo(){
-        $TranslateInfoObj = new \epet\hr\workuserflower\translate\TranslateInfoClass();
+        $TranslateInfoObj = new \Vendor\Jbpm\Translate\TranslateInfoClass();
+
         $this->_execution && $TranslateInfoObj->setExecution($this->_execution);
         $this->_histProcinst && $TranslateInfoObj->setHistprocinst($this->_histProcinst);
         $this->_task && $TranslateInfoObj->setTask($this->_task);
@@ -215,7 +217,9 @@ class AssembleExecutionAndTarget{
      */
 
     private function _processHisTask(){
-        $obj = new \epet\hr\workuserflower\handlerclass\AssmebleHisTask();
+
+        $obj = new \Vendor\Jbpm\Handlerclass\AssmebleHisTask();
+
         $this->_hisTask = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
     }
 
@@ -226,7 +230,7 @@ class AssembleExecutionAndTarget{
      */
 
     private function _processParticipation(){
-        $obj = new \epet\hr\workuserflower\handlerclass\AssmebleParticipation();
+        $obj = new \Vendor\Jbpm\Handlerclass\AssmebleParticipation();
         $this->_participation = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
         $this->_num = $obj->getNum();
     }
@@ -240,7 +244,7 @@ class AssembleExecutionAndTarget{
      */
 
     private function _processVarsList(){
-        $obj = new \epet\hr\workuserflower\handlerclass\AssmebleVariable();
+        $obj = new \Vendor\Jbpm\Handlerclass\AssmebleVariable();
         $obj->initi($this->_executionObj , $this->_targetNode , $this->_num , $this->_execution);
         $this->_variable = $obj->process();
         $this->_num = $obj->getNum();
@@ -255,7 +259,7 @@ class AssembleExecutionAndTarget{
      */
 
     private function _processExecution(){
-        $obj = new \epet\hr\workuserflower\handlerclass\AssmebleExecution();
+        $obj = new \Vendor\Jbpm\Handlerclass\AssmebleExecution();
         $this->_execution = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num)->process();
         $this->_num = $obj->getNum();
     }
@@ -269,7 +273,7 @@ class AssembleExecutionAndTarget{
      */
 
     private function _processTask(){
-        $obj = new \epet\hr\workuserflower\handlerclass\AssmebleTask();
+        $obj = new \Vendor\Jbpm\Handlerclass\AssmebleTask();
         $this->_task = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution)
             ->process();
         $this->_num = $obj->getNum();
@@ -284,7 +288,8 @@ class AssembleExecutionAndTarget{
      */
 
     private function _processHistActinst(){
-        $obj = new \epet\hr\workuserflower\handlerclass\AssmebleHistActinst();
+        $obj = new \Vendor\Jbpm\Handlerclass\AssmebleHisTask();
+
         $this->_histActinst = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
         $this->_execution = $obj->getExecution();
         $this->_task = $obj->getTask();
@@ -300,7 +305,7 @@ class AssembleExecutionAndTarget{
      */
 
     private function _processHistProcinst(){
-        $obj = new \epet\hr\workuserflower\handlerclass\AssmebleHistProcinst();
+        $obj = new \Vendor\Jbpm\Handlerclass\AssmebleHistProcinst();
         $this->_histProcinst = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution)->process();
         $this->_num = $obj->getNum();
     }

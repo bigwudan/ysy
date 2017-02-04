@@ -22,7 +22,14 @@ class AssembleOrderOfForm
      * 组合数据
      */
     public function processData(){
-        $orderId = intval(date("Ymdhis"));
+
+        if($this->_orderId){
+            $orderId = $this->_orderId;
+        }else{
+            $orderId = intval(date("Ymdhis"));
+        }
+
+
         $goodspackageinfo = array();
         $orderInfo = array();
         $orderInfo['addtime'] = time();

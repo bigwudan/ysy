@@ -77,7 +77,7 @@ class TranslateFactory{
         }else{
             $target = $currNode['transitionList'][0]['to'];
         }
-        $XmlObj  =  new \epet\hr\workuserflower\processfunction\XmlEngine();
+        $XmlObj  =  new \Vendor\Jbpm\Processfunction\XmlEngine();
         $targetNodeList = $XmlObj->getActionXml( $this->_executionObj->getXmlObj() ,  $target);
         return $targetNodeList;
     }
@@ -92,23 +92,23 @@ class TranslateFactory{
 
     private function _assignTargetClass($varTargetNodeList){
         if($varTargetNodeList['nodeName'] == 'task'){
-            $obj =  new \epet\hr\workuserflower\targetexecutionclass\TaskTargetExecutionClass();
+            $obj =  new \Vendor\Jbpm\Targetexecutionclass\TaskTargetExecutionClass();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);
             if(!$obj->process()) return false;
         }elseif($varTargetNodeList['nodeName'] == 'decision'){
-            $obj =  new \epet\hr\workuserflower\targetexecutionclass\DecisionTargetExecution();
+            $obj =  new \Vendor\Jbpm\Targetexecutionclass\DecisionTargetExecution();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);
             if(!$obj->process()) return false;
         }elseif($varTargetNodeList['nodeName'] == 'fork'){
-            $obj =  new \epet\hr\workuserflower\targetexecutionclass\ForkTargetExecution();
+            $obj =  new \Vendor\Jbpm\Targetexecutionclass\ForkTargetExecution();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);
             if(!$obj->process()) return false;
         }elseif($varTargetNodeList['nodeName'] == 'join'){
-            $obj = new \epet\hr\workuserflower\targetexecutionclass\JoinTargetExecution();
+            $obj = new \Vendor\Jbpm\Targetexecutionclass\JoinTargetExecution();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);
             if(!$obj->process()) return false;
         }else{
-            $obj =  new \epet\hr\workuserflower\targetexecutionclass\StateTargetExecutinClass();
+            $obj =  new \Vendor\Jbpm\Targetexecutionclass\StateTargetExecutinClass();
             $obj->initi($this->_executionObj ,  $varTargetNodeList);
         }
         return $obj;

@@ -68,13 +68,6 @@ class CommonExecutionClass{
     protected $_histTask = array();
 
 
-
-//    /**
-//     * 得到参数
-//     */
-//
-//    protected $_variable = array();
-
     /**
      * 外部传入参数
      */

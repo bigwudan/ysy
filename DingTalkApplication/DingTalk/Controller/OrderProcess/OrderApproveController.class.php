@@ -17,6 +17,19 @@ class OrderApproveController extends Controller
      * 主页
      */
     public function index(){
+        $orderId = intval(I('order'));
+        $packageHtml = '';
+        $dataFromDb = array();
+        if($orderId){
+            $Model = new \Think\Model();
+            $sqlStr = "SELECT * FROM think_ysy_order as yo join think_ysy_ordergoods as yog on yo.order_id = yog.order_id where yo.order_id = {$orderId}";
+            $dataFromDb = $Model->query("$sqlStr");
+            foreach($dataFromDb as $k => $v){
+                $packageHtml .= $this->_assPackageHtml($v);
+            }
+        }
+
+
         $goodsPackageList= $this->_getGoodsPackage();
         $goodsPackageList = json_encode($goodsPackageList , JSON_UNESCAPED_UNICODE);
         $ConfigObj = new \CommonClass\Config\BaseConfig();
@@ -26,11 +39,70 @@ class OrderApproveController extends Controller
             'sendType' => $ConfigObj->getSendType(),
             'orderType' => $ConfigObj->getOrderType(),
         );
+        $this->assign('goodsInfo' , reset($dataFromDb));
         $this->assign('goodsPackageList' , $goodsPackageList);
         $this->assign('configList' , json_encode($configList , JSON_UNESCAPED_UNICODE));
         $this->assign('sendType',$ConfigObj->getSendType());
-
+        $this->assign('packageHtml',$packageHtml);
+        $this->assign('orderId' , $orderId);
         $this->display('/orderprocess/orderapprove');
+    }
+
+    /**
+     * 组合详细商品
+     */
+    private function _assPackageHtml($varDataInfo){
+
+        $goodsPackageFromDb = M('ysy_goodspackage')->where('status = 0')->select();
+        $packSelectHtml = '';
+        foreach($goodsPackageFromDb as $k => $v){
+            if($varDataInfo['package_id'] == $v['id']){
+                $packSelectHtml .= "<option selected value='{$v['id']}'>{$v['name']}</option>";
+            }else{
+                $packSelectHtml .= "<option value='{$v['id']}'>{$v['name']}</option>";
+            }
+        }
+        $dataFromOrderAndMin = $this->_getOrderPriceAndMin($varDataInfo['package_id']);
+        $orderPriceSelectHtml = '';
+        $ConfigObj = new \CommonClass\Config\BaseConfig();
+        $orderType = $ConfigObj->getOrderType();
+        $curOrderTypeProce = 0;
+        foreach($dataFromOrderAndMin['priceList'] as $k => $v){
+            $tmpName = $orderType[$v['ordertype']];
+
+            if($varDataInfo['ordertype'] == $v['ordertype']){
+                $curOrderTypeProce = $v['price'];
+                $orderPriceSelectHtml .= "<option selected data-price=\"{$v['price']}\" value=\"{$v['ordertype']}\">{$tmpName}(价格{$v['price']})</option>";
+            }else{
+                $orderPriceSelectHtml .= "<option data-price=\"{$v['price']}\" value=\"{$v['ordertype']}\">{$tmpName}(价格{$v['price']})</option>";
+            }
+
+
+        }
+
+$htmlModel =<<<EOT
+<div class="page__bd">
+	<div class="weui-cells__title">商品明细<a onclick="OrderApporve.delPackage(this)" class="del-a">删除</a></div>
+	<input type="hidden" name="price[]" value="{$curOrderTypeProce}">
+	<div class="weui-cells" style="margin-top:0">
+		<div class="weui-cell weui-cell_select weui-cell_select-after">
+			<div class="weui-cell__hd"><label for="" class="weui-label">商品</label></div>
+			<div class="weui-cell__bd"><select onchange="OrderApporve.onChange(this)" name="package_id[]" class="weui-select">{$packSelectHtml}</select></div>
+		</div>
+	</div>
+	<div class="weui-cells" style="margin-top:0">
+		<div class="weui-cell weui-cell_select weui-cell_select-after">
+			<div class="weui-cell__hd"><label for="" class="weui-label">订单类别</label></div>
+			<div class="weui-cell__bd"><select onchange="OrderApporve.onChangeOrderType(this)" class="weui-select" name="ordertype[]">{$orderPriceSelectHtml}</select></div>
+		</div>
+	</div>
+	<div class="weui-cells" style="margin-top:0">
+		<div class="weui-cell"><div class="weui-cell__hd"><label class="weui-label num-label">数量(库存{$dataFromOrderAndMin['min']})</label></div>
+		<div class="weui-cell__bd"><input name="num[]" class="weui-input" type="number" placeholder="必填" value="{$varDataInfo['num']}"></div></div>
+	</div>
+</div>
+EOT;
+        return $htmlModel;
     }
 
     /**
@@ -62,14 +134,37 @@ class OrderApproveController extends Controller
      */
     private function _processSubmit(){
         $data = I('data');
+        $orderId = 0;
+        foreach($data as $k => $v){
+            if($v['name'] == 'orderid')$orderId = $v['value'];
+        }
+        if($orderId){
+            $ReBackObj = new \CommonClass\Order\Dealpackage\RebackOrderGoods();
+            $ReBackObj->initi($orderId);
+            $reBackInfo = $ReBackObj->prcessToSQL();
+        }
         $AssembleOrderObj = new \CommonClass\Order\AssembleOrderOfForm();
-        $AssembleOrderObj->initi($data , 0);
+        $AssembleOrderObj->initi($data , $orderId);
         $orderInfo = $AssembleOrderObj->processData();
         $ProcessOrderObj = new \CommonClass\Order\ProcessOrderInfoService();
-        $ProcessOrderObj->initi( $orderInfo , 0);
+        $ProcessOrderObj->initi( $orderInfo , $orderId);
         $res = $ProcessOrderObj->process();
+
+
+        $needSql = array();
+        $needSql['order'] = $res['order'];
+        $needSql['ordergoods']['insert'] = $res['orderGoods'];
+        $needSql['stock']['dec'] = $res['stock'];
+
+        if(!empty($reBackInfo['orderGoods'])){
+            $needSql['ordergoods']['del'] = $reBackInfo['orderGoods'];
+        }
+
+        if(!empty($reBackInfo['stock'])){
+            $needSql['stock']['inc'] = $reBackInfo['stock'];
+        }
         $OrderUpdata = new \CommonClass\Order\OrderUpdata();
-        $OrderUpdata->initi($res);
+        $OrderUpdata->initi($needSql);
         $OrderUpdata->process();
 
 
@@ -92,6 +187,38 @@ class OrderApproveController extends Controller
         return $responseJson;
     }
 
+    /**
+     * 获得价格和最小库存
+     */
+    private function _getOrderPriceAndMin($varId){
+        $packagePriceFromDb = M('ysy_packageprice')->where("packageid = {$varId}")->select();
+        if(!$packagePriceFromDb) return false;
+        $packageInfoFromDb = M('ysy_goodspackageinfo')->where("packageid = {$varId}")->select();
+        if(!$packageInfoFromDb) return false;
+        $flag = true;
+        $minList = array();
+        foreach($packageInfoFromDb as $k => $v){
+            $tmpList = M('ysy_stock')->where("format_id={$v['format_id']}")->find();
+            if(!$tmpList || $tmpList['goods_num'] == 0){
+                $flag = false;
+                break;
+            }
+            $tmpNum = intval($tmpList['goods_num'] / $v['num']);
+            if($tmpNum == 0){
+                $flag = false;
+                break;
+            }
+            array_push($minList , $tmpNum);
+        }
+        if($flag){
+            sort($minList);
+            $min = $minList[0];
+        }else{
+            $min = 0;
+        }
+        $priceList = $packagePriceFromDb;
+        return array('min' => $min , 'priceList' => $priceList);
+    }
 
 
     /**

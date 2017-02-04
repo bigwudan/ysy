@@ -4,7 +4,7 @@ namespace Vendor\Jbpm\Targetexecutionclass;
  * wudan 吴丹 创建于 2016-11-29 17:41:10
 JoinTargetExecution
  */
-class JoinTargetExecution extends \epet\hr\workuserflower\targetexecutionclass\CommonTargetExecutionClass{
+class JoinTargetExecution extends \Vendor\Jbpm\Targetexecutionclass\CommonTargetExecutionClass{
     /**
 
      *  参数
@@ -140,7 +140,7 @@ class JoinTargetExecution extends \epet\hr\workuserflower\targetexecutionclass\C
      */
 
     private function _checkFinishFork($varMulti = 0){
-        $obj = new \epet\hr\workuserflower\processdatabase\SelectData();
+        $obj = new \Vendor\Jbpm\Processdatabase\SelectData();
         $subForkDb = $obj->getSubForkDataBaseByParent($this->_executionObj->getExecution()['parent']);
         foreach($subForkDb as $k => $v){
 
@@ -247,7 +247,7 @@ class JoinTargetExecution extends \epet\hr\workuserflower\targetexecutionclass\C
     private function _translate($varData){
 
         $xmlObj = $this->_executionObj->getXmlObj();
-        $XmlEngine = new \epet\hr\workuserflower\processfunction\XmlEngine();
+        $XmlEngine = new \Vendor\Jbpm\Processfunction\XmlEngine();
         $res = $XmlEngine->getActionXml( $xmlObj , $varData);
         $this->_initialTargetNodeList['translate'] = $res;
         if($res['nodeName'] == 'decision'){
@@ -270,7 +270,7 @@ class JoinTargetExecution extends \epet\hr\workuserflower\targetexecutionclass\C
      */
 
     public function _processDecision($varData){
-        $DecisionObj = new \epet\hr\workuserflower\targetexecutionclass\DecisionTargetExecution();
+        $DecisionObj = new \Vendor\Jbpm\Targetexecutionclass\DecisionTargetExecution();
         $result = $DecisionObj->dealhandler($varData , $this->_executionObj);
         $this->_variable = $result['variable'];
         $this->_variableExecution = $result['variableExecution'];
@@ -311,7 +311,7 @@ class JoinTargetExecution extends \epet\hr\workuserflower\targetexecutionclass\C
      */
 
     private function _taskTarget($varData){
-        $TaskObj = new \epet\hr\workuserflower\targetexecutionclass\TaskTargetExecutionClass();
+        $TaskObj = new \Vendor\Jbpm\Targetexecutionclass\TaskTargetExecutionClass();
         $this->_candidate = $TaskObj->processCandidate($varData , $this->_variable);
     }
 

@@ -4,7 +4,7 @@ namespace Vendor\Jbpm\Targetexecutionclass;
  * wudan 吴丹 创建于 2016-11-29 17:41:34
 StateTargetExecutinClass
  */
-class StateTargetExecutinClass extends \epet\hr\workuserflower\targetexecutionclass\CommonTargetExecutionClass{
+class StateTargetExecutinClass extends \Vendor\Jbpm\Targetexecutionclass\CommonTargetExecutionClass{
     /**
 
      * 类名称

@@ -10,6 +10,7 @@
 </head>
 <body>
 <form id="orderapprove">
+    <input name="orderid" value="{$orderId}" type="hidden">
 <div class="page">
 
     <div class="page__bd">
@@ -19,7 +20,7 @@
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">客户电话</label></div>
                 <div class="weui-cell__bd">
-                    <input name="rece_tel" class="weui-input" type="text"  placeholder="必填">
+                    <input name="rece_tel" value="{$goodsInfo['rece_tel']}" class="weui-input" type="text"  placeholder="必填">
                 </div>
             </div>
         </div>
@@ -28,7 +29,7 @@
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">收货人姓名</label></div>
                 <div class="weui-cell__bd">
-                    <input name="rece_name" class="weui-input"   placeholder="必填">
+                    <input name="rece_name" value="{$goodsInfo['rece_name']}" class="weui-input"   placeholder="必填">
                 </div>
             </div>
         </div>
@@ -37,7 +38,7 @@
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">收货人地址</label></div>
                 <div class="weui-cell__bd">
-                    <input name="rece_addr" class="weui-input"   placeholder="必填">
+                    <input name="rece_addr" class="weui-input" value="{$goodsInfo['rece_addr']}"  placeholder="必填">
                 </div>
             </div>
         </div>
@@ -48,8 +49,8 @@
                 <div class="weui-cell__bd">
                     <p>要求发货时间</p>
                 </div>
-                <input name="requireddeliverytime" value="" type="hidden">
-                <div  class="weui-cell__ft requireddeliverytime">2017-11-01</div>
+                <input name="requireddeliverytime" value="<php>if($goodsInfo['requireddeliverytime']){echo date("Y-m-d" , $goodsInfo['requireddeliverytime']);}else{echo date("Y-m-d");}</php>" type="hidden">
+                <div  class="weui-cell__ft requireddeliverytime"><php>if($goodsInfo['requireddeliverytime']){echo date("Y-m-d" , $goodsInfo['requireddeliverytime']);}else{echo date("Y-m-d");}</php></div>
             </a>
         </div>
 
@@ -63,7 +64,12 @@
                 <div class="weui-cell__bd">
                     <select class="weui-select" name="deliveryttpe">
                         <foreach name="sendType" item="v" key="k" >
-                            <option value="{$k}">{$v}</option>
+                            <if condition="$goodsInfo['deliveryttpe'] eq $k ">
+                                <option selected value="{$k}">{$v}</option>
+                                <else />
+                                <option value="{$k}">{$v}</option>
+                            </if>
+
                         </foreach>
                     </select>
                 </div>
@@ -76,6 +82,9 @@
                 <a href="javascript:;" class="addgoodsinfo-a weui-btn weui-btn_primary">+增加商品</a>
             </div>
         </div>
+
+
+        {$packageHtml}
     </div>
 
 <style>

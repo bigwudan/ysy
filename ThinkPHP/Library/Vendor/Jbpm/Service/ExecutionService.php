@@ -56,16 +56,16 @@ class ExecutionService{
 
     public function startProcessInstanceById($varModelName , $varVars = null){
         $this->_variable = $varVars;
-        $obj = new \epet\hr\workuserflower\processdatabase\SelectData();
+        $obj = new \Vendor\Jbpm\Processdatabase\SelectData();
         $rule = $obj->getRuleByModuleName($varModelName);
         if(!$rule['rule']){
             return array('error' => 1 , 'msg' => 'sql worry');
         }
         $property = $obj->getProperty();
-        $StartObj = new \epet\hr\workuserflower\executionclass\StartExecutionClass();
+        $StartObj = new \Vendor\Jbpm\Executionclass\StartExecutionClass();
         $StartObj->setRule($rule);
         $StartObj->setProperty($property['value']);
-        $XmlObj = new \epet\hr\workuserflower\processfunction\XmlEngine();
+        $XmlObj = new \Vendor\Jbpm\Processdatabase\XmlEngine();
         $obj = $XmlObj->getDbToXmlObj($rule['rule']);
         if(!$obj){
             return array('error' => 1 , 'msg' => 'load xml worry');
@@ -79,7 +79,7 @@ class ExecutionService{
         if(!$TranObj){
             return array('error' =>1 , 'msg' => 'translate worry');
         }
-        $obj = new \epet\hr\workuserflower\processdatabase\WriteToDataBase();
+        $obj = new \Vendor\Jbpm\Processdatabase\WriteToDataBase();
         $obj->initi($TranObj);
         return $obj->writeToDataBase();
     }
@@ -98,10 +98,10 @@ class ExecutionService{
         $this->_execution = $varExecution;
         $this->_translate = $varTranslate;
         $this->_variable = $varVariable;
-        $this->_executionClass = new \epet\hr\workuserflower\executionclass\StateExecutionClass();
+        $this->_executionClass = new \Vendor\Jbpm\Executionclass\StateExecutionClass();
         $this->_getDataFromDataBaseByExecution();
         $TranObj = $this->_onTranslate();
-        $obj = new \epet\hr\workuserflower\processdatabase\WriteToDataBase();
+        $obj = new \Vendor\Jbpm\Processdatabase\WriteToDataBase();
         $obj->initi($TranObj);
         return $obj->writeToDataBase();
     }
@@ -120,10 +120,10 @@ class ExecutionService{
         $this->_execution = $varExecution;
         $this->_translate = $varTranslate;
         $this->_variable = $varVariable;
-        $this->_executionClass = new \epet\hr\workuserflower\executionclass\TaskExecutionClass();
+        $this->_executionClass = new \Vendor\Jbpm\Executionclass\TaskExecutionClass();
         $this->_getDataFromDataBaseByExecution();
         $TranObj = $this->_onTranslate();
-        $obj = new \epet\hr\workuserflower\processdatabase\WriteToDataBase();
+        $obj = new \Vendor\Jbpm\Processdatabase\WriteToDataBase();
         $obj->initi($TranObj);
         return $obj->writeToDataBase();
     }
@@ -136,7 +136,7 @@ class ExecutionService{
 
     private function _getDataFromDataBaseByExecution(){
         $ExecutionObj = $this->_executionClass;
-        $obj = new \epet\hr\workuserflower\processdatabase\SelectData();
+        $obj = new \Vendor\Jbpm\Processdatabase\SelectData();
         $data = $obj->getDataFromDataBaseByExecution($this->_execution);
         $property = $obj->getProperty();
         $execution = array(
@@ -227,7 +227,7 @@ class ExecutionService{
             $variable = $obj->getVariableFromDataBaseByTask($execution['dbid']);
             $ExecutionObj->setDbVars($this->_assembleVariable($variable));
         }
-        $XmlObj = new \epet\hr\workuserflower\processfunction\XmlEngine();
+        $XmlObj = new \Vendor\Jbpm\Processfunction\XmlEngine();
         $obj = $XmlObj->getDbToXmlObj($rule['rule']);
         $ExecutionObj->setXmlObj($obj);
         $this->_executionClass = $ExecutionObj;
@@ -263,11 +263,11 @@ class ExecutionService{
         if($this->_variable){
             $this->_executionClass->setIntroduceVars($this->_variable);
         }
-        $TranslateObj = new \epet\hr\workuserflower\translate\TranslateFactory();
+        $TranslateObj = new \Vendor\Jbpm\Translate\TranslateFactory();
         $TranslateObj->initi($this->_executionClass , $this->_translate);
         $obj =  $TranslateObj->translate();
         if(!$obj) return false;
-        $AssembleObj = new \epet\hr\workuserflower\service\AssembleExecutionAndTarget();
+        $AssembleObj = new \Vendor\Jbpm\Service\AssembleExecutionAndTarget();
         $AssembleObj->initi($this->_executionClass , $obj);
         $Translateobj = $AssembleObj->process();
         return $Translateobj;
