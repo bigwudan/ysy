@@ -9,6 +9,7 @@
 
 </head>
 <body>
+<form id="orderapprove">
 <div class="page">
 
     <div class="page__bd">
@@ -18,7 +19,7 @@
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">客户电话</label></div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="text"  placeholder="必填">
+                    <input name="rece_tel" class="weui-input" type="text"  placeholder="必填">
                 </div>
             </div>
         </div>
@@ -27,7 +28,7 @@
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">收货人姓名</label></div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="number"  placeholder="必填">
+                    <input name="rece_name" class="weui-input"   placeholder="必填">
                 </div>
             </div>
         </div>
@@ -36,7 +37,7 @@
             <div class="weui-cell">
                 <div class="weui-cell__hd"><label class="weui-label">收货人地址</label></div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="number"  placeholder="必填">
+                    <input name="rece_addr" class="weui-input"   placeholder="必填">
                 </div>
             </div>
         </div>
@@ -47,7 +48,8 @@
                 <div class="weui-cell__bd">
                     <p>要求发货时间</p>
                 </div>
-                <div class="weui-cell__ft">2017-11-01</div>
+                <input name="requireddeliverytime" value="" type="hidden">
+                <div  class="weui-cell__ft requireddeliverytime">2017-11-01</div>
             </a>
         </div>
 
@@ -59,7 +61,7 @@
                     <label for="" class="weui-label">配送方式</label>
                 </div>
                 <div class="weui-cell__bd">
-                    <select class="weui-select" name="select2">
+                    <select class="weui-select" name="deliveryttpe">
                         <foreach name="sendType" item="v" key="k" >
                             <option value="{$k}">{$v}</option>
                         </foreach>
@@ -90,9 +92,10 @@
 
 
     <div class="fixed fix-position bgfff pt10 pb10 pr20 pl20 w100">
-        <a href="javascript:;" class="bgblue cfff block w100 round5 ft16 ftc pad5">提交</a>
+        <a href="javascript:;" class="bgblue cfff block w100 round5 ft16 ftc pad5 submit-a">提交</a>
     </div>
 </div>
+</form>
 <script src="__ROOT__/Public/Dingtalk/Js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="__ROOT__/Public/Dingtalk/Js/weui.min.js" type="text/javascript" charset="utf-8"></script>
 
@@ -107,23 +110,21 @@
             onChange: function (result) {
             },
             onConfirm: function (result) {
-//                if((result[1]/10) < 1){
-//                    result[1] = '0'+ result[1];
-//                }
-//                var contractDate = result[0]+'-'+result[1]+'-'+result[2];
-//                $('p.'+obj.attr('date-type')).html(contractDate);
-//
-//                $('input[name="'+obj.attr('date-type')+'"]').val(contractDate);
+                if((result[1]/10) < 1){
+                    result[1] = '0'+ result[1];
+                }
+                var contractDate = result[0]+'-'+result[1]+'-'+result[2];
+                console.log(contractDate);
+                $('.requireddeliverytime').html(contractDate);
+                $('input[name="requireddeliverytime"]').val(contractDate);
             }
         });
     });
 
 
     var OrderApporve = function(){
-
         var _goodsPackageListJson = {$goodsPackageList};
         var _config = {$configList};
-
         //增加商品
         var _addPackageHtml = function(){
             var html = '';
@@ -139,8 +140,9 @@
         var _addGoodsInfo = function(){
             var packageHtml = _addPackageHtml();
             var html = '<div class="page__bd"><div class="weui-cells__title">商品明细<a onclick="OrderApporve.delPackage(this)" class="del-a">删除</a></div>'+
+                            '<input type="hidden" name="price[]" value="">'+
                     '<div class="weui-cells" style="margin-top:0"><div class="weui-cell weui-cell_select weui-cell_select-after"><div class="weui-cell__hd"><label for="" class="weui-label">商品</label></div><div class="weui-cell__bd">'+packageHtml+'</div></div></div>'+
-                    '<div class="weui-cells" style="margin-top:0"><div class="weui-cell weui-cell_select weui-cell_select-after"><div class="weui-cell__hd"><label for="" class="weui-label">订单类别</label></div><div class="weui-cell__bd"><select class="weui-select" name="ordertype[]"><option value="1">请选择商品</option></select></div></div></div>'+
+                    '<div class="weui-cells" style="margin-top:0"><div class="weui-cell weui-cell_select weui-cell_select-after"><div class="weui-cell__hd"><label for="" class="weui-label">订单类别</label></div><div class="weui-cell__bd"><select onchange="OrderApporve.onChangeOrderType(this)" class="weui-select" name="ordertype[]"><option value="1">请选择商品</option></select></div></div></div>'+
                     '<div class="weui-cells" style="margin-top:0"><div class="weui-cell"><div class="weui-cell__hd"><label class="weui-label num-label">数量(库存0)</label></div><div class="weui-cell__bd"><input name="num[]" class="weui-input" type="number"  placeholder="必填"></div></div></div>'+
                     '</div>';
             return html;
@@ -158,7 +160,7 @@
                     if(dataJson.hasOwnProperty(k)){
                         var tmpName = _config['orderType'][dataJson[k]['ordertype']];
                         var tmpPrice = dataJson[k]['price'];
-                        html += '<option value="'+dataJson[k]['ordertype']+'">'+tmpName+'(价格'+tmpPrice+')</option>';
+                        html += '<option data-price="'+tmpPrice+'" value="'+dataJson[k]['ordertype']+'">'+tmpName+'(价格'+tmpPrice+')</option>';
                     }
                 }
                 parentObj.find('select[name="ordertype[]"]').html(html);
@@ -170,23 +172,67 @@
             console.log($(obj).parent().parent().remove());
         };
 
+
+        var _onChangeOrderType = function(obj){
+            var objList = $(obj).find('option');
+            var val = $(obj).val();
+            var parentObj = $(obj).parent().parent().parent().parent();
+            for(var k in objList){
+                if(objList.hasOwnProperty(k)){
+                    if(objList[k].tagName == 'OPTION'){
+                        //console.log($(objList[k]).attr('data-price'));
+                        if(val == $(objList[k]).attr('value')){
+                            parentObj.find('input[name="price[]"]').val($(objList[k]).attr('data-price'));
+                            return true;
+                        }
+                    }
+                }
+            }
+        };
+
         var _initi = function(){
 
             $('.addgoodsinfo-a').on('click',function(){
                 var html = _addGoodsInfo();
                 $('.page').append(html);
-                console.log('wudan');
+            });
 
+            $('.submit-a').on('click' , function(){
+                var dataStrFromForm = $("form").serializeArray();
+                $.get('<?php echo U('OrderProcess/OrderApprove/actionRequestService') ?>',{type:'submitform',data:dataStrFromForm},function(data){
+                    console.log(data);
+                });
+
+                console.log(dataStrFromForm);
+
+            });
+
+            $('input[name="rece_tel"]').on('blur' , function(){
+                $.get('<?php echo U('OrderProcess/OrderApprove/actionRequestService') ?>',{type:'getaddress',tel:$(this).val()},function(data){
+                    var responseJson = JSON.parse(data);
+                    if(responseJson['tel'] == 0){
+                        return false;
+                    }else{
+                        $('input[name="rece_name"]').val(responseJson['name']);
+                        $('input[name="rece_addr"]').val(responseJson['addr']);
+                    }
+                });
             });
 
         }();
 
+
+
         return {
             delPackage:_delPackage,
-            onChange:_onChangePackage
+            onChange:_onChangePackage,
+            onChangeOrderType : _onChangeOrderType
         }
 
     }();
+
+
+
 
 </script>
 

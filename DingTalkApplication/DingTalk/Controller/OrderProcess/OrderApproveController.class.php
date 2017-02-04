@@ -49,8 +49,43 @@ class OrderApproveController extends Controller
         if($type == 'changepackage'){
             $res = $this->_getGoodsPackageInfo();
             die($res);
+        }elseif($type == 'getaddress'){
+            $res = $this->_getAddress();
+            die($res);
+        }elseif($type == 'submitform'){
+            $res = $this->_processSubmit();
         }
     }
+
+    /**
+     * 处理提交
+     */
+    private function _processSubmit(){
+        $data = I('data');
+        $AssembleOrderObj = new \CommonClass\Order\AssembleOrderOfForm();
+        $AssembleOrderObj->initi($data , 0);
+        $AssembleOrderObj->processData();
+
+
+
+    }
+
+    /**
+     * 获得地址
+     */
+    private function _getAddress(){
+        $tel = I('tel');
+        $telFromDb = M('ysy_address')->where("tel={$tel}")->find();
+        if($telFromDb){
+            $responseJson = json_encode($telFromDb , JSON_UNESCAPED_UNICODE);
+        }else{
+            $responseJson = json_encode(array('tel'=>0) , JSON_UNESCAPED_UNICODE);
+        }
+
+        return $responseJson;
+    }
+
+
 
     /**
      * 获得商品详情
