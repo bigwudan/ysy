@@ -64,7 +64,14 @@ class OrderApproveController extends Controller
         $data = I('data');
         $AssembleOrderObj = new \CommonClass\Order\AssembleOrderOfForm();
         $AssembleOrderObj->initi($data , 0);
-        $AssembleOrderObj->processData();
+        $orderInfo = $AssembleOrderObj->processData();
+        $ProcessOrderObj = new \CommonClass\Order\ProcessOrderInfoService();
+        $ProcessOrderObj->initi( $orderInfo , 0);
+        $res = $ProcessOrderObj->process();
+        $OrderUpdata = new \CommonClass\Order\OrderUpdata();
+        $OrderUpdata->initi($res);
+        $OrderUpdata->process();
+
 
 
 
