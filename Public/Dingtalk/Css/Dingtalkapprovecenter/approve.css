@@ -110,9 +110,9 @@ a {color:#333; text-decoration: none; -webkit-tap-highlight-color: transparent; 
 /*审批首页*/
 .w33{width: 33.3%;}
 .apply-icon{margin-bottom: 5px;width: 42px;height: 42px;}
-.ai1{background-position: 0 0;background: url(__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/indexico.png);background-size: 100% 360%;}
-.ai2{background: url(__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/indexico.png);background-size: 100% 360%;background-position: 0 45%;}
-.ai3{background: url(__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/indexico.png);background-size: 100% 360%;background-position: 0 92%;}
+.ai1{background-position: 0 0;background: url(../../Img/Dingtalkapprovecenter/indexico.png);background-size: 100% 360%;}
+.ai2{background: url(../../Img/Dingtalkapprovecenter/indexico.png);background-size: 100% 360%;background-position: 0 45%;}
+.ai3{background: url(../../Img/Dingtalkapprovecenter/indexico.png);background-size: 100% 360%;background-position: 0 92%;}
 .c949f{color: #8c949f;}
 .blockflame{border-top: solid 1px #dedede; border-right: solid 1px #dedede;}
 .blockflame:nth-child(3n){border-top: solid 1px #dedede; border-right:none;}
