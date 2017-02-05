@@ -217,9 +217,7 @@ class AssembleExecutionAndTarget{
      */
 
     private function _processHisTask(){
-
         $obj = new \Vendor\Jbpm\Handlerclass\AssmebleHisTask();
-
         $this->_hisTask = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
     }
 
@@ -288,8 +286,7 @@ class AssembleExecutionAndTarget{
      */
 
     private function _processHistActinst(){
-        $obj = new \Vendor\Jbpm\Handlerclass\AssmebleHisTask();
-
+        $obj = new \Vendor\Jbpm\Handlerclass\AssmebleHistActinst();
         $this->_histActinst = $obj->initi($this->_executionObj , $this->_targetNode , $this->_num ,  $this->_execution , $this->_task)->process();
         $this->_execution = $obj->getExecution();
         $this->_task = $obj->getTask();

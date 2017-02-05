@@ -32,16 +32,13 @@ class SelectData{
      */
 
     public function getProperty(){
-
-
-
-        if($data = M('flow_num')->find()){
+        if($data = M('workflow_num')->find()){
             return $data;
         }else{
             $data['key'] = 'next.dbid';
             $data['version'] = 0;
             $data['value'] = 1;
-            M('flow_num')->add($data);
+            M('workflow_num')->add($data);
             return $data;
         }
 

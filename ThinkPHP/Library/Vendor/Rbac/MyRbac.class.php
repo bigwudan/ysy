@@ -70,7 +70,6 @@ namespace Vendor\Rbac;
 
 class MyRbac implements IRbac{
 
-
     /**
      * 得到_authorList
      */

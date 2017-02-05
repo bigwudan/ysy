@@ -1,5 +1,5 @@
 <?php
-namespace Vendor\Jbpm\Handlerclasss;
+namespace Vendor\Jbpm\Handlerclass;
 /**
  * wudan 吴丹 创建于 2016-11-29 17:28:22
 AssmebleHistActinst

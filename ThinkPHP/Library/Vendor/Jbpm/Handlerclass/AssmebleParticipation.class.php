@@ -92,9 +92,7 @@ class AssmebleParticipation{
 
 
     /**
-
      * 执行
-
      */
 
     public function process(){
@@ -116,9 +114,7 @@ class AssmebleParticipation{
 
 
     /**
-
      * 删除
-
      */
 
     public function _processDel(){
@@ -144,7 +140,6 @@ class AssmebleParticipation{
      */
 
     private function _processInsert(){
-
         if($this->_targetNode->getClassName() == 'fork'){
             $tmp = $this->_targetNode->getForkTargetNodeList();
             $taskList = array();
@@ -218,15 +213,11 @@ class AssmebleParticipation{
 
 
     /**
-
      * 得到num
-
      */
 
     public function getNum(){
-
         return $this->_num;
-
     }
 
 }

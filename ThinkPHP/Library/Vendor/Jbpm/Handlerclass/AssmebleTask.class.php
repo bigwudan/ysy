@@ -173,27 +173,16 @@ class AssmebleTask{
             $taskList = array();
 
             foreach($tmp as $k => $v){
-
                 $v['nodeName'] == 'task' && array_push($taskList , $v);
-
             }
-
         }
-
         $task = array();
-
         if($taskList){
-
             $task = $this->_processInsertTargetOfForkTask($taskList);
-
         }else if($this->_targetNode->getTargetNodeList()['nodeName'] == 'task'){
-
             $task = $this->_processInsertTargetOfTask();
-
         }
-
         return $task;
-
     }
 
 
@@ -287,93 +276,49 @@ class AssmebleTask{
         }else{
             $hasVars = 0;
         }
-
         if(($this->_targetNode->getClassName()=='join') && $this->_targetNode->getHasFinishJoin()){
-
             $tmpTask = array();
-
             $tmpTask = $this->_targetNode->getJoinExecution()['pActive'];
-
             $task[$this->_num] = array(
-
                 'dbid' => $this->_num,
-
                 'name' => $this->_targetNode->getTargetNodeList()['name'],
-
                 'state' => 'open',
-
                 'assignee' => '',
-
                 'priority' => 0,
-
                 'create' => time(),
-
                 'execution_id' => $tmpTask['id'],
-
                 'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
-
                 'hasvars' => $hasVars,
-
                 'execution' => $tmpTask['dbid'],
-
                 'procinst' => $tmpTask['instance']
-
             );
-
         }else{
-
             $execution = $this->_executionObj->getExecution();//??
-
             $tmpTask = array();
-
             if($this->_executionObj->getCurrNode()['nodeName'] == 'start'){
-
                 foreach($this->_execution['insert'] as $k => $v){
-
                     $tmpTask['execution_id'] = $v['id'];
-
                     $tmpTask['execution'] = $v['dbid'];
-
                     $tmpTask['procinst'] = $v['dbid'];
-
                     break;
-
                 }
-
             }else{
-
                 $tmpTask['execution_id'] = $execution['id'];
-
                 $tmpTask['execution'] = $execution['dbid'];
-
                 $tmpTask['procinst'] = $execution['instance'];
-
             }
-
             $task[$this->_num] = array(
-
                 'dbid' => $this->_num,
-
                 'name' => $this->_targetNode->getTargetNodeList()['name'],
-
                 'state' => 'open',
-
                 'assignee' => '',
-
                 'priority' => 0,
-
                 'create' => time(),
-
                 'execution_id' => $tmpTask['execution_id'],
-
                 'activity_name' => $this->_targetNode->getTargetNodeList()['name'],
-
                 'hasvars' => $hasVars,
-
                 'execution' => $tmpTask['execution'],
-
                 'procinst' => $tmpTask['procinst']
-
             );
 
         }

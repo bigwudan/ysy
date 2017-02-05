@@ -162,9 +162,7 @@ class AssmebleVariable{
             }
 
         }
-
         $varList = array_merge($this->_executionObj->getIntroduceVars() , $this->_executionObj->getRunVars());
-
         foreach($varList as $k => $v){
             $modelList = array(
                 'dbid' => 0,

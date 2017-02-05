@@ -11,6 +11,14 @@ use Think\Controller;
 
 class OrderApproveController extends Controller
 {
+    /**
+     * 测试任务流
+     */
+    public function test(){
+        $obj = new \Vendor\Jbpm\Service\ExecutionService();
+        $obj->startProcessInstanceById('orderapprove');
+    }
+
 
 
     /**

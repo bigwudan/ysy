@@ -73,14 +73,14 @@ class WriteToDataBase
 
             //histProcinst
             if($histProcinst['insert']){
-                $flag = M('workflow_histprocinst')->addAll(array_merge($histProcinst['insert']));
+                $flag = M('workflow_hist_procinst')->addAll(array_merge($histProcinst['insert']));
                 if(!$flag){
                     new \Exception('histProcinsterror-insert');
                 }
             }
             if($histProcinst['updata']){
                 foreach($histProcinst['updata'] as $k => $v){
-                    $flag = M('workflow_histprocinst')->where("dbid = {$v['where']['dbid']}")->save($v['data']);
+                    $flag = M('workflow_hist_procinst')->where("dbid = {$v['where']['dbid']}")->save($v['data']);
                     if(!$flag) new \Exception('histProcinsterror-updata');
                 }
             }
@@ -113,14 +113,14 @@ class WriteToDataBase
 
             //histActinst
             if($histActinst['insert']){
-                $flag = M('workflow_histactinst')->addAll(array_merge($histActinst['insert']));
+                $flag = M('workflow_hist_actinst')->addAll(array_merge($histActinst['insert']));
                 if(!$flag){
                     new \Exception('histActinsterror');
                 }
             }
             if($histActinst['updata']){
                 foreach($histActinst['updata'] as $k => $v){
-                    $flag = M('workflow_histactinst')->where("dbid = {$v['where']['dbid']}")->save($v['data']);
+                    $flag = M('workflow_hist_actinst')->where("dbid = {$v['where']['dbid']}")->save($v['data']);
                     if(!$flag) new \Exception('histActinsterror-updata');
                 }
             }
@@ -141,16 +141,16 @@ class WriteToDataBase
 
             //histtask
             if($histtask['insert']){
-                $flag = M('workflow_histtask')->addAll(array_merge($histtask['insert']));
+                $flag = M('workflow_hist_task')->addAll(array_merge($histtask['insert']));
                 if(!$flag) new \Exception('histtaskerror-insert');
             }
             if($histtask['updata']){
                 foreach($histtask['updata'] as $k => $v){
-                    $flag = M('workflow_histtask')->where("dbid = {$v['where']['dbid']}")->save($v['data']);
+                    $flag = M('workflow_hist_task')->where("dbid = {$v['where']['dbid']}")->save($v['data']);
                     if(!$flag) new \Exception('histtaskerror-updata');
                 }
             }
-            $flag = $Dao->execute("update think_workflow_property set version = version + {$versionNum} , value = value + {$totalsum}");
+            $flag = $Dao->execute("update think_workflow_num set version = version + {$versionNum} , value = value + {$totalsum}");
             if(!$flag){
                 new \Exception('error');
             }
@@ -158,7 +158,6 @@ class WriteToDataBase
             return array();
         }catch (\Exception $e){
             $model->rollback();
-
             return array('error'=>1 , 'errormsg'=>'sql-error');
         }
     }
