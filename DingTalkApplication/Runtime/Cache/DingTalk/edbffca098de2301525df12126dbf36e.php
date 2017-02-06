@@ -237,7 +237,6 @@
         };
 
         var _initi = function(){
-
             $('body').on('click' , function(){
                 if($('#loadingToast').css('opacity') == 1 && $('#loadingToast i').hasClass('weui-icon-cancel')){
                     _promptBox('hide');
@@ -256,8 +255,9 @@
                     var dataJson = JSON.parse(data);
                     if(dataJson.error){
                         _promptBox('warm' , dataJson.msg);
+                    }else{
+                        window.location.href='<?php echo U('ApproveCenter/ApproveCenter') ?>';
                     }
-
                 });
             });
             //获取用户信息

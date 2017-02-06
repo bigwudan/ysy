@@ -155,7 +155,7 @@ class WriteToDataBase
                 new \Exception('error');
             }
             $model->commit();
-            return array();
+            return $this->_translateInfoObj;
         }catch (\Exception $e){
             $model->rollback();
             return array('error'=>1 , 'errormsg'=>'sql-error');

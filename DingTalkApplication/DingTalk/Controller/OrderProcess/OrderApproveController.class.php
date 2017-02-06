@@ -143,9 +143,11 @@ EOT;
      * 地址处理
      */
     private function _dealAddr($varAddrData){
-        $telFromDb = M('ysy_address')->where("tel='{$varAddrData['rece_tel']}'")->find();
+        $telFromDb = M('ysy_address')->where("tel='{$varAddrData['order']['rece_tel']}'")->find();
         if(!$telFromDb){
-            return array('tel' => $varAddrData['rece_tel'] , 'addr' => $varAddrData['rece_name'] , 'name' => $varAddrData['name']);
+            return array('tel' => $varAddrData['order']['rece_tel'] , 'addr' => $varAddrData['order']['rece_addr'] , 'name' => $varAddrData['order']['rece_name']);
+        }else{
+            return false;
         }
     }
 
@@ -167,15 +169,18 @@ EOT;
         $AssembleOrderObj = new \CommonClass\Order\AssembleOrderOfForm();
         $AssembleOrderObj->initi($data , $orderId);
         $orderInfo = $AssembleOrderObj->processData();
-
+        $resFlag = $this->_dealAddr($orderInfo);
+        $needSql = array();
+        if($resFlag !== false){
+            $needSql['addr'] = $resFlag;
+        }
         if($orderInfo['error']){
             return json_encode(array('error'=>1 , 'msg' => $orderInfo['msg']) ,JSON_UNESCAPED_UNICODE);
         }
-
         $ProcessOrderObj = new \CommonClass\Order\ProcessOrderInfoService();
         $ProcessOrderObj->initi( $orderInfo , $orderId);
         $res = $ProcessOrderObj->process();
-        $needSql = array();
+
         $needSql['order'] = $res['order'];
         $needSql['ordergoods']['insert'] = $res['orderGoods'];
         $needSql['stock']['dec'] = $res['stock'];
@@ -189,10 +194,22 @@ EOT;
         $OrderUpdata = new \CommonClass\Order\OrderUpdata();
         $OrderUpdata->initi($needSql);
         $flag = $OrderUpdata->process();
-        if($flag){
-            return json_encode(array('msg' => '返回库存错误') ,JSON_UNESCAPED_UNICODE);
-        }else{
+        if(!$flag){
             return json_encode(array('error' => 1 , 'msg' => '提交异常') ,JSON_UNESCAPED_UNICODE);
+        }
+        $FlowerService = new \Vendor\Jbpm\Service\ExecutionService();
+        $responseFlowData = $FlowerService->startProcessInstanceById('orderapprove');
+        $ExecutionObj = reset($responseFlowData->getExecution()['insert']);
+        if(!$ExecutionObj['dbid'] && !$ExecutionObj['activityname']){
+            return json_encode(array('error' => 1 , 'msg' => '流程错误') ,JSON_UNESCAPED_UNICODE);
+        }
+        $tmp['flowerid'] = $ExecutionObj['dbid'];
+        $tmp['status'] = $ExecutionObj['activityname'];
+        $sqlFlag = M('ysy_order')->where("order_id = {$orderInfo['order']['order_id']}")->save($tmp);
+        if($flag){
+            return json_encode(array('msg' => '正常') ,JSON_UNESCAPED_UNICODE);
+        }else{
+            return json_encode(array('error' => 1 , 'msg' => '写入流程异常') ,JSON_UNESCAPED_UNICODE);
         }
     }
 

@@ -32,22 +32,23 @@ class OrderUpdata
         try{
             $Model = new \Think\Model();
             $Model->db()->startTrans();
+
+            if(!empty($data['addr'])){
+                $dealFlag = M('ysy_address')->add($data['addr']);
+                if(!$dealFlag) E('新增失败');
+            }
             if(!empty($data['order']['insert'])){
                 $dealFlag = M('ysy_order')->add($data['order']['insert']);
                 if(!$dealFlag) E('新增失败');
             }
-
             if(!empty($data['order']['update'])){
                 $dealFlag = M('ysy_order')->where("order_id = {$data['order']['update']['where']['order_id']}")->data($data['order']['update']['data'])->save();
                 if(!$dealFlag) E('新增失败');
             }
-
-
             if(!empty($data['ordergoods']['del'])){
                 $dealFlag = M('ysy_ordergoods')->where("order_id = {$data['ordergoods']['del']['order_id']}")->delete();
                 if(!$dealFlag) E('新增失败');
             }
-
             if(!empty($data['ordergoods']['insert'])){
                 $dealFlag = M('ysy_ordergoods')->addAll($data['ordergoods']['insert']);
                 if(!$dealFlag) E('新增失败');
@@ -68,7 +69,6 @@ class OrderUpdata
                     if(!$dealFlag)E('新增失败');
                 }
             }
-
             $Model->db()->commit();
         }catch (\Exception $e){
             $Model->db()->rollback();

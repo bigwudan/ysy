@@ -4,13 +4,35 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="/myysy/Public/Dingtalk/Css/Dingtalkapprovecenter/approve.css"/>
-		<title></title>
+
+        <link rel="stylesheet" type="text/css" href="/myysy/Public/Dingtalk/Css/weui.css"/>
+        <title></title>
 	</head>
 	<script src="/myysy/Public/Dingtalk/Js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
 	<body>
 
-		<div class="main operation-div hide">
-			<textarea name="" placeholder="请输入同意/不同意理由" rows="" cols="" class="pad15 ft14 c333 w100 block bbt" ></textarea>
+		<div class="main operation-div ">
+			<!--<textarea name="" placeholder="请输入同意/不同意理由" rows="" cols="" class="pad15 ft14 c333 w100 block bbt" ></textarea>-->
+            <form>
+                <input value="<?php echo ($orderid); ?>" name="orderid"  type="hidden">
+                <input value="" name="approvetype" type="hidden">
+
+                <div class="weui-cells__title">审批意见</div>
+                <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <textarea name="remark" class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+                            <div class="weui-textarea-counter"><span>0</span>/200</div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="weui-flex">
+                <div class="weui-flex__item"><div class="placeholder"><a href="javascript:;" class="weui-btn weui-btn_primary ">页面主操作 Loading</a></div></div>
+                <div class="weui-flex__item"><div class="placeholder"><a href="javascript:;" class="weui-btn weui-btn_primary ">页面主操作 Loading</a></div></div>
+            </div>
+
+
 		</div>
 
 		<div class="main applyinfo">

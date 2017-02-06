@@ -242,7 +242,6 @@
         };
 
         var _initi = function(){
-
             $('body').on('click' , function(){
                 if($('#loadingToast').css('opacity') == 1 && $('#loadingToast i').hasClass('weui-icon-cancel')){
                     _promptBox('hide');
@@ -262,7 +261,7 @@
                     if(dataJson.error){
                         _promptBox('warm' , dataJson.msg);
                     }else{
-                        _promptBox('hide' , dataJson.msg);
+                        window.location.href='<?php echo U('ApproveCenter/ApproveCenter') ?>';
                     }
                 });
             });

@@ -23,10 +23,15 @@ class AssembleOrderOfForm
      */
     private function _checkDataOfForm(){
         foreach($this->_orderDataOfForm as $k => $v){
-            if($v['name'] == 'price[]' && $v == ''){
-                return array('error'=>1 , 'msg' => '价格异常');
+            if($v['name'] == 'price[]' || $v['name'] == 'deliveryttpe' || $v['name'] == 'orderid'){
+                if($v['value'] == ''){
+                    return array('error'=>1 , 'msg' => '价格异常');
+                }
+            }else{
+                if(!$v['value']){
+                    return array('error'=>1 , 'msg' => '信息不完整');
+                }
             }
-            if(!$v['value']) return array('error'=>1 , 'msg' => '信息不完整');
         }
         return true;
     }
@@ -43,7 +48,7 @@ class AssembleOrderOfForm
         if($this->_orderId){
             $orderId = $this->_orderId;
         }else{
-            $orderId = intval(date("Ymdhis"));
+            $orderId = time();
         }
         $goodspackageinfo = array();
         $orderInfo = array();
