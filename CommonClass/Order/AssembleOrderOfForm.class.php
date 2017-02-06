@@ -19,17 +19,32 @@ class AssembleOrderOfForm
     }
 
     /**
+     * 验证数据
+     */
+    private function _checkDataOfForm(){
+        foreach($this->_orderDataOfForm as $k => $v){
+            if($v['name'] == 'price[]' && $v == ''){
+                return array('error'=>1 , 'msg' => '价格异常');
+            }
+            if(!$v['value']) return array('error'=>1 , 'msg' => '信息不完整');
+        }
+        return true;
+    }
+
+
+    /**
      * 组合数据
      */
     public function processData(){
-
+        $res = $this->_checkDataOfForm();
+        if($res !== true){
+            return $res;
+        }
         if($this->_orderId){
             $orderId = $this->_orderId;
         }else{
             $orderId = intval(date("Ymdhis"));
         }
-
-
         $goodspackageinfo = array();
         $orderInfo = array();
         $orderInfo['addtime'] = time();

@@ -32,9 +32,6 @@ class OrderUpdata
         try{
             $Model = new \Think\Model();
             $Model->db()->startTrans();
-
-
-
             if(!empty($data['order']['insert'])){
                 $dealFlag = M('ysy_order')->add($data['order']['insert']);
                 if(!$dealFlag) E('新增失败');
@@ -75,10 +72,8 @@ class OrderUpdata
             $Model->db()->commit();
         }catch (\Exception $e){
             $Model->db()->rollback();
-
             $flag = false;
         }
-        var_dump($flag);
         return $flag;
     }
 

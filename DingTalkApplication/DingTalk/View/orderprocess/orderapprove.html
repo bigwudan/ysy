@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Dingtalk/Css/Dingtalkapprovecenter/approve.css"/>
     <link rel="stylesheet" type="text/css" href="__ROOT__/Public/Dingtalk/Css/weui.css"/>
-    <title>Document</title>
+    <title>订单申请</title>
 
 </head>
 <body>
+
+<style>
+    .font84{
+        font-size: 84px;
+
+    }
+
+
+
+</style>
+
+
+<div id="loadingToast" style="opacity: 0; display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast">
+        <!--<i class="weui-loading weui-icon_toast"></i>-->
+        <!--<i class="weui-icon-cancel font84"></i>-->
+        <i class="weui-loading weui-icon_toast"></i>
+        <p class="weui-toast__content">数据加载中</p>
+    </div>
+</div>
+
 <form id="orderapprove">
     <input name="orderid" value="{$orderId}" type="hidden">
 <div class="page">
@@ -92,14 +114,7 @@
         color: #0BB20C;
         float: right;
     }
-
-
 </style>
-
-
-
-
-
     <div class="fixed fix-position bgfff pt10 pb10 pr20 pl20 w100">
         <a href="javascript:;" class="bgblue cfff block w100 round5 ft16 ftc pad5 submit-a">提交</a>
     </div>
@@ -134,6 +149,25 @@
     var OrderApporve = function(){
         var _goodsPackageListJson = {$goodsPackageList};
         var _config = {$configList};
+
+        //提示框
+        var _promptBox = function(varType , varMsg){
+            if(varType == 'showLoading'){
+                $('#loadingToast i').attr('class','weui-loading weui-icon_toast');
+                $('#loadingToast .weui-toast__content').html('加载中');
+                $('#loadingToast').css({'opacity':1 , 'display':'block'});
+            }else if(varType == 'hide'){
+                $('#loadingToast').css({'opacity':0 , 'display':'none'});
+                $('#loadingToast i').attr('class','weui-loading weui-icon_toast');
+                $('#loadingToast .weui-toast__content').html('加载中');
+            }else if(varType == 'warm'){
+                $('#loadingToast i').attr('class' , 'weui-icon-cancel font84');
+                $('#loadingToast .weui-toast__content').html(varMsg);
+            }
+
+        };
+
+
         //增加商品
         var _addPackageHtml = function(){
             var html = '';
@@ -157,30 +191,38 @@
             return html;
         };
 
+        //根据商品获得订单类型
         var _onChangePackage = function(obj){
+            _promptBox('showLoading');
             $.get('<?php echo U('OrderProcess/OrderApprove/actionRequestService') ?>',{type:'changepackage',id:$(obj).val()},function(data){
                 var dataJson = JSON.parse(data);
-                var min = dataJson['min'];
-                var dataJson = dataJson['priceList'];
                 var parentObj = $(obj).parent().parent().parent().parent();
-                parentObj.find('.num-label').html('数量(库存'+min+')');
-                html = '';
-                for(var k in dataJson){
-                    if(dataJson.hasOwnProperty(k)){
-                        var tmpName = _config['orderType'][dataJson[k]['ordertype']];
-                        var tmpPrice = dataJson[k]['price'];
-                        html += '<option data-price="'+tmpPrice+'" value="'+dataJson[k]['ordertype']+'">'+tmpName+'(价格'+tmpPrice+')</option>';
-                    }
-                }
-                parentObj.find('select[name="ordertype[]"]').html(html);
-            });
+                if(dataJson.error){
+                    _promptBox('warm' , dataJson.msg);
+                    parentObj.find('.num-label').html('数量(库存0)');
+                    parentObj.find('select[name="ordertype[]"]').html('<option>请选择商品</option>');
+                }else{
+                    var min = dataJson['min'];
+                    var dataJson = dataJson['priceList'];
 
+                    parentObj.find('.num-label').html('数量(库存'+min+')');
+                    html = '';
+                    for(var k in dataJson){
+                        if(dataJson.hasOwnProperty(k)){
+                            var tmpName = _config['orderType'][dataJson[k]['ordertype']];
+                            var tmpPrice = dataJson[k]['price'];
+                            html += '<option data-price="'+tmpPrice+'" value="'+dataJson[k]['ordertype']+'">'+tmpName+'(价格'+tmpPrice+')</option>';
+                        }
+                    }
+                    parentObj.find('select[name="ordertype[]"]').html(html);
+                    _promptBox('hide');
+                }
+            });
         };
 
         var _delPackage = function(obj){
             console.log($(obj).parent().parent().remove());
         };
-
 
         var _onChangeOrderType = function(obj){
             var objList = $(obj).find('option');
@@ -201,30 +243,39 @@
 
         var _initi = function(){
 
+            $('body').on('click' , function(){
+                if($('#loadingToast').css('opacity') == 1 && $('#loadingToast i').hasClass('weui-icon-cancel')){
+                    _promptBox('hide');
+                }
+            });
+
             $('.addgoodsinfo-a').on('click',function(){
                 var html = _addGoodsInfo();
                 $('.page').append(html);
             });
 
             $('.submit-a').on('click' , function(){
+                _promptBox('showLoading');
                 var dataStrFromForm = $("form").serializeArray();
                 $.get('<?php echo U('OrderProcess/OrderApprove/actionRequestService') ?>',{type:'submitform',data:dataStrFromForm},function(data){
-                    console.log(data);
+                    var dataJson = JSON.parse(data);
+                    if(dataJson.error){
+                        _promptBox('warm' , dataJson.msg);
+                    }else{
+                        _promptBox('hide' , dataJson.msg);
+                    }
                 });
-
-                console.log(dataStrFromForm);
-
             });
-
+            //获取用户信息
             $('input[name="rece_tel"]').on('blur' , function(){
+                _promptBox('showLoading');
                 $.get('<?php echo U('OrderProcess/OrderApprove/actionRequestService') ?>',{type:'getaddress',tel:$(this).val()},function(data){
                     var responseJson = JSON.parse(data);
-                    if(responseJson['tel'] == 0){
-                        return false;
-                    }else{
+                    if(responseJson['tel'] != 0){
                         $('input[name="rece_name"]').val(responseJson['name']);
                         $('input[name="rece_addr"]').val(responseJson['addr']);
                     }
+                    _promptBox('hide');
                 });
             });
 

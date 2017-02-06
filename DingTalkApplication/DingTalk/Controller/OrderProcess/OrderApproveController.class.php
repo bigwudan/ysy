@@ -134,6 +134,18 @@ EOT;
             die($res);
         }elseif($type == 'submitform'){
             $res = $this->_processSubmit();
+            die($res);
+        }
+    }
+
+
+    /**
+     * 地址处理
+     */
+    private function _dealAddr($varAddrData){
+        $telFromDb = M('ysy_address')->where("tel='{$varAddrData['rece_tel']}'")->find();
+        if(!$telFromDb){
+            return array('tel' => $varAddrData['rece_tel'] , 'addr' => $varAddrData['rece_name'] , 'name' => $varAddrData['name']);
         }
     }
 
@@ -150,20 +162,23 @@ EOT;
             $ReBackObj = new \CommonClass\Order\Dealpackage\RebackOrderGoods();
             $ReBackObj->initi($orderId);
             $reBackInfo = $ReBackObj->prcessToSQL();
+            if(!$reBackInfo) return json_encode(array('error'=>1 , 'msg' => '返回库存错误') ,JSON_UNESCAPED_UNICODE);
         }
         $AssembleOrderObj = new \CommonClass\Order\AssembleOrderOfForm();
         $AssembleOrderObj->initi($data , $orderId);
         $orderInfo = $AssembleOrderObj->processData();
+
+        if($orderInfo['error']){
+            return json_encode(array('error'=>1 , 'msg' => $orderInfo['msg']) ,JSON_UNESCAPED_UNICODE);
+        }
+
         $ProcessOrderObj = new \CommonClass\Order\ProcessOrderInfoService();
         $ProcessOrderObj->initi( $orderInfo , $orderId);
         $res = $ProcessOrderObj->process();
-
-
         $needSql = array();
         $needSql['order'] = $res['order'];
         $needSql['ordergoods']['insert'] = $res['orderGoods'];
         $needSql['stock']['dec'] = $res['stock'];
-
         if(!empty($reBackInfo['orderGoods'])){
             $needSql['ordergoods']['del'] = $reBackInfo['orderGoods'];
         }
@@ -173,11 +188,12 @@ EOT;
         }
         $OrderUpdata = new \CommonClass\Order\OrderUpdata();
         $OrderUpdata->initi($needSql);
-        $OrderUpdata->process();
-
-
-
-
+        $flag = $OrderUpdata->process();
+        if($flag){
+            return json_encode(array('msg' => '返回库存错误') ,JSON_UNESCAPED_UNICODE);
+        }else{
+            return json_encode(array('error' => 1 , 'msg' => '提交异常') ,JSON_UNESCAPED_UNICODE);
+        }
     }
 
     /**
@@ -185,7 +201,7 @@ EOT;
      */
     private function _getAddress(){
         $tel = I('tel');
-        $telFromDb = M('ysy_address')->where("tel={$tel}")->find();
+        $telFromDb = M('ysy_address')->where("tel='{$tel}'")->find();
         if($telFromDb){
             $responseJson = json_encode($telFromDb , JSON_UNESCAPED_UNICODE);
         }else{
@@ -235,20 +251,20 @@ EOT;
     private function _getGoodsPackageInfo(){
         $id = intval(I('id'));
         $packagePriceFromDb = M('ysy_packageprice')->where("packageid = {$id}")->select();
-        if(!$packagePriceFromDb) return false;
+        if(!$packagePriceFromDb) return json_encode(array('error'=>1 , 'msg' => '无效商品') ,JSON_UNESCAPED_UNICODE);
         $packageInfoFromDb = M('ysy_goodspackageinfo')->where("packageid = {$id}")->select();
-        if(!$packageInfoFromDb) return false;
+        if(!$packageInfoFromDb) return json_encode(array('error'=>1 , 'msg' => '商品对应库存未设置') ,JSON_UNESCAPED_UNICODE);
         $flag = true;
         $minList = array();
         foreach($packageInfoFromDb as $k => $v){
             $tmpList = M('ysy_stock')->where("format_id={$v['format_id']}")->find();
             if(!$tmpList || $tmpList['goods_num'] == 0){
-                $flag = false;
+                $flag = array('error'=>1 , 'msg' => '库存为0');
                 break;
             }
             $tmpNum = intval($tmpList['goods_num'] / $v['num']);
             if($tmpNum == 0){
-                $flag = false;
+                $flag = array('error'=>2 , 'msg' => '库存为0');
                 break;
             }
             array_push($minList , $tmpNum);
