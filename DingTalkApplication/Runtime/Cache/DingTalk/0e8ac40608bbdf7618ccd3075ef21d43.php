@@ -28,8 +28,8 @@
                 </div>
             </form>
             <div class="weui-flex">
-                <div class="weui-flex__item"><div class="placeholder"><a href="javascript:;" class="weui-btn weui-btn_primary ">页面主操作 Loading</a></div></div>
-                <div class="weui-flex__item"><div class="placeholder"><a href="javascript:;" class="weui-btn weui-btn_primary ">页面主操作 Loading</a></div></div>
+                <div class="weui-flex__item"><div style="padding-right: 5px" class="placeholder"><a href="javascript:;" class="weui-btn weui-btn_primary ">确认</a></div></div>
+                <div class="weui-flex__item"><div style="padding-left: 5px" class="placeholder"><a href="javascript:;" class="weui-btn weui-btn_primary ">返回</a></div></div>
             </div>
 
 

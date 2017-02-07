@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : wwewe
+Source Server         : localhost
 Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : thinkphp
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-02-06 18:37:23
+Date: 2017-02-07 22:45:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -106,6 +106,9 @@ INSERT INTO `think_access` VALUES ('2', '49', '0', null);
 INSERT INTO `think_access` VALUES ('2', '50', '0', null);
 INSERT INTO `think_access` VALUES ('2', '51', '0', null);
 INSERT INTO `think_access` VALUES ('2', '52', '0', null);
+INSERT INTO `think_access` VALUES ('2', '53', '0', null);
+INSERT INTO `think_access` VALUES ('2', '54', '0', null);
+INSERT INTO `think_access` VALUES ('2', '55', '0', null);
 
 -- ----------------------------
 -- Table structure for `think_log`
@@ -146,7 +149,7 @@ CREATE TABLE `think_node` (
   KEY `pid` (`pid`),
   KEY `status` (`status`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_node
@@ -199,6 +202,9 @@ INSERT INTO `think_node` VALUES ('49', 'Goodspackage', '组合商品', '1', '', 
 INSERT INTO `think_node` VALUES ('50', 'index', 'index', '1', '', '0', '49', '4', '');
 INSERT INTO `think_node` VALUES ('51', 'actionEditGoodsPackage', 'actionEditGoodsPackage', '1', '', '0', '49', '4', '');
 INSERT INTO `think_node` VALUES ('52', 'actionRequestService', 'actionRequestService', '0', '', '0', '49', '4', '');
+INSERT INTO `think_node` VALUES ('53', 'ManageGoods', '管理商品', '1', '', '0', '44', '3', '');
+INSERT INTO `think_node` VALUES ('54', 'index', 'index', '1', '', '0', '53', '4', '');
+INSERT INTO `think_node` VALUES ('55', 'actionRequestService', 'actionRequestService', '1', '', '0', '53', '4', '');
 
 -- ----------------------------
 -- Table structure for `think_order`
@@ -1318,6 +1324,7 @@ CREATE TABLE `think_ysy_format` (
   `format_remark` varchar(255) NOT NULL,
   `format_pid` int(10) unsigned NOT NULL DEFAULT '0',
   `unit_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '0删除1显示',
   PRIMARY KEY (`format_id`),
   KEY `format_pid` (`format_pid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
@@ -1325,10 +1332,29 @@ CREATE TABLE `think_ysy_format` (
 -- ----------------------------
 -- Records of think_ysy_format
 -- ----------------------------
-INSERT INTO `think_ysy_format` VALUES ('1', '苹果', '', '0', '0');
-INSERT INTO `think_ysy_format` VALUES ('2', '梨', '', '0', '0');
-INSERT INTO `think_ysy_format` VALUES ('3', '苹果50G', '', '1', '0');
-INSERT INTO `think_ysy_format` VALUES ('4', '梨10G', '', '2', '0');
+INSERT INTO `think_ysy_format` VALUES ('1', '苹果', '', '0', '0', '1');
+INSERT INTO `think_ysy_format` VALUES ('2', '梨', '', '0', '0', '1');
+INSERT INTO `think_ysy_format` VALUES ('3', '苹果50G', '', '1', '0', '1');
+INSERT INTO `think_ysy_format` VALUES ('4', '梨10G', '', '2', '0', '1');
+
+-- ----------------------------
+-- Table structure for `think_ysy_goods`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_goods`;
+CREATE TABLE `think_ysy_goods` (
+  `goods_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '商品编号',
+  `format_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '规格',
+  `remark` varchar(255) NOT NULL,
+  `addtime` int(11) unsigned NOT NULL,
+  `status` tinyint(10) unsigned NOT NULL DEFAULT '1' COMMENT '0删除1开始',
+  `goods_name` char(20) NOT NULL COMMENT '商品名称',
+  PRIMARY KEY (`goods_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_goods
+-- ----------------------------
+INSERT INTO `think_ysy_goods` VALUES ('20', '1', '', '1486478222', '1', '324');
 
 -- ----------------------------
 -- Table structure for `think_ysy_goodspackage`
@@ -1448,17 +1474,18 @@ INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '6', '1.00', '0', '0.
 -- ----------------------------
 DROP TABLE IF EXISTS `think_ysy_stock`;
 CREATE TABLE `think_ysy_stock` (
-  `format_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `goods_id` int(10) unsigned NOT NULL DEFAULT '0',
   `goods_num` int(10) unsigned NOT NULL DEFAULT '0',
   `goods_weight` int(10) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`format_id`)
+  PRIMARY KEY (`goods_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_ysy_stock
 -- ----------------------------
-INSERT INTO `think_ysy_stock` VALUES ('3', '140', '63');
-INSERT INTO `think_ysy_stock` VALUES ('4', '270', '128');
+INSERT INTO `think_ysy_stock` VALUES ('20', '0', '0');
+INSERT INTO `think_ysy_stock` VALUES ('111', '140', '63');
+INSERT INTO `think_ysy_stock` VALUES ('222', '270', '128');
 
 -- ----------------------------
 -- Table structure for `think_ysy_unit`
