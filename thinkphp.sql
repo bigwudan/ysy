@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-02-06 18:37:23
+Date: 2017-02-07 17:27:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1019,7 +1019,7 @@ CREATE TABLE `think_workflow_deployment` (
 -- ----------------------------
 -- Records of think_workflow_deployment
 -- ----------------------------
-INSERT INTO `think_workflow_deployment` VALUES ('1', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"160,16,48,48\" name=\"start1\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive1\" to=\"exclusive1\"/>\r\n   </start>\r\n   <decision g=\"267,106,48,48\" name=\"exclusive1\">\r\n   <handler class=\"\\CommonClass\\Order\\WorkFlowHandle\\HandleLeader\" />\r\n      <transition g=\"-52,-22\" name=\"to leader\" to=\"leader\"/>\r\n   </decision>\r\n   <task candidate-users=\"#{leader}\" g=\"114,129,92,52\" name=\"leader\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive2\" to=\"exclusive2\"/>\r\n	  <transition g=\"-79,-22\" name=\"to cancel\" to=\"cancel\"/>\r\n	  <transition g=\"-79,-22\" name=\"to retreat\" to=\"retreat\"/>\r\n   </task>\r\n   <decision g=\"267,106,48,48\" name=\"exclusive2\">\r\n   <handler class=\"\\Org\\Jbmp\\TestHander\\testHander\" />\r\n      <transition g=\"-52,-22\" name=\"to chiefleader\" to=\"chiefleader\"/>\r\n   </decision>\r\n   <task candidate-users=\"#{chiefleader}\" g=\"114,129,92,52\" name=\"leader\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive3\" to=\"exclusive3\"/>\r\n	  <transition g=\"-79,-22\" name=\"to cancel\" to=\"cancel\"/>\r\n	  <transition g=\"-79,-22\" name=\"to retreat\" to=\"retreat\"/>\r\n   </task>\r\n   <decision g=\"267,106,48,48\" name=\"exclusive3\">\r\n   <handler class=\"\\Org\\Jbmp\\TestHander\\testHander\" />\r\n      <transition g=\"-52,-22\" name=\"to storehouse\" to=\"storehouse\"/>\r\n   </decision>\r\n   <task candidate-users=\"#{storehouse}\" g=\"114,129,92,52\" name=\"storehouse\">\r\n      <transition g=\"-79,-22\" name=\"to complete\" to=\"complete\"/>\r\n   </task>\r\n   <state name=\"retreat\">\r\n		<transition g=\"-79,-22\" name=\"to exclusive1\" to=\"exclusive1\"/>\r\n		<transition g=\"-79,-22\" name=\"to cancel\" to=\"cancel\"/>\r\n   </state>\r\n   <end name=\"complete\" />\r\n   <end name=\"cancel\" /> \r\n</process>', 'orderapprove', '0', '0');
+INSERT INTO `think_workflow_deployment` VALUES ('1', '<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<process name=\"demo\" xmlns=\"http://jbpm.org/4.4/jpdl\">\r\n   <start g=\"160,16,48,48\" name=\"start1\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive1\" to=\"exclusive1\"/>\r\n   </start>\r\n   <decision g=\"267,106,48,48\" name=\"exclusive1\">\r\n   <handler class=\"\\CommonClass\\Order\\WorkFlowHandle\\HandleLeader\" />\r\n      <transition g=\"-52,-22\" name=\"to leader\" to=\"leader\"/>\r\n   </decision>\r\n   <task candidate-users=\"#{leader}\" g=\"114,129,92,52\" name=\"leader\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive2\" to=\"exclusive2\"/>\r\n	  <transition g=\"-79,-22\" name=\"to cancel\" to=\"cancel\"/>\r\n	  <transition g=\"-79,-22\" name=\"to retreat\" to=\"retreat\"/>\r\n   </task>\r\n   <decision g=\"267,106,48,48\" name=\"exclusive2\">\r\n   <handler class=\"\\CommonClass\\Order\\WorkFlowHandle\\HandleChiefLeader\" />\r\n      <transition g=\"-52,-22\" name=\"to chiefleader\" to=\"chiefleader\"/>\r\n   </decision>\r\n   <task candidate-users=\"#{chiefleader}\" g=\"114,129,92,52\" name=\"chiefleader\">\r\n      <transition g=\"-79,-22\" name=\"to exclusive3\" to=\"exclusive3\"/>\r\n	  <transition g=\"-79,-22\" name=\"to cancel\" to=\"cancel\"/>\r\n	  <transition g=\"-79,-22\" name=\"to retreat\" to=\"retreat\"/>\r\n   </task>\r\n   <decision g=\"267,106,48,48\" name=\"exclusive3\">\r\n   <handler class=\"\\Org\\Jbmp\\TestHander\\testHander\" />\r\n      <transition g=\"-52,-22\" name=\"to storehouse\" to=\"storehouse\"/>\r\n   </decision>\r\n   <task candidate-users=\"#{storehouse}\" g=\"114,129,92,52\" name=\"storehouse\">\r\n      <transition g=\"-79,-22\" name=\"to complete\" to=\"complete\"/>\r\n   </task>\r\n   <state name=\"retreat\">\r\n		<transition g=\"-79,-22\" name=\"to exclusive1\" to=\"exclusive1\"/>\r\n		<transition g=\"-79,-22\" name=\"to cancel\" to=\"cancel\"/>\r\n   </state>\r\n   <end name=\"complete\" />\r\n   <end name=\"cancel\" /> \r\n</process>\r\n', 'orderapprove', '0', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_execution`
@@ -1053,7 +1053,9 @@ CREATE TABLE `think_workflow_execution` (
 INSERT INTO `think_workflow_execution` VALUES ('11', 'leader', 'orderapprove', '1', '', 'orderapprove.11', 'active-root', '0', '15', '0', '0', '11', '1486282219');
 INSERT INTO `think_workflow_execution` VALUES ('21', 'leader', 'orderapprove', '1', '', 'orderapprove.21', 'active-root', '0', '25', '0', '0', '21', '1486366089');
 INSERT INTO `think_workflow_execution` VALUES ('31', 'leader', 'orderapprove', '1', '', 'orderapprove.31', 'active-root', '0', '35', '0', '0', '31', '1486368131');
-INSERT INTO `think_workflow_execution` VALUES ('41', 'leader', 'orderapprove', '1', '', 'orderapprove.41', 'active-root', '0', '45', '0', '0', '41', '1486368729');
+INSERT INTO `think_workflow_execution` VALUES ('41', 'chiefleader', 'orderapprove', '1', '', 'orderapprove.41', 'active-root', '0', '54', '0', '0', '41', '1486368729');
+INSERT INTO `think_workflow_execution` VALUES ('61', 'chiefleader', 'orderapprove', '1', '', 'orderapprove.61', 'active-root', '0', '74', '0', '0', '61', '1486452536');
+INSERT INTO `think_workflow_execution` VALUES ('81', 'leader', 'orderapprove', '1', '', 'orderapprove.81', 'active-root', '0', '85', '0', '0', '81', '1486452857');
 
 -- ----------------------------
 -- Table structure for `think_workflow_hist_actinst`
@@ -1086,7 +1088,15 @@ INSERT INTO `think_workflow_hist_actinst` VALUES ('25', '21', 'task', 'orderappr
 INSERT INTO `think_workflow_hist_actinst` VALUES ('34', '31', 'decision', 'orderapprove.31', 'exclusive1', '1486368131', '1486368131', '0', 'to leader', '0', '1486368131');
 INSERT INTO `think_workflow_hist_actinst` VALUES ('35', '31', 'task', 'orderapprove.31', 'leader', '1486368131', '0', '0', '', '32', '1486368131');
 INSERT INTO `think_workflow_hist_actinst` VALUES ('44', '41', 'decision', 'orderapprove.41', 'exclusive1', '1486368729', '1486368729', '0', 'to leader', '0', '1486368729');
-INSERT INTO `think_workflow_hist_actinst` VALUES ('45', '41', 'task', 'orderapprove.41', 'leader', '1486368729', '0', '0', '', '42', '1486368729');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('45', '41', 'task', 'orderapprove.41', 'leader', '1486368729', '1486452170', '83441', 'to chiefleader', '42', '1486368729');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('53', '41', 'decision', 'orderapprove.41', 'exclusive2', '1486452170', '1486452170', '0', 'to chiefleader', '0', '1486452170');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('54', '41', 'task', 'orderapprove.41', 'chiefleader', '1486452170', '0', '0', '', '51', '1486452170');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('64', '61', 'decision', 'orderapprove.61', 'exclusive1', '1486452536', '1486452536', '0', 'to leader', '0', '1486452536');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('65', '61', 'task', 'orderapprove.61', 'leader', '1486452536', '1486452631', '95', 'to chiefleader', '62', '1486452536');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('73', '61', 'decision', 'orderapprove.61', 'exclusive2', '1486452631', '1486452631', '0', 'to chiefleader', '0', '1486452631');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('74', '61', 'task', 'orderapprove.61', 'chiefleader', '1486452631', '0', '0', '', '71', '1486452631');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('84', '81', 'decision', 'orderapprove.81', 'exclusive1', '1486452857', '1486452857', '0', 'to leader', '0', '1486452857');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('85', '81', 'task', 'orderapprove.81', 'leader', '1486452857', '0', '0', '', '82', '1486452857');
 
 -- ----------------------------
 -- Table structure for `think_workflow_hist_procinst`
@@ -1113,6 +1123,8 @@ INSERT INTO `think_workflow_hist_procinst` VALUES ('11', 'orderapprove.11', 'ord
 INSERT INTO `think_workflow_hist_procinst` VALUES ('21', 'orderapprove.21', 'orderapprove', '', '1486366089', '0', '0', 'active', '', '0');
 INSERT INTO `think_workflow_hist_procinst` VALUES ('31', 'orderapprove.31', 'orderapprove', '', '1486368131', '0', '0', 'active', '', '0');
 INSERT INTO `think_workflow_hist_procinst` VALUES ('41', 'orderapprove.41', 'orderapprove', '', '1486368729', '0', '0', 'active', '', '0');
+INSERT INTO `think_workflow_hist_procinst` VALUES ('61', 'orderapprove.61', 'orderapprove', '', '1486452536', '0', '0', 'active', '', '0');
+INSERT INTO `think_workflow_hist_procinst` VALUES ('81', 'orderapprove.81', 'orderapprove', '', '1486452857', '0', '0', 'active', '', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_hist_task`
@@ -1139,7 +1151,11 @@ CREATE TABLE `think_workflow_hist_task` (
 INSERT INTO `think_workflow_hist_task` VALUES ('12', 'orderapprove.11', '', '', '0', 'open', '1486282219', '0', '0', '0');
 INSERT INTO `think_workflow_hist_task` VALUES ('22', 'orderapprove.21', '', '', '0', 'open', '1486366089', '0', '0', '0');
 INSERT INTO `think_workflow_hist_task` VALUES ('32', 'orderapprove.31', '', '', '0', 'open', '1486368131', '0', '0', '0');
-INSERT INTO `think_workflow_hist_task` VALUES ('42', 'orderapprove.41', '', '', '0', 'open', '1486368729', '0', '0', '0');
+INSERT INTO `think_workflow_hist_task` VALUES ('42', 'orderapprove.41', 'chiefleader', '', '0', 'complete', '1486368729', '1486452170', '83441', '0');
+INSERT INTO `think_workflow_hist_task` VALUES ('51', 'orderapprove.41', '', '', '0', 'open', '1486452170', '0', '0', '0');
+INSERT INTO `think_workflow_hist_task` VALUES ('62', 'orderapprove.61', 'chiefleader', '', '0', 'complete', '1486452536', '1486452631', '95', '0');
+INSERT INTO `think_workflow_hist_task` VALUES ('71', 'orderapprove.61', '', '', '0', 'open', '1486452631', '0', '0', '0');
+INSERT INTO `think_workflow_hist_task` VALUES ('82', 'orderapprove.81', '', '', '0', 'open', '1486452857', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_num`
@@ -1156,7 +1172,7 @@ CREATE TABLE `think_workflow_num` (
 -- ----------------------------
 -- Records of think_workflow_num
 -- ----------------------------
-INSERT INTO `think_workflow_num` VALUES ('next.dbid', '4', '41', '0');
+INSERT INTO `think_workflow_num` VALUES ('next.dbid', '8', '81', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_participation`
@@ -1181,7 +1197,9 @@ CREATE TABLE `think_workflow_participation` (
 INSERT INTO `think_workflow_participation` VALUES ('13', '0', '1', 'candidate', '12', '0');
 INSERT INTO `think_workflow_participation` VALUES ('23', '0', '1', 'candidate', '22', '0');
 INSERT INTO `think_workflow_participation` VALUES ('33', '0', '1', 'candidate', '32', '0');
-INSERT INTO `think_workflow_participation` VALUES ('43', '0', '1', 'candidate', '42', '0');
+INSERT INTO `think_workflow_participation` VALUES ('52', '0', '2', 'candidate', '51', '0');
+INSERT INTO `think_workflow_participation` VALUES ('72', '0', '2', 'candidate', '71', '0');
+INSERT INTO `think_workflow_participation` VALUES ('83', '0', '1', 'candidate', '82', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_task`
@@ -1211,7 +1229,9 @@ CREATE TABLE `think_workflow_task` (
 INSERT INTO `think_workflow_task` VALUES ('12', 'leader', 'open', '', '0', '1486282219', 'orderapprove.11', 'leader', '1', '11', '11', '0');
 INSERT INTO `think_workflow_task` VALUES ('22', 'leader', 'open', '', '0', '1486366089', 'orderapprove.21', 'leader', '1', '21', '21', '0');
 INSERT INTO `think_workflow_task` VALUES ('32', 'leader', 'open', '', '0', '1486368131', 'orderapprove.31', 'leader', '1', '31', '31', '0');
-INSERT INTO `think_workflow_task` VALUES ('42', 'leader', 'open', '', '0', '1486368729', 'orderapprove.41', 'leader', '1', '41', '41', '0');
+INSERT INTO `think_workflow_task` VALUES ('51', 'chiefleader', 'open', '', '0', '1486452170', 'orderapprove.41', 'chiefleader', '1', '41', '41', '0');
+INSERT INTO `think_workflow_task` VALUES ('71', 'chiefleader', 'open', '', '0', '1486452631', 'orderapprove.61', 'chiefleader', '1', '61', '61', '0');
+INSERT INTO `think_workflow_task` VALUES ('82', 'leader', 'open', '', '0', '1486452857', 'orderapprove.81', 'leader', '1', '81', '81', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_variable`
@@ -1238,6 +1258,10 @@ INSERT INTO `think_workflow_variable` VALUES ('16', 'int', 'leader', '11', '0', 
 INSERT INTO `think_workflow_variable` VALUES ('26', 'int', 'leader', '21', '0', '1', '', '', '1486366089');
 INSERT INTO `think_workflow_variable` VALUES ('36', 'int', 'leader', '31', '0', '1', '', '', '1486368131');
 INSERT INTO `think_workflow_variable` VALUES ('46', 'int', 'leader', '41', '0', '1', '', '', '1486368729');
+INSERT INTO `think_workflow_variable` VALUES ('55', 'int', 'chiefleader', '41', '0', '2', '', '', '1486452170');
+INSERT INTO `think_workflow_variable` VALUES ('66', 'int', 'leader', '61', '0', '1', '', '', '1486452536');
+INSERT INTO `think_workflow_variable` VALUES ('75', 'int', 'chiefleader', '61', '0', '2', '', '', '1486452631');
+INSERT INTO `think_workflow_variable` VALUES ('86', 'int', 'leader', '81', '0', '1', '', '', '1486452857');
 
 -- ----------------------------
 -- Table structure for `think_ysy_address`
@@ -1254,6 +1278,26 @@ CREATE TABLE `think_ysy_address` (
 -- Records of think_ysy_address
 -- ----------------------------
 INSERT INTO `think_ysy_address` VALUES ('1', '2', '3');
+
+-- ----------------------------
+-- Table structure for `think_ysy_approvelog`
+-- ----------------------------
+DROP TABLE IF EXISTS `think_ysy_approvelog`;
+CREATE TABLE `think_ysy_approvelog` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `orderid` int(10) unsigned NOT NULL DEFAULT '0',
+  `status` char(20) NOT NULL,
+  `nodename` char(20) NOT NULL,
+  `uid` int(10) unsigned NOT NULL,
+  `addtime` int(10) unsigned NOT NULL,
+  `remark` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `orderid` (`orderid`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of think_ysy_approvelog
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `think_ysy_checkin`
@@ -1396,6 +1440,9 @@ CREATE TABLE `think_ysy_order` (
 INSERT INTO `think_ysy_order` VALUES ('1486366087', '0', '1486366087', '0', '1486310400', '1', '0.00', '', '1', '3', '2', '1', '', '0');
 INSERT INTO `think_ysy_order` VALUES ('1486368130', '0', '1486368130', '0', '1486310400', '1', '0.00', '', '1', '3', '2', '1', '', '0');
 INSERT INTO `think_ysy_order` VALUES ('1486368728', '0', '1486368728', '0', '1486310400', '1', '0.00', '', '1', '3', '2', '1', 'leader', '41');
+INSERT INTO `think_ysy_order` VALUES ('1486452534', '0', '1486452534', '0', '1089907200', '0', '0.00', '', '1', '3', '2', '1', 'leader', '61');
+INSERT INTO `think_ysy_order` VALUES ('1486452790', '0', '1486452790', '0', '1089907200', '0', '0.00', '', '1', '3', '2', '1', '', '0');
+INSERT INTO `think_ysy_order` VALUES ('1486452856', '0', '1486452856', '0', '1089907200', '0', '0.00', '', '1', '3', '2', '1', 'leader', '81');
 
 -- ----------------------------
 -- Table structure for `think_ysy_ordergoods`
@@ -1416,6 +1463,10 @@ CREATE TABLE `think_ysy_ordergoods` (
 INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '1486366087', '1', '1', '3.00');
 INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '1486368130', '1', '1', '3.00');
 INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '1486368728', '1', '1', '3.00');
+INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '1486452534', '1', '1', '3.00');
+INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '1486452534', '2', '6', '1.00');
+INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '1486452790', '1', '2', '4.00');
+INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '1486452856', '1', '2', '4.00');
 INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '2147483647', '10', '2', '4.00');
 INSERT INTO `think_ysy_ordergoods` VALUES ('2147483647', '2147483647', '20', '5', '7.00');
 
@@ -1457,8 +1508,8 @@ CREATE TABLE `think_ysy_stock` (
 -- ----------------------------
 -- Records of think_ysy_stock
 -- ----------------------------
-INSERT INTO `think_ysy_stock` VALUES ('3', '140', '63');
-INSERT INTO `think_ysy_stock` VALUES ('4', '270', '128');
+INSERT INTO `think_ysy_stock` VALUES ('3', '134', '63');
+INSERT INTO `think_ysy_stock` VALUES ('4', '267', '128');
 
 -- ----------------------------
 -- Table structure for `think_ysy_unit`

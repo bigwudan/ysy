@@ -11,9 +11,9 @@
 	<script src="__ROOT__/Public/Dingtalk/Js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
 	<body>
 
-		<div class="main operation-div ">
+		<div class="main operation-div hide">
 			<!--<textarea name="" placeholder="请输入同意/不同意理由" rows="" cols="" class="pad15 ft14 c333 w100 block bbt" ></textarea>-->
-            <form>
+            <form id="approve">
                 <input value="{$orderid}" name="orderid"  type="hidden">
                 <input value="" name="approvetype" type="hidden">
 
@@ -27,11 +27,6 @@
                     </div>
                 </div>
             </form>
-            <div class="weui-flex">
-                <div class="weui-flex__item"><div style="" class="placeholder"><a href="javascript:;" class="weui-btn weui-btn_primary ">页面主操作 Loading</a></div></div>
-                <div class="weui-flex__item"><div class="placeholder"><a href="javascript:;" class="weui-btn weui-btn_primary ">页面主操作 Loading</a></div></div>
-            </div>
-
 
 		</div>
 
@@ -111,31 +106,60 @@
 				</div>
 			</div>
 		</div>
-		<!--待申请 开始-->
-		<div class="fixed clearfix bgfff btop fix-position w100 btn-applyinfo">
-			<a href="" class="ftc w33 cblue lh40 ft16 block fl">同意</a>
-			<a href="" class="ftc w33 cblue lh40 ft16 block fl">不同意</a>
-			<a href="" class="ftc w33 cblue lh40 ft16 block fl">转交</a>
-		</div>
-		<!--待申请 结束-->
-		<!--拒绝 开始-->
-		<div class="fixed fix-position bgfff pt10 pb10 pr20 pl20 w100 hide btn-operation">
-			<a href="javascript:;" class="bgblue cfff block w100 round5 ft16 ftc pad5">同意</a>
-		</div>
-		<!--拒绝 结束-->
+        <div class="weui-navbar" style="position: fixed;bottom: 0;top:auto">
+            <div data-type="agree" class="weui-navbar__item">同意</div>
+            <div data-type="disagree" class="weui-navbar__item">拒绝</div>
+            <div data-type="cancel" class="weui-navbar__item">撤销</div>
+        </div>
 
 
 	<script>
 
-		var showApplyInfo = function(){
-			$('.applyinfo').hide();
-			$('.operation-div').show();
 
-			$('.btn-applyinfo').hide();
-			$('.btn-operation').show();
+        var ApproveInfo = function(){
+            var _showApprove = function(type){
+                var showBarHtml = '<div data-type="agree" class="weui-navbar__item">同意</div><div data-type="disagree" class="weui-navbar__item">拒绝</div><div data-type="cancel" class="weui-navbar__item">撤销</div>';
+                var hideBarHtml = '<div data-type="submit" class="weui-navbar__item">提交</div><div data-type="return" class="weui-navbar__item">返回</div>';
+                if(type == 'show'){
+                    $('.operation-div').show();
+                    $('.applyinfo').hide();
+                    $('.weui-navbar').html(hideBarHtml);
+                }else{
+                    $('.operation-div').hide();
+                    $('.applyinfo').show();
+                    $('.weui-navbar').html(showBarHtml);
+                }
+            };
 
+            var _sumbitApprove = function(){
+                var id = $('input[name="orderid"]').val();
+                var approvetype = $('input[name="approvetype"]').val();
+                var remark = $('textarea[name="remark"]').val();
+                $.get('<?php echo U('ApproveCenter/ApproveCenter/actionApproveService') ?>',{id:id , approvetype : approvetype , remark :  remark},function(responseData){
 
-		}
+                    console.log(responseData);
+
+                });
+
+                console.log(dataStrFromForm);
+
+            };
+
+            var _initi = function(){
+                $('.weui-navbar').on('click' , function(ev){
+                    var dataOfType = $(ev.target).attr('data-type');
+                    if(dataOfType == 'agree' || dataOfType == 'disagree' || dataOfType == 'cancel'){
+                        $('input[name="approvetype"]').val(dataOfType);
+                        _showApprove('show');
+                    }else if(dataOfType == 'return'){
+                        _showApprove('hide');
+                    }else if(dataOfType == 'submit'){
+                        _sumbitApprove();
+                    }
+                });
+            }();
+        }();
+
 
 
 

@@ -28,7 +28,7 @@ class RebackOrderGoods
      */
     public function prcessToSQL(){
         $dataFormDb = M('ysy_ordergoods')->where("order_id = {$this->_orderId}")->select();
-        if($dataFormDb) return false;
+        if(!$dataFormDb) return false;
         $DealObj = new \CommonClass\Order\Dealpackage\BaseDealPackage();
         $stock = array();
         foreach($dataFormDb as $k => $v){
