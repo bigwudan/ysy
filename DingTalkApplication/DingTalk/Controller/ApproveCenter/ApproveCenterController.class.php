@@ -84,4 +84,20 @@ EOT;
         $this->display('approvecenter/approveinfo');
     }
 
+    /**
+     * 处理提交的数据
+     */
+    public function actionApproveService(){
+        $id = intval(I('id'));
+        $approveType = trim(I('approvetype'));
+        $remark = trim(strip_tags(I('remark')));
+        $ApproveDealObj = new \CommonClass\Order\ApproveDealFactory();
+        $ApproveDealObj->initi($id , $approveType , $remark);
+        $ApproveDealObj->process();
+
+    }
+
+
+
+
 }
