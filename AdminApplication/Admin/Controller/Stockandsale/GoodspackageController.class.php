@@ -37,6 +37,8 @@ class GoodspackageController extends Controller
      * 显示历史信息
      */
     public function index(){
+        $goodsPackList = M('ysy_goodspackage')->select();
+        $this->assign('goodsPackList' , $goodsPackList);
         $this->display('/Stockandsale/GoodsPackageList');
     }
 
@@ -44,9 +46,16 @@ class GoodspackageController extends Controller
      * 编辑
      */
     public function actionEditGoodsPackage(){
-        $formatFromDb = M('ysy_format')->field('format_id,format_name')->select();
-        $formatJson = json_encode($formatFromDb , JSON_UNESCAPED_UNICODE);
-
+        $packageId = intval(I('packageid'));
+        if($packageId){
+            $goodsPackeageFromDb = M('ysy_goodspackage')->alias('gp')
+                ->join("think_ysy_goodspackageinfo as gs ON gp.id = gs.packageid ")
+                ->where("gp.id = {$packageId}")
+                ->select();
+            $goodsPackeagePriceFromDb = M('ysy_packageprice')->where("packageid = {$packageId}")->select();
+        }
+        $goodsFromDb = M('ysy_goods')->field('goods_id , goods_name')->select();
+        $goodsJson = json_encode($goodsFromDb , JSON_UNESCAPED_UNICODE);
         $orderType = array(
             array('销售订单', 0),
             array('送样订单', 0),
@@ -56,8 +65,10 @@ class GoodspackageController extends Controller
             array('次品销售订单', 0),
             array('预售订单订单', 0),
         );
-
-        $this->assign('formatJson' , $formatJson);
+        $this->assign('goodsPackeageJson' , json_encode($goodsPackeageFromDb , JSON_UNESCAPED_UNICODE));
+        $this->assign('goodsPackeageFromDb' , $goodsPackeageFromDb);
+        $this->assign('goodsPackeagePriceFromDb' , $goodsPackeagePriceFromDb);
+        $this->assign('goodsJson' , $goodsJson);
         $this->assign('orderType' , $orderType);
         $this->display('/Stockandsale/GoodsPackage');
     }
@@ -78,10 +89,11 @@ class GoodspackageController extends Controller
      */
     private function _package(){
         $data = I('data');
-        $packageId =  intval(date('Ymdhis'));
+        $packageId =  time();
         $goodspackage = array();
         $goodspackage['addtime'] = time();
         $goodspackage['id'] = $packageId;
+        $goodspackage['uid'] = session('uid');
 
         $packageprice = array();
         $goodspackageinfo = array();
@@ -101,17 +113,16 @@ class GoodspackageController extends Controller
         for($num = 0 ; $num < count($goodspackageinfo) ; $num = $num + 2){
             array_push($goodspackageinfoList , array(
                 'packageid' => $packageId,
-                'format_id' => $goodspackageinfo[$num]['value'],
+                'goods_id' => $goodspackageinfo[$num]['value'],
                 'num' => $goodspackageinfo[$num+1]['value'],
                 'addtime' => time(),
 
             ));
         }
-
         $flag = true;
+        $Model = new \Think\Model();
+        $Model->db()->startTrans();
         try{
-            $Model = new \Think\Model();
-            $Model->db()->startTrans();
             $flag = M('ysy_goodspackage')->add($goodspackage);
             if(!$flag) E('新增失败');
             $flag =  M('ysy_packageprice')->addAll($packageprice);
@@ -123,8 +134,6 @@ class GoodspackageController extends Controller
             $Model->db()->rollback();
             $flag = false;
         }
-        var_dump($flag);
-        die();
         return $flag;
     }
 

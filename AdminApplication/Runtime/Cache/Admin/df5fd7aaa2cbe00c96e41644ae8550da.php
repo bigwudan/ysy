@@ -23,14 +23,14 @@
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">名称</label>
                 <div class="col-sm-10">
-                    <input name="packagename"  class="form-control" id="inputEmail3" placeholder="名称">
+                    <input name="packagename" value="<?php echo ($goodsPackeageFromDb[0]['packagename']); ?>"  class="form-control" id="inputEmail3" placeholder="名称">
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">备注</label>
                 <div class="col-sm-10">
-                    <textarea name="remark" class="form-control" rows="3"></textarea>
+                    <textarea name="remark"  class="form-control" rows="3"><?php echo ($goodsPackeageFromDb[0]['remark']); ?></textarea>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
                     <div class="row">
                         <div class="input-group">
                             <?php if(is_array($orderType)): foreach($orderType as $k=>$vo): ?><span class="input-group-addon" ><?php echo ($vo[0]); ?></span>
-                                <input type="text" name="packageprice-<?php echo ($k); ?>" class="form-control"  aria-describedby="basic-addon3" value="<?php echo ($vo[1]); ?>"><?php endforeach; endif; ?>
+                                <input type="text" name="packageprice-<?php echo ($k); ?>" class="form-control"  aria-describedby="basic-addon3" value="<?php echo ($goodsPackeagePriceFromDb[$k]['price']); ?>"><?php endforeach; endif; ?>
                         </div>
                     </div>
 
@@ -77,7 +77,8 @@
 
 <script>
 var GoodsPackage = function(){
-    var _formJson = <?php echo ($formatJson); ?>;
+    var _goodsJson = <?php echo ($goodsJson); ?>;
+    var _goodsPackeageJson = <?php echo ($goodsPackeageJson); ?>;
 
 
     var _assembSelectHtml = function( nameVal , dataList , selectedVal){
@@ -93,7 +94,7 @@ var GoodsPackage = function(){
     };
     var _assemGoods = function(){
         var html = '';
-        var formatOfSelectHtml = _assembSelectHtml('format' , _formJson , null);
+        var formatOfSelectHtml = _assembSelectHtml('goods' , _goodsJson , null);
         html = '<tr>' +
                 '<td>'+formatOfSelectHtml+'</td>' +
 
@@ -105,7 +106,28 @@ var GoodsPackage = function(){
     };
 
     var _initi = function(){
-        _assemGoods();
+
+        if(_goodsPackeageJson){
+            var html = '';
+            for(var k in _goodsPackeageJson){
+                if(_goodsPackeageJson.hasOwnProperty(k)){
+                    var formatOfSelectHtml = _assembSelectHtml('goods' , _goodsJson , _goodsPackeageJson[k]['goods_id']);
+                    html += '<tr>' +
+                            '<td>'+formatOfSelectHtml+'</td>' +
+
+                            '<td><input value="'+_goodsPackeageJson[k]['num']+'" class="form-control" name="num[]"></td>' +
+
+                            '<td><a class="btn btn-info" href="#" >增加</a> <a class="btn btn-danger" href="#" >删除</a></td>' +
+                            '</tr>';
+                }
+            }
+            $('.checkin-table tbody').append(html);
+        }else{
+            _assemGoods();
+        }
+
+
+
         $('.checkin-table tbody').on('click' , function(event){
             var targetObj = $(event.target);
             if(targetObj.hasClass('btn-info')){

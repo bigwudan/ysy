@@ -28,20 +28,20 @@
             <table class="table table-condensed checkin-table">
                 <thead>
                 <tr>
-                    <th>入库单号</th>
+                    <th>组合商品编号</th>
+                    <th>名称</th>
                     <th>时间</th>
-                    <th>录入人</th>
                     <th>操作</th>
                 </tr>
                 </thead>
                 <tbody>
 
-                <foreach name="checkInFromDb" item="vo" key="k" >
+                <foreach name="goodsPackList" item="vo" key="k" >
                     <tr>
-                        <td>{$vo.checkin_id}</td>
+                        <td>{$vo.id}</td>
+                        <td>{$vo.packagename}</td>
                         <td><?php echo date("Y-m-d" , $vo['addtime']); ?></td>
-                        <td>{$vo.uid}</td>
-                        <td><a href="<?php echo U('stockandsale/Checkin/actionEditCheckIn') ?>?checkin={$vo.checkin_id}" class="btn btn-danger">修改</a></td>
+                        <td><a href="<?php echo U('stockandsale/Goodspackage/actionEditGoodsPackage') ?>?packageid={$vo.id}" class="btn btn-danger">修改</a></td>
                     </tr>
                 </foreach>
                 </tbody>

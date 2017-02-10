@@ -28,19 +28,19 @@
             <table class="table table-condensed checkin-table">
                 <thead>
                 <tr>
-                    <th>入库单号</th>
+                    <th>组合商品编号</th>
+                    <th>名称</th>
                     <th>时间</th>
-                    <th>录入人</th>
                     <th>操作</th>
                 </tr>
                 </thead>
                 <tbody>
 
-                <?php if(is_array($checkInFromDb)): foreach($checkInFromDb as $k=>$vo): ?><tr>
-                        <td><?php echo ($vo["checkin_id"]); ?></td>
+                <?php if(is_array($goodsPackList)): foreach($goodsPackList as $k=>$vo): ?><tr>
+                        <td><?php echo ($vo["id"]); ?></td>
+                        <td><?php echo ($vo["packagename"]); ?></td>
                         <td><?php echo date("Y-m-d" , $vo['addtime']); ?></td>
-                        <td><?php echo ($vo["uid"]); ?></td>
-                        <td><a href="<?php echo U('stockandsale/Checkin/actionEditCheckIn') ?>?checkin=<?php echo ($vo["checkin_id"]); ?>" class="btn btn-danger">修改</a></td>
+                        <td><a href="<?php echo U('stockandsale/Goodspackage/actionEditGoodsPackage') ?>?packageid=<?php echo ($vo["id"]); ?>" class="btn btn-danger">修改</a></td>
                     </tr><?php endforeach; endif; ?>
                 </tbody>
             </table>
