@@ -72,7 +72,7 @@
             var html = '';
             for(var k in checkInJson){
                 if(checkInJson.hasOwnProperty(k)){
-                    var tmpFormatOfSelectHtml = _assembSelectHtml('format' , format , checkInJson[k]['format_id']);
+                    var tmpFormatOfSelectHtml = _assembSelectHtml('goods' , goodsJson , checkInJson[k]['goods_id']);
                     html += '<tr>' +
                             '<td>'+tmpFormatOfSelectHtml+'</td>' +
                             '<td><input class="form-control" value="'+checkInJson[k]['goodsnum']+'" name="goodsnum[]"></td>' +

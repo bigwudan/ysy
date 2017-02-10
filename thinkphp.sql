@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
+Source Server         : wwewe
 Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : thinkphp
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-02-09 20:55:03
+Date: 2017-02-10 16:56:50
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1275,6 +1275,7 @@ CREATE TABLE `think_ysy_checkin` (
 -- ----------------------------
 -- Records of think_ysy_checkin
 -- ----------------------------
+INSERT INTO `think_ysy_checkin` VALUES ('1486714488', '1486716966', '1');
 INSERT INTO `think_ysy_checkin` VALUES ('2147483647', '1485965580', '1');
 
 -- ----------------------------
@@ -1284,19 +1285,21 @@ DROP TABLE IF EXISTS `think_ysy_checkingoods`;
 CREATE TABLE `think_ysy_checkingoods` (
   `cg_id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '编号',
   `checkin_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `format_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `goods_id` int(10) unsigned NOT NULL DEFAULT '0',
   `goodsnum` int(10) unsigned NOT NULL DEFAULT '0',
   `grossweight` int(10) unsigned NOT NULL DEFAULT '0',
   `weight` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`cg_id`),
-  UNIQUE KEY `checkin_id` (`checkin_id`,`format_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8;
+  KEY `checkin_id` (`checkin_id`,`goods_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_ysy_checkingoods
 -- ----------------------------
 INSERT INTO `think_ysy_checkingoods` VALUES ('121', '2147483647', '3', '11', '22', '33');
 INSERT INTO `think_ysy_checkingoods` VALUES ('122', '2147483647', '4', '66', '77', '88');
+INSERT INTO `think_ysy_checkingoods` VALUES ('137', '1486716966', '20', '33', '55', '77');
+INSERT INTO `think_ysy_checkingoods` VALUES ('138', '1486716966', '21', '44', '66', '88');
 
 -- ----------------------------
 -- Table structure for `think_ysy_department`
@@ -1349,12 +1352,13 @@ CREATE TABLE `think_ysy_goods` (
   `status` tinyint(10) unsigned NOT NULL DEFAULT '1' COMMENT '0删除1开始',
   `goods_name` char(20) NOT NULL COMMENT '商品名称',
   PRIMARY KEY (`goods_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_ysy_goods
 -- ----------------------------
 INSERT INTO `think_ysy_goods` VALUES ('20', '1', '', '1486478222', '1', '324');
+INSERT INTO `think_ysy_goods` VALUES ('21', '3', '', '1486692858', '1', '你好我是吴丹');
 
 -- ----------------------------
 -- Table structure for `think_ysy_goodspackage`
@@ -1483,7 +1487,8 @@ CREATE TABLE `think_ysy_stock` (
 -- ----------------------------
 -- Records of think_ysy_stock
 -- ----------------------------
-INSERT INTO `think_ysy_stock` VALUES ('20', '0', '0');
+INSERT INTO `think_ysy_stock` VALUES ('20', '34', '55');
+INSERT INTO `think_ysy_stock` VALUES ('21', '46', '66');
 INSERT INTO `think_ysy_stock` VALUES ('111', '140', '63');
 INSERT INTO `think_ysy_stock` VALUES ('222', '270', '128');
 

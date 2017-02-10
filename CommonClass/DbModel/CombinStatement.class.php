@@ -46,7 +46,7 @@ class CombinStatement
     /**
      *
      */
-    public function __construct($varTableName){
+    public function __construct($varTableName = null){
         $this->_tableName = $varTableName;
 
     }

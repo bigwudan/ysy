@@ -36,48 +36,30 @@ class ProcessStock
      * 组合数据
      */
     public function processData(){
-        $stock = array();
-        $checkingoods = 0;
-        $stockDec = 0;
+        $DbObjOfResultList = array();
+        if($this->_dataFromClient['checkInAdd']){
+            $DbModelObj = new \CommonClass\DbModel\CombinStatement('ysy_checkin');
+            $DbObjOfResultList[] = $DbModelObj->insert(array($this->_dataFromClient['checkInAdd']));
+        }else{
+            $DbModelObj = new \CommonClass\DbModel\CombinStatement('ysy_checkin');
+            $DbObjOfResultList[] = $DbModelObj->where("checkin_id = {$this->_checkIn}")->update($this->_dataFromClient['checkInUp']);
+        }
         if($this->_checkIn){
-            $checkingoods = array(
-                'condition' => 'del',
-                'where' => $this->_checkIn
-
-            );
-            $data = M('ysy_checkingoods')->where("checkin_id = {$this->_checkIn}")->select();
-            $stockDec = array();
-            foreach($data as $k => $v){
-                $stockDec[] = array(
-                    'where' => array(
-                        'format_id' => $v['format_id']
-                    ),
-                    'condition' => 'dec',
-                    'data' => array(
-                        'goods_num' => $v['goodsnum'],
-                        'goods_weight' => $v['weight'],
-                    )
-                );
+            $checkinGoodsList = M('ysy_checkingoods')->where("checkin_id = {$this->_checkIn}")->select();
+            $DbModelObj = new \CommonClass\DbModel\CombinStatement('ysy_checkingoods');
+            $DbObjOfResultList[] = $DbModelObj->where("checkin_id = {$this->_checkIn}")->del();
+            foreach($checkinGoodsList as $k => $v){
+                $DbModelObj = new \CommonClass\DbModel\CombinStatement('ysy_stock');
+                $DbObjOfResultList[] = $DbModelObj->execute("update think_ysy_stock SET goods_num = goods_num - {$v['goodsnum']} , goods_weight = goods_weight - {$v['grossweight']} where goods_id = {$v['goods_id']}");
             }
         }
         foreach($this->_dataFromClient['checkingoods'] as $k => $v){
-            $stock[] = array(
-                'where' => array(
-                    'format_id' => $v['format_id']
-                ),
-                'condition' => 'add',
-                'data' => array(
-                    'goods_num' => $v['goodsnum'],
-                    'goods_weight' => $v['weight'],
-                )
-            );
+            $DbModelObj = new \CommonClass\DbModel\CombinStatement('ysy_checkingoods');
+            $DbObjOfResultList[] = $DbModelObj->insert($v);
+            $DbModelObj = new \CommonClass\DbModel\CombinStatement('ysy_stock');
+            $DbObjOfResultList[] = $DbModelObj->execute("update think_ysy_stock SET goods_num = goods_num + {$v['goodsnum']} , goods_weight = goods_weight + {$v['grossweight']} where goods_id = {$v['goods_id']}");
         }
-        $res = array(
-            'checkInGoodsDel' => $checkingoods,
-            'stockDec' =>$stockDec,
-            'stockAdd' => $stock
-        );
-        return $res;
+        return $DbObjOfResultList;
     }
 
 

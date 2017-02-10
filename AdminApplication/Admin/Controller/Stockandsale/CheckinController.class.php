@@ -52,8 +52,6 @@ class CheckinController extends Controller
                 ->select();
             $checkInJson = json_encode($checkInListFromDb , JSON_UNESCAPED_UNICODE);
         }
-
-
         $goodsDataFromDb = M('ysy_goods')->select();
         $dataListFromService = array(
             'goods' => json_encode($goodsDataFromDb , JSON_UNESCAPED_UNICODE),
@@ -86,9 +84,19 @@ class CheckinController extends Controller
         $ProcessStockObj = new \CommonClass\Stockandsale\ProcessStock();
         $ProcessStockObj->initi($checkDataList,$checkin);
         $stockList = $ProcessStockObj->processData();
-        $CheckInUpdataObj = new \CommonClass\Stockandsale\CheckInUpdata();
-        $CheckInUpdataObj->initi($checkDataList , $stockList);
-        $flag = $CheckInUpdataObj->processData();
+        $RunCombinObj = new \CommonClass\DbModel\RunCombinStatement();
+        $RunCombinObj->add($stockList);
+        $flag = true;
+        $Model = new \Think\Model();
+        $Model->db()->startTrans();
+        try{
+            $RunCombinObj->run();
+            $Model->db()->commit();
+        }catch (\Exception $e){
+            $Model->db()->rollback();
+            $flag = false;
+        }
+        die('xxxxxx');
         return $flag;
     }
 

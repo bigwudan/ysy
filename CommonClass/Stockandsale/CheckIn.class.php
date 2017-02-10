@@ -41,20 +41,20 @@ class CheckIn
         if(!$count = count($this->_dataFromClient)){
             return false;
         }
-
+        $checkId =  time();
+        $dataList =array();
+        $data = $this->_dataFromClient;
+        for($num = 0 ; $num < $count ; $num = $num + 4){
+            array_push($dataList , array(
+                'goods_id' => $data[$num]['value'],
+                'goodsnum' => $data[$num+1]['value'],
+                'grossweight' => $data[$num+2]['value'],
+                'weight' => $data[$num+3]['value'],
+                'checkin_id' => $checkId
+            ));
+        }
         if($this->_checkIn){
             $checkId =  $this->_checkIn;
-            $dataList =array();
-            $data = $this->_dataFromClient;
-            for($num = 0 ; $num < $count ; $num = $num + 4){
-                array_push($dataList , array(
-                    'goods_id' => intval($data[$num]['value']),
-                    'goodsnum' => intval($data[$num+1]['value']),
-                    'grossweight' => $data[$num+2]['value'],
-                    'weight' => $data[$num+3]['value'],
-                    'checkin_id' => intval($checkId)
-                ));
-            }
             $list = array(
                 'checkInUp' => array(
                     'checkin_id' => intval($checkId),
@@ -63,20 +63,7 @@ class CheckIn
                 ),
                 'checkingoods' =>$dataList
             );
-
         }else{
-            $checkId =  time();
-            $dataList =array();
-            $data = $this->_dataFromClient;
-            for($num = 0 ; $num < $count ; $num = $num + 4){
-                array_push($dataList , array(
-                    'goods_id' => $data[$num]['value'],
-                    'goodsnum' => $data[$num+1]['value'],
-                    'grossweight' => $data[$num+2]['value'],
-                    'weight' => $data[$num+3]['value'],
-                    'checkin_id' => $checkId
-                ));
-            }
             $list = array(
                 'checkInAdd' => array(
                     'checkin_id' => $checkId,
@@ -86,7 +73,6 @@ class CheckIn
                 'checkingoods' =>$dataList
             );
         }
-
         $flag = $this->_checkData($list);
         if(!$flag) return false;
         return $list;

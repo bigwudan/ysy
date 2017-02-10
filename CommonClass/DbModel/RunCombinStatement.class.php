@@ -17,8 +17,16 @@ class RunCombinStatement
      * 新增
      */
     public function add($varCombinStateObj){
-        $this->_combinStatementList[] = $varCombinStateObj;
 
+        if(is_object($varCombinStateObj)){
+            $this->_combinStatementList[] = $varCombinStateObj;
+
+        }else{
+            foreach($varCombinStateObj as $k => $v){
+                $this->_combinStatementList[] = $v;
+            }
+        }
+        return $this->_combinStatementList;
     }
 
     /**
@@ -28,7 +36,12 @@ class RunCombinStatement
         $flag = true;
         foreach($this->_combinStatementList as $k => $v){
             $flag = $v->run();
-            if(!$flag) E('新增失败');
+
+            if(!$flag){
+                var_dump($flag);
+                var_dump($v);die('xxxxxx');
+                E('新增失败');
+            }
         }
         return $flag;
     }
