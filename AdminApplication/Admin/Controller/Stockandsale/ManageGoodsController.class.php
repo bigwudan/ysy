@@ -26,8 +26,18 @@ class ManageGoodsController extends Controller
      * 显示历史信息
      */
     public function index(){
-        $formatList = M('ysy_format')->where("status = 1")->select();
+        //$formatList = M('ysy_format')->where("status = 1")->select();
+        //$this->assign('formatList' , $formatList);
+
+        $formatList = M('ysy_goods')
+            ->alias('g')
+            ->field("g.goods_id , s.goods_num , g.format_id , g.goods_name , f.format_id , f.format_name")
+            ->join("think_ysy_stock AS s ON s.goods_id = g.goods_id")
+            ->join("think_ysy_format AS f ON f.format_id = g.format_id")
+            ->select();
+
         $this->assign('formatList' , $formatList);
+
         $this->display('/Stockandsale/ManageGoodsList');
     }
 
@@ -79,7 +89,15 @@ class ManageGoodsController extends Controller
             $model->commit();
         }catch (\Exception $e){
             $model->rollback();
+            $flag = false;
         }
+
+        if($flag){
+            die(json_encode(array('error' => 0) , JSON_UNESCAPED_UNICODE));
+        }else{
+            die(json_encode(array('error' => 1) , JSON_UNESCAPED_UNICODE));
+        }
+
     }
 
 }

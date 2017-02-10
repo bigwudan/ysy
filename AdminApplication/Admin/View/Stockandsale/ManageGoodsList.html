@@ -17,24 +17,28 @@
     <div class="row">
         {$body['sider']}
         <div class="col-md-10">
-            <div><a href="" type="button" class="btn btn-info">新增商品</a></div>
+            <div><a  type="button" class="btn btn-info addgoods-a">新增商品</a></div>
             <table class="table table-condensed checkin-table">
                 <thead>
                 <tr>
-                    <th>入库单号</th>
-                    <th>时间</th>
-                    <th>录入人</th>
+                    <th>商品id</th>
+                    <th>规格</th>
+                    <th>名称</th>
+                    <th>库存</th>
                     <th>操作</th>
                 </tr>
                 </thead>
                 <tbody>
 
-                <foreach name="checkInFromDb" item="vo" key="k" >
+                <foreach name="formatList" item="vo" key="k" >
                     <tr>
-                        <td>{$vo.checkin_id}</td>
-                        <td><?php echo date("Y-m-d" , $vo['addtime']); ?></td>
-                        <td>{$vo.uid}</td>
-                        <td><a href="<?php echo U('stockandsale/Checkin/actionEditCheckIn') ?>?checkin={$vo.checkin_id}" class="btn btn-danger">修改</a></td>
+                        <td>{$vo.goods_id}</td>
+                        <td>{$vo.format_name}</td>
+                        <td>{$vo.goods_name}</td>
+                        <td>{$vo.goods_num}</td>
+                        <td>
+                            <a href="<?php echo U('stockandsale/Checkin/actionEditCheckIn') ?>?checkin={$vo.checkin_id}" class="btn btn-danger">修改</a>
+                        </td>
                     </tr>
                 </foreach>
                 </tbody>
@@ -48,7 +52,7 @@
 </form>
 
 
-<div class="modal fade in" style="display: block" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal fade in"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -91,7 +95,7 @@
 
 </div>
 
-<div class="modal-backdrop fade in"></div>
+<div style="display: none" class="modal-backdrop fade in"></div>
 <script>
     var ManageGoodsList = function(){
 
@@ -99,16 +103,39 @@
 
 
         var _initi = function(){
-            $('.modal-dialog .btn-primary').on('click' , function(){
-                var url = '<?php echo U('stockandsale/ManageGoods/actionRequestService') ?>';
 
+            $('.addgoods-a').on('click' , function(){
+                $('.modal').show();
+                $('.modal-backdrop').show();
+            });
+
+
+            $('.modal-dialog .btn-default').on('click' , function(){
+                $('.modal').hide();
+                $('.modal-backdrop').hide();
+
+            });
+
+            $('.modal-dialog .close').on('click' , function(){
+                $('.modal').hide();
+                $('.modal-backdrop').hide();
+            });
+
+            $('.modal-dialog .btn-primary').on('click' , function(){
+                $('.modal').hide();
+                var url = '<?php echo U('stockandsale/ManageGoods/actionRequestService') ?>';
                 var formatid = $('select[name="format_id"]').val();
                 var goodsname = $('input[name="goods_name"]').val();
                 var remark = $('input[name="remark"]').val();
-
                 $.get(url , {type:'editgoods',formatid:formatid,goodsname:goodsname,remark:remark} , function(data){
-
-                    console.log(data);
+                    var url = '<?php echo U('stockandsale/ManageGoods') ?>';
+                    var responseJson = JSON.parse(data);
+                    if(responseJson.error === 0){
+                        window.location.href = url;
+                    }else{
+                        $('.modal-backdrop').hide();
+                        alert('更新失败');
+                    }
                 });
             })
 
