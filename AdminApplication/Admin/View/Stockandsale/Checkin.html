@@ -22,7 +22,7 @@
             <table class="table table-condensed checkin-table">
                 <thead>
                 <tr>
-                    <th>规格</th>
+                    <th>商品</th>
                     <th>数量</th>
                     <th>单件毛重</th>
                     <th>入库重量</th>
@@ -39,8 +39,7 @@
 </form>
 <script>
     var CheckIn = function(){
-        var unit = {$dataListFromService['unit']};
-        var format = {$dataListFromService['format']};
+        var goodsJson = {$dataListFromService['goods']};
         var checkId = {$checkId};
         var checkInJson = {$checkInJson};
 
@@ -58,11 +57,9 @@
 
         var _assemCheckInGoods = function(){
             var html = '';
-            var formatOfSelectHtml = _assembSelectHtml('format' , format , null);
-
+            var formatOfSelectHtml = _assembSelectHtml('goods' , goodsJson , null);
             html = '<tr>' +
                     '<td>'+formatOfSelectHtml+'</td>' +
-
                     '<td><input class="form-control" name="goodsnum[]"></td>' +
                     '<td><input class="form-control" name="grossweight[]"></td>' +
                     '<td><input class="form-control" name="weight[]"></td>' +
@@ -78,7 +75,6 @@
                     var tmpFormatOfSelectHtml = _assembSelectHtml('format' , format , checkInJson[k]['format_id']);
                     html += '<tr>' +
                             '<td>'+tmpFormatOfSelectHtml+'</td>' +
-
                             '<td><input class="form-control" value="'+checkInJson[k]['goodsnum']+'" name="goodsnum[]"></td>' +
                             '<td><input class="form-control" value="'+checkInJson[k]['grossweight']+'" name="grossweight[]"></td>' +
                             '<td><input class="form-control" value="'+checkInJson[k]['weight']+'" name="weight[]"></td>' +

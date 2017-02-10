@@ -53,11 +53,10 @@ class CheckinController extends Controller
             $checkInJson = json_encode($checkInListFromDb , JSON_UNESCAPED_UNICODE);
         }
 
-        $unitDataFromDb = M('ysy_unit')->select();
-        $formatDataFromDb = M('ysy_format')->select();
+
+        $goodsDataFromDb = M('ysy_goods')->select();
         $dataListFromService = array(
-            'unit' => json_encode($unitDataFromDb , JSON_UNESCAPED_UNICODE),
-            'format' => json_encode($formatDataFromDb , JSON_UNESCAPED_UNICODE),
+            'goods' => json_encode($goodsDataFromDb , JSON_UNESCAPED_UNICODE),
         );
         $this->assign('checkId' , $checkId);
         $this->assign('checkInJson' , $checkInJson);
