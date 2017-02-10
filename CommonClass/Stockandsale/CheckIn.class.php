@@ -48,16 +48,16 @@ class CheckIn
             $data = $this->_dataFromClient;
             for($num = 0 ; $num < $count ; $num = $num + 4){
                 array_push($dataList , array(
-                    'format_id' => $data[$num]['value'],
-                    'goodsnum' => $data[$num+1]['value'],
+                    'goods_id' => intval($data[$num]['value']),
+                    'goodsnum' => intval($data[$num+1]['value']),
                     'grossweight' => $data[$num+2]['value'],
                     'weight' => $data[$num+3]['value'],
-                    'checkin_id' => $checkId
+                    'checkin_id' => intval($checkId)
                 ));
             }
             $list = array(
                 'checkInUp' => array(
-                    'checkin_id' => $checkId,
+                    'checkin_id' => intval($checkId),
                     'addtime' => time(),
                     'uid' =>session('uid')
                 ),
@@ -65,12 +65,12 @@ class CheckIn
             );
 
         }else{
-            $checkId =  date('Ymdhis');
+            $checkId =  time();
             $dataList =array();
             $data = $this->_dataFromClient;
             for($num = 0 ; $num < $count ; $num = $num + 4){
                 array_push($dataList , array(
-                    'format_id' => $data[$num]['value'],
+                    'goods_id' => $data[$num]['value'],
                     'goodsnum' => $data[$num+1]['value'],
                     'grossweight' => $data[$num+2]['value'],
                     'weight' => $data[$num+3]['value'],
@@ -86,7 +86,24 @@ class CheckIn
                 'checkingoods' =>$dataList
             );
         }
+
+        $flag = $this->_checkData($list);
+        if(!$flag) return false;
         return $list;
+    }
+
+    /**
+     * 验证数据完整性和准确性
+     */
+    private function _checkData($varNeedData){
+        if(empty($varNeedData)) return false;
+        $data = $varNeedData['checkingoods'];
+        foreach($data as $k => $v){
+            if(!$v['checkin_id'] || !$v['goods_id'] || !$v['goodsnum']){
+                return false;
+            }
+        }
+        return true;
     }
 
 

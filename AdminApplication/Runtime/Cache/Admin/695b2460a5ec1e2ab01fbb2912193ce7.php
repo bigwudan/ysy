@@ -58,10 +58,8 @@
         var _assemCheckInGoods = function(){
             var html = '';
             var formatOfSelectHtml = _assembSelectHtml('goods' , goodsJson , null);
-
             html = '<tr>' +
                     '<td>'+formatOfSelectHtml+'</td>' +
-
                     '<td><input class="form-control" name="goodsnum[]"></td>' +
                     '<td><input class="form-control" name="grossweight[]"></td>' +
                     '<td><input class="form-control" name="weight[]"></td>' +
@@ -106,7 +104,6 @@
                 var dataStrFromForm = $("form").serializeArray();
                 var url = '<?php echo U('stockandsale/Checkin/actionRequestService') ?>';
                 $.get(url , {type:'checkin',checkin:checkId,data:dataStrFromForm} , function(data){
-
                     console.log(data);
                 });
 
