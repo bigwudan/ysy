@@ -68,6 +68,7 @@ class GoodspackageController extends Controller
         $this->assign('goodsPackeageJson' , json_encode($goodsPackeageFromDb , JSON_UNESCAPED_UNICODE));
         $this->assign('goodsPackeageFromDb' , $goodsPackeageFromDb);
         $this->assign('goodsPackeagePriceFromDb' , $goodsPackeagePriceFromDb);
+        $this->assign('packageId' , $packageId);
         $this->assign('goodsJson' , $goodsJson);
         $this->assign('orderType' , $orderType);
         $this->display('/Stockandsale/GoodsPackage');
@@ -89,10 +90,18 @@ class GoodspackageController extends Controller
      */
     private function _package(){
         $data = I('data');
-        $packageId =  time();
+        $packageIdFromRequest = intval(I('packageid'));
+
+        if($packageIdFromRequest){
+            $packageId =  $packageIdFromRequest;
+        }else{
+            $packageId =  time();
+
+        }
+        $goodspackage['id'] = $packageId;
         $goodspackage = array();
         $goodspackage['addtime'] = time();
-        $goodspackage['id'] = $packageId;
+
         $goodspackage['uid'] = session('uid');
 
         $packageprice = array();
@@ -109,6 +118,9 @@ class GoodspackageController extends Controller
                 array_push($goodspackageinfo , $v);
             }
         }
+
+
+
         $goodspackageinfoList = array();
         for($num = 0 ; $num < count($goodspackageinfo) ; $num = $num + 2){
             array_push($goodspackageinfoList , array(
@@ -119,12 +131,26 @@ class GoodspackageController extends Controller
 
             ));
         }
+
         $flag = true;
         $Model = new \Think\Model();
         $Model->db()->startTrans();
         try{
-            $flag = M('ysy_goodspackage')->add($goodspackage);
+            if($packageIdFromRequest){
+                $flag = M('ysy_goodspackage')->where("id = {$packageIdFromRequest}")->save($goodspackage);
+            }else{
+                $flag = M('ysy_goodspackage')->add($goodspackage);
+            }
             if(!$flag) E('新增失败');
+
+            if($packageIdFromRequest){
+                $flag =  M('ysy_packageprice')->where("packageid = {$packageIdFromRequest}")->delete();
+                if(!$flag) E('新增失败');
+            }
+            if($packageIdFromRequest){
+                $flag =  M('ysy_goodspackageinfo')->where("packageid = {$packageIdFromRequest}")->delete();
+                if(!$flag) E('新增失败');
+            }
             $flag =  M('ysy_packageprice')->addAll($packageprice);
             if(!$flag) E('新增失败');
             $flag = M('ysy_goodspackageinfo')->addAll($goodspackageinfoList);

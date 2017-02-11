@@ -79,6 +79,7 @@
 var GoodsPackage = function(){
     var _goodsJson = <?php echo ($goodsJson); ?>;
     var _goodsPackeageJson = <?php echo ($goodsPackeageJson); ?>;
+    var _packageId = <?php echo ($packageId); ?>;
 
 
     var _assembSelectHtml = function( nameVal , dataList , selectedVal){
@@ -140,7 +141,7 @@ var GoodsPackage = function(){
         $('.checkin-btn').on('click' , function(){
             var dataStrFromForm = $("form").serializeArray();
             var url = '<?php echo U('stockandsale/Goodspackage/actionRequestService') ?>';
-            $.get(url , {type:'package',data:dataStrFromForm} , function(data){
+            $.get(url , {type:'package' , packageid : _packageId ,data:dataStrFromForm} , function(data){
 
                 console.log(data);
             });
