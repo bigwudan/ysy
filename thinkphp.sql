@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : wwewe
+Source Server         : localhost
 Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : thinkphp
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-02-10 16:56:50
+Date: 2017-02-12 18:38:28
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -1378,7 +1378,10 @@ CREATE TABLE `think_ysy_goodspackage` (
 -- Records of think_ysy_goodspackage
 -- ----------------------------
 INSERT INTO `think_ysy_goodspackage` VALUES ('2', '212', '232', '1232', '0', '0');
-INSERT INTO `think_ysy_goodspackage` VALUES ('2147483647', '商品', '22', '1486047515', '0', '0');
+INSERT INTO `think_ysy_goodspackage` VALUES ('1486733119', '12', '12', '1486733119', '1', '0');
+INSERT INTO `think_ysy_goodspackage` VALUES ('1486733142', '2222', '12555', '1486822492', '1', '0');
+INSERT INTO `think_ysy_goodspackage` VALUES ('1486733192', 'wudan222', 'wudan333', '1486821166', '1', '0');
+INSERT INTO `think_ysy_goodspackage` VALUES ('2147483647', '商品', '22', '1486819758', '1', '0');
 
 -- ----------------------------
 -- Table structure for `think_ysy_goodspackageinfo`
@@ -1386,17 +1389,23 @@ INSERT INTO `think_ysy_goodspackage` VALUES ('2147483647', '商品', '22', '1486
 DROP TABLE IF EXISTS `think_ysy_goodspackageinfo`;
 CREATE TABLE `think_ysy_goodspackageinfo` (
   `packageid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '包id',
-  `format_id` int(11) unsigned NOT NULL DEFAULT '0',
+  `goods_id` int(11) unsigned NOT NULL DEFAULT '0',
   `num` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '数量',
   `addtime` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '时间',
-  UNIQUE KEY `packageid` (`packageid`,`format_id`)
+  UNIQUE KEY `packageid` (`packageid`,`goods_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_ysy_goodspackageinfo
 -- ----------------------------
-INSERT INTO `think_ysy_goodspackageinfo` VALUES ('2147483647', '3', '2', '1486047515');
-INSERT INTO `think_ysy_goodspackageinfo` VALUES ('2147483647', '4', '1', '1486047515');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1486733119', '20', '12', '1486733119');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1486733119', '21', '100', '1486733119');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1486733142', '20', '12', '1486822492');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1486733142', '21', '100', '1486822492');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1486819758', '20', '2', '1486819758');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1486819758', '21', '1', '1486819758');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1486821166', '20', '123', '1486821166');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1486821166', '21', '2147483647', '1486821166');
 
 -- ----------------------------
 -- Table structure for `think_ysy_order`
@@ -1465,13 +1474,34 @@ CREATE TABLE `think_ysy_packageprice` (
 -- ----------------------------
 -- Records of think_ysy_packageprice
 -- ----------------------------
-INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '0', '2.00', '0', '0.00');
-INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '1', '3.00', '0', '0.00');
-INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '2', '4.00', '0', '0.00');
-INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '3', '5.00', '0', '0.00');
-INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '4', '6.00', '0', '0.00');
-INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '5', '7.00', '0', '0.00');
-INSERT INTO `think_ysy_packageprice` VALUES ('2147483647', '6', '1.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733119', '0', '12.23', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733119', '1', '2.30', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733119', '2', '23.30', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733119', '3', '12.30', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733119', '4', '12.30', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733119', '5', '12.50', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733119', '6', '2.30', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733142', '0', '12.23', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733142', '1', '2.30', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733142', '2', '23.30', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733142', '3', '12.30', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733142', '4', '12.30', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733142', '5', '12.50', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486733142', '6', '2.30', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486819758', '0', '2.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486819758', '1', '3.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486819758', '2', '4.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486819758', '3', '5.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486819758', '4', '6.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486819758', '5', '7.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486819758', '6', '1.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486821166', '0', '12.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486821166', '1', '22.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486821166', '2', '12.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486821166', '3', '12.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486821166', '4', '22.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486821166', '5', '22.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1486821166', '6', '33.00', '0', '0.00');
 
 -- ----------------------------
 -- Table structure for `think_ysy_stock`
