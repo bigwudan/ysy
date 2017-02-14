@@ -27,17 +27,16 @@ class BaseDealPackage implements \CommonClass\Order\Dealpackage\IDealPackage
      * 处理
      */
     public function prcessToSQL(){
+        $CommonObjList = array();
         $goodsPackageInfo = M('ysy_goodspackageinfo')->where("packageid = {$this->_data['package_id']}")->select();
         if(!$goodsPackageInfo) return false;
-        $responseSqlList = array();
         foreach($goodsPackageInfo as $k => $v){
             $tmpNum = $v['num'] * $this->_data['num'];
-            $responseSqlList[] = array(
-                'where' => array('format_id' => $v['format_id']),
-                'num' => $tmpNum
-            );
+            $CommonObj = new \CommonClass\DbModel\CombinStatement('ysy_stock');
+            $CommonObj->where("goods_id = {$v['goods_id']}")->where("goods_id = {$v['goods_id']}")->dec(array('name' => 'goods_num' , 'value' => $tmpNum));
+            $CommonObjList[] = $CommonObj;
         }
-        return $responseSqlList;
+        return $CommonObjList;
     }
 
 }

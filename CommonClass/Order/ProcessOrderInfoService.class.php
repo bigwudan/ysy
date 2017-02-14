@@ -13,6 +13,11 @@ class ProcessOrderInfoService
 {
 
     /**
+     * CombinStatement
+     */
+    private $_combinStatementList = array();
+
+    /**
      * 数据
      */
     private $_data = null;
@@ -34,17 +39,24 @@ class ProcessOrderInfoService
      * 操作
      */
     public function process(){
-        $res['order'] = $this->_dealOrderInfo($this->_data['order'] , $this->_orderId);
-        $res['orderGoods'] = $this->_dealOrderGoods($this->_data['goodsPack']);
-        $res['stock'] = $this->_dealPackageFactory($this->_data['goodsPack'] , $this->_orderId);
-        return $res;
+        $tmpList = $this->_dealOrderInfo($this->_data['order'] , $this->_orderId);
+        $this->_combinStatementList[] = $tmpList;
+        $tmpList = array();
+        $tmpList[] = $this->_dealOrderGoods($this->_data['goodsPack']);
+        $this->_combinStatementList = array_merge($this->_combinStatementList , $tmpList);
+        $tmpList = $this->_dealPackageFactory($this->_data['goodsPack']);
+        $this->_combinStatementList = array_merge($this->_combinStatementList , $tmpList);
+        return $this->_combinStatementList;
     }
 
     /**
      * 处理ordergoods
      */
     private function _dealOrderGoods($varOrderData){
-        return $varOrderData;
+
+        $obj = new \CommonClass\DbModel\CombinStatement('ysy_ordergoods');
+        $res = $obj->insert($varOrderData);
+        return $res;
     }
 
     /**
@@ -52,11 +64,14 @@ class ProcessOrderInfoService
      * @param $varOrderData array
      */
     private function _dealOrderInfo($varOrderData , $varOrderId){
+        $CombinObj = new \CommonClass\DbModel\CombinStatement('ysy_order');
         if($varOrderId){
-            $res['update']['where'] = array('order_id' => $varOrderId);
-            $res['update']['data'] = $varOrderData;
+//            $res['update']['where'] = array('order_id' => $varOrderId);
+//            $res['update']['data'] = $varOrderData;
+            $res = $CombinObj->where("order_id = {$varOrderId}")->update($varOrderData);
         }else{
-            $res['insert'] = $varOrderData;
+//            $res['insert'] = $varOrderData;
+            $res = $CombinObj->insert($varOrderData);
         }
         return $res;
     }
@@ -64,18 +79,16 @@ class ProcessOrderInfoService
     /**
      * 处理goodspackage
      */
-    private function _dealPackageFactory($varPackage , $varOrderId){
-        $stockSqlDec = array();
+    private function _dealPackageFactory($varPackage){
+        $CommObjList = array();
         foreach($varPackage as $k => $v){
             if($v['ordertype'] == 6) continue;
             $DealObj = new \CommonClass\Order\Dealpackage\BaseDealPackage();
             $DealObj->initi($v);
             $tmp = $DealObj->prcessToSQL();
-            if($tmp === false) return false;
-            $stockSqlDec = array_merge($stockSqlDec , $tmp);
+            $CommObjList = array_merge($CommObjList , $tmp);
         }
-
-        return $stockSqlDec;
+        return $CommObjList;
     }
 
 }

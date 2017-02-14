@@ -24,6 +24,7 @@ class OrderApproveController extends Controller
         $orderId = intval(I('order'));
         $packageHtml = '';
         $dataFromDb = array();
+
         if($orderId){
             $Model = new \Think\Model();
             $sqlStr = "SELECT * FROM think_ysy_order as yo join think_ysy_ordergoods as yog on yo.order_id = yog.order_id where yo.order_id = {$orderId}";
@@ -32,8 +33,6 @@ class OrderApproveController extends Controller
                 $packageHtml .= $this->_assPackageHtml($v);
             }
         }
-
-
         $goodsPackageList= $this->_getGoodsPackage();
         $goodsPackageList = json_encode($goodsPackageList , JSON_UNESCAPED_UNICODE);
         $ConfigObj = new \CommonClass\Config\BaseConfig();
@@ -61,9 +60,9 @@ class OrderApproveController extends Controller
         $packSelectHtml = '';
         foreach($goodsPackageFromDb as $k => $v){
             if($varDataInfo['package_id'] == $v['id']){
-                $packSelectHtml .= "<option selected value='{$v['id']}'>{$v['name']}</option>";
+                $packSelectHtml .= "<option selected value='{$v['id']}'>{$v['packagename']}</option>";
             }else{
-                $packSelectHtml .= "<option value='{$v['id']}'>{$v['name']}</option>";
+                $packSelectHtml .= "<option value='{$v['id']}'>{$v['packagename']}</option>";
             }
         }
         $dataFromOrderAndMin = $this->_getOrderPriceAndMin($varDataInfo['package_id']);
@@ -169,6 +168,8 @@ EOT;
         $needSql = array();
         if($resFlag !== false){
             $needSql['addr'] = $resFlag;
+        }else{
+            $orderInfo['order']['isolder'] = 1;
         }
         if($orderInfo['error']){
             return json_encode(array('error'=>1 , 'msg' => $orderInfo['msg']) ,JSON_UNESCAPED_UNICODE);
@@ -176,20 +177,34 @@ EOT;
         $ProcessOrderObj = new \CommonClass\Order\ProcessOrderInfoService();
         $ProcessOrderObj->initi( $orderInfo , $orderId);
         $res = $ProcessOrderObj->process();
-
-        $needSql['order'] = $res['order'];
-        $needSql['ordergoods']['insert'] = $res['orderGoods'];
-        $needSql['stock']['dec'] = $res['stock'];
-        if(!empty($reBackInfo['orderGoods'])){
-            $needSql['ordergoods']['del'] = $reBackInfo['orderGoods'];
+        $RunCombinObj = new \CommonClass\DbModel\RunCombinStatement();
+        $RunCombinObj->add($res);
+        try{
+            $Model = new \Think\Model();
+            $Model->db()->startTrans();
+            $RunCombinObj->run();
+            $Model->db()->commit();
+        }catch (\Exception $e){
+            $Model->db()->rollback();
+            $flag = false;
         }
+        die('xxxx');
+        $flag = false;
 
-        if(!empty($reBackInfo['stock'])){
-            $needSql['stock']['inc'] = $reBackInfo['stock'];
-        }
-        $OrderUpdata = new \CommonClass\Order\OrderUpdata();
-        $OrderUpdata->initi($needSql);
-        $flag = $OrderUpdata->process();
+//        $needSql['order'] = $res['order'];
+//        $needSql['ordergoods']['insert'] = $res['orderGoods'];
+//        $needSql['stock']['dec'] = $res['stock'];
+//        if(!empty($reBackInfo['orderGoods'])){
+//            $needSql['ordergoods']['del'] = $reBackInfo['orderGoods'];
+//        }
+//
+//        if(!empty($reBackInfo['stock'])){
+//            $needSql['stock']['inc'] = $reBackInfo['stock'];
+//        }
+//        die('222');
+//        $OrderUpdata = new \CommonClass\Order\OrderUpdata();
+//        $OrderUpdata->initi($needSql);
+//        $flag = $OrderUpdata->process();
         if(!$flag){
             return json_encode(array('error' => 1 , 'msg' => '提交异常') ,JSON_UNESCAPED_UNICODE);
         }
@@ -235,7 +250,7 @@ EOT;
         $flag = true;
         $minList = array();
         foreach($packageInfoFromDb as $k => $v){
-            $tmpList = M('ysy_stock')->where("format_id={$v['format_id']}")->find();
+            $tmpList = M('ysy_stock')->where("goods_id={$v['goods_id']}")->find();
             if(!$tmpList || $tmpList['goods_num'] == 0){
                 $flag = false;
                 break;

@@ -210,6 +210,7 @@
                         if(dataJson.hasOwnProperty(k)){
                             var tmpName = _config['orderType'][dataJson[k]['ordertype']];
                             var tmpPrice = dataJson[k]['price'];
+                            if(k == 0) parentObj.find('input[name="price[]"]').val(tmpPrice);
                             html += '<option data-price="'+tmpPrice+'" value="'+dataJson[k]['ordertype']+'">'+tmpName+'(价格'+tmpPrice+')</option>';
                         }
                     }

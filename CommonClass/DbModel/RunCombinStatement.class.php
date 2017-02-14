@@ -17,10 +17,8 @@ class RunCombinStatement
      * 新增
      */
     public function add($varCombinStateObj){
-
         if(is_object($varCombinStateObj)){
             $this->_combinStatementList[] = $varCombinStateObj;
-
         }else{
             foreach($varCombinStateObj as $k => $v){
                 $this->_combinStatementList[] = $v;
@@ -36,7 +34,6 @@ class RunCombinStatement
         $flag = true;
         foreach($this->_combinStatementList as $k => $v){
             $flag = $v->run();
-
             if(!$flag){
                 var_dump($flag);
                 var_dump($v);die('xxxxxx');

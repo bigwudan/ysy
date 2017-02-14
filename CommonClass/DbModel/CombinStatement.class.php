@@ -31,6 +31,17 @@ class CombinStatement
     /**
      *
      */
+    private $_dec = null;
+
+    /**
+     *
+     */
+    private $_inc = null;
+
+
+    /**
+     *
+     */
     private $_limit = null;
 
     /**
@@ -88,6 +99,22 @@ class CombinStatement
     }
 
     /**
+     * @param $varDec
+     * @return $this
+     */
+    public function dec($varDec){
+        $this->_dec = $varDec;
+        return $this;
+    }
+
+    public function inc($varInc){
+        $this->_inc = $varInc;
+        return $this;
+
+    }
+
+
+    /**
      *
      */
     public function del($varDel = true){
@@ -131,6 +158,10 @@ class CombinStatement
             $result = $DbObj->save($this->_update);
         }elseif(!empty($this->_del)){
             $result = $DbObj->delete();
+        }elseif(!empty($this->_dec)){
+            $result = $DbObj->setDec($this->_dec['name'],$this->_dec['value']);
+        }elseif(!empty($this->_inc)){
+            $result = $DbObj->setInc($this->_inc['name'],$this->_dec['value']);
         }elseif($this->_execute){
             $Model = new \Think\Model();
             $result = $Model->db()->execute($this->_execute);

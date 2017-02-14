@@ -98,8 +98,9 @@ class GoodspackageController extends Controller
             $packageId =  time();
 
         }
-        $goodspackage['id'] = $packageId;
         $goodspackage = array();
+        $goodspackage['id'] = $packageId;
+
         $goodspackage['addtime'] = time();
 
         $goodspackage['uid'] = session('uid');
@@ -131,7 +132,6 @@ class GoodspackageController extends Controller
 
             ));
         }
-
         $flag = true;
         $Model = new \Think\Model();
         $Model->db()->startTrans();

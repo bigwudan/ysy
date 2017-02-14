@@ -23,7 +23,7 @@ class AssembleOrderOfForm
      */
     private function _checkDataOfForm(){
         foreach($this->_orderDataOfForm as $k => $v){
-            if($v['name'] == 'price[]' || $v['name'] == 'deliveryttpe' || $v['name'] == 'orderid'){
+            if($v['name'] == 'price[]' || $v['name'] == 'deliveryttpe' || $v['name'] == 'orderid' || $v['name'] == 'ordertype[]'){
                 if($v['value'] == ''){
                     return array('error'=>1 , 'msg' => '价格异常');
                 }
