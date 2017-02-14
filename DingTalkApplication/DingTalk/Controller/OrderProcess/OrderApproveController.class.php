@@ -11,20 +11,16 @@ use Think\Controller;
 
 class OrderApproveController extends Controller
 {
-    /**
-     * 测试任务流
-     */
-    public function test(){
-        $obj = new \Vendor\Jbpm\Service\ExecutionService();
-        $obj->startProcessInstanceById('orderapprove');
-    }
-
-
 
     /**
      * 主页
      */
     public function index(){
+        $LogInfo = new \CommonClass\Login\ProcessLoginInfo();
+        if(!$uid = $LogInfo->getLoginInfo()['id']){
+            die('no login');
+        }
+
         $orderId = intval(I('order'));
         $packageHtml = '';
         $dataFromDb = array();
@@ -274,7 +270,7 @@ EOT;
         $flag = true;
         $minList = array();
         foreach($packageInfoFromDb as $k => $v){
-            $tmpList = M('ysy_stock')->where("format_id={$v['format_id']}")->find();
+            $tmpList = M('ysy_stock')->where("goods_id={$v['goods_id']}")->find();
             if(!$tmpList || $tmpList['goods_num'] == 0){
                 $flag = array('error'=>1 , 'msg' => '库存为0');
                 break;

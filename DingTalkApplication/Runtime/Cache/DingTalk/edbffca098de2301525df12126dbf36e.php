@@ -92,16 +92,15 @@
                 </div>
             </div>
         </div>
-
-
         <div class="weui-cells" style="margin-top:0">
             <div class="page__bd page__bd_spacing">
                 <a href="javascript:;" class="addgoodsinfo-a weui-btn weui-btn_primary">+增加商品</a>
             </div>
         </div>
 
-
-        <?php echo ($packageHtml); ?>
+        <div class="package-container-div" style="margin-bottom: 60px">
+            <?php echo ($packageHtml); ?>
+        </div>
     </div>
 
 <style>
@@ -124,7 +123,7 @@
         var obj = $(this);
         obj.attr('date-type');
         weui.datePicker({
-            start: 1990,
+            start: new Date().getFullYear(),
             end: new Date().getFullYear(),
             onChange: function (result) {
             },
@@ -165,7 +164,7 @@
 
         //增加商品
         var _addPackageHtml = function(){
-            var html = '';
+            var html = '<option value="">请选择</option>';
             for(var k in _goodsPackageListJson){
                 if(_goodsPackageListJson.hasOwnProperty(k)){
                     html += '<option value="'+_goodsPackageListJson[k]['id']+'">'+_goodsPackageListJson[k]['packagename']+'</option>';
@@ -245,7 +244,7 @@
 
             $('.addgoodsinfo-a').on('click',function(){
                 var html = _addGoodsInfo();
-                $('.page').append(html);
+                $('.package-container-div').append(html);
             });
 
             $('.submit-a').on('click' , function(){

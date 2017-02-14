@@ -11,15 +11,15 @@ use Think\Controller;
 
 class ApproveCenterController extends Controller
 {
-
-
     /**
      * 主页
      */
     public function index(){
+        $LoginInfo = new \CommonClass\Login\ProcessLoginInfo();
+        $loginInfo = $LoginInfo->getLoginInfo();
+        if(empty($loginInfo)) die('login');
         $this->display('approvecenter/approvecenter');
     }
-
 
     /**
      * 查询服务
