@@ -72,16 +72,12 @@ EOT;
      */
     public function actionApproveInfo(){
         $id = intval(I('id'));
-        $orderList = M('ysy_order')->alias('yo')
 
-            ->field("yo.order_id , yo.rece_name ,  yog.num , yog.price , yog.ordertype , u.realname , ygp.packagename")
-            ->join("think_user AS u ON u.id = yo.order_user")
-            ->join('think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id')
-            ->join('think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id')
-            ->select();
+        $OrderInfo = new \CommonClass\Order\GetOrderInfo();
 
-        var_dump($orderList);
-        die();
+        $OrderInfo->initi($id);
+
+
         $this->assign('order' , $orderList);
         $this->assign('orderid' , $id);
 
