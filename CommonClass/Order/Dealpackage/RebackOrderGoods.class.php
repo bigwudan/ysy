@@ -30,15 +30,14 @@ class RebackOrderGoods
         $dataFormDb = M('ysy_ordergoods')->where("order_id = {$this->_orderId}")->select();
         if(!$dataFormDb) return false;
         $DealObj = new \CommonClass\Order\Dealpackage\BaseDealPackage();
-        $stock = array();
+        $StatmentObjList = array();
         foreach($dataFormDb as $k => $v){
             if($v['ordertype'] == 6) continue;
             $DealObj->initi($v);
-            $stock = array_merge($stock , $DealObj->prcessToSQL());
-            if(!$stock) return false;
+            $StatmentObjList = array_merge($StatmentObjList , $DealObj->prcessToSQL());
+            if(!$StatmentObjList) return false;
         }
-        $orderGoods = array('order_id' => $this->_orderId);
-        return array('stock' => $stock , 'orderGoods' => $orderGoods);
+        return $StatmentObjList;
     }
 
 }

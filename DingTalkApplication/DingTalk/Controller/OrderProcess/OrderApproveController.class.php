@@ -179,6 +179,7 @@ EOT;
         $res = $ProcessOrderObj->process();
         $RunCombinObj = new \CommonClass\DbModel\RunCombinStatement();
         $RunCombinObj->add($res);
+        $flag = true;
         try{
             $Model = new \Think\Model();
             $Model->db()->startTrans();
@@ -188,23 +189,6 @@ EOT;
             $Model->db()->rollback();
             $flag = false;
         }
-        die('xxxx');
-        $flag = false;
-
-//        $needSql['order'] = $res['order'];
-//        $needSql['ordergoods']['insert'] = $res['orderGoods'];
-//        $needSql['stock']['dec'] = $res['stock'];
-//        if(!empty($reBackInfo['orderGoods'])){
-//            $needSql['ordergoods']['del'] = $reBackInfo['orderGoods'];
-//        }
-//
-//        if(!empty($reBackInfo['stock'])){
-//            $needSql['stock']['inc'] = $reBackInfo['stock'];
-//        }
-//        die('222');
-//        $OrderUpdata = new \CommonClass\Order\OrderUpdata();
-//        $OrderUpdata->initi($needSql);
-//        $flag = $OrderUpdata->process();
         if(!$flag){
             return json_encode(array('error' => 1 , 'msg' => '提交异常') ,JSON_UNESCAPED_UNICODE);
         }
@@ -217,7 +201,7 @@ EOT;
         $tmp['flowerid'] = $ExecutionObj['dbid'];
         $tmp['status'] = $ExecutionObj['activityname'];
         $sqlFlag = M('ysy_order')->where("order_id = {$orderInfo['order']['order_id']}")->save($tmp);
-        if($flag){
+        if($sqlFlag){
             return json_encode(array('msg' => '正常') ,JSON_UNESCAPED_UNICODE);
         }else{
             return json_encode(array('error' => 1 , 'msg' => '写入流程异常') ,JSON_UNESCAPED_UNICODE);

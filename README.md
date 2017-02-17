@@ -14,10 +14,10 @@
 	  <transition g="-79,-22" name="to retreat" to="retreat"/>
    </task>
    <decision g="267,106,48,48" name="exclusive2">
-   <handler class="\Org\Jbmp\TestHander\testHander" />
+   <handler class="\CommonClass\Order\WorkFlowHandle\HandleChiefLeader" />
       <transition g="-52,-22" name="to chiefleader" to="chiefleader"/>
    </decision>
-   <task candidate-users="#{chiefleader}" g="114,129,92,52" name="leader">
+   <task candidate-users="#{chiefleader}" g="114,129,92,52" name="chiefleader">
       <transition g="-79,-22" name="to exclusive3" to="exclusive3"/>
 	  <transition g="-79,-22" name="to cancel" to="cancel"/>
 	  <transition g="-79,-22" name="to retreat" to="retreat"/>
