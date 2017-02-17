@@ -72,9 +72,7 @@ EOT;
      */
     public function actionApproveInfo(){
         $id = intval(I('id'));
-
         $OrderInfo = new \CommonClass\Order\GetOrderInfo();
-
         $OrderInfo->initi($id);
 
 
