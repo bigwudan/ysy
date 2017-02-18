@@ -59,7 +59,6 @@ class ApproveDealFactory
             $ReBackObj->initi($this->_orderId);
             $reBackInfo = $ReBackObj->prcessToSQL();
             $StatmentList = array_merge($reBackInfo , $StatmentList);
-//            $needWrToDb['stock'] = reset($reBackInfo);
         }
         $this->_writeToDb($StatmentList);
 
@@ -100,9 +99,7 @@ class ApproveDealFactory
         $StatementList = array();
         $CommonObj = new \CommonClass\DbModel\CombinStatement('ysy_order');
         $CommonObj->where("order_id = {$this->_orderId}")->update(array('flowerid' => $tmp['flowerid'] , 'status' => $tmp['status'] ));
-
         $StatementList[] = $CommonObj;
-
         $insertLog = array(
             'orderid' => $this->_orderId,
             'nodename' => $tmp['status'],
@@ -113,7 +110,6 @@ class ApproveDealFactory
         $CommonObj = new \CommonClass\DbModel\CombinStatement('ysy_approvelog');
         $CommonObj->insert($insertLog);
         $StatementList[] = $CommonObj;
-
         return $StatementList;
 
     }
@@ -129,12 +125,13 @@ class ApproveDealFactory
             foreach($varData as $k => $v){
                 $dbFlag = $v->run();
             }
+//            $model->rollback();
             $model->commit();
         }catch (\Exception $e){
             $model->rollback();
             $flag = false;
         }
-        die('111');
+        die('333');
         return $flag;
     }
 

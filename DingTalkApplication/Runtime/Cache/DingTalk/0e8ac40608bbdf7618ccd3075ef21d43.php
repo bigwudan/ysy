@@ -40,6 +40,8 @@
 					<p class="fr orange ft16 pt10">
 						<?php switch($orderBase['status']): case "leader": ?>销售主管审批<?php break;?>
 							<?php case "chiefleader": ?>销售经理审批<?php break;?>
+							<?php case "storehouse": ?>库管审批<?php break;?>
+							<?php case "complete": ?>审批通过<?php break;?>
 							<?php case "cancel": ?>撤销<?php break;?>
 							<?php case "retreat": ?>退回<?php break; endswitch;?>
 					</p>
@@ -116,6 +118,12 @@
 				<div data-type="cancel" class="weui-navbar__item">撤销</div>
 			</div><?php endif; ?>
 
+
+
+		<?php if($orderBase['status'] == 'retreat' ): ?><div class="weui-navbar" style="position: fixed;bottom: 0;top:auto">
+				<a href="<?php echo U('OrderProcess/OrderApprove'); ?>?order=<?php echo ($orderBase['orderId']); ?>" data-type="xiugai" class="weui-navbar__item">修改</a>
+
+			</div><?php endif; ?>
 
 
 

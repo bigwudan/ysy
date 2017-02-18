@@ -41,6 +41,10 @@ class AssembleOrderOfForm
      * 组合数据
      */
     public function processData(){
+
+        $UserObj = new \CommonClass\Login\ProcessLoginInfo();
+        $uid = $UserObj->getLoginInfo()['id'];
+
         $res = $this->_checkDataOfForm();
         if($res !== true){
             return $res;
@@ -63,6 +67,9 @@ class AssembleOrderOfForm
             }
         }
         $orderInfo['requireddeliverytime'] = strtotime($orderInfo['requireddeliverytime']);
+
+
+        $orderInfo['order_user'] = $uid;
         $newGoodsPackeInfo = array();
         for($num = 0 ; $num < count($goodspackageinfo) ; $num=$num+4){
             $newGoodsPackeInfo[] = array(

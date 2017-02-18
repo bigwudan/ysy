@@ -1,0 +1,78 @@
+[ 2017-02-18T20:53:55+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-02-18T20:53:58+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionCheckUserInfo.html?username=wudan&password=wd811103
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0670s ]
+SQL: SELECT * FROM `think_user` WHERE ( username = 'wudan' AND password = '883327915c4022331b5abcb9da2a390c' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T20:54:00+08:00 ] 127.0.0.1 /myysy/admin.php/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0040s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.2090s ]
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\www\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

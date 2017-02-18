@@ -23,6 +23,8 @@
 							<p class="fr orange ft16 pt10">
 								<?php switch($v['status']): case "leader": ?>销售主管审批<?php break;?>
 									<?php case "chiefleader": ?>销售经理审批<?php break;?>
+									<?php case "storehouse": ?>库管审批<?php break;?>
+									<?php case "complete": ?>审批通过<?php break;?>
 									<?php case "cancel": ?>撤销<?php break;?>
 									<?php case "retreat": ?>退回<?php break; endswitch;?>
 							</p>

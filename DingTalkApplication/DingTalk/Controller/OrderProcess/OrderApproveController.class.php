@@ -180,11 +180,13 @@ EOT;
         $RunCombinObj = new \CommonClass\DbModel\RunCombinStatement();
         $RunCombinObj->add($res);
         $flag = true;
+        $Model = new \Think\Model();
+        $Model->db()->startTrans();
         try{
-            $Model = new \Think\Model();
-            $Model->db()->startTrans();
+
             $RunCombinObj->run();
-            $Model->db()->commit();
+            $Model->db()->rollback();
+//            $Model->db()->commit();
         }catch (\Exception $e){
             $Model->db()->rollback();
             $flag = false;
@@ -192,14 +194,31 @@ EOT;
         if(!$flag){
             return json_encode(array('error' => 1 , 'msg' => '提交异常') ,JSON_UNESCAPED_UNICODE);
         }
+
+
         $FlowerService = new \Vendor\Jbpm\Service\ExecutionService();
-        $responseFlowData = $FlowerService->startProcessInstanceById('orderapprove');
-        $ExecutionObj = reset($responseFlowData->getExecution()['insert']);
-        if(!$ExecutionObj['dbid'] && !$ExecutionObj['activityname']){
-            return json_encode(array('error' => 1 , 'msg' => '流程错误') ,JSON_UNESCAPED_UNICODE);
+
+        $orderInfoFromDb = M('ysy_order')->where("order_id = {$orderInfo['order']['order_id']}")->find();
+
+        if($orderInfoFromDb['status'] == 'retreat'){
+            $responseFlowData = $FlowerService->completeCommon($orderInfoFromDb['flowerid'] , 'to exclusive1');
+        }else{
+            $responseFlowData = $FlowerService->startProcessInstanceById('orderapprove');
         }
-        $tmp['flowerid'] = $ExecutionObj['dbid'];
-        $tmp['status'] = $ExecutionObj['activityname'];
+        $ExecutionObj = reset($responseFlowData->getExecution()['insert']);
+
+
+        if($ExecutionObj){
+            if(!$ExecutionObj['dbid'] && !$ExecutionObj['activityname']){
+                return json_encode(array('error' => 1 , 'msg' => '流程错误') ,JSON_UNESCAPED_UNICODE);
+            }
+            $tmp['flowerid'] = $ExecutionObj['dbid'];
+            $tmp['status'] = $ExecutionObj['activityname'];
+        }else{
+            $tmpList  = reset($responseFlowData->getExecution()['updata']);
+            $tmp['flowerid'] = $tmpList['where']['dbid'];
+            $tmp['status'] = $tmpList['data']['activityname'];
+        }
         $sqlFlag = M('ysy_order')->where("order_id = {$orderInfo['order']['order_id']}")->save($tmp);
         if($sqlFlag){
             return json_encode(array('msg' => '正常') ,JSON_UNESCAPED_UNICODE);

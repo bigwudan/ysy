@@ -45,10 +45,8 @@ class ApproveCenterController extends Controller
      * 待我审批
      */
     public function actionWaitOfMyApprove(){
-
         $approveList = $this->_waitOfMyApproveList();
         $this->assign('approveList' , $approveList);
-
         $this->display('approvecenter/waitofmyapprove');
     }
 
