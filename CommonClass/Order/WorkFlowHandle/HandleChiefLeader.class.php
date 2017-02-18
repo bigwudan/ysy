@@ -20,7 +20,7 @@ class HandleChiefLeader
     public function decide($varData){
         return array('target' => 'to chiefleader',
                      'variable' => array(
-                         array('key' => 'chiefleader','value' => 2 , 'class' => 'int')
+                         array('key' => 'chiefleader','value' => 1 , 'class' => 'int')
 
                      ));
     }

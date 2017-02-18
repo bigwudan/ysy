@@ -1,0 +1,1505 @@
+[ 2017-02-18T16:54:36+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:03:44+08:00 ] 127.0.0.1 /myysy/dingtalk.php/Login/LoginByHtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.009000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.009000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:03:49+08:00 ] 127.0.0.1 /myysy/dingtalk.php/Login/LoginByHtml/actionSubmit.html?loginname=wudan&loginpassword=wd811103
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0890s ]
+SQL: SELECT * FROM `think_user` WHERE ( username='wudan' and password = '883327915c4022331b5abcb9da2a390c'  ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT `id`,`username`,`realname` FROM `think_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:03:50+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T17:03:52+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionWaitOfMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0840s ]
+SQL: SELECT * FROM `think_ysy_order`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:03:54+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.1100s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0570s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: orderList D:\www\myysy\DingTalkApplication\DingTalk\Controller\ApproveCenter\ApproveCenterController.class.php 第 79 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:08:05+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveService.html?id=1487339825&approvetype=agree&remark=1212
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487339825 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0850s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,mr.addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_workflow_execution e left join think_workflow_hist_actinst AS ha ON e.hisactinst = ha.dbid left join think_workflow_hist_procinst AS hp ON e.instance = hp.dbid left join think_workflow_deployment AS mr ON e.procdefid = mr.rulename left join think_workflow_task AS t ON e.dbid = t.execution left join think_workflow_hist_task AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 51 ) LIMIT 1   [ RunTime:0.3070s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0500s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0900s ]
+SQL: SELECT * FROM `think_workflow_participation` WHERE ( task=52 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `think_workflow_variable` WHERE ( execution=51 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleVariable.class.php 第 96 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_workflow_execution` SET `activityname`='chiefleader',`hisactinst`='64' WHERE ( dbid = 51 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_workflow_task` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_workflow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('61','chiefleader','open','','0','1487408885','orderapprove.51','chiefleader','1','51','51') [ RunTime:0.0010s ]
+SQL: DELETE FROM `think_workflow_task` WHERE (  dbid in (52) ) [ RunTime:0.0000s ]
+SQL: INSERT INTO `think_workflow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('62','0','2','candidate','61') [ RunTime:0.0000s ]
+SQL: DELETE FROM `think_workflow_participation` WHERE (  dbid in (53) ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_hist_actinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_workflow_hist_actinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`,`addtime`) VALUES ('63','51','decision','orderapprove.51','exclusive2','1487408885','1487408885','0','to chiefleader','0','1487408885'),('64','51','task','orderapprove.51','chiefleader','1487408885','0','0','','61','1487408885') [ RunTime:0.0000s ]
+SQL: UPDATE `think_workflow_hist_actinst` SET `transition`='to chiefleader',`end`='1487408885',`duration`='69060' WHERE ( dbid = 55 ) [ RunTime:0.0000s ]
+SQL: INSERT INTO `think_workflow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('65','int','chiefleader','51','0','2','','','1487408885') [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_hist_task` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_workflow_hist_task` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('61','orderapprove.51','','','0','open','1487408885','0','0') [ RunTime:0.0000s ]
+SQL: UPDATE `think_workflow_hist_task` SET `outcome`='chiefleader',`state`='complete',`end`='1487408885',`duration`='69060' WHERE ( dbid = 52 ) [ RunTime:0.0000s ]
+SQL: update think_workflow_num set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+SQL: UPDATE `think_ysy_order` SET `flowerid`='51',`status`='chiefleader' WHERE ( order_id = 1487339825 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_ysy_approvelog` (`orderid`,`nodename`,`uid`,`addtime`,`remark`) VALUES ('1487339825','chiefleader','1','1487408885','1212') [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:11:18+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveService.html?id=1487339825&approvetype=agree&remark=1212
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487339825 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0080s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,mr.addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_workflow_execution e left join think_workflow_hist_actinst AS ha ON e.hisactinst = ha.dbid left join think_workflow_hist_procinst AS hp ON e.instance = hp.dbid left join think_workflow_deployment AS mr ON e.procdefid = mr.rulename left join think_workflow_task AS t ON e.dbid = t.execution left join think_workflow_hist_task AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 51 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_participation` WHERE ( task=52 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_variable` WHERE ( execution=51 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleVariable.class.php 第 96 行.
+
+[ 2017-02-18T17:11:21+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveService.html?id=1487339825&approvetype=agree&remark=1212
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487339825 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,mr.addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_workflow_execution e left join think_workflow_hist_actinst AS ha ON e.hisactinst = ha.dbid left join think_workflow_hist_procinst AS hp ON e.instance = hp.dbid left join think_workflow_deployment AS mr ON e.procdefid = mr.rulename left join think_workflow_task AS t ON e.dbid = t.execution left join think_workflow_hist_task AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 51 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_workflow_participation` WHERE ( task=52 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_variable` WHERE ( execution=51 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleVariable.class.php 第 96 行.
+
+[ 2017-02-18T17:11:41+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveService.html?id=1487339825&approvetype=agree&remark=1212
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487339825 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,mr.addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_workflow_execution e left join think_workflow_hist_actinst AS ha ON e.hisactinst = ha.dbid left join think_workflow_hist_procinst AS hp ON e.instance = hp.dbid left join think_workflow_deployment AS mr ON e.procdefid = mr.rulename left join think_workflow_task AS t ON e.dbid = t.execution left join think_workflow_hist_task AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 51 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_workflow_participation` WHERE ( task=52 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_variable` WHERE ( execution=51 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleVariable.class.php 第 96 行.
+
+[ 2017-02-18T17:12:34+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveService.html?id=1487339825&approvetype=agree&remark=1212
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487339825 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0080s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,mr.addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_workflow_execution e left join think_workflow_hist_actinst AS ha ON e.hisactinst = ha.dbid left join think_workflow_hist_procinst AS hp ON e.instance = hp.dbid left join think_workflow_deployment AS mr ON e.procdefid = mr.rulename left join think_workflow_task AS t ON e.dbid = t.execution left join think_workflow_hist_task AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 51 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_workflow_participation` WHERE ( task=52 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_workflow_variable` WHERE ( execution=51 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleVariable.class.php 第 96 行.
+
+[ 2017-02-18T17:14:40+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveService.html?id=1487339825&approvetype=agree&remark=1212
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487339825 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0060s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,mr.addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_workflow_execution e left join think_workflow_hist_actinst AS ha ON e.hisactinst = ha.dbid left join think_workflow_hist_procinst AS hp ON e.instance = hp.dbid left join think_workflow_deployment AS mr ON e.procdefid = mr.rulename left join think_workflow_task AS t ON e.dbid = t.execution left join think_workflow_hist_task AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 51 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_participation` WHERE ( task=52 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_variable` WHERE ( execution=51 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleVariable.class.php 第 96 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_workflow_execution` SET `activityname`='chiefleader',`hisactinst`='64' WHERE ( dbid = 51 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_workflow_task` [ RunTime:0.0080s ]
+SQL: INSERT INTO `think_workflow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('61','chiefleader','open','','0','1487409280','orderapprove.51','chiefleader','1','51','51') [ RunTime:0.0000s ]
+SQL: DELETE FROM `think_workflow_task` WHERE (  dbid in (52) ) [ RunTime:0.0010s ]
+SQL: INSERT INTO `think_workflow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('62','0','1','candidate','61') [ RunTime:0.0000s ]
+SQL: DELETE FROM `think_workflow_participation` WHERE (  dbid in (53) ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_hist_actinst` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_workflow_hist_actinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`,`addtime`) VALUES ('63','51','decision','orderapprove.51','exclusive2','1487409280','1487409280','0','to chiefleader','0','1487409280'),('64','51','task','orderapprove.51','chiefleader','1487409280','0','0','','61','1487409280') [ RunTime:0.0000s ]
+SQL: UPDATE `think_workflow_hist_actinst` SET `transition`='to chiefleader',`end`='1487409280',`duration`='69455' WHERE ( dbid = 55 ) [ RunTime:0.0000s ]
+SQL: INSERT INTO `think_workflow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('65','int','chiefleader','51','0','1','','','1487409280') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_hist_task` [ RunTime:0.0060s ]
+SQL: INSERT INTO `think_workflow_hist_task` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('61','orderapprove.51','','','0','open','1487409280','0','0') [ RunTime:0.0010s ]
+SQL: UPDATE `think_workflow_hist_task` SET `outcome`='chiefleader',`state`='complete',`end`='1487409280',`duration`='69455' WHERE ( dbid = 52 ) [ RunTime:0.0000s ]
+SQL: update think_workflow_num set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:18:29+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveService.html?id=1487339825&approvetype=agree&remark=1212
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487339825 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0070s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,mr.addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_workflow_execution e left join think_workflow_hist_actinst AS ha ON e.hisactinst = ha.dbid left join think_workflow_hist_procinst AS hp ON e.instance = hp.dbid left join think_workflow_deployment AS mr ON e.procdefid = mr.rulename left join think_workflow_task AS t ON e.dbid = t.execution left join think_workflow_hist_task AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 51 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_participation` WHERE ( task=52 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `think_workflow_variable` WHERE ( execution=51 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleVariable.class.php 第 96 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_workflow_execution` SET `activityname`='chiefleader',`hisactinst`='64' WHERE ( dbid = 51 ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: del D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\www\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_workflow_task` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_workflow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('61','chiefleader','open','','0','1487409509','orderapprove.51','chiefleader','1','51','51') [ RunTime:0.0000s ]
+SQL: DELETE FROM `think_workflow_task` WHERE (  dbid in (52) ) [ RunTime:0.0000s ]
+SQL: INSERT INTO `think_workflow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('62','0','1','candidate','61') [ RunTime:0.0000s ]
+SQL: DELETE FROM `think_workflow_participation` WHERE (  dbid in (53) ) [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_workflow_hist_actinst` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_workflow_hist_actinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`,`addtime`) VALUES ('63','51','decision','orderapprove.51','exclusive2','1487409509','1487409509','0','to chiefleader','0','1487409509'),('64','51','task','orderapprove.51','chiefleader','1487409509','0','0','','61','1487409509') [ RunTime:0.0000s ]
+SQL: UPDATE `think_workflow_hist_actinst` SET `transition`='to chiefleader',`end`='1487409509',`duration`='69684' WHERE ( dbid = 55 ) [ RunTime:0.0010s ]
+SQL: INSERT INTO `think_workflow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('65','int','chiefleader','51','0','1','','','1487409509') [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_hist_task` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_workflow_hist_task` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('61','orderapprove.51','','','0','open','1487409509','0','0') [ RunTime:0.0000s ]
+SQL: UPDATE `think_workflow_hist_task` SET `outcome`='chiefleader',`state`='complete',`end`='1487409509',`duration`='69684' WHERE ( dbid = 52 ) [ RunTime:0.0000s ]
+SQL: update think_workflow_num set version = version + 1 , value = value + 10 [ RunTime:0.0000s ]
+SQL: UPDATE `think_ysy_order` SET `flowerid`='51',`status`='chiefleader' WHERE ( order_id = 1487339825 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: INSERT INTO `think_ysy_approvelog` (`orderid`,`nodename`,`uid`,`addtime`,`remark`) VALUES ('1487339825','chiefleader','1','1487409509','1212') [ RunTime:0.0010s ]
+
+[ 2017-02-18T17:19:34+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: orderList D:\www\myysy\DingTalkApplication\DingTalk\Controller\ApproveCenter\ApproveCenterController.class.php 第 79 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:20:30+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0080s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0070s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:20:33+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0070s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0020s ]
+
+[ 2017-02-18T17:20:37+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0080s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0070s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:22:58+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: orderList D:\www\myysy\DingTalkApplication\DingTalk\Controller\ApproveCenter\ApproveCenterController.class.php 第 79 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:28:17+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0050s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+
+[ 2017-02-18T17:28:46+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+
+[ 2017-02-18T17:28:56+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0090s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:29:23+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0080s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0020s ]
+
+[ 2017-02-18T17:30:02+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0090s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+
+[ 2017-02-18T17:30:29+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0050s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0390s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:34:20+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:34:27+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0080s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:34:47+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-18T17:36:28+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\0e8ac40608bbdf7618ccd3075ef21d43.php 第 40 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T17:36:30+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\0e8ac40608bbdf7618ccd3075ef21d43.php 第 40 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:36:50+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:37:41+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:37:51+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T17:38:05+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T17:38:06+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T17:38:06+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T17:38:07+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0080s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0080s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0070s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T17:38:07+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:40:28+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:41:52+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:42:41+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:42:42+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:49:06+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T17:49:12+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Array to string conversion D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\0e8ac40608bbdf7618ccd3075ef21d43.php 第 52 行.
+NOTIC: [8] Array to string conversion D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\0e8ac40608bbdf7618ccd3075ef21d43.php 第 52 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:51:48+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0050s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:52:12+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T17:52:46+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:53:52+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T17:59:09+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T17:59:55+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0070s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: price D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\0e8ac40608bbdf7618ccd3075ef21d43.php 第 63 行.
+NOTIC: [8] Undefined index: price D:\www\myysy\DingTalkApplication\Runtime\Cache\DingTalk\0e8ac40608bbdf7618ccd3075ef21d43.php 第 63 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T18:00:13+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0070s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T18:00:15+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T18:00:48+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0080s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+
+[ 2017-02-18T18:00:49+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0070s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+
+[ 2017-02-18T18:04:18+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0110s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+
+[ 2017-02-18T18:04:19+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0050s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+
+[ 2017-02-18T18:04:24+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T18:05:39+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T18:05:39+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T18:05:55+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T18:06:21+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0040s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T18:06:23+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0070s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-02-18T18:07:40+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T18:07:41+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+
+[ 2017-02-18T18:09:21+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T18:10:41+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0010s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-18T18:12:13+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-18T18:13:48+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487339825
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0070s ]
+SQL: SELECT yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487339825 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0060s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487055184 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0050s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487339825 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

@@ -154,8 +154,7 @@ class WriteToDataBase
             if(!$flag){
                 new \Exception('error');
             }
-            $model->rollback();
-//            $model->commit();
+            $model->commit();
             return $this->_translateInfoObj;
         }catch (\Exception $e){
             $model->rollback();

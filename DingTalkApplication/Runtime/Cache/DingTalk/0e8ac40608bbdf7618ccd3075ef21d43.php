@@ -14,7 +14,7 @@
 		<div class="main operation-div hide">
 			<!--<textarea name="" placeholder="请输入同意/不同意理由" rows="" cols="" class="pad15 ft14 c333 w100 block bbt" ></textarea>-->
             <form id="approve">
-                <input value="<?php echo ($orderid); ?>" name="orderid"  type="hidden">
+                <input value="<?php echo ($orderBase['orderId']); ?>" name="orderid"  type="hidden">
                 <input value="" name="approvetype" type="hidden">
 
                 <div class="weui-cells__title">审批意见</div>
@@ -34,76 +34,81 @@
 			<div class="pl10 bgfff bbt">
 				<a href="" class="bbt pt10 pb10 pr10 clearfix block">
 					<div class="fl ell-width">
-						<p class="ellipsis ft15">吴丹吴丹 的申请</p>
-						<p class="c999 ft12">2016.02.03</p>
+						<p class="ellipsis ft15"><?php echo ($orderBase['realname']); ?>的申请</p>
+						<p class="c999 ft12"><?php echo (date("Y-m-d H:i:s",$orderBase['addtime'])); ?></p>
 					</div>
-					<p class="fr orange ft16 pt10">待审批</p>
+					<p class="fr orange ft16 pt10">
+						<?php switch($orderBase['status']): case "leader": ?>销售主管审批<?php break;?>
+							<?php case "chiefleader": ?>销售经理审批<?php break;?>
+							<?php case "cancel": ?>撤销<?php break;?>
+							<?php case "retreat": ?>退回<?php break; endswitch;?>
+					</p>
 				</a>
 				<div class="pt10 pb10 pr10">
-					<div class="clearfix mb5">
-						<p class="c949f dib fl ft14">基本信息：</p>
-						<p class="ft14 information">及第三方哈师大发贺卡上的家伙发卡上的回复看见爱上的话费卡手机话费</p>
-					</div>
-					<div class="clearfix mb5">
-						<p class="c949f dib fl ft14">基本信息：</p>
-						<p class="ft14 information">及第三方哈师大发贺卡上的家伙发卡上的回复看见爱上的话费卡手机话费</p>
-					</div>
-				</div>
-				<div class="pt10 pb10 pr10 btop">
-					<p class="ft16">抄送人<span class="c999 ft14">(审批人全部处理后，将抄送给以下人员)</span></p>
-					<div class="clearfix mt15">
-						<div class="fl mr15">
-							<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="round30"/>
-							<p class="ftc">黄思琪</p>
+					<?php if(is_array($orderInfo)): foreach($orderInfo as $k=>$v): ?><div class="clearfix mb5">
+							<p class="c949f dib fl ft14">(<?php echo ($k+1); ?>)订单明细</p>
+
 						</div>
-						<div class="fl mr15">
-							<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="round30"/>
-							<p class="ftc">黄思琪</p>
+						<div class="clearfix mb5">
+							<p class="c949f dib fl ft14">名称：</p>
+							<p class="ft14 information"><?php echo ($v['packagename']); ?></p>
 						</div>
-					</div>
+						<div class="clearfix mb5">
+							<p class="c949f dib fl ft14">订单类型：</p>
+							<p class="ft14 information"> <?php echo ($orderType[$v['ordertype']]); ?></p>
+						</div>
+
+						<div class="clearfix mb5">
+							<p class="c949f dib fl ft14">价格：</p>
+							<p class="ft14 information"> <?php echo ($v['price']); ?></p>
+						</div>
+						<div class="clearfix mb5">
+							<p class="c949f dib fl ft14">数量：</p>
+							<p class="ft14 information"><?php echo ($v['num']); ?></p>
+						</div><?php endforeach; endif; ?>
 				</div>
 			</div>
 			<div class="pl20 mb60">
-				<div class="bleft rela pt15 pr20 pl15">
-					<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>
-					<div class="b-all round5 bgfff pad10 clearfix">
-						<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>
-						<div class="ml60">
-							<p class="ft15 mt5">黄思琪</p>
-							<p class="cgreen ft14">发起申请</p>
+				<!--<div class="bleft rela pt15 pr20 pl15">-->
+					<!--<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>-->
+					<!--<div class="b-all round5 bgfff pad10 clearfix">-->
+						<!--<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>-->
+						<!--<div class="ml60">-->
+							<!--<p class="ft15 mt5">黄思琪</p>-->
+							<!--<p class="cgreen ft14">发起申请</p>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="bleft rela pt15 pr20 pl15">-->
+					<!--<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>-->
+					<!--<div class="b-all round5 bgfff pad10 clearfix">-->
+						<!--<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>-->
+						<!--<div class="ml60">-->
+							<!--<p class="ft15 mt5">黄思琪</p>-->
+							<!--<p class="cred ft14">已拒绝<span class="c999">(留言留言留言留言留言留言留言留言留言留言)</span></p>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<?php if(is_array($log)): foreach($log as $k=>$v): ?><div class="bleft rela pt15 pr20 pl15">
+						<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>
+						<div class="b-all round5 bgfff pad10 clearfix">
+							<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>
+							<div class="ml60">
+								<p class="ft15 mt5"><?php echo ($v['realname']); ?></p>
+								<p class="cred ft14">
+									<?php switch($v['nodename']): case "cancel": ?>撤销<?php break;?>
+										<?php case "retreat": ?>退回<?php break;?>
+										<?php default: ?>同意<?php endswitch;?>
+									<span class="c999">(<?php echo ($v['remark']); ?>)</span>
+								</p>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="bleft rela pt15 pr20 pl15">
-					<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>
-					<div class="b-all round5 bgfff pad10 clearfix">
-						<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>
-						<div class="ml60">
-							<p class="ft15 mt5">黄思琪</p>
-							<p class="cgreen ft14">审批中</p>
-						</div>
-					</div>
-				</div>
-				<div class="bleft rela pt15 pr20 pl15">
-					<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>
-					<div class="b-all round5 bgfff pad10 clearfix">
-						<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>
-						<div class="ml60">
-							<p class="ft15 mt5">黄思琪</p>
-							<p class="cred ft14">已拒绝<span class="c999">(留言留言留言留言留言留言留言留言留言留言)</span></p>
-						</div>
-					</div>
-				</div>
-				<div class="bleft rela pt15 pr20 pl15">
-					<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>
-					<div class="b-all round5 bgfff pad10 clearfix">
-						<img src="/myysy/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>
-						<div class="ml60">
-							<p class="ft15 mt5">黄思琪</p>
-							<p class="cred ft14"><span class="c999">(留言留言留言留言留言留言留言留言留言留言)</span></p>
-						</div>
-					</div>
-				</div>
+					</div><?php endforeach; endif; ?>
+
+
+
+
+
 			</div>
 		</div>
         <div class="weui-navbar" style="position: fixed;bottom: 0;top:auto">

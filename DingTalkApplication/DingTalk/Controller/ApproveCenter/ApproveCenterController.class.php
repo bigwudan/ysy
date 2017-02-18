@@ -74,11 +74,22 @@ EOT;
         $id = intval(I('id'));
         $OrderInfo = new \CommonClass\Order\GetOrderInfo();
         $OrderInfo->initi($id);
+        $orderBase = $OrderInfo->getOrderbase();
+        $orderInfo = $OrderInfo->getOrderInfo();
 
 
-        $this->assign('order' , $orderList);
-        $this->assign('orderid' , $id);
 
+        $log = $OrderInfo->getLog();
+
+
+        $OrderTypeObj = new \CommonClass\Config\BaseConfig();
+        $orderType = $OrderTypeObj->getOrderType();
+
+
+        $this->assign('orderType' , $orderType);
+        $this->assign('orderBase' , $orderBase);
+        $this->assign('orderInfo' , $orderInfo);
+        $this->assign('log' , $log);
         $this->display('approvecenter/approveinfo');
     }
 

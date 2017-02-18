@@ -54,7 +54,7 @@ class ApproveDealFactory
         $needWrToDb = $this->_dealApproveToFlower();
         $StatmentList = array_merge($needWrToDb , $StatmentList);
 
-        if($this->_type == 'cancel' || $this->_type == 'disagree'){
+        if($this->_type == 'cancel' ){
             $ReBackObj = new \CommonClass\Order\Dealpackage\RebackOrderGoods();
             $ReBackObj->initi($this->_orderId);
             $reBackInfo = $ReBackObj->prcessToSQL();
@@ -71,6 +71,8 @@ class ApproveDealFactory
      * 同意
      */
     private function _dealApproveToFlower(){
+        $LogInfo = new \CommonClass\Login\ProcessLoginInfo();
+        $uid = $LogInfo->getLoginInfo()['id'];
         $orderInfoFromDb = M('ysy_order')->where("order_id = {$this->_orderId}")->find();
         $ExceutionService = new \Vendor\Jbpm\Service\ExecutionService();
         if($this->_type == 'agree'){
@@ -104,11 +106,10 @@ class ApproveDealFactory
         $insertLog = array(
             'orderid' => $this->_orderId,
             'nodename' => $tmp['status'],
-            'uid' => 1,
+            'uid' => $uid,
             'addtime' => time(),
             'remark' => $this->_remark
         );
-
         $CommonObj = new \CommonClass\DbModel\CombinStatement('ysy_approvelog');
         $CommonObj->insert($insertLog);
         $StatementList[] = $CommonObj;
@@ -121,44 +122,19 @@ class ApproveDealFactory
      * 写入数据库
      */
     private function _writeToDb($varData){
-        $model = new \Think\Model();
-        $model->startTrans();
-        try{
-
-            foreach($varData as $k => $v){
-                $flag = $v->run();
-            }
-        }catch (\Exception $e){
-        }
-
-
-
-
-
-
-
-        die();
-        if(!$varData) return false;
-        $model = new \Think\Model();
-        $model->startTrans();
         $flag = true;
+        $model = new \Think\Model();
+        $model->startTrans();
         try{
-            if(!empty($varData['stock'])){
-                foreach($varData['stock'] as $k => $v){
-                    $v['where']['format_id'] = intval($v['where']['format_id']);
-                    $flagOfDb = M('ysy_stock')->where("format_id={$v['where']['format_id']}")->setInc('goods_num' , $v['num']);
-                    if(!$flagOfDb) new \Exception('ysy_order');
-                }
+            foreach($varData as $k => $v){
+                $dbFlag = $v->run();
             }
-            $flagOfDb = M('ysy_order')->where("order_id = {$varData['order']['where']['order_id']}")->save($varData['order']['update']);
-            if(!$flagOfDb) new \Exception('ysy_order');
-            $flagOfDb = M('ysy_approvelog')->add($varData['log']['insert']);
-            if(!$flagOfDb) new \Exception('ysy_approvelog-updata');
             $model->commit();
         }catch (\Exception $e){
             $model->rollback();
             $flag = false;
         }
+        die('111');
         return $flag;
     }
 
