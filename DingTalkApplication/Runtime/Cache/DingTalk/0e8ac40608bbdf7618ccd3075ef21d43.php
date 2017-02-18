@@ -104,18 +104,19 @@
 							</div>
 						</div>
 					</div><?php endforeach; endif; ?>
-
-
-
-
-
 			</div>
 		</div>
-        <div class="weui-navbar" style="position: fixed;bottom: 0;top:auto">
-            <div data-type="agree" class="weui-navbar__item">同意</div>
-            <div data-type="disagree" class="weui-navbar__item">拒绝</div>
-            <div data-type="cancel" class="weui-navbar__item">撤销</div>
-        </div>
+
+
+
+		<?php if($type == 'show' ): else: ?>
+			<div class="weui-navbar" style="position: fixed;bottom: 0;top:auto">
+				<div data-type="agree" class="weui-navbar__item">同意</div>
+				<div data-type="disagree" class="weui-navbar__item">拒绝</div>
+				<div data-type="cancel" class="weui-navbar__item">撤销</div>
+			</div><?php endif; ?>
+
+
 
 
 	<script>
