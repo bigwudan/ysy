@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-02-18 22:29:54
+Date: 2017-02-19 12:14:00
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -109,6 +109,9 @@ INSERT INTO `think_access` VALUES ('2', '52', '0', null);
 INSERT INTO `think_access` VALUES ('2', '53', '0', null);
 INSERT INTO `think_access` VALUES ('2', '54', '0', null);
 INSERT INTO `think_access` VALUES ('2', '55', '0', null);
+INSERT INTO `think_access` VALUES ('2', '56', '0', null);
+INSERT INTO `think_access` VALUES ('2', '57', '0', null);
+INSERT INTO `think_access` VALUES ('2', '58', '0', null);
 
 -- ----------------------------
 -- Table structure for `think_log`
@@ -149,7 +152,7 @@ CREATE TABLE `think_node` (
   KEY `pid` (`pid`),
   KEY `status` (`status`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_node
@@ -205,6 +208,9 @@ INSERT INTO `think_node` VALUES ('52', 'actionRequestService', 'actionRequestSer
 INSERT INTO `think_node` VALUES ('53', 'ManageGoods', '管理商品', '1', '', '0', '44', '3', '');
 INSERT INTO `think_node` VALUES ('54', 'index', 'index', '1', '', '0', '53', '4', '');
 INSERT INTO `think_node` VALUES ('55', 'actionRequestService', 'actionRequestService', '1', '', '0', '53', '4', '');
+INSERT INTO `think_node` VALUES ('56', 'ApproveOrder', '审批订单', '1', '', '0', '44', '3', '');
+INSERT INTO `think_node` VALUES ('57', 'index', 'index', '1', '', '0', '56', '4', '');
+INSERT INTO `think_node` VALUES ('58', 'actionRequestService', 'actionRequestService', '1', '', '0', '56', '4', '');
 
 -- ----------------------------
 -- Table structure for `think_order`
@@ -874,21 +880,23 @@ CREATE TABLE `think_ysy_order` (
   `rece_tel` char(30) NOT NULL,
   `status` char(20) NOT NULL,
   `flowerid` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '流程id',
+  `expressnum` varchar(200) NOT NULL,
+  `expresstime` int(10) unsigned NOT NULL,
   PRIMARY KEY (`order_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_ysy_order
 -- ----------------------------
-INSERT INTO `think_ysy_order` VALUES ('1486366087', '1', '1486366087', '0', '1486310400', '1', '0.00', '', '1', '3', '2', '1', '', '0');
-INSERT INTO `think_ysy_order` VALUES ('1486368130', '1', '1486368130', '0', '1486310400', '1', '0.00', '', '1', '3', '2', '1', '', '0');
-INSERT INTO `think_ysy_order` VALUES ('1486368728', '1', '1486368728', '0', '1486310400', '1', '0.00', '', '1', '3', '2', '1', 'leader', '41');
-INSERT INTO `think_ysy_order` VALUES ('1487064770', '1', '1487064770', '1', '1487001600', '0', '0.00', '', '1', '3', '2', '1', '', '0');
-INSERT INTO `think_ysy_order` VALUES ('1487339550', '0', '1487339550', '0', '1500134400', '1', '0.00', '', '1', '23', '23', '2', '', '0');
-INSERT INTO `think_ysy_order` VALUES ('1487339825', '1', '1487339825', '0', '1500134400', '1', '0.00', '', '1', '23', '23', '2', 'chiefleader', '51');
-INSERT INTO `think_ysy_order` VALUES ('1487423526', '1', '1487423526', '1', '1487347200', '0', '0.00', '', '1', '3', '2', '1', 'leader', '91');
-INSERT INTO `think_ysy_order` VALUES ('1487424482', '1', '1487424482', '1', '1487347200', '0', '0.00', '', '1', '3', '2', '1', 'complete', '141');
-INSERT INTO `think_ysy_order` VALUES ('1487425655', '1', '1487425655', '1', '1487347200', '0', '0.00', '', '1', '3', '2', '1', 'cancel', '181');
+INSERT INTO `think_ysy_order` VALUES ('1486366087', '1', '1486366087', '0', '1486310400', '1', '0.00', '', '1', '3', '2', '1', '', '0', '', '0');
+INSERT INTO `think_ysy_order` VALUES ('1486368130', '1', '1486368130', '0', '1486310400', '1', '0.00', '', '1', '3', '2', '1', '', '0', '', '0');
+INSERT INTO `think_ysy_order` VALUES ('1486368728', '1', '1486368728', '0', '1486310400', '1', '0.00', '', '1', '3', '2', '1', 'leader', '41', '', '0');
+INSERT INTO `think_ysy_order` VALUES ('1487064770', '1', '1487064770', '1', '1487001600', '0', '0.00', '', '1', '3', '2', '1', '', '0', '', '0');
+INSERT INTO `think_ysy_order` VALUES ('1487339550', '0', '1487339550', '0', '1500134400', '1', '0.00', '', '1', '23', '23', '2', '', '0', '', '0');
+INSERT INTO `think_ysy_order` VALUES ('1487339825', '1', '1487339825', '0', '1500134400', '1', '0.00', '', '1', '23', '23', '2', 'chiefleader', '51', '', '0');
+INSERT INTO `think_ysy_order` VALUES ('1487423526', '1', '1487423526', '1', '1487347200', '0', '0.00', '', '1', '3', '2', '1', 'leader', '91', '567', '1486828800');
+INSERT INTO `think_ysy_order` VALUES ('1487424482', '1', '1487424482', '1', '1487347200', '0', '0.00', '', '1', '3', '2', '1', 'complete', '141', '', '0');
+INSERT INTO `think_ysy_order` VALUES ('1487425655', '1', '1487425655', '1', '1487347200', '0', '0.00', '', '1', '3', '2', '1', 'cancel', '181', '', '0');
 
 -- ----------------------------
 -- Table structure for `think_ysy_ordergoods`
