@@ -62,15 +62,13 @@ class ProcessOrderInfoService
     /**
      * 处理orderinfo
      * @param $varOrderData array
+     * @return array
      */
     private function _dealOrderInfo($varOrderData , $varOrderId){
         $CombinObj = new \CommonClass\DbModel\CombinStatement('ysy_order');
         if($varOrderId){
-//            $res['update']['where'] = array('order_id' => $varOrderId);
-//            $res['update']['data'] = $varOrderData;
             $res = $CombinObj->where("order_id = {$varOrderId}")->update($varOrderData);
         }else{
-//            $res['insert'] = $varOrderData;
             $res = $CombinObj->insert($varOrderData);
         }
         return $res;

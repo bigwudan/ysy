@@ -20,35 +20,44 @@ class AssembleOrderOfForm
 
     /**
      * 验证数据
+     * @param array $varData 数据
+     * @return array
      */
-    private function _checkDataOfForm(){
-        foreach($this->_orderDataOfForm as $k => $v){
-            if($v['name'] == 'price[]' || $v['name'] == 'deliveryttpe' || $v['name'] == 'orderid' || $v['name'] == 'ordertype[]'){
-                if($v['value'] == ''){
-                    return array('error'=>1 , 'msg' => '价格异常');
-                }
-            }else{
-                if(!$v['value']){
-                    return array('error'=>1 , 'msg' => '信息不完整');
-                }
-            }
+    private function _checkDataOfForm($varData){
+        $orderList = $varData['order'];
+        $goodsPackList = $varData['goodsPack'];
+        if(!$orderList['rece_tel']) return array('error'=>1 , 'msg' => '填写客户电话');
+        if(empty($varData['order'])) return array('error'=>1 , 'msg' => '填写订单申请');
+        if(!intval($orderList['order_id'])) return array('error'=>1 , 'msg' => '订单号错误');
+        if(!$orderList['requireddeliverytime']) return array('error'=>1 , 'msg' => '填写发货时间');
+        if(empty($goodsPackList)) return array('error'=>1 , 'msg' => '商品为空');
+        foreach($goodsPackList as $k => $v){
+            if(!$v['price']) return array('error'=>1 , 'msg' => '商品价格错误');
+            if(!intval($v['package_id'])) return array('error'=>1 , 'msg' => '商品号错误');
+            if($v['ordertype'] === '请选择商品') return array('error'=>1 , 'msg' => '订单类型错误');
+            if(!intval($v['num'])) return array('error'=>1 , 'msg' => '商品数量错误');
         }
         return true;
     }
-
-
     /**
      * 组合数据
      */
     public function processData(){
-
-        $UserObj = new \CommonClass\Login\ProcessLoginInfo();
-        $uid = $UserObj->getLoginInfo()['id'];
-
-        $res = $this->_checkDataOfForm();
-        if($res !== true){
+        $orderInfo = $this->_processOrder();
+        $res = $this->_checkDataOfForm($orderInfo);
+        if($res === true){
+            return $orderInfo;
+        }else{
             return $res;
         }
+    }
+
+    /**
+     * 处理订单
+     */
+    private function _processOrder(){
+        $UserObj = new \CommonClass\Login\ProcessLoginInfo();
+        $uid = $UserObj->getLoginInfo()['id'];
         if($this->_orderId){
             $orderId = $this->_orderId;
         }else{
@@ -57,7 +66,6 @@ class AssembleOrderOfForm
         $goodspackageinfo = array();
         $orderInfo = array();
         $orderInfo['addtime'] = time();
-        $orderInfo['belonger'] = 1;
         $orderInfo['order_id'] = $orderId;
         foreach($this->_orderDataOfForm as $k => $v){
             if($v['name'] == 'package_id[]' || $v['name'] == 'ordertype[]' || $v['name'] == 'num[]' || $v['name'] == 'price[]'){
@@ -67,8 +75,6 @@ class AssembleOrderOfForm
             }
         }
         $orderInfo['requireddeliverytime'] = strtotime($orderInfo['requireddeliverytime']);
-
-
         $orderInfo['order_user'] = $uid;
         $newGoodsPackeInfo = array();
         for($num = 0 ; $num < count($goodspackageinfo) ; $num=$num+4){
@@ -84,7 +90,7 @@ class AssembleOrderOfForm
             'goodsPack' => $newGoodsPackeInfo,
             'order' => $orderInfo
         );
-    }
 
+    }
 
 }
