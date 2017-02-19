@@ -161,7 +161,7 @@ class CombinStatement
         }elseif(!empty($this->_dec)){
             $result = $DbObj->setDec($this->_dec['name'],$this->_dec['value']);
         }elseif(!empty($this->_inc)){
-            $result = $DbObj->setInc($this->_inc['name'],$this->_dec['value']);
+            $result = $DbObj->setInc($this->_inc['name'],$this->_inc['value']);
         }elseif($this->_execute){
             $Model = new \Think\Model();
             $result = $Model->db()->execute($this->_execute);

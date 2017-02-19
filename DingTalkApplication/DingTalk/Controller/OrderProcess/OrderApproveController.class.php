@@ -20,11 +20,9 @@ class OrderApproveController extends Controller
         if(!$uid = $LogInfo->getLoginInfo()['id']){
             die('no login');
         }
-
         $orderId = intval(I('order'));
         $packageHtml = '';
         $dataFromDb = array();
-
         if($orderId){
             $Model = new \Think\Model();
             $sqlStr = "SELECT * FROM think_ysy_order as yo join think_ysy_ordergoods as yog on yo.order_id = yog.order_id where yo.order_id = {$orderId}";
@@ -152,11 +150,13 @@ EOT;
                 unset($data[$k]);
             }
         }
+        $reBackOrderGoodsList = null;
         if($orderId){
             $ReBackObj = new \CommonClass\Order\Dealpackage\RebackOrderGoods();
             $ReBackObj->initi($orderId);
-            $reBackInfo = $ReBackObj->prcessToSQL();
-            if(!$reBackInfo) return json_encode(array('error'=>1 , 'msg' => '返回库存错误') ,JSON_UNESCAPED_UNICODE);
+
+            $reBackOrderGoodsList = $ReBackObj->getGoodsInfoByOrderId();
+
         }
         $AssembleOrderObj = new \CommonClass\Order\AssembleOrderOfForm();
         $AssembleOrderObj->initi($data , $orderId);
@@ -175,8 +175,13 @@ EOT;
             return json_encode(array('error'=>1 , 'msg' => $orderInfo['msg']) ,JSON_UNESCAPED_UNICODE);
         }
         $ProcessOrderObj = new \CommonClass\Order\ProcessOrderInfoService();
-        $ProcessOrderObj->initi( $orderInfo , $orderId);
+        $ProcessOrderObj->initi( $orderInfo , $orderId , $reBackOrderGoodsList);
         $StatmentObjList = $ProcessOrderObj->process();
+        if($StatmentObjList['error'] === 1){
+            $tmpGoodsId = intval($StatmentObjList['msg']);
+            $tmpGoods = M('ysy_goods')->where("goods_id = {$tmpGoodsId}")->find();
+            return json_encode(array('error' => 1 , 'msg' => "{$tmpGoods['goods_name']}库存不足") ,JSON_UNESCAPED_UNICODE);
+        }
         $RunCombinObj = new \CommonClass\DbModel\RunCombinStatement();
         $RunCombinObj->add($StatmentObjList);
         $flag = true;
