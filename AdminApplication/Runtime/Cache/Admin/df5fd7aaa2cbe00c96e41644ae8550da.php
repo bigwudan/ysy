@@ -39,8 +39,10 @@
                 <div class="col-sm-10">
                     <div class="row">
                         <div class="input-group">
-                            <?php if(is_array($orderType)): foreach($orderType as $k=>$vo): ?><span class="input-group-addon" ><?php echo ($vo[0]); ?></span>
-                                <input type="text" name="packageprice-<?php echo ($k); ?>" class="form-control"  aria-describedby="basic-addon3" value="<?php echo ($goodsPackeagePriceFromDb[$k]['price']); ?>"><?php endforeach; endif; ?>
+                            <?php if(is_array($orderType)): foreach($orderType as $k=>$vo): ?><div class="input-group">
+                                    <span class="input-group-addon"><?php echo ($vo[0]); ?></span>
+                                    <input type="text" name="packageprice-<?php echo ($k); ?>" class="form-control" value="<?php echo ($goodsPackeagePriceFromDb[$k]['price']); ?>" >
+                                </div><?php endforeach; endif; ?>
                         </div>
                     </div>
 
@@ -54,7 +56,7 @@
                             <table class="table checkin-table">
                                 <thead>
                                 <tr>
-                                    <th>规格</th>
+                                    <th>商品名</th>
                                     <th>数量</th>
                                     <th>操作</th>
                                 </tr>
@@ -142,8 +144,7 @@ var GoodsPackage = function(){
             var dataStrFromForm = $("form").serializeArray();
             var url = '<?php echo U('stockandsale/Goodspackage/actionRequestService') ?>';
             $.get(url , {type:'package' , packageid : _packageId ,data:dataStrFromForm} , function(data){
-
-                console.log(data);
+                window.location.href = '<?php echo U('stockandsale/Goodspackage') ?>';
             });
 
         });

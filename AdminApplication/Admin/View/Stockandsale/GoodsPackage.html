@@ -40,8 +40,10 @@
                     <div class="row">
                         <div class="input-group">
                             <foreach name="orderType" item="vo" key="k" >
-                                <span class="input-group-addon" >{$vo[0]}</span>
-                                <input type="text" name="packageprice-{$k}" class="form-control"  aria-describedby="basic-addon3" value="{$goodsPackeagePriceFromDb[$k]['price']}">
+                                <div class="input-group">
+                                    <span class="input-group-addon">{$vo[0]}</span>
+                                    <input type="text" name="packageprice-{$k}" class="form-control" value="{$goodsPackeagePriceFromDb[$k]['price']}" >
+                                </div>
                             </foreach>
                         </div>
                     </div>
@@ -56,7 +58,7 @@
                             <table class="table checkin-table">
                                 <thead>
                                 <tr>
-                                    <th>规格</th>
+                                    <th>商品名</th>
                                     <th>数量</th>
                                     <th>操作</th>
                                 </tr>
@@ -144,8 +146,7 @@ var GoodsPackage = function(){
             var dataStrFromForm = $("form").serializeArray();
             var url = '<?php echo U('stockandsale/Goodspackage/actionRequestService') ?>';
             $.get(url , {type:'package' , packageid : _packageId ,data:dataStrFromForm} , function(data){
-
-                console.log(data);
+                window.location.href = '<?php echo U('stockandsale/Goodspackage') ?>';
             });
 
         });
