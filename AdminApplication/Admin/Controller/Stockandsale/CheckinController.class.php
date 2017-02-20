@@ -82,7 +82,6 @@ class CheckinController extends Controller
         $ProcessStockObj = new \CommonClass\Stockandsale\ProcessStock();
         $ProcessStockObj->initi($checkDataList,$checkin);
         $stockList = $ProcessStockObj->processData();
-
         $RunCombinObj = new \CommonClass\DbModel\RunCombinStatement();
         $RunCombinObj->add($stockList);
         $flag = true;
