@@ -33,10 +33,9 @@ class RunCombinStatement
     public function run(){
         $flag = true;
         foreach($this->_combinStatementList as $k => $v){
-            $flag = $v->run();
-            if(!$flag){
-                var_dump($flag);
-                var_dump($v);die('xxxxxx');
+            $flagDb = $v->run();
+            if(!$flagDb){
+                $flag = false;
                 E('新增失败');
             }
         }

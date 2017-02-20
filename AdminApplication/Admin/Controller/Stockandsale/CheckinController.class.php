@@ -32,9 +32,7 @@ class CheckinController extends Controller
         $showPage       = $Page->show();// 分页显示输出
         $checkInFromDb = M('ysy_checkin')->where("1 = 1 {$where}")->limit($Page->firstRow.','.$Page->listRows)->select();
         $this->assign('showPage' , $showPage);
-
         $this->assign('checkInFromDb' , $checkInFromDb);
-
         $this->display('/Stockandsale/CheckInList');
     }
 

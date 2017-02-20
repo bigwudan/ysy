@@ -161,7 +161,7 @@ class AssembleExecutionAndTarget{
         $this->_variable && $TranslateInfoObj->setVariable($this->_variable);
         $TranslateInfoObj->setVersionNum($this->_executionObj->getVersionNum());
         $this->_translateInfoObj = $TranslateInfoObj;
-//        var_dump($this->_execution);die('222');
+//       var_dump($this->_execution);die('222');
 //        var_dump($this->_histProcinst);die('3333');
 //        var_dump($this->_task);die('111');
 //        var_dump($this->_hisTask);die('4444');

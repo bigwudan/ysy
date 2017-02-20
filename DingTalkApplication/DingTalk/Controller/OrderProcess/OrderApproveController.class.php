@@ -20,11 +20,9 @@ class OrderApproveController extends Controller
         if(!$uid = $LogInfo->getLoginInfo()['id']){
             die('no login');
         }
-
         $orderId = intval(I('order'));
         $packageHtml = '';
         $dataFromDb = array();
-
         if($orderId){
             $Model = new \Think\Model();
             $sqlStr = "SELECT * FROM think_ysy_order as yo join think_ysy_ordergoods as yog on yo.order_id = yog.order_id where yo.order_id = {$orderId}";
@@ -36,8 +34,6 @@ class OrderApproveController extends Controller
         $goodsPackageList= $this->_getGoodsPackage();
         $goodsPackageList = json_encode($goodsPackageList , JSON_UNESCAPED_UNICODE);
         $ConfigObj = new \CommonClass\Config\BaseConfig();
-
-
         $configList = array(
             'sendType' => $ConfigObj->getSendType(),
             'orderType' => $ConfigObj->getOrderType(),
@@ -55,7 +51,6 @@ class OrderApproveController extends Controller
      * 组合详细商品
      */
     private function _assPackageHtml($varDataInfo){
-
         $goodsPackageFromDb = M('ysy_goodspackage')->where('status = 0')->select();
         $packSelectHtml = '';
         foreach($goodsPackageFromDb as $k => $v){
@@ -72,15 +67,12 @@ class OrderApproveController extends Controller
         $curOrderTypeProce = 0;
         foreach($dataFromOrderAndMin['priceList'] as $k => $v){
             $tmpName = $orderType[$v['ordertype']];
-
             if($varDataInfo['ordertype'] == $v['ordertype']){
                 $curOrderTypeProce = $v['price'];
                 $orderPriceSelectHtml .= "<option selected data-price=\"{$v['price']}\" value=\"{$v['ordertype']}\">{$tmpName}(价格{$v['price']})</option>";
             }else{
                 $orderPriceSelectHtml .= "<option data-price=\"{$v['price']}\" value=\"{$v['ordertype']}\">{$tmpName}(价格{$v['price']})</option>";
             }
-
-
         }
 
 $htmlModel =<<<EOT
@@ -153,17 +145,25 @@ EOT;
         $data = I('data');
         $orderId = 0;
         foreach($data as $k => $v){
-            if($v['name'] == 'orderid')$orderId = $v['value'];
+            if($v['name'] == 'orderid'){
+                $orderId = $v['value'];
+                unset($data[$k]);
+            }
         }
+        $reBackOrderGoodsList = null;
         if($orderId){
             $ReBackObj = new \CommonClass\Order\Dealpackage\RebackOrderGoods();
             $ReBackObj->initi($orderId);
-            $reBackInfo = $ReBackObj->prcessToSQL();
-            if(!$reBackInfo) return json_encode(array('error'=>1 , 'msg' => '返回库存错误') ,JSON_UNESCAPED_UNICODE);
+
+            $reBackOrderGoodsList = $ReBackObj->getGoodsInfoByOrderId();
+
         }
         $AssembleOrderObj = new \CommonClass\Order\AssembleOrderOfForm();
         $AssembleOrderObj->initi($data , $orderId);
         $orderInfo = $AssembleOrderObj->processData();
+        if($orderInfo['error']){
+            return json_encode($orderInfo ,JSON_UNESCAPED_UNICODE);
+        }
         $resFlag = $this->_dealAddr($orderInfo);
         $needSql = array();
         if($resFlag !== false){
@@ -175,49 +175,49 @@ EOT;
             return json_encode(array('error'=>1 , 'msg' => $orderInfo['msg']) ,JSON_UNESCAPED_UNICODE);
         }
         $ProcessOrderObj = new \CommonClass\Order\ProcessOrderInfoService();
-        $ProcessOrderObj->initi( $orderInfo , $orderId);
-        $res = $ProcessOrderObj->process();
+        $ProcessOrderObj->initi( $orderInfo , $orderId , $reBackOrderGoodsList);
+        $StatmentObjList = $ProcessOrderObj->process();
+        if($StatmentObjList['error'] === 1){
+            $tmpGoodsId = intval($StatmentObjList['msg']);
+            $tmpGoods = M('ysy_goods')->where("goods_id = {$tmpGoodsId}")->find();
+            return json_encode(array('error' => 1 , 'msg' => "{$tmpGoods['goods_name']}库存不足") ,JSON_UNESCAPED_UNICODE);
+        }
         $RunCombinObj = new \CommonClass\DbModel\RunCombinStatement();
-        $RunCombinObj->add($res);
+        $RunCombinObj->add($StatmentObjList);
+        $flag = true;
+        $Model = new \Think\Model();
+        $Model->db()->startTrans();
         try{
-            $Model = new \Think\Model();
-            $Model->db()->startTrans();
             $RunCombinObj->run();
             $Model->db()->commit();
         }catch (\Exception $e){
             $Model->db()->rollback();
             $flag = false;
         }
-        die('xxxx');
-        $flag = false;
-
-//        $needSql['order'] = $res['order'];
-//        $needSql['ordergoods']['insert'] = $res['orderGoods'];
-//        $needSql['stock']['dec'] = $res['stock'];
-//        if(!empty($reBackInfo['orderGoods'])){
-//            $needSql['ordergoods']['del'] = $reBackInfo['orderGoods'];
-//        }
-//
-//        if(!empty($reBackInfo['stock'])){
-//            $needSql['stock']['inc'] = $reBackInfo['stock'];
-//        }
-//        die('222');
-//        $OrderUpdata = new \CommonClass\Order\OrderUpdata();
-//        $OrderUpdata->initi($needSql);
-//        $flag = $OrderUpdata->process();
         if(!$flag){
             return json_encode(array('error' => 1 , 'msg' => '提交异常') ,JSON_UNESCAPED_UNICODE);
         }
         $FlowerService = new \Vendor\Jbpm\Service\ExecutionService();
-        $responseFlowData = $FlowerService->startProcessInstanceById('orderapprove');
-        $ExecutionObj = reset($responseFlowData->getExecution()['insert']);
-        if(!$ExecutionObj['dbid'] && !$ExecutionObj['activityname']){
-            return json_encode(array('error' => 1 , 'msg' => '流程错误') ,JSON_UNESCAPED_UNICODE);
+        $orderInfoFromDb = M('ysy_order')->where("order_id = {$orderInfo['order']['order_id']}")->find();
+        if($orderInfoFromDb['status'] == 'retreat'){
+            $responseFlowData = $FlowerService->completeCommon($orderInfoFromDb['flowerid'] , 'to exclusive1');
+        }else{
+            $responseFlowData = $FlowerService->startProcessInstanceById('orderapprove');
         }
-        $tmp['flowerid'] = $ExecutionObj['dbid'];
-        $tmp['status'] = $ExecutionObj['activityname'];
+        $ExecutionObj = reset($responseFlowData->getExecution()['insert']);
+        if($ExecutionObj){
+            if(!$ExecutionObj['dbid'] && !$ExecutionObj['activityname']){
+                return json_encode(array('error' => 1 , 'msg' => '流程错误') ,JSON_UNESCAPED_UNICODE);
+            }
+            $tmp['flowerid'] = $ExecutionObj['dbid'];
+            $tmp['status'] = $ExecutionObj['activityname'];
+        }else{
+            $tmpList  = reset($responseFlowData->getExecution()['updata']);
+            $tmp['flowerid'] = $tmpList['where']['dbid'];
+            $tmp['status'] = $tmpList['data']['activityname'];
+        }
         $sqlFlag = M('ysy_order')->where("order_id = {$orderInfo['order']['order_id']}")->save($tmp);
-        if($flag){
+        if($sqlFlag){
             return json_encode(array('msg' => '正常') ,JSON_UNESCAPED_UNICODE);
         }else{
             return json_encode(array('error' => 1 , 'msg' => '写入流程异常') ,JSON_UNESCAPED_UNICODE);

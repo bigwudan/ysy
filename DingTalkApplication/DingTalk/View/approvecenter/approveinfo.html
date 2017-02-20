@@ -14,7 +14,7 @@
 		<div class="main operation-div hide">
 			<!--<textarea name="" placeholder="请输入同意/不同意理由" rows="" cols="" class="pad15 ft14 c333 w100 block bbt" ></textarea>-->
             <form id="approve">
-                <input value="{$orderid}" name="orderid"  type="hidden">
+                <input value="{$orderBase['orderId']}" name="orderid"  type="hidden">
                 <input value="" name="approvetype" type="hidden">
 
                 <div class="weui-cells__title">审批意见</div>
@@ -27,14 +27,6 @@
                     </div>
                 </div>
             </form>
-<<<<<<< HEAD
-            <div class="weui-flex">
-                <div class="weui-flex__item"><div style="padding-right: 5px" class="placeholder"><a href="javascript:;" class="weui-btn weui-btn_primary ">确认</a></div></div>
-                <div class="weui-flex__item"><div style="padding-left: 5px" class="placeholder"><a href="javascript:;" class="weui-btn weui-btn_primary ">返回</a></div></div>
-            </div>
-
-=======
->>>>>>> 1614f24424a020947ae22e5d4e455357a41141c4
 
 		</div>
 
@@ -42,83 +34,110 @@
 			<div class="pl10 bgfff bbt">
 				<a href="" class="bbt pt10 pb10 pr10 clearfix block">
 					<div class="fl ell-width">
-						<p class="ellipsis ft15">吴丹吴丹 的申请</p>
-						<p class="c999 ft12">2016.02.03</p>
+						<p class="ellipsis ft15">{$orderBase['realname']}的申请</p>
+						<p class="c999 ft12"><?php echo (date("Y-m-d H:i:s",$orderBase['addtime'])); ?></p>
 					</div>
-					<p class="fr orange ft16 pt10">待审批</p>
+					<p class="fr orange ft16 pt10">
+						<switch name="orderBase['status']">
+							<case value="leader">销售主管审批</case>
+							<case value="chiefleader">销售经理审批</case>
+							<case value="storehouse">库管审批</case>
+							<case value="complete">审批通过</case>
+							<case value="cancel">撤销</case>
+							<case value="retreat">退回</case>
+						</switch>
+					</p>
 				</a>
 				<div class="pt10 pb10 pr10">
-					<div class="clearfix mb5">
-						<p class="c949f dib fl ft14">基本信息：</p>
-						<p class="ft14 information">及第三方哈师大发贺卡上的家伙发卡上的回复看见爱上的话费卡手机话费</p>
-					</div>
-					<div class="clearfix mb5">
-						<p class="c949f dib fl ft14">基本信息：</p>
-						<p class="ft14 information">及第三方哈师大发贺卡上的家伙发卡上的回复看见爱上的话费卡手机话费</p>
-					</div>
-				</div>
-				<div class="pt10 pb10 pr10 btop">
-					<p class="ft16">抄送人<span class="c999 ft14">(审批人全部处理后，将抄送给以下人员)</span></p>
-					<div class="clearfix mt15">
-						<div class="fl mr15">
-							<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="round30"/>
-							<p class="ftc">黄思琪</p>
+					<foreach name="orderInfo" item="v" key="k" >
+						<div class="clearfix mb5">
+							<p class="c949f dib fl ft14">(<?php echo ($k+1); ?>)订单明细</p>
+
 						</div>
-						<div class="fl mr15">
-							<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="round30"/>
-							<p class="ftc">黄思琪</p>
+						<div class="clearfix mb5">
+							<p class="c949f dib fl ft14">名称：</p>
+							<p class="ft14 information">{$v['packagename']}</p>
 						</div>
-					</div>
+						<div class="clearfix mb5">
+							<p class="c949f dib fl ft14">订单类型：</p>
+							<p class="ft14 information"> {$orderType[$v['ordertype']]}</p>
+						</div>
+
+						<div class="clearfix mb5">
+							<p class="c949f dib fl ft14">价格：</p>
+							<p class="ft14 information"> {$v['price']}</p>
+						</div>
+						<div class="clearfix mb5">
+							<p class="c949f dib fl ft14">数量：</p>
+							<p class="ft14 information">{$v['num']}</p>
+						</div>
+					</foreach>
 				</div>
 			</div>
 			<div class="pl20 mb60">
-				<div class="bleft rela pt15 pr20 pl15">
-					<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>
-					<div class="b-all round5 bgfff pad10 clearfix">
-						<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>
-						<div class="ml60">
-							<p class="ft15 mt5">黄思琪</p>
-							<p class="cgreen ft14">发起申请</p>
+				<!--<div class="bleft rela pt15 pr20 pl15">-->
+					<!--<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>-->
+					<!--<div class="b-all round5 bgfff pad10 clearfix">-->
+						<!--<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>-->
+						<!--<div class="ml60">-->
+							<!--<p class="ft15 mt5">黄思琪</p>-->
+							<!--<p class="cgreen ft14">发起申请</p>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--<div class="bleft rela pt15 pr20 pl15">-->
+					<!--<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>-->
+					<!--<div class="b-all round5 bgfff pad10 clearfix">-->
+						<!--<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>-->
+						<!--<div class="ml60">-->
+							<!--<p class="ft15 mt5">黄思琪</p>-->
+							<!--<p class="cred ft14">已拒绝<span class="c999">(留言留言留言留言留言留言留言留言留言留言)</span></p>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<foreach name="log" item="v" key="k" >
+					<div class="bleft rela pt15 pr20 pl15">
+						<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>
+						<div class="b-all round5 bgfff pad10 clearfix">
+							<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>
+							<div class="ml60">
+								<p class="ft15 mt5">{$v['realname']}</p>
+								<p class="cred ft14">
+									<switch name="v['nodename']">
+										<case value="cancel">撤销</case>
+										<case value="retreat">退回</case>
+										<default />同意
+									</switch>
+									<span class="c999">({$v['remark']})</span>
+								</p>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="bleft rela pt15 pr20 pl15">
-					<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>
-					<div class="b-all round5 bgfff pad10 clearfix">
-						<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>
-						<div class="ml60">
-							<p class="ft15 mt5">黄思琪</p>
-							<p class="cgreen ft14">审批中</p>
-						</div>
-					</div>
-				</div>
-				<div class="bleft rela pt15 pr20 pl15">
-					<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>
-					<div class="b-all round5 bgfff pad10 clearfix">
-						<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>
-						<div class="ml60">
-							<p class="ft15 mt5">黄思琪</p>
-							<p class="cred ft14">已拒绝<span class="c999">(留言留言留言留言留言留言留言留言留言留言)</span></p>
-						</div>
-					</div>
-				</div>
-				<div class="bleft rela pt15 pr20 pl15">
-					<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="20px" height="20px" class="typeico abs"/>
-					<div class="b-all round5 bgfff pad10 clearfix">
-						<img src="__ROOT__/Public/Dingtalk/Img/Dingtalkapprovecenter/aply2.png" width="50px" height="50px" class="fl dib round30"/>
-						<div class="ml60">
-							<p class="ft15 mt5">黄思琪</p>
-							<p class="cred ft14"><span class="c999">(留言留言留言留言留言留言留言留言留言留言)</span></p>
-						</div>
-					</div>
-				</div>
+				</foreach>
 			</div>
 		</div>
-        <div class="weui-navbar" style="position: fixed;bottom: 0;top:auto">
-            <div data-type="agree" class="weui-navbar__item">同意</div>
-            <div data-type="disagree" class="weui-navbar__item">拒绝</div>
-            <div data-type="cancel" class="weui-navbar__item">撤销</div>
-        </div>
+
+
+
+		<if condition="$type eq 'show' ">
+
+			<else />
+			<div class="weui-navbar" style="position: fixed;bottom: 0;top:auto">
+				<div data-type="agree" class="weui-navbar__item">同意</div>
+				<div data-type="disagree" class="weui-navbar__item">拒绝</div>
+				<div data-type="cancel" class="weui-navbar__item">撤销</div>
+			</div>
+		</if>
+
+
+
+		<if condition="$orderBase['status'] eq 'retreat' ">
+			<div class="weui-navbar" style="position: fixed;bottom: 0;top:auto">
+				<a href="<?php echo U('OrderProcess/OrderApprove'); ?>?order={$orderBase['orderId']}" data-type="xiugai" class="weui-navbar__item">修改</a>
+
+			</div>
+		</if>
+
 
 
 	<script>
