@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
+Source Server         : wwewe
 Source Server Version : 50540
 Source Host           : localhost:3306
 Source Database       : thinkphp
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2017-02-19 22:13:08
+Date: 2017-02-20 16:17:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -420,6 +420,8 @@ INSERT INTO `think_workflow_execution` VALUES ('101', 'leader', 'orderapprove', 
 INSERT INTO `think_workflow_execution` VALUES ('111', 'storehouse', 'orderapprove', '1', '', 'orderapprove.111', 'active-root', '0', '133', '0', '0', '111', '1487424287');
 INSERT INTO `think_workflow_execution` VALUES ('221', 'leader', 'orderapprove', '1', '', 'orderapprove.221', 'active-root', '0', '225', '0', '0', '221', '1487499151');
 INSERT INTO `think_workflow_execution` VALUES ('231', 'leader', 'orderapprove', '1', '', 'orderapprove.231', 'active-root', '0', '235', '0', '0', '231', '1487507304');
+INSERT INTO `think_workflow_execution` VALUES ('241', 'leader', 'orderapprove', '1', '', 'orderapprove.241', 'active-root', '0', '245', '0', '0', '241', '1487577853');
+INSERT INTO `think_workflow_execution` VALUES ('251', 'leader', 'orderapprove', '1', '', 'orderapprove.251', 'active-root', '0', '255', '0', '0', '251', '1487578574');
 
 -- ----------------------------
 -- Table structure for `think_workflow_hist_actinst`
@@ -486,6 +488,10 @@ INSERT INTO `think_workflow_hist_actinst` VALUES ('224', '221', 'decision', 'ord
 INSERT INTO `think_workflow_hist_actinst` VALUES ('225', '221', 'task', 'orderapprove.221', 'leader', '1487499151', '0', '0', '', '222', '1487499151');
 INSERT INTO `think_workflow_hist_actinst` VALUES ('234', '231', 'decision', 'orderapprove.231', 'exclusive1', '1487507304', '1487507304', '0', 'to leader', '0', '1487507304');
 INSERT INTO `think_workflow_hist_actinst` VALUES ('235', '231', 'task', 'orderapprove.231', 'leader', '1487507304', '0', '0', '', '232', '1487507304');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('244', '241', 'decision', 'orderapprove.241', 'exclusive1', '1487577853', '1487577853', '0', 'to leader', '0', '1487577853');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('245', '241', 'task', 'orderapprove.241', 'leader', '1487577853', '0', '0', '', '242', '1487577853');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('254', '251', 'decision', 'orderapprove.251', 'exclusive1', '1487578574', '1487578574', '0', 'to leader', '0', '1487578574');
+INSERT INTO `think_workflow_hist_actinst` VALUES ('255', '251', 'task', 'orderapprove.251', 'leader', '1487578574', '0', '0', '', '252', '1487578574');
 
 -- ----------------------------
 -- Table structure for `think_workflow_hist_procinst`
@@ -520,6 +526,8 @@ INSERT INTO `think_workflow_hist_procinst` VALUES ('141', 'orderapprove.141', 'o
 INSERT INTO `think_workflow_hist_procinst` VALUES ('181', 'orderapprove.181', 'orderapprove', '', '1487425655', '1487428102', '2447', 'ended', 'cancel', '0');
 INSERT INTO `think_workflow_hist_procinst` VALUES ('221', 'orderapprove.221', 'orderapprove', '', '1487499151', '0', '0', 'active', '', '0');
 INSERT INTO `think_workflow_hist_procinst` VALUES ('231', 'orderapprove.231', 'orderapprove', '', '1487507304', '0', '0', 'active', '', '0');
+INSERT INTO `think_workflow_hist_procinst` VALUES ('241', 'orderapprove.241', 'orderapprove', '', '1487577853', '0', '0', 'active', '', '0');
+INSERT INTO `think_workflow_hist_procinst` VALUES ('251', 'orderapprove.251', 'orderapprove', '', '1487578574', '0', '0', 'active', '', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_hist_task`
@@ -563,6 +571,8 @@ INSERT INTO `think_workflow_hist_task` VALUES ('182', 'orderapprove.181', 'retre
 INSERT INTO `think_workflow_hist_task` VALUES ('201', 'orderapprove.181', 'cancel', '', '0', 'complete', '1487427598', '1487428102', '504', '0');
 INSERT INTO `think_workflow_hist_task` VALUES ('222', 'orderapprove.221', '', '', '0', 'open', '1487499151', '0', '0', '0');
 INSERT INTO `think_workflow_hist_task` VALUES ('232', 'orderapprove.231', '', '', '0', 'open', '1487507304', '0', '0', '0');
+INSERT INTO `think_workflow_hist_task` VALUES ('242', 'orderapprove.241', '', '', '0', 'open', '1487577853', '0', '0', '0');
+INSERT INTO `think_workflow_hist_task` VALUES ('252', 'orderapprove.251', '', '', '0', 'open', '1487578574', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_num`
@@ -579,7 +589,7 @@ CREATE TABLE `think_workflow_num` (
 -- ----------------------------
 -- Records of think_workflow_num
 -- ----------------------------
-INSERT INTO `think_workflow_num` VALUES ('next.dbid', '23', '231', '0');
+INSERT INTO `think_workflow_num` VALUES ('next.dbid', '25', '251', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_participation`
@@ -609,6 +619,8 @@ INSERT INTO `think_workflow_participation` VALUES ('93', '0', '1', 'candidate', 
 INSERT INTO `think_workflow_participation` VALUES ('103', '0', '1', 'candidate', '102', '0');
 INSERT INTO `think_workflow_participation` VALUES ('223', '0', '1', 'candidate', '222', '0');
 INSERT INTO `think_workflow_participation` VALUES ('233', '0', '1', 'candidate', '232', '0');
+INSERT INTO `think_workflow_participation` VALUES ('243', '0', '1', 'candidate', '242', '0');
+INSERT INTO `think_workflow_participation` VALUES ('253', '0', '1', 'candidate', '252', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_task`
@@ -645,6 +657,8 @@ INSERT INTO `think_workflow_task` VALUES ('102', 'leader', 'open', '', '0', '148
 INSERT INTO `think_workflow_task` VALUES ('131', 'storehouse', 'open', '', '0', '1487424376', 'orderapprove.111', 'storehouse', '1', '111', '111', '0');
 INSERT INTO `think_workflow_task` VALUES ('222', 'leader', 'open', '', '0', '1487499151', 'orderapprove.221', 'leader', '1', '221', '221', '0');
 INSERT INTO `think_workflow_task` VALUES ('232', 'leader', 'open', '', '0', '1487507304', 'orderapprove.231', 'leader', '1', '231', '231', '0');
+INSERT INTO `think_workflow_task` VALUES ('242', 'leader', 'open', '', '0', '1487577853', 'orderapprove.241', 'leader', '1', '241', '241', '0');
+INSERT INTO `think_workflow_task` VALUES ('252', 'leader', 'open', '', '0', '1487578574', 'orderapprove.251', 'leader', '1', '251', '251', '0');
 
 -- ----------------------------
 -- Table structure for `think_workflow_variable`
@@ -682,6 +696,8 @@ INSERT INTO `think_workflow_variable` VALUES ('125', 'int', 'chiefleader', '111'
 INSERT INTO `think_workflow_variable` VALUES ('134', 'int', 'leader', '111', '0', '1', '', '', '1487424376');
 INSERT INTO `think_workflow_variable` VALUES ('226', 'int', 'leader', '221', '0', '1', '', '', '1487499151');
 INSERT INTO `think_workflow_variable` VALUES ('236', 'int', 'leader', '231', '0', '1', '', '', '1487507304');
+INSERT INTO `think_workflow_variable` VALUES ('246', 'int', 'leader', '241', '0', '1', '', '', '1487577853');
+INSERT INTO `think_workflow_variable` VALUES ('256', 'int', 'leader', '251', '0', '1', '', '', '1487578574');
 
 -- ----------------------------
 -- Table structure for `think_ysy_address`
@@ -847,6 +863,8 @@ INSERT INTO `think_ysy_goodspackage` VALUES ('1486733119', '12', '12', '14870544
 INSERT INTO `think_ysy_goodspackage` VALUES ('1486733142', '2222', '12555', '1486822492', '1', '0');
 INSERT INTO `think_ysy_goodspackage` VALUES ('1486733192', 'wudan222', 'wudan333', '1486821166', '1', '0');
 INSERT INTO `think_ysy_goodspackage` VALUES ('1487055184', 'wudanTest', 'wudanTest', '1487055184', '1', '0');
+INSERT INTO `think_ysy_goodspackage` VALUES ('1487577364', 'package1', '1', '1487577364', '1', '0');
+INSERT INTO `think_ysy_goodspackage` VALUES ('1487577469', 'package2', 'package2', '1487577469', '1', '0');
 INSERT INTO `think_ysy_goodspackage` VALUES ('2147483647', '商品', '22', '1486819758', '1', '0');
 
 -- ----------------------------
@@ -876,6 +894,9 @@ INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1487054487', '20', '1', '14870
 INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1487054487', '21', '2', '1487054487');
 INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1487055184', '20', '1', '1487055184');
 INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1487055184', '21', '2', '1487055184');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1487577364', '20', '1', '1487577364');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1487577364', '21', '2', '1487577364');
+INSERT INTO `think_ysy_goodspackageinfo` VALUES ('1487577469', '21', '3', '1487577469');
 
 -- ----------------------------
 -- Table structure for `think_ysy_order`
@@ -914,6 +935,7 @@ INSERT INTO `think_ysy_order` VALUES ('1487424482', '1', '1487424482', '1', '148
 INSERT INTO `think_ysy_order` VALUES ('1487425655', '1', '1487425655', '1', '1487347200', '0', '0.00', '', '3', '2', '1', 'cancel', '181', '', '0');
 INSERT INTO `think_ysy_order` VALUES ('1487499151', '1', '1487499151', '1', '1487433600', '0', '0.00', '', '3', '2', '1', 'leader', '221', '', '0');
 INSERT INTO `think_ysy_order` VALUES ('1487507304', '1', '1487513526', '1', '1487433600', '0', '0.00', '', '3', '2', '1', 'leader', '231', '', '0');
+INSERT INTO `think_ysy_order` VALUES ('1487577851', '1', '1487578574', '1', '1487520000', '0', '0.00', '', '3', '2', '1', 'leader', '251', '', '0');
 
 -- ----------------------------
 -- Table structure for `think_ysy_ordergoods`
@@ -955,6 +977,9 @@ INSERT INTO `think_ysy_ordergoods` VALUES ('1486733119', '1487507304', '3', '0',
 INSERT INTO `think_ysy_ordergoods` VALUES ('1486733142', '1487507304', '4', '0', '12.23');
 INSERT INTO `think_ysy_ordergoods` VALUES ('1486733119', '1487507304', '3', '0', '11.00');
 INSERT INTO `think_ysy_ordergoods` VALUES ('1486733142', '1487507304', '4', '0', '12.23');
+INSERT INTO `think_ysy_ordergoods` VALUES ('1487577364', '1487577851', '1', '0', '1.00');
+INSERT INTO `think_ysy_ordergoods` VALUES ('1487577469', '1487577851', '2', '1', '12.00');
+INSERT INTO `think_ysy_ordergoods` VALUES ('1487577469', '1487577851', '3', '1', '12.00');
 
 -- ----------------------------
 -- Table structure for `think_ysy_packageprice`
@@ -1014,6 +1039,20 @@ INSERT INTO `think_ysy_packageprice` VALUES ('1487055184', '3', '4.00', '0', '0.
 INSERT INTO `think_ysy_packageprice` VALUES ('1487055184', '4', '5.00', '0', '0.00');
 INSERT INTO `think_ysy_packageprice` VALUES ('1487055184', '5', '6.00', '0', '0.00');
 INSERT INTO `think_ysy_packageprice` VALUES ('1487055184', '6', '7.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577364', '0', '1.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577364', '1', '2.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577364', '2', '3.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577364', '3', '4.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577364', '4', '5.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577364', '5', '6.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577364', '6', '7.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577469', '0', '11.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577469', '1', '12.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577469', '2', '13.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577469', '3', '14.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577469', '4', '15.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577469', '5', '16.00', '0', '0.00');
+INSERT INTO `think_ysy_packageprice` VALUES ('1487577469', '6', '17.00', '0', '0.00');
 
 -- ----------------------------
 -- Table structure for `think_ysy_stock`
@@ -1030,7 +1069,7 @@ CREATE TABLE `think_ysy_stock` (
 -- Records of think_ysy_stock
 -- ----------------------------
 INSERT INTO `think_ysy_stock` VALUES ('20', '15', '55');
-INSERT INTO `think_ysy_stock` VALUES ('21', '22', '66');
+INSERT INTO `think_ysy_stock` VALUES ('21', '13', '66');
 INSERT INTO `think_ysy_stock` VALUES ('111', '140', '63');
 INSERT INTO `think_ysy_stock` VALUES ('222', '270', '128');
 
