@@ -39,7 +39,7 @@ class ProcessStock
         $DbObjOfResultList = array();
         if($this->_dataFromClient['checkInAdd']){
             $DbModelObj = new \CommonClass\DbModel\CombinStatement('ysy_checkin');
-            $DbObjOfResultList[] = $DbModelObj->insert(array($this->_dataFromClient['checkInAdd']));
+            $DbObjOfResultList[] = $DbModelObj->insert($this->_dataFromClient['checkInAdd']);
         }else{
             $DbModelObj = new \CommonClass\DbModel\CombinStatement('ysy_checkin');
             $DbObjOfResultList[] = $DbModelObj->where("checkin_id = {$this->_checkIn}")->update($this->_dataFromClient['checkInUp']);

@@ -1,0 +1,29 @@
+[ 2017-02-17T08:55:23+08:00 ] 127.0.0.1 /myysy/admin.php/Stockandsale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.025576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.037733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.037802s ]
+NOTIC: [8] Undefined index: controller_2 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 58 行.
+
+[ 2017-02-17T08:55:24+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000609s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.050851s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.050912s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.227964s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.228025s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.033840s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.033881s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.037585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.037633s ]
+

@@ -17,7 +17,10 @@
     <div class="row">
         <?php echo ($body['sider']); ?>
         <div class="col-md-10">
-            <div><a  type="button" class="btn btn-info addgoods-a">新增商品</a></div>
+            <div>
+                <a  type="button" class="btn btn-info addgoods-a">新增商品</a>
+                <a  type="button" class="btn btn-info addformat-a">新增规格</a>
+            </div>
             <table class="table table-condensed checkin-table">
                 <thead>
                 <tr>
@@ -30,7 +33,7 @@
                 </thead>
                 <tbody>
 
-                <?php if(is_array($formatList)): foreach($formatList as $k=>$vo): ?><tr>
+                <?php if(is_array($goodsList)): foreach($goodsList as $k=>$vo): ?><tr>
                         <td><?php echo ($vo["goods_id"]); ?></td>
                         <td><?php echo ($vo["format_name"]); ?></td>
                         <td><?php echo ($vo["goods_name"]); ?></td>
@@ -55,20 +58,23 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="exampleModalLabel">新加商品</h4>
+                    <h4 class="modal-title" id="exampleModalLabel"><span class="title-span">新加商品</span></h4>
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal">
+
+                        <input name="type" value="addgoods" type="hidden" >
+
                         <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">规格</label>
+                            <label for="inputEmail3" class="col-sm-2 control-label"><span class="text1-span">规格</span></label>
                             <div class="col-sm-10">
                                 <select name="format_id" class="form-control">
-                                    <?php if(is_array($formatList)): foreach($formatList as $k=>$v): ?><option value="<?php echo ($v["format_id"]); ?>"><?php echo ($v["format_name"]); ?></option><?php endforeach; endif; ?>
+                                    <?php if(is_array($formatArr)): foreach($formatArr as $k=>$v): ?><option value="<?php echo ($v["format_id"]); ?>"><?php echo ($v["format_name"]); ?></option><?php endforeach; endif; ?>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label  class="col-sm-2 control-label">商品名称</label>
+                            <label  class="col-sm-2 control-label"><span class="text2-span">商品名称</span></label>
                             <div class="col-sm-10">
                                 <input name="goods_name" class="form-control">
                             </div>
@@ -101,9 +107,26 @@
         var _initi = function(){
 
             $('.addgoods-a').on('click' , function(){
+
+
+                $('.title-span').text('新增商品');
+                $('.text1-span').text('规格');
+                $('.text2-span').text('商品名称');
+                $('input[name="type"]').val('addgoods');
+
                 $('.modal').show();
                 $('.modal-backdrop').show();
             });
+
+            $('.addformat-a').on('click' , function(){
+                $('.title-span').text('新增规格');
+                $('.text1-span').text('父级规格');
+                $('.text2-span').text('规格名称');
+                $('input[name="type"]').val('addformat');
+                $('.modal').show();
+                $('.modal-backdrop').show();
+            });
+
 
 
             $('.modal-dialog .btn-default').on('click' , function(){
@@ -123,7 +146,8 @@
                 var formatid = $('select[name="format_id"]').val();
                 var goodsname = $('input[name="goods_name"]').val();
                 var remark = $('input[name="remark"]').val();
-                $.get(url , {type:'editgoods',formatid:formatid,goodsname:goodsname,remark:remark} , function(data){
+                var type = $('input[name="type"]').val();
+                $.get(url , {type:type,formatid:formatid,goodsname:goodsname,remark:remark } , function(data){
                     var url = '<?php echo U('stockandsale/ManageGoods') ?>';
                     var responseJson = JSON.parse(data);
                     if(responseJson.error === 0){

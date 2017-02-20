@@ -104,7 +104,9 @@
                 var dataStrFromForm = $("form").serializeArray();
                 var url = '<?php echo U('stockandsale/Checkin/actionRequestService') ?>';
                 $.get(url , {type:'checkin',checkin:checkId,data:dataStrFromForm} , function(data){
-                    console.log(data);
+                    var url = '<?php echo U('stockandsale/Checkin') ?>';
+                    window.location.href = url;
+
                 });
 
             });

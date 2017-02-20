@@ -26,18 +26,16 @@ class ManageGoodsController extends Controller
      * 显示历史信息
      */
     public function index(){
-        //$formatList = M('ysy_format')->where("status = 1")->select();
-        //$this->assign('formatList' , $formatList);
-
-        $formatList = M('ysy_goods')
+        $goodsList = M('ysy_goods')
             ->alias('g')
             ->field("g.goods_id , s.goods_num , g.format_id , g.goods_name , f.format_id , f.format_name")
             ->join("think_ysy_stock AS s ON s.goods_id = g.goods_id")
             ->join("think_ysy_format AS f ON f.format_id = g.format_id")
             ->select();
 
-        $this->assign('formatList' , $formatList);
-
+        $formatArr = M('ysy_format')->where('status = 1')->select();
+        $this->assign('formatArr' , $formatArr);
+        $this->assign('goodsList' , $goodsList);
         $this->display('/Stockandsale/ManageGoodsList');
     }
 
@@ -54,14 +52,33 @@ class ManageGoodsController extends Controller
      */
     public function actionRequestService(){
         $type = I('type');
-        if($type == 'editgoods'){
-            $this->_editGoods(I('formatid') , I('goodsname') , I('reamrk'));
+        if($type == 'addgoods'){
+            $this->_editGoods(I('formatid') , I('goodsname') , I('remark'));
+        }else{
+            $this->_editFormat();
         }
-
-
-        die('11');
-
     }
+
+    /**
+     * 增加规格
+     */
+    private function _editFormat(){
+        $pId = intval(I('formatid'));
+        $name = trim(trim(I('goodsname')));
+        $remark = strip_tags(trim(I('remark')));
+        $InsertFormatList = array(
+            'format_name' => $name,
+            'format_remark' => $remark,
+            'format_pid' => $pId,
+        );
+        $flag = M('ysy_format')->add($InsertFormatList);
+        if($flag){
+            die(json_encode(array('error' => 0) , JSON_UNESCAPED_UNICODE));
+        }else{
+            die(json_encode(array('error' => 1) , JSON_UNESCAPED_UNICODE));
+        }
+    }
+
 
     /**
      * 新增商品
@@ -82,6 +99,7 @@ class ManageGoodsController extends Controller
         $flag = true;
         try{
             $goodsId = M('ysy_goods')->add($ysyGoodsOfForm);
+
             if(!$goodsId){
                 new \Exception('histActinsterror');
             }

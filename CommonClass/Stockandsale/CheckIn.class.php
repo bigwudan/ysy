@@ -53,6 +53,18 @@ class CheckIn
                 'checkin_id' => $checkId
             ));
         }
+
+        $assembleAfterData = array();
+
+        foreach($dataList as $k => $v){
+            $assembleAfterData[$v['goods_id']]['goodsnum'] += $v['goodsnum'];
+            $assembleAfterData[$v['goods_id']]['goods_id'] = $v['goods_id'];
+            $assembleAfterData[$v['goods_id']]['grossweight'] = $v['grossweight'];
+            $assembleAfterData[$v['goods_id']]['weight'] = $v['weight'];
+            $assembleAfterData[$v['goods_id']]['checkin_id'] = $v['checkin_id'];
+
+        }
+
         if($this->_checkIn){
             $checkId =  $this->_checkIn;
             $list = array(

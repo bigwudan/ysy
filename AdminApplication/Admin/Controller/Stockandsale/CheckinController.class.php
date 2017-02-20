@@ -84,6 +84,7 @@ class CheckinController extends Controller
         $ProcessStockObj = new \CommonClass\Stockandsale\ProcessStock();
         $ProcessStockObj->initi($checkDataList,$checkin);
         $stockList = $ProcessStockObj->processData();
+
         $RunCombinObj = new \CommonClass\DbModel\RunCombinStatement();
         $RunCombinObj->add($stockList);
         $flag = true;
@@ -96,7 +97,6 @@ class CheckinController extends Controller
             $Model->db()->rollback();
             $flag = false;
         }
-        die('xxxxxx');
         return $flag;
     }
 
