@@ -12,7 +12,6 @@
 
 <body>
 
-
 {$body['head']}
 <form id="checkin-form">
 <div class="container-fluid">
@@ -22,6 +21,7 @@
             <table class="table table-condensed checkin-table">
                 <thead>
                 <tr>
+                    <th>规格</th>
                     <th>商品</th>
                     <th>数量</th>
                     <th>单件毛重</th>
@@ -42,6 +42,7 @@
         var goodsJson = {$dataListFromService['goods']};
         var checkId = {$checkId};
         var checkInJson = {$checkInJson};
+        var dataOfFormat = {$dataOfFormat};
 
         var _assembSelectHtml = function( nameVal , dataList , selectedVal){
             var html = '';
@@ -55,10 +56,24 @@
             return html;
         };
 
+        var _assembFormatSelectHtml = function(nameVal , dataList , selectedVal){
+            var html = '';
+            for(var k in dataOfFormat){
+                if(dataOfFormat.hasOwnProperty(k)){
+                    var str = new Array(dataOfFormat[k]['level']).join("--");
+                    html += '<option   value="'+dataOfFormat[k]['format_id']+'">'+str+dataOfFormat[k]['format_name']+'</option>';
+                }
+            }
+            html ='<select onchange="CheckIn.selectFormatOnChange(this)" class="form-control formatselect" >'+html+'</select>';
+            return html;
+        };
+
         var _assemCheckInGoods = function(){
             var html = '';
             var formatOfSelectHtml = _assembSelectHtml('goods' , goodsJson , null);
+            var assembFormatSelectHtml = _assembFormatSelectHtml();
             html = '<tr>' +
+                    '<td>'+assembFormatSelectHtml+'</td>' +
                     '<td>'+formatOfSelectHtml+'</td>' +
                     '<td><input class="form-control" name="goodsnum[]"></td>' +
                     '<td><input class="form-control" name="grossweight[]"></td>' +
@@ -68,12 +83,35 @@
             $('.checkin-table tbody').append(html);
         };
 
+        var _selectFormatOnChange = function(obj){
+            var formatId = $(obj).val();
+            var url = '<?php echo U('stockandsale/Checkin/actionRequestService') ?>';
+            $.get(url , {type:'selectformat',formatid:formatId} , function(data){
+                var subObj = $(obj).parents('tr').find('select[name="goods_id[]"]');
+                try{
+                    var goodsList = JSON.parse(data);
+                    var html = '';
+                    for(var k in goodsList){
+                        if(goodsList.hasOwnProperty(k)){
+                            html += '<option  value="'+goodsList[k]['goods_id']+'">'+goodsList[k]['goods_name']+'</option>';
+                        }
+                    }
+
+                }catch (e){
+                    alert('系统错误');
+                }
+                subObj.html(html);
+            });
+        };
+
         var _editByCheckIn = function(){
             var html = '';
             for(var k in checkInJson){
                 if(checkInJson.hasOwnProperty(k)){
                     var tmpFormatOfSelectHtml = _assembSelectHtml('goods' , goodsJson , checkInJson[k]['goods_id']);
+                    var assembFormatSelectHtml = _assembFormatSelectHtml();
                     html += '<tr>' +
+                            '<td>'+assembFormatSelectHtml+'</td>' +
                             '<td>'+tmpFormatOfSelectHtml+'</td>' +
                             '<td><input class="form-control" value="'+checkInJson[k]['goodsnum']+'" name="goodsnum[]"></td>' +
                             '<td><input class="form-control" value="'+checkInJson[k]['grossweight']+'" name="grossweight[]"></td>' +
@@ -84,7 +122,6 @@
             }
             $('.checkin-table tbody').append(html);
         };
-
         var _initi = function(){
             if(checkId == 0){
                 _assemCheckInGoods();
@@ -99,22 +136,21 @@
                     targetObj.parent().parent().remove();
                 }
             });
-
             $('.checkin-btn').on('click' , function(){
                 var dataStrFromForm = $("form").serializeArray();
                 var url = '<?php echo U('stockandsale/Checkin/actionRequestService') ?>';
                 $.get(url , {type:'checkin',checkin:checkId,data:dataStrFromForm} , function(data){
                     var url = '<?php echo U('stockandsale/Checkin') ?>';
                     window.location.href = url;
-
                 });
-
             });
-
-
         }();
 
+        return {
 
+            selectFormatOnChange : _selectFormatOnChange
+
+        }
     }();
 
 

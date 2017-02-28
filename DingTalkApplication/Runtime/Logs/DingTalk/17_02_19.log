@@ -3449,3 +3449,103 @@ SQL: UPDATE `think_ysy_stock` SET `goods_num`=goods_num+12 WHERE ( goods_id = 21
 SQL: UPDATE `think_ysy_stock` SET `goods_num`=goods_num-7 WHERE ( goods_id = 20 ) [ RunTime:0.0000s ]
 SQL: UPDATE `think_ysy_stock` SET `goods_num`=goods_num-7 WHERE ( goods_id = 21 ) [ RunTime:0.0000s ]
 
+[ 2017-02-19T22:17:02+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove.html?order=1487507304
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SELECT * FROM think_ysy_order as yo join think_ysy_ordergoods as yog on yo.order_id = yog.order_id where yo.order_id = 1487507304 [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1486733119 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 1486733119 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=20 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=21 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=20 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=21 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1486733119 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 1486733119 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=20 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=21 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=20 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=21 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1486733119 )  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 1486733119 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=20 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=21 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 1486733142 )  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=20 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=21 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-02-19T22:17:16+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_ysy_order o INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND o.order_user = 1 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-02-19T22:17:18+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionWaitOfMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0070s ]
+SQL: SELECT wp.userid,o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
