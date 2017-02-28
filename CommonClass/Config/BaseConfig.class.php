@@ -19,6 +19,22 @@ class BaseConfig
     private $_orderType = array('销售订单','送样订单','赠送订单','兑券订单','损耗订单','次品销售订单','预售订单订单');
 
     /**
+     * 包装和商品
+     */
+    static private $_classify = array(
+        'goods' => 2,
+        'pack' => 1,
+    );
+
+    /**
+     * 包装和商品配置
+     */
+    static function getClassify(){
+        return self::$_classify;
+
+    }
+
+    /**
      * 得到物流信息
      */
     public function getSendType(){

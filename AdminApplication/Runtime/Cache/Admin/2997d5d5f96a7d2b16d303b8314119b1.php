@@ -18,13 +18,13 @@
         <?php echo ($body['sider']); ?>
         <div class="col-md-10">
             <div>
-                <a  type="button" class="btn btn-info addgoods-a">新增商品</a>
-                <a  type="button" class="btn btn-info addformat-a">新增商品规格</a>
+                <a  type="button" class="btn btn-info addgoods-a">新增包装</a>
+                <a  type="button" class="btn btn-info addformat-a">新增包装规格</a>
             </div>
             <table class="table table-condensed checkin-table">
                 <thead>
                 <tr>
-                    <th>商品id</th>
+                    <th>包装id</th>
                     <th>规格</th>
                     <th>名称</th>
                     <th>库存</th>

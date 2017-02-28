@@ -1,0 +1,138 @@
+[ 2017-02-21T14:58:49+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.050860s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007224s ]
+
+[ 2017-02-21T14:58:59+08:00 ] 127.0.0.1 /myysy/dingtalk.php/Login/LoginByHtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000689s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.026586s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.026675s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.179600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.179661s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.102950s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.102994s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.029477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.029541s ]
+
+[ 2017-02-21T14:59:05+08:00 ] 127.0.0.1 /myysy/dingtalk.php/Login/LoginByHtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000663s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007600s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000596s ]
+
+[ 2017-02-21T14:59:13+08:00 ] 127.0.0.1 /myysy/dingtalk.php/Login/LoginByHtml/actionSubmit.html?loginname=wudan&loginpassword=wd811103
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.2324s ]
+SQL: SELECT * FROM `think_user` WHERE ( username='wudan' and password = '883327915c4022331b5abcb9da2a390c'  ) LIMIT 1   [ RunTime:0.0454s ]
+SQL: SELECT `id`,`username`,`realname` FROM `think_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030318s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030396s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000933s ]
+
+[ 2017-02-21T14:59:14+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000894s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000036s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025864s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000654s ]
+
+[ 2017-02-21T14:59:17+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionWaitOfMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.1389s ]
+SQL: SELECT wp.userid,o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 )  [ RunTime:0.1505s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000076s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065174s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065218s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000591s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000623s ]
+
+[ 2017-02-21T14:59:19+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487577851
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0059s ]
+SQL: SELECT `rece_tel`,`rece_addr`,`rece_name`,yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487577851 )  [ RunTime:0.1380s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0055s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487577364 )  [ RunTime:0.0521s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487577469 )  [ RunTime:0.0004s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487577469 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0911s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487577851 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001082s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001127s ]
+

@@ -1,0 +1,633 @@
+[ 2017-02-22T17:41:04+08:00 ] 127.0.0.1 /myysy/dingtalk.php/Login/LoginByHtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035836s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000589s ]
+
+[ 2017-02-22T17:41:11+08:00 ] 127.0.0.1 /myysy/dingtalk.php/Login/LoginByHtml/actionSubmit.html?loginname=wudan&loginpassword=wd811103
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `think_user` WHERE ( username='wudan' and password = '883327915c4022331b5abcb9da2a390c'  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`username`,`realname` FROM `think_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006101s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006160s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000438s ]
+
+[ 2017-02-22T17:41:13+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000606s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040801s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040869s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000582s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2017-02-22T17:41:16+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `think_ysy_goodspackage` WHERE ( status = 0 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026062s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000640s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000680s ]
+
+[ 2017-02-22T17:41:19+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=getaddress&tel=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `think_ysy_address` [ RunTime:0.0849s ]
+SQL: SELECT * FROM `think_ysy_address` WHERE ( tel='1' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-02-22T17:41:25+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=1487756449
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1487756449 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 1487756449 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=21 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=22 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2017-02-22T17:41:36+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=changepackage&id=1486733142
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000711s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1486733142 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0168s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 1486733142 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=20 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id=21 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2017-02-22T17:41:48+08:00 ] 127.0.0.1 /myysy/dingtalk.php/OrderProcess/OrderApprove/actionRequestService.html?type=submitform&data%5B0%5D%5Bname%5D=orderid&data%5B0%5D%5Bvalue%5D=0&data%5B1%5D%5Bname%5D=rece_tel&data%5B1%5D%5Bvalue%5D=1&data%5B2%5D%5Bname%5D=rece_name&data%5B2%5D%5Bvalue%5D=3&data%5B3%5D%5Bname%5D=rece_addr&data%5B3%5D%5Bvalue%5D=2&data%5B4%5D%5Bname%5D=requireddeliverytime&data%5B4%5D%5Bvalue%5D=2017-02-22&data%5B5%5D%5Bname%5D=deliveryttpe&data%5B5%5D%5Bvalue%5D=0&data%5B6%5D%5Bname%5D=price%5B%5D&data%5B6%5D%5Bvalue%5D=1.00&data%5B7%5D%5Bname%5D=package_id%5B%5D&data%5B7%5D%5Bvalue%5D=1487756449&data%5B8%5D%5Bname%5D=ordertype%5B%5D&data%5B8%5D%5Bvalue%5D=0&data%5B9%5D%5Bname%5D=num%5B%5D&data%5B9%5D%5Bvalue%5D=1&data%5B10%5D%5Bname%5D=price%5B%5D&data%5B10%5D%5Bvalue%5D=12.23&data%5B11%5D%5Bname%5D=package_id%5B%5D&data%5B11%5D%5Bvalue%5D=1486733142&data%5B12%5D%5Bname%5D=ordertype%5B%5D&data%5B12%5D%5Bvalue%5D=0&data%5B13%5D%5Bname%5D=num%5B%5D&data%5B13%5D%5Bvalue%5D=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000772s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000784s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+NOTIC: [8] Undefined index: error D:\phpStudy\WWW\myysy\DingTalkApplication\DingTalk\Controller\OrderProcess\OrderApproveController.class.php 第 164 行.
+SQL: SHOW COLUMNS FROM `think_ysy_address` [ RunTime:0.0052s ]
+SQL: SELECT * FROM `think_ysy_address` WHERE ( tel='1' ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: error D:\phpStudy\WWW\myysy\DingTalkApplication\DingTalk\Controller\OrderProcess\OrderApproveController.class.php 第 174 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 1487756449 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_ysy_goodspackageinfo` WHERE ( packageid = 1486733142 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 21 D:\phpStudy\WWW\myysy\CommonClass\Order\ProcessOrderInfoService.class.php 第 100 行.
+NOTIC: [8] Undefined offset: 22 D:\phpStudy\WWW\myysy\CommonClass\Order\ProcessOrderInfoService.class.php 第 100 行.
+NOTIC: [8] Undefined offset: 20 D:\phpStudy\WWW\myysy\CommonClass\Order\ProcessOrderInfoService.class.php 第 100 行.
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `think_ysy_stock` WHERE ( goods_id in (21,22,20) )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: error D:\phpStudy\WWW\myysy\CommonClass\Order\ProcessOrderInfoService.class.php 第 54 行.
+NOTIC: [8] Undefined index: error D:\phpStudy\WWW\myysy\DingTalkApplication\DingTalk\Controller\OrderProcess\OrderApproveController.class.php 第 180 行.
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0838s ]
+SQL: INSERT INTO `think_ysy_order` (`addtime`,`order_id`,`rece_tel`,`rece_name`,`rece_addr`,`requireddeliverytime`,`deliveryttpe`,`order_user`,`isolder`) VALUES ('1487756505','1487756505','1','3','2','1487692800','0','1','1') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_ysy_ordergoods` [ RunTime:0.0152s ]
+SQL: INSERT INTO `think_ysy_ordergoods` (`price`,`package_id`,`ordertype`,`num`,`order_id`) VALUES ('1.00','1487756449','0','1','1487756505'),('12.23','1486733142','0','2','1487756505') [ RunTime:0.0003s ]
+SQL: UPDATE `think_ysy_stock` SET `goods_num`=goods_num-4 WHERE ( goods_id = 21 ) [ RunTime:0.0003s ]
+SQL: UPDATE `think_ysy_stock` SET `goods_num`=goods_num-1 WHERE ( goods_id = 22 ) [ RunTime:0.0002s ]
+SQL: UPDATE `think_ysy_stock` SET `goods_num`=goods_num-2 WHERE ( goods_id = 20 ) [ RunTime:0.0002s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487756505 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_workflow_deployment` [ RunTime:0.0606s ]
+SQL: SELECT * FROM `think_workflow_deployment` WHERE ( rulename='orderapprove' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0872s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: del D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleVariable.class.php 第 96 行.
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0655s ]
+SQL: INSERT INTO `think_workflow_execution` (`dbid`,`activityname`,`procdefid`,`hasvars`,`key`,`id`,`state`,`priority`,`hisactinst`,`parent`,`parentidx`,`instance`,`addtime`) VALUES ('261','leader','orderapprove','1','','orderapprove.261','active-root','0','265','0','0','261','1487756507') [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: updata D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 61 行.
+NOTIC: [8] Undefined index: del D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 67 行.
+SQL: SHOW COLUMNS FROM `think_workflow_hist_procinst` [ RunTime:0.0560s ]
+SQL: INSERT INTO `think_workflow_hist_procinst` (`dbid`,`id`,`procdefid`,`key`,`start`,`end`,`duration`,`state`,`endactivity`) VALUES ('261','orderapprove.261','orderapprove','','1487756507','0','0','active','') [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: updata D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_workflow_task` [ RunTime:0.1062s ]
+SQL: INSERT INTO `think_workflow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('262','leader','open','','0','1487756507','orderapprove.261','leader','1','261','261') [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: del D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 95 行.
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0441s ]
+SQL: INSERT INTO `think_workflow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('263','0','1','candidate','262') [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: del D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 107 行.
+SQL: SHOW COLUMNS FROM `think_workflow_hist_actinst` [ RunTime:0.0577s ]
+SQL: INSERT INTO `think_workflow_hist_actinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`,`addtime`) VALUES ('264','261','decision','orderapprove.261','exclusive1','1487756507','1487756507','0','to leader','0','1487756507'),('265','261','task','orderapprove.261','leader','1487756507','0','0','','262','1487756507') [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: updata D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 121 行.
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0487s ]
+SQL: INSERT INTO `think_workflow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('266','int','leader','261','0','1','','','1487756507') [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: del D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 135 行.
+SQL: SHOW COLUMNS FROM `think_workflow_hist_task` [ RunTime:0.0511s ]
+SQL: INSERT INTO `think_workflow_hist_task` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('262','orderapprove.261','','','0','open','1487756507','0','0') [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: updata D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 147 行.
+SQL: update think_workflow_num set version = version + 1 , value = value + 10 [ RunTime:0.0003s ]
+SQL: UPDATE `think_ysy_order` SET `flowerid`='261',`status`='leader' WHERE ( order_id = 1487756505 ) [ RunTime:0.0245s ]
+
+[ 2017-02-22T17:41:48+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000537s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000558s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006638s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000988s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001027s ]
+
+[ 2017-02-22T17:41:51+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionWaitOfMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000538s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0058s ]
+SQL: SELECT wp.userid,o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000419s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2017-02-22T17:41:55+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487756505
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000848s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0074s ]
+SQL: SELECT `rece_tel`,`rece_addr`,`rece_name`,yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487756505 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0541s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0004s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487756449 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0719s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487756505 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000726s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000796s ]
+
+[ 2017-02-22T17:42:03+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveService.html?id=1487756505&approvetype=agree&remark=1212
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487756505 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0056s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,mr.addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_workflow_execution e left join think_workflow_hist_actinst AS ha ON e.hisactinst = ha.dbid left join think_workflow_hist_procinst AS hp ON e.instance = hp.dbid left join think_workflow_deployment AS mr ON e.procdefid = mr.rulename left join think_workflow_task AS t ON e.dbid = t.execution left join think_workflow_hist_task AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 261 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_participation` WHERE ( task=262 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `think_workflow_variable` WHERE ( execution=261 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: del D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleVariable.class.php 第 96 行.
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_workflow_execution` SET `activityname`='chiefleader',`hisactinst`='274' WHERE ( dbid = 261 ) [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: del D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_workflow_task` [ RunTime:0.0058s ]
+SQL: INSERT INTO `think_workflow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('271','chiefleader','open','','0','1487756523','orderapprove.261','chiefleader','1','261','261') [ RunTime:0.0004s ]
+SQL: DELETE FROM `think_workflow_task` WHERE (  dbid in (262) ) [ RunTime:0.0297s ]
+SQL: INSERT INTO `think_workflow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('272','0','1','candidate','271') [ RunTime:0.0003s ]
+SQL: DELETE FROM `think_workflow_participation` WHERE (  dbid in (263) ) [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `think_workflow_hist_actinst` [ RunTime:0.0058s ]
+SQL: INSERT INTO `think_workflow_hist_actinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`,`addtime`) VALUES ('273','261','decision','orderapprove.261','exclusive2','1487756523','1487756523','0','to chiefleader','0','1487756523'),('274','261','task','orderapprove.261','chiefleader','1487756523','0','0','','271','1487756523') [ RunTime:0.0004s ]
+SQL: UPDATE `think_workflow_hist_actinst` SET `transition`='to chiefleader',`end`='1487756523',`duration`='16' WHERE ( dbid = 265 ) [ RunTime:0.0003s ]
+SQL: INSERT INTO `think_workflow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('275','int','chiefleader','261','0','1','','','1487756523') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_workflow_hist_task` [ RunTime:0.0056s ]
+SQL: INSERT INTO `think_workflow_hist_task` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('271','orderapprove.261','','','0','open','1487756523','0','0') [ RunTime:0.0003s ]
+SQL: UPDATE `think_workflow_hist_task` SET `outcome`='chiefleader',`state`='complete',`end`='1487756523',`duration`='16' WHERE ( dbid = 262 ) [ RunTime:0.0003s ]
+SQL: update think_workflow_num set version = version + 1 , value = value + 10 [ RunTime:0.0002s ]
+SQL: UPDATE `think_ysy_order` SET `flowerid`='261',`status`='chiefleader' WHERE ( order_id = 1487756505 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0061s ]
+SQL: INSERT INTO `think_ysy_approvelog` (`orderid`,`nodename`,`uid`,`addtime`,`remark`) VALUES ('1487756505','chiefleader','1','1487756523','1212') [ RunTime:0.0003s ]
+
+[ 2017-02-22T17:42:11+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionWaitOfMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0059s ]
+SQL: SELECT wp.userid,o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 )  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007628s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007689s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000622s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2017-02-22T17:42:14+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487756505
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000603s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0066s ]
+SQL: SELECT `rece_tel`,`rece_addr`,`rece_name`,yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487756505 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0052s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0004s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487756449 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0060s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487756505 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009660s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000651s ]
+
+[ 2017-02-22T17:42:19+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveService.html?id=1487756505&approvetype=agree&remark=1212
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487756505 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0054s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,mr.addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_workflow_execution e left join think_workflow_hist_actinst AS ha ON e.hisactinst = ha.dbid left join think_workflow_hist_procinst AS hp ON e.instance = hp.dbid left join think_workflow_deployment AS mr ON e.procdefid = mr.rulename left join think_workflow_task AS t ON e.dbid = t.execution left join think_workflow_hist_task AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 261 ) LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0404s ]
+SQL: SELECT * FROM `think_workflow_participation` WHERE ( task=271 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `think_workflow_variable` WHERE ( execution=261 )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: del D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleVariable.class.php 第 96 行.
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 57 行.
+SQL: UPDATE `think_workflow_execution` SET `activityname`='storehouse',`hisactinst`='284' WHERE ( dbid = 261 ) [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: del D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 67 行.
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 75 行.
+NOTIC: [8] Undefined index: updata D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `think_workflow_task` [ RunTime:0.0058s ]
+SQL: INSERT INTO `think_workflow_task` (`dbid`,`name`,`state`,`assignee`,`priority`,`create`,`execution_id`,`activity_name`,`hasvars`,`execution`,`procinst`) VALUES ('281','storehouse','open','','0','1487756539','orderapprove.261','storehouse','1','261','261') [ RunTime:0.0004s ]
+SQL: DELETE FROM `think_workflow_task` WHERE (  dbid in (271) ) [ RunTime:0.0003s ]
+SQL: INSERT INTO `think_workflow_participation` (`dbid`,`groupid`,`userid`,`type`,`task`) VALUES ('282','0','1','candidate','281') [ RunTime:0.0002s ]
+SQL: DELETE FROM `think_workflow_participation` WHERE (  dbid in (272) ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_workflow_hist_actinst` [ RunTime:0.0066s ]
+SQL: INSERT INTO `think_workflow_hist_actinst` (`dbid`,`hprocid`,`type`,`execution`,`activity_name`,`start`,`end`,`duration`,`transition`,`htask`,`addtime`) VALUES ('283','261','decision','orderapprove.261','exclusive3','1487756539','1487756539','0','to storehouse','0','1487756539'),('284','261','task','orderapprove.261','storehouse','1487756539','0','0','','281','1487756539') [ RunTime:0.0003s ]
+SQL: UPDATE `think_workflow_hist_actinst` SET `transition`='to storehouse',`end`='1487756539',`duration`='16' WHERE ( dbid = 274 ) [ RunTime:0.0003s ]
+SQL: INSERT INTO `think_workflow_variable` (`dbid`,`class`,`key`,`execution`,`double_value`,`int_value`,`string_value`,`text_value`,`addtime`) VALUES ('285','int','storehouse','261','0','1','','','1487756539') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_workflow_hist_task` [ RunTime:0.0059s ]
+SQL: INSERT INTO `think_workflow_hist_task` (`dbid`,`execution`,`outcome`,`assignee`,`priority`,`state`,`create`,`end`,`duration`) VALUES ('281','orderapprove.261','','','0','open','1487756539','0','0') [ RunTime:0.0003s ]
+SQL: UPDATE `think_workflow_hist_task` SET `outcome`='storehouse',`state`='complete',`end`='1487756539',`duration`='16' WHERE ( dbid = 271 ) [ RunTime:0.0003s ]
+SQL: update think_workflow_num set version = version + 1 , value = value + 10 [ RunTime:0.0002s ]
+SQL: UPDATE `think_ysy_order` SET `flowerid`='261',`status`='storehouse' WHERE ( order_id = 1487756505 ) [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0071s ]
+SQL: INSERT INTO `think_ysy_approvelog` (`orderid`,`nodename`,`uid`,`addtime`,`remark`) VALUES ('1487756505','storehouse','1','1487756539','1212') [ RunTime:0.0003s ]
+
+[ 2017-02-22T17:42:24+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionWaitOfMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0060s ]
+SQL: SELECT wp.userid,o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007213s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000625s ]
+
+[ 2017-02-22T17:42:25+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionWaitOfMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000617s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000660s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0054s ]
+SQL: SELECT wp.userid,o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008160s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008205s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000606s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2017-02-22T17:42:52+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionWaitOfMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0061s ]
+SQL: SELECT wp.userid,o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 )  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007257s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2017-02-22T17:43:10+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000739s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0421s ]
+SQL: SELECT o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_ysy_order o INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND o.order_user = 1 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000609s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2017-02-22T17:43:15+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionApproveInfo.html?id=1487756505&type=show
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0072s ]
+SQL: SELECT `rece_tel`,`rece_addr`,`rece_name`,yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487756505 )  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0058s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0005s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487756449 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0081s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487756505 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011301s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011344s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000659s ]
+
+[ 2017-02-22T19:14:14+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+
+[ 2017-02-22T19:14:20+08:00 ] 127.0.0.1 /myysy/dingtalk.php/Login/LoginByHtml
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.113478s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.113530s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000790s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000849s ]
+
+[ 2017-02-22T19:14:29+08:00 ] 127.0.0.1 /myysy/dingtalk.php/Login/LoginByHtml/actionSubmit.html?loginname=wudan&loginpassword=wd811103
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.1319s ]
+SQL: SELECT * FROM `think_user` WHERE ( username='wudan' and password = '883327915c4022331b5abcb9da2a390c'  ) LIMIT 1   [ RunTime:0.0323s ]
+SQL: SELECT `id`,`username`,`realname` FROM `think_user` WHERE ( id = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000463s ]
+
+[ 2017-02-22T19:14:30+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000075s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025122s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025175s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000603s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000635s ]
+
+[ 2017-02-22T19:14:33+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter/actionWaitOfMyApprove.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0727s ]
+SQL: SELECT wp.userid,o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 )  [ RunTime:0.1195s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065220s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000577s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2017-02-22T19:24:11+08:00 ] 127.0.0.1 /myysy/dingtalk.php/ApproveCenter/ApproveCenter.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000762s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000799s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000845s ]
+
+[ 2017-02-22T19:51:02+08:00 ] 127.0.0.1 /myysy/dingtalk.php/Login/LoginByHtml/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000697s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046716s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000715s ]
+

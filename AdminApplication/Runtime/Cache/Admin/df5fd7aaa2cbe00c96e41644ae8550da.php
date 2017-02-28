@@ -53,7 +53,7 @@
                     <label for="inputEmail3" class="col-sm-2 control-label">商品组合</label>
                     <div class="col-sm-10">
                         <div class="row">
-                            <table class="table checkin-table">
+                            <table class="table goods-table packinfo-table">
                                 <thead>
                                 <tr>
                                     <th>商品名</th>
@@ -68,6 +68,27 @@
                         </div>
 
                     </div>
+
+                    <label for="inputEmail3" class="col-sm-2 control-label">包装组合</label>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <table class="table pack-table packinfo-table">
+                                <thead>
+                                <tr>
+                                    <th>包装名称</th>
+                                    <th>数量</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+
                 </div>
 
 
@@ -95,46 +116,67 @@ var GoodsPackage = function(){
         html ='<select class="form-control" name="'+nameVal+'_id[]">'+html+'</select>';
         return html;
     };
-    var _assemGoods = function(){
+    var _assemGoods = function(varFormType){
         var html = '';
-        var formatOfSelectHtml = _assembSelectHtml('goods' , _goodsJson , null);
+        var formatOfSelectHtml = _assembSelectHtml('goods' , _goodsJson[varFormType] , null);
         html = '<tr>' +
                 '<td>'+formatOfSelectHtml+'</td>' +
 
                 '<td><input class="form-control" name="num[]"></td>' +
 
+                '<td><a data-type="'+varFormType+'" class="btn btn-info" href="#" >增加</a> <a class="btn btn-danger" href="#" >删除</a></td>' +
+                '</tr>';
+        $('.'+varFormType+'-table tbody').append(html);
+    };
+
+
+    var _goodsPackeageHtml = function(varType){
+        var html = '';
+        var packInfoList = _goodsPackeageJson[varType];
+
+
+        for(var k in packInfoList){
+            if(packInfoList.hasOwnProperty(k)){
+                var formatOfSelectHtml = _assembSelectHtml('goods' , _goodsJson[varType] , packInfoList[k]['goods_id']);
+                html += '<tr>' +
+                '<td>'+formatOfSelectHtml+'</td>' +
+
+                '<td><input value="'+packInfoList[k]['num']+'" class="form-control" name="num[]"></td>' +
+
                 '<td><a class="btn btn-info" href="#" >增加</a> <a class="btn btn-danger" href="#" >删除</a></td>' +
                 '</tr>';
-        $('.checkin-table tbody').append(html);
+            }
+        }
+        $('.'+varType+'-table tbody').append(html);
     };
 
     var _initi = function(){
 
         if(_goodsPackeageJson){
-            var html = '';
-            for(var k in _goodsPackeageJson){
-                if(_goodsPackeageJson.hasOwnProperty(k)){
-                    var formatOfSelectHtml = _assembSelectHtml('goods' , _goodsJson , _goodsPackeageJson[k]['goods_id']);
-                    html += '<tr>' +
-                            '<td>'+formatOfSelectHtml+'</td>' +
-
-                            '<td><input value="'+_goodsPackeageJson[k]['num']+'" class="form-control" name="num[]"></td>' +
-
-                            '<td><a class="btn btn-info" href="#" >增加</a> <a class="btn btn-danger" href="#" >删除</a></td>' +
-                            '</tr>';
-                }
+            if(_goodsPackeageJson['goods']){
+                _goodsPackeageHtml('goods')
+            }else{
+                _assemGoods('goods');
             }
-            $('.checkin-table tbody').append(html);
+
+            if(_goodsPackeageJson['pack']){
+                _goodsPackeageHtml('pack')
+            }else{
+                _assemGoods('pack');
+            }
+
+
         }else{
-            _assemGoods();
+            _assemGoods('goods');
+            _assemGoods('pack');
         }
 
 
 
-        $('.checkin-table tbody').on('click' , function(event){
+        $('.packinfo-table tbody').on('click' , function(event){
             var targetObj = $(event.target);
             if(targetObj.hasClass('btn-info')){
-                _assemGoods();
+                _assemGoods(targetObj.attr('data-type'));
             }else if(targetObj.hasClass('btn-danger')){
                 targetObj.parent().parent().remove();
             }

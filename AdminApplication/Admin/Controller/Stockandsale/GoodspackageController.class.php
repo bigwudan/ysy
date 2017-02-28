@@ -42,19 +42,61 @@ class GoodspackageController extends Controller
         $this->display('/Stockandsale/GoodsPackageList');
     }
 
+
+    /**
+     * 分类得到商品
+     */
+    private function _getGoodsByFormatType($varFormatType){
+        $GoodsAndFormatObj = new \CommonClass\Stockandsale\GoodsAndFormatClassify();
+        $dataOfFormatBeList = $GoodsAndFormatObj->getByFormat(\CommonClass\Config\BaseConfig::getClassify()[$varFormatType]);
+
+        $formatList = array();
+        foreach($dataOfFormatBeList as $k => $v){
+            array_push($formatList , $v['format_id']);
+        }
+        $formatList = implode(',' , $formatList);
+        $goodsList = M('ysy_goods')
+            ->alias('g')
+            ->where("g.format_id in ({$formatList})")
+            ->select();
+        return $goodsList;
+    }
+
     /**
      * 编辑
      */
     public function actionEditGoodsPackage(){
         $packageId = intval(I('packageid'));
+        $goodsFromDb['goods'] = $this->_getGoodsByFormatType('goods');
+        $goodsFromDb['pack'] = $this->_getGoodsByFormatType('pack');
         if($packageId){
             $goodsPackeageFromDb = M('ysy_goodspackage')->alias('gp')
                 ->join("think_ysy_goodspackageinfo as gs ON gp.id = gs.packageid ")
                 ->where("gp.id = {$packageId}")
                 ->select();
+            $goodsPackeageInfo = array();
+
+            foreach($goodsPackeageFromDb as $k => $v){
+
+                foreach($goodsFromDb['goods'] as $k1 => $v1){
+                    if($v1['goods_id'] == $v['goods_id']){
+                        $goodsPackeageInfo['goods'][] = $v;
+                        break;
+                    }
+                }
+                foreach($goodsFromDb['pack'] as $k1 => $v1){
+                    if($v1['goods_id'] == $v['goods_id']){
+                        $goodsPackeageInfo['pack'][] = $v;
+                        break;
+                    }
+                }
+            }
+
+
             $goodsPackeagePriceFromDb = M('ysy_packageprice')->where("packageid = {$packageId}")->select();
         }
-        $goodsFromDb = M('ysy_goods')->field('goods_id , goods_name')->select();
+
+        //$goodsFromDb = M('ysy_goods')->field('goods_id , goods_name')->select();
         $goodsJson = json_encode($goodsFromDb , JSON_UNESCAPED_UNICODE);
         $orderType = array(
             array('销售订单', 0),
@@ -65,7 +107,7 @@ class GoodspackageController extends Controller
             array('次品销售订单', 0),
             array('预售订单订单', 0),
         );
-        $this->assign('goodsPackeageJson' , json_encode($goodsPackeageFromDb , JSON_UNESCAPED_UNICODE));
+        $this->assign('goodsPackeageJson' , json_encode($goodsPackeageInfo , JSON_UNESCAPED_UNICODE));
         $this->assign('goodsPackeageFromDb' , $goodsPackeageFromDb);
         $this->assign('goodsPackeagePriceFromDb' , $goodsPackeagePriceFromDb);
         $this->assign('packageId' , $packageId);

@@ -1,16 +1,15 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Administrator
- * Date: 2016/12/17
- * Time: 16:00
+ * User: 丹
+ * Date: 2017-02-28
+ * Time: 14:48
  */
 
 namespace Admin\Controller\Stockandsale;
-
 use Think\Controller;
-class ManageGoodsController extends Controller
-{
+
+class ManagePacksController extends Controller {
     /**
      * 初始化
      */
@@ -27,7 +26,7 @@ class ManageGoodsController extends Controller
      */
     public function index(){
         $GoodsAndFormatObj = new \CommonClass\Stockandsale\GoodsAndFormatClassify();
-        $dataOfFormatBelongToGoods = $GoodsAndFormatObj->getByFormat(\CommonClass\Config\BaseConfig::getClassify()['goods']);
+        $dataOfFormatBelongToGoods = $GoodsAndFormatObj->getByFormat(\CommonClass\Config\BaseConfig::getClassify()['pack']);
         $formatList = array();
         foreach($dataOfFormatBelongToGoods as $k => $v){
             array_push($formatList , $v['format_id']);
@@ -42,7 +41,7 @@ class ManageGoodsController extends Controller
             ->select();
         $this->assign('formatArr' , $dataOfFormatBelongToGoods);
         $this->assign('goodsList' , $goodsList);
-        $this->display('/Stockandsale/ManageGoodsList');
+        $this->display('/Stockandsale/ManagePackList');
     }
 
     /**

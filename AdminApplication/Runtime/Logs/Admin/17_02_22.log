@@ -1,0 +1,1272 @@
+[ 2017-02-22T17:37:33+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.033941s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004368s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004437s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.015078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.015181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.129472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013649s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015349s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015393s ]
+
+[ 2017-02-22T17:37:41+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionCheckUserInfo.html?username=wudan&password=wd811103
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.1140s ]
+SQL: SELECT * FROM `think_user` WHERE ( username = 'wudan' AND password = '883327915c4022331b5abcb9da2a390c' ) LIMIT 1   [ RunTime:0.0638s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000629s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001023s ]
+
+[ 2017-02-22T17:37:44+08:00 ] 127.0.0.1 /myysy/admin.php/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0368s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.6634s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000072s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043073s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2017-02-22T17:37:47+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0056s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000084s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005665s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005732s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2017-02-22T17:37:58+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ManageGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000508s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0064s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.1023s ]
+SQL: SELECT g.goods_id,s.goods_num,g.format_id,g.goods_name,f.format_id,f.format_name FROM think_ysy_goods g INNER JOIN think_ysy_stock AS s ON s.goods_id = g.goods_id INNER JOIN think_ysy_format AS f ON f.format_id = g.format_id   [ RunTime:0.0775s ]
+SQL: SHOW COLUMNS FROM `think_ysy_format` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `think_ysy_format` WHERE ( status = 1 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined variable: showPage D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.103549s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.103601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+
+[ 2017-02-22T17:38:19+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Goodspackage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0958s ]
+SQL: SELECT * FROM `think_ysy_goodspackage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+NOTIC: [8] Undefined variable: showPage D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\fcf0d44c22039fc637c47e637165ca86.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055762s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055814s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000621s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2017-02-22T17:38:25+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Goodspackage/actionEditGoodsPackage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000671s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0056s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.0052s ]
+SQL: SELECT `goods_id`,`goods_name` FROM `think_ysy_goods`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: goodsPackeageFromDb D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Stockandsale\GoodspackageController.class.php 第 68 行.
+NOTIC: [8] Undefined variable: goodsPackeageFromDb D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Stockandsale\GoodspackageController.class.php 第 69 行.
+NOTIC: [8] Undefined variable: goodsPackeagePriceFromDb D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Stockandsale\GoodspackageController.class.php 第 70 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062718s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000728s ]
+
+[ 2017-02-22T17:38:42+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000514s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000957s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0057s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.1215s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ysy_checkin` WHERE ( 1 = 1  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_ysy_checkin` WHERE ( 1 = 1  ) LIMIT 0,25   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2017-02-22T17:38:47+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ManageGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000506s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0054s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.0052s ]
+SQL: SELECT g.goods_id,s.goods_num,g.format_id,g.goods_name,f.format_id,f.format_name FROM think_ysy_goods g INNER JOIN think_ysy_stock AS s ON s.goods_id = g.goods_id INNER JOIN think_ysy_format AS f ON f.format_id = g.format_id   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_format` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `think_ysy_format` WHERE ( status = 1 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined variable: showPage D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007331s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007391s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+
+[ 2017-02-22T17:39:09+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ManageGoods/actionRequestService.html?type=addformat&formatid=4&goodsname=%E6%A2%A8%E5%AD%90-1&remark=%E6%A2%A8%E5%AD%90-1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000607s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0054s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_format` [ RunTime:0.0056s ]
+SQL: INSERT INTO `think_ysy_format` (`format_name`,`format_remark`,`format_pid`) VALUES ('梨子-1','梨子-1','4') [ RunTime:0.0642s ]
+
+[ 2017-02-22T17:39:10+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ManageGoods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000713s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0053s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.0064s ]
+SQL: SELECT g.goods_id,s.goods_num,g.format_id,g.goods_name,f.format_id,f.format_name FROM think_ysy_goods g INNER JOIN think_ysy_stock AS s ON s.goods_id = g.goods_id INNER JOIN think_ysy_format AS f ON f.format_id = g.format_id   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_ysy_format` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `think_ysy_format` WHERE ( status = 1 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined variable: showPage D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009193s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2017-02-22T17:39:27+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ManageGoods/actionRequestService.html?type=addgoods&formatid=5&goodsname=%E6%A2%A8%E5%AD%90%E5%95%86%E5%93%81&remark=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0055s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.0054s ]
+SQL: INSERT INTO `think_ysy_goods` (`format_id`,`goods_name`,`remark`,`addtime`) VALUES ('5','梨子商品','1','1487756367') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0053s ]
+SQL: INSERT INTO `think_ysy_stock` (`goods_id`) VALUES ('22') [ RunTime:0.0003s ]
+
+[ 2017-02-22T17:39:28+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ManageGoods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0073s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0016s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.0066s ]
+SQL: SELECT g.goods_id,s.goods_num,g.format_id,g.goods_name,f.format_id,f.format_name FROM think_ysy_goods g INNER JOIN think_ysy_stock AS s ON s.goods_id = g.goods_id INNER JOIN think_ysy_format AS f ON f.format_id = g.format_id   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_format` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `think_ysy_format` WHERE ( status = 1 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined variable: showPage D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010070s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000472s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000693s ]
+
+[ 2017-02-22T17:39:34+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0054s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0053s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ysy_checkin` WHERE ( 1 = 1  ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `think_ysy_checkin` WHERE ( 1 = 1  ) LIMIT 0,25   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007230s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007285s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2017-02-22T17:39:36+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionEditCheckIn.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0058s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `think_ysy_goods`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053684s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053727s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000406s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000679s ]
+
+[ 2017-02-22T17:39:53+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionRequestService.html?type=checkin&checkin=0&data%5B0%5D%5Bname%5D=goods_id%5B%5D&data%5B0%5D%5Bvalue%5D=22&data%5B1%5D%5Bname%5D=goodsnum%5B%5D&data%5B1%5D%5Bvalue%5D=12&data%5B2%5D%5Bname%5D=grossweight%5B%5D&data%5B2%5D%5Bvalue%5D=11&data%5B3%5D%5Bname%5D=weight%5B%5D&data%5B3%5D%5Bvalue%5D=22&data%5B4%5D%5Bname%5D=goods_id%5B%5D&data%5B4%5D%5Bvalue%5D=21&data%5B5%5D%5Bname%5D=goodsnum%5B%5D&data%5B5%5D%5Bvalue%5D=11&data%5B6%5D%5Bname%5D=grossweight%5B%5D&data%5B6%5D%5Bvalue%5D=22&data%5B7%5D%5Bname%5D=weight%5B%5D&data%5B7%5D%5Bvalue%5D=222
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0057s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined offset: 22 D:\phpStudy\WWW\myysy\CommonClass\Stockandsale\CheckIn.class.php 第 62 行.
+NOTIC: [8] Undefined index: goodsnum D:\phpStudy\WWW\myysy\CommonClass\Stockandsale\CheckIn.class.php 第 62 行.
+NOTIC: [8] Undefined offset: 21 D:\phpStudy\WWW\myysy\CommonClass\Stockandsale\CheckIn.class.php 第 62 行.
+NOTIC: [8] Undefined index: goodsnum D:\phpStudy\WWW\myysy\CommonClass\Stockandsale\CheckIn.class.php 第 62 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0052s ]
+SQL: INSERT INTO `think_ysy_checkin` (`checkin_id`,`addtime`,`uid`) VALUES ('1487756393','1487756393','1') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_ysy_checkingoods` [ RunTime:0.0672s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`goods_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('22','12','11','22','1487756393') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_ysy_stock` [ RunTime:0.0056s ]
+SQL: update think_ysy_stock SET goods_num = goods_num + 12 , goods_weight = goods_weight + 11 where goods_id = 22 [ RunTime:0.0414s ]
+SQL: INSERT INTO `think_ysy_checkingoods` (`goods_id`,`goodsnum`,`grossweight`,`weight`,`checkin_id`) VALUES ('21','11','22','222','1487756393') [ RunTime:0.0002s ]
+SQL: update think_ysy_stock SET goods_num = goods_num + 11 , goods_weight = goods_weight + 22 where goods_id = 21 [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000740s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000799s ]
+
+[ 2017-02-22T17:39:54+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0066s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0055s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `think_ysy_checkin` WHERE ( 1 = 1  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `think_ysy_checkin` WHERE ( 1 = 1  ) LIMIT 0,25   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000073s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006873s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006928s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2017-02-22T17:40:00+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Checkin/actionEditCheckIn.html?checkin=1487756393
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0059s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_checkin` [ RunTime:0.0063s ]
+SQL: SELECT * FROM think_ysy_checkin c RIGHT JOIN think_ysy_checkingoods AS cg ON c.checkin_id = cg.checkin_id  WHERE ( c.checkin_id=1487756393 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `think_ysy_goods`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006170s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000626s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000664s ]
+
+[ 2017-02-22T17:40:05+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ManageGoods
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000535s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0055s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.0066s ]
+SQL: SELECT g.goods_id,s.goods_num,g.format_id,g.goods_name,f.format_id,f.format_name FROM think_ysy_goods g INNER JOIN think_ysy_stock AS s ON s.goods_id = g.goods_id INNER JOIN think_ysy_format AS f ON f.format_id = g.format_id   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_ysy_format` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `think_ysy_format` WHERE ( status = 1 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined index: checkin_id D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 42 行.
+NOTIC: [8] Undefined variable: showPage D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\1019c64dae76f0413a6c3401fe884c86.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008813s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000634s ]
+
+[ 2017-02-22T17:40:09+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Goodspackage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0056s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0056s ]
+SQL: SELECT * FROM `think_ysy_goodspackage`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+NOTIC: [8] Undefined variable: showPage D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\fcf0d44c22039fc637c47e637165ca86.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006364s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006403s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000567s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000600s ]
+
+[ 2017-02-22T17:40:13+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Goodspackage/actionEditGoodsPackage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000669s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0060s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.0055s ]
+SQL: SELECT `goods_id`,`goods_name` FROM `think_ysy_goods`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: goodsPackeageFromDb D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Stockandsale\GoodspackageController.class.php 第 68 行.
+NOTIC: [8] Undefined variable: goodsPackeageFromDb D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Stockandsale\GoodspackageController.class.php 第 69 行.
+NOTIC: [8] Undefined variable: goodsPackeagePriceFromDb D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Stockandsale\GoodspackageController.class.php 第 70 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008373s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008439s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000609s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000732s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2017-02-22T17:40:50+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Goodspackage/actionRequestService.html?type=package&packageid=0&data%5B0%5D%5Bname%5D=packagename&data%5B0%5D%5Bvalue%5D=20170222&data%5B1%5D%5Bname%5D=remark&data%5B1%5D%5Bvalue%5D=20170222&data%5B2%5D%5Bname%5D=packageprice-0&data%5B2%5D%5Bvalue%5D=1&data%5B3%5D%5Bname%5D=packageprice-1&data%5B3%5D%5Bvalue%5D=2&data%5B4%5D%5Bname%5D=packageprice-2&data%5B4%5D%5Bvalue%5D=3&data%5B5%5D%5Bname%5D=packageprice-3&data%5B5%5D%5Bvalue%5D=4&data%5B6%5D%5Bname%5D=packageprice-4&data%5B6%5D%5Bvalue%5D=5&data%5B7%5D%5Bname%5D=packageprice-5&data%5B7%5D%5Bvalue%5D=6&data%5B8%5D%5Bname%5D=packageprice-6&data%5B8%5D%5Bvalue%5D=7&data%5B9%5D%5Bname%5D=goods_id%5B%5D&data%5B9%5D%5Bvalue%5D=22&data%5B10%5D%5Bname%5D=num%5B%5D&data%5B10%5D%5Bvalue%5D=1&data%5B11%5D%5Bname%5D=goods_id%5B%5D&data%5B11%5D%5Bvalue%5D=21&data%5B12%5D%5Bname%5D=num%5B%5D&data%5B12%5D%5Bvalue%5D=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0064s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0017s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0065s ]
+SQL: INSERT INTO `think_ysy_goodspackage` (`id`,`addtime`,`uid`,`packagename`,`remark`) VALUES ('1487756449','1487756449','1','20170222','20170222') [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0925s ]
+SQL: INSERT INTO `think_ysy_packageprice` (`packageid`,`ordertype`,`price`) VALUES ('1487756449','0','1'),('1487756449','1','2'),('1487756449','2','3'),('1487756449','3','4'),('1487756449','4','5'),('1487756449','5','6'),('1487756449','6','7') [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackageinfo` [ RunTime:0.0711s ]
+SQL: INSERT INTO `think_ysy_goodspackageinfo` (`packageid`,`goods_id`,`num`,`addtime`) VALUES ('1487756449','22','1','1487756449'),('1487756449','21','2','1487756449') [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001048s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001146s ]
+
+[ 2017-02-22T17:40:51+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Goodspackage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000570s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0066s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0053s ]
+SQL: SELECT * FROM `think_ysy_goodspackage`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+NOTIC: [8] Undefined variable: showPage D:\phpStudy\WWW\myysy\AdminApplication\Runtime\Cache\Admin\fcf0d44c22039fc637c47e637165ca86.php 第 48 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2017-02-22T17:40:57+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/Goodspackage/actionEditGoodsPackage.html?packageid=1487756449
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0057s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0057s ]
+SQL: SELECT * FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo as gs ON gp.id = gs.packageid   WHERE ( gp.id = 1487756449 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_packageprice` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `think_ysy_packageprice` WHERE ( packageid = 1487756449 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goods` [ RunTime:0.0054s ]
+SQL: SELECT `goods_id`,`goods_name` FROM `think_ysy_goods`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006935s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006978s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000677s ]
+
+[ 2017-02-22T17:42:31+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ApproveOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0056s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0052s ]
+SQL: SELECT COUNT(*) AS tp_count FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT wp.userid,o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 ) LIMIT 0,25   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070757s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000411s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000646s ]
+
+[ 2017-02-22T17:42:34+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ApproveOrder/actionRequestService.html?type=show&orderid=1487756505
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000657s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0054s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0060s ]
+SQL: SELECT `rece_tel`,`rece_addr`,`rece_name`,yo.status,yo.order_id,yo.rece_name,yo.addtime,yog.package_id,yog.num,yog.price,yog.ordertype,u.realname,ygp.packagename FROM think_ysy_order yo INNER JOIN think_user AS u ON u.id = yo.order_user INNER JOIN think_ysy_ordergoods AS yog ON yo.order_id = yog.order_id INNER JOIN think_ysy_goodspackage AS ygp ON yog.package_id = ygp.id  WHERE ( yo.order_id = 1487756505 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `think_ysy_goodspackage` [ RunTime:0.0057s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1486733142 )  [ RunTime:0.0005s ]
+SQL: SELECT `packagename`,g.goods_id,`num`,`goods_name` FROM think_ysy_goodspackage gp INNER JOIN think_ysy_goodspackageinfo AS gpi ON gp.id = gpi.packageid INNER JOIN think_ysy_goods AS g ON g.goods_id = gpi.goods_id  WHERE ( gp.id = 1487756449 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0051s ]
+SQL: SELECT al.addtime,al.uid,u.realname,al.remark,al.nodename FROM think_ysy_approvelog al INNER JOIN think_user AS u ON al.uid = u.id  WHERE ( al.orderid = 1487756505 )  [ RunTime:0.0004s ]
+
+[ 2017-02-22T17:42:47+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ApproveOrder/actionRequestService.html?type=submit&approvetype=agree&remark=23232&expressnum=212&expresstime=2017-02-16&id=1487756505
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000567s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000636s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000691s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0074s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_ysy_order` [ RunTime:0.0149s ]
+SQL: SELECT * FROM `think_ysy_order` WHERE ( order_id = 1487756505 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `think_workflow_execution` [ RunTime:0.0058s ]
+SQL: SELECT e.dbid as edbid,e.activityname as eactivityname,e.procdefid as eprocdefid,e.hasvars as ehasvars,e.key as ekey,e.id as eid,e.state as estate,e.priority as epriority,e.hisactinst as ehisactinst,e.parent as eparent,e.parentidx as eparentidx,e.instance as einstance,ha.dbid as hadbid,ha.hprocid as hahprocid,ha.type as hatype,ha.execution as haexecution,ha.activity_name as haactivity_name,ha.start as hastart,ha.end as haend,ha.duration as haduration,ha.transition as hatransition,ha.htask as hahtask,hp.dbid as hpdbid,hp.id as hpid,hp.procdefid as hpprocdefid,hp.key as hpkey,hp.start as hpstart,hp.end as hpend,hp.duration as hpduration,hp.state as hpstate,hp.endactivity as hpendactivity,ht.dbid as htdbid,ht.execution as htexecution,ht.outcome as htoutcome,ht.assignee as htassignee,ht.priority as htpriority,ht.state as htstate,ht.create as htcreate,ht.end as htend,ht.duration as htduration,moduleid as mrmoduleid,rule as mrrule,rulename as mrrulename,mr.addtime as mraddtime,creater as mrcreater,t.dbid as tdbid,t.name as tname,t.state as tstate,t.assignee as tassignee,t.priority as tpriority,t.create as tcreate,t.execution_id as texecution_id,t.activity_name as tactivity_name,t.hasvars as thasvars,t.execution as texecution,t.procinst as tprocinst FROM think_workflow_execution e left join think_workflow_hist_actinst AS ha ON e.hisactinst = ha.dbid left join think_workflow_hist_procinst AS hp ON e.instance = hp.dbid left join think_workflow_deployment AS mr ON e.procdefid = mr.rulename left join think_workflow_task AS t ON e.dbid = t.execution left join think_workflow_hist_task AS ht ON t.dbid = ht.dbid  WHERE ( e.dbid = 261 ) LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `think_workflow_num` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `think_workflow_num` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `think_workflow_participation` WHERE ( task=281 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_workflow_variable` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `think_workflow_variable` WHERE ( execution=261 )  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleTask.class.php 第 180 行.
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleHisTask.class.php 第 206 行.
+NOTIC: [8] Undefined variable: taskList D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Handlerclass\AssmebleParticipation.class.php 第 150 行.
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 57 行.
+NOTIC: [8] Undefined index: updata D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 61 行.
+SQL: DELETE FROM `think_workflow_execution` WHERE (  dbid in (261) ) [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 75 行.
+SQL: SHOW COLUMNS FROM `think_workflow_hist_procinst` [ RunTime:0.0057s ]
+SQL: UPDATE `think_workflow_hist_procinst` SET `state`='ended',`end`='1487756566',`duration`='59',`endactivity`='complete' WHERE ( dbid = 261 ) [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `think_workflow_task` [ RunTime:0.0057s ]
+SQL: DELETE FROM `think_workflow_task` WHERE (  dbid in (281) ) [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 103 行.
+SQL: DELETE FROM `think_workflow_participation` WHERE (  dbid in (282) ) [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 115 行.
+SQL: SHOW COLUMNS FROM `think_workflow_hist_actinst` [ RunTime:0.0068s ]
+SQL: UPDATE `think_workflow_hist_actinst` SET `transition`='to complete',`end`='1487756567',`duration`='28' WHERE ( dbid = 284 ) [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 129 行.
+SQL: DELETE FROM `think_workflow_variable` WHERE (  execution in (261) ) [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: insert D:\phpStudy\WWW\myysy\ThinkPHP\Library\Vendor\Jbpm\Processdatabase\WriteToDataBase.class.php 第 143 行.
+SQL: SHOW COLUMNS FROM `think_workflow_hist_task` [ RunTime:0.0072s ]
+SQL: UPDATE `think_workflow_hist_task` SET `outcome`='complete',`state`='complete',`end`='1487756567',`duration`='28' WHERE ( dbid = 281 ) [ RunTime:0.0004s ]
+SQL: update think_workflow_num set version = version + 1 , value = value + 10 [ RunTime:0.0002s ]
+NOTIC: [2] reset() expects parameter 1 to be array, null given D:\phpStudy\WWW\myysy\CommonClass\Order\ApproveDealFactory.class.php 第 87 行.
+SQL: UPDATE `think_ysy_order` SET `flowerid`='261',`status`='complete' WHERE ( order_id = 1487756505 ) [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `think_ysy_approvelog` [ RunTime:0.0057s ]
+SQL: INSERT INTO `think_ysy_approvelog` (`orderid`,`nodename`,`uid`,`addtime`,`remark`) VALUES ('1487756505','complete','1','1487756567','23232') [ RunTime:0.0003s ]
+
+[ 2017-02-22T17:43:03+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale/ApproveOrder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0255s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+SQL: SHOW COLUMNS FROM `think_workflow_participation` [ RunTime:0.0291s ]
+SQL: SELECT COUNT(*) AS tp_count FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT wp.userid,o.order_id,o.order_user,o.addtime,o.status,u.realname as order_realname FROM think_workflow_participation wp INNER JOIN think_workflow_task as wt ON wp.task = wt.dbid INNER JOIN think_ysy_order as o ON o.flowerid = wt.execution INNER JOIN think_user as u ON u.id = o.order_user  WHERE ( 1 = 1  AND wp.userid = 1 ) LIMIT 0,25   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000049s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008245s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008293s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000654s ]
+
+[ 2017-02-22T19:06:52+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.422193s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.081966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.082040s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.123353s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.123417s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:1.418018s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.418090s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.036259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.036304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.049195s ]
+INFO: [ app_end ] --END-- [ RunTime:0.049307s ]
+
+[ 2017-02-22T19:06:58+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000942s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000034s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004489s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000304s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000482s ]
+
+[ 2017-02-22T19:07:00+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004562s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004606s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2017-02-22T19:07:12+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000064s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004313s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000477s ]
+
+[ 2017-02-22T19:07:13+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005748s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005801s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000658s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000716s ]
+
+[ 2017-02-22T19:07:26+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004082s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004122s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2017-02-22T19:08:51+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000669s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004748s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000618s ]
+
+[ 2017-02-22T19:10:21+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000648s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000065s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005140s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005180s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2017-02-22T19:24:35+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005084s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005136s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000566s ]
+
+[ 2017-02-22T19:24:48+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000035s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006249s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006299s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000607s ]
+
+[ 2017-02-22T19:25:39+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionCheckUserInfo.html?username=wudan&password=wd811103
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `think_user` WHERE ( username = 'wudan' AND password = '883327915c4022331b5abcb9da2a390c' ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000031s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000067s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005081s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005130s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2017-02-22T19:25:41+08:00 ] 127.0.0.1 /myysy/admin.php/statistics.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0047s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.1695s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000080s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020775s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2017-02-22T19:25:46+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000474s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0045s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0012s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005284s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005328s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000699s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
+
+[ 2017-02-22T19:25:51+08:00 ] 127.0.0.1 /myysy/admin.php/stockandsale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000522s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000554s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SHOW COLUMNS FROM `think_user` [ RunTime:0.0362s ]
+SQL: SELECT u.username as username,ru.user_id,ru.role_id,r.name as role_name,a.node_id,n.name as node_name,n.title as node_title,n.pid,n.level FROM think_user u INNER JOIN think_role_user AS ru ON ru.user_id = u.id INNER JOIN think_role AS r ON r.id = ru.role_id INNER JOIN think_access AS a ON a.role_id = r.id INNER JOIN think_node AS n ON a.node_id = n.id  WHERE ( ru.user_id = 1 )  [ RunTime:0.0013s ]
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 64 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Use of undefined constant CONTROLLER_2_NAME - assumed 'CONTROLLER_2_NAME' D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 86 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+NOTIC: [8] Undefined index: url D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 167 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006586s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006630s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2017-02-22T19:35:24+08:00 ] 127.0.0.1 /myysy/admin.php/Stockandsale
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.055499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004386s ]
+NOTIC: [8] Undefined index: controller_2 D:\phpStudy\WWW\myysy\AdminApplication\Admin\Controller\Body\BodyController.class.php 第 58 行.
+
+[ 2017-02-22T19:35:24+08:00 ] 127.0.0.1 /myysy/admin.php/Login/Login/actionLogin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000570s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.039095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.039164s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.159428s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.159491s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.014095s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.014139s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015509s ]
+
