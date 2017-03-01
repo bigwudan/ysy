@@ -40,7 +40,7 @@
                         <td>{$vo.goods_name}</td>
                         <td>{$vo.goods_num}</td>
                         <td>
-                            <a href="<?php echo U('stockandsale/Checkin/actionEditCheckIn') ?>?checkin={$vo.checkin_id}" class="btn btn-danger">修改</a>
+                            <a data-formatid="{$vo.format_id}" data-id="{$vo.goods_id}" href="javascript:void(0)" class="btn btn-danger editgoods">修改</a>
                         </td>
                     </tr>
                 </foreach>
@@ -53,6 +53,65 @@
     </div>
 </div>
 </form>
+
+
+
+
+
+
+
+<div class="modal fade in"  id="editgoods" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel"><span class="title-span">新加商品</span></h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal editgoods-form">
+
+                    <input name="goodsinfo_type" value="editgoods" type="hidden" >
+                    <input name="goodsinfo_goodsid" value="0" type="hidden" >
+
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label"><span class="text1-span">规格</span></label>
+                        <div class="col-sm-10">
+                            <select name="format_select" class="form-control">
+                                <foreach name="formatArr" item="v" key="k" >
+                                    <option value="{$v.format_id}"><?php echo str_pad('',$v['level'],"--"); ?>{$v.format_name}</option>
+                                </foreach>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label"><span class="text2-span">商品名称</span></label>
+                        <div class="col-sm-10">
+                            <input name="goodsinfo_name" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label  class="col-sm-2 control-label"><span class="text2-span">库存</span></label>
+                        <div class="col-sm-10">
+                            <input name="goodsinfo_num" class="form-control">
+                        </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
 
 
 <div class="modal fade in"  id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
@@ -104,20 +163,45 @@
 <div style="display: none" class="modal-backdrop fade in"></div>
 <script>
     var ManageGoodsList = function(){
-
+        var _stats = 'beg';
 
 
 
         var _initi = function(){
 
+
+            $('.checkin-table .editgoods').on('click' , function(){
+                $('.modal-backdrop').show();
+                var goodsid = $(this).attr('data-id');
+                var type = 'getgoodinfo';
+                var url = '<?php echo U('stockandsale/ManageGoods/actionRequestService') ?>';
+                $.get(url , {type:type,goodsid:goodsid} , function(data){
+                    _stats = 'editgoods';
+
+                    $('input[name="goodsinfo_goodsid"]').val(goodsid);
+
+                    try{
+                        var goodsinfoJson = JSON.parse(data);
+                        $('select[name="format_select"] option').each(function(){
+                            if($(this).val() == goodsinfoJson.format_id){
+                                $(this).prop('selected' , true);
+                            }
+                        });
+                        $('input[name="goodsinfo_name"]').val(goodsinfoJson.goods_name);
+                        $('input[name="goodsinfo_num"]').val(goodsinfoJson.goods_num);
+                        $('#editgoods').show();
+                    }catch(e){
+                        alert('异常错误');
+                    }
+                });
+            });
+
+
             $('.addgoods-a').on('click' , function(){
-
-
                 $('.title-span').text('新增商品');
                 $('.text1-span').text('规格');
                 $('.text2-span').text('商品名称');
                 $('input[name="type"]').val('addgoods');
-
                 $('.modal').show();
                 $('.modal-backdrop').show();
             });
@@ -127,40 +211,62 @@
                 $('.text1-span').text('父级规格');
                 $('.text2-span').text('规格名称');
                 $('input[name="type"]').val('addformat');
-                $('.modal').show();
+                $('.modal#exampleModal').show();
                 $('.modal-backdrop').show();
             });
 
 
 
             $('.modal-dialog .btn-default').on('click' , function(){
-                $('.modal').hide();
+                $('.modal#exampleModal').hide();
                 $('.modal-backdrop').hide();
+                $('#editgoods').hide();
 
             });
 
             $('.modal-dialog .close').on('click' , function(){
-                $('.modal').hide();
+                $('.modal#exampleModal').hide();
                 $('.modal-backdrop').hide();
+                $('#editgoods').hide();
             });
 
             $('.modal-dialog .btn-primary').on('click' , function(){
-                $('.modal').hide();
+                $('.modal#exampleModal').hide();
+                $('#editgoods').hide();
                 var url = '<?php echo U('stockandsale/ManageGoods/actionRequestService') ?>';
-                var formatid = $('select[name="format_id"]').val();
-                var goodsname = $('input[name="goods_name"]').val();
-                var remark = $('input[name="remark"]').val();
-                var type = $('input[name="type"]').val();
-                $.get(url , {type:type,formatid:formatid,goodsname:goodsname,remark:remark } , function(data){
-                    var url = '<?php echo U('stockandsale/ManageGoods') ?>';
-                    var responseJson = JSON.parse(data);
-                    if(responseJson.error === 0){
+                if(_stats == 'editgoods'){
+                    var requestJson = {
+                        type : 'submitgoods',
+                        formatid : $('select[name="format_select"]').val(),
+                        goodsid : $('input[name="goodsinfo_goodsid"]').val(),
+                        goodsname : $('input[name="goodsinfo_name"]').val(),
+                        goodsnum : $('input[name="goodsinfo_num"]').val()
+                    };
+                    $.get(url , requestJson , function(data){
+                        var url = '<?php echo U('stockandsale/ManagePacks') ?>';
                         window.location.href = url;
-                    }else{
-                        $('.modal-backdrop').hide();
-                        alert('更新失败');
-                    }
-                });
+                    });
+                    return false;
+
+                }else{
+                    var formatid = $('select[name="format_id"]').val();
+                    var goodsname = $('input[name="goods_name"]').val();
+                    var remark = $('input[name="remark"]').val();
+                    var type = $('input[name="type"]').val();
+                    $.get(url , {type:type,formatid:formatid,goodsname:goodsname,remark:remark } , function(data){
+                        var url = '<?php echo U('stockandsale/ManageGoods') ?>';
+                        var responseJson = JSON.parse(data);
+                        if(responseJson.error === 0){
+                            window.location.href = url;
+                        }else{
+                            $('.modal-backdrop').hide();
+                            alert('更新失败');
+                        }
+                    });
+
+                }
+
+
             })
 
         }();

@@ -33,13 +33,29 @@ class ManageGoodsController extends Controller
             array_push($formatList , $v['format_id']);
         }
         $tmpStr = implode(',' , $formatList);
-        $goodsList = M('ysy_goods')
+        $count = M('ysy_goods')
             ->alias('g')
             ->field("g.goods_id , s.goods_num , g.format_id , g.goods_name , f.format_id , f.format_name")
             ->join("think_ysy_stock AS s ON s.goods_id = g.goods_id")
             ->join("think_ysy_format AS f ON f.format_id = g.format_id")
             ->where("g.format_id in ({$tmpStr})")
+            ->count();
+        $Page       = new \Think\NewPage($count,25);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+        $showPage       = $Page->show();// 分页显示输出
+        $pageList = array(
+            'firstRow' => $Page->firstRow,
+            'listRows' => $Page->listRows,
+        );
+
+        $goodsList = M('ysy_goods')
+            ->alias('g')
+            ->field("g.goods_id , s.goods_num , g.format_id , g.goods_name , f.format_id , f.format_name")
+            ->join("think_ysy_stock AS s ON s.goods_id = g.goods_id")
+            ->join("think_ysy_format AS f ON f.format_id = g.format_id")
+            ->limit($pageList['firstRow'].','.$pageList['listRows'])
+            ->where("g.format_id in ({$tmpStr})")
             ->select();
+        $this->assign('showPage' , $showPage);
         $this->assign('formatArr' , $dataOfFormatBelongToGoods);
         $this->assign('goodsList' , $goodsList);
         $this->display('/Stockandsale/ManageGoodsList');
@@ -60,11 +76,54 @@ class ManageGoodsController extends Controller
         $type = I('type');
         if($type == 'addgoods'){
             $this->_editGoods(I('formatid') , I('goodsname') , I('remark'));
+        }elseif($type == 'getgoodinfo'){
+            $this->_getGoodsInfo();
+        }elseif($type == 'submitgoods'){
+            $this->_submitGoods();
         }else{
             $this->_editFormat();
         }
     }
 
+    /**
+     * 提交数据
+     */
+    private function _submitGoods(){
+        $formatId = intval(I('formatid'));
+        $goodsId = intval(I('goodsid'));
+        $goodsName = trim(I('goodsname'));
+        $goodsNum = intval(I('goodsnum'));
+        $model = new \Think\Model();
+        $model->startTrans();
+        $flag = true;
+        try{
+            $flagOfDb = M('ysy_goods')->where("goods_id = {$goodsId}")->save(array('format_id' => $formatId , 'goods_name' => $goodsName));
+            $flagOfDb = M('ysy_stock')->where("goods_id = {$goodsId}")->save(array('goods_num' => $goodsNum));
+            $model->commit();
+        }catch (\Exception $e){
+            var_dump($e);
+            $model->rollback();
+            $flag = false;
+            die('失败');
+        }
+        die('成功');
+    }
+
+    /**
+     * 获得库存和商品信息
+     */
+    private function _getGoodsInfo(){
+        $goodsId = intval(I('goodsid'));
+        $goodsList = M('ysy_goods')
+            ->alias('g')
+            ->field("g.goods_id , s.goods_num , g.format_id , g.goods_name , f.format_id , f.format_name")
+            ->join("think_ysy_stock AS s ON s.goods_id = g.goods_id")
+            ->join("think_ysy_format AS f ON f.format_id = g.format_id")
+            ->where("g.goods_id = $goodsId")
+            ->find();
+        $jsonGoodsList = json_encode($goodsList , JSON_UNESCAPED_UNICODE);
+        die($jsonGoodsList);
+    }
     /**
      * 增加规格
      */

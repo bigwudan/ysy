@@ -32,13 +32,30 @@ class ManagePacksController extends Controller {
             array_push($formatList , $v['format_id']);
         }
         $tmpStr = implode(',' , $formatList);
-        $goodsList = M('ysy_goods')
+
+        $count = M('ysy_goods')
             ->alias('g')
             ->field("g.goods_id , s.goods_num , g.format_id , g.goods_name , f.format_id , f.format_name")
             ->join("think_ysy_stock AS s ON s.goods_id = g.goods_id")
             ->join("think_ysy_format AS f ON f.format_id = g.format_id")
             ->where("g.format_id in ({$tmpStr})")
+            ->count();
+        $Page       = new \Think\NewPage($count,25);// 实例化分页类 传入总记录数和每页显示的记录数(25)
+        $showPage       = $Page->show();// 分页显示输出
+        $pageList = array(
+            'firstRow' => $Page->firstRow,
+            'listRows' => $Page->listRows,
+        );
+
+        $goodsList = M('ysy_goods')
+            ->alias('g')
+            ->field("g.goods_id , s.goods_num , g.format_id , g.goods_name , f.format_id , f.format_name")
+            ->join("think_ysy_stock AS s ON s.goods_id = g.goods_id")
+            ->join("think_ysy_format AS f ON f.format_id = g.format_id")
+            ->limit($pageList['firstRow'].','.$pageList['listRows'])
+            ->where("g.format_id in ({$tmpStr})")
             ->select();
+        $this->assign('showPage' , $showPage);
         $this->assign('formatArr' , $dataOfFormatBelongToGoods);
         $this->assign('goodsList' , $goodsList);
         $this->display('/Stockandsale/ManagePackList');
@@ -59,9 +76,23 @@ class ManagePacksController extends Controller {
         $type = I('type');
         if($type == 'addgoods'){
             $this->_editGoods(I('formatid') , I('goodsname') , I('remark'));
+        }elseif($type == 'getgoodinfo'){
+            $this->_getGoodsInfo();
         }else{
             $this->_editFormat();
         }
+    }
+
+    /**
+     * 获得库存和商品信息
+     */
+    private function _getGoodsInfo(){
+        $goodsId = intval(I('goodsid'));
+
+        var_dump($goodsId);
+        die();
+
+
     }
 
     /**
