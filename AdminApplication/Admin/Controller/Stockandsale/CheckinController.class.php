@@ -36,11 +36,16 @@ class CheckinController extends Controller
         $this->display('/Stockandsale/CheckInList');
     }
 
+    /**
+     * 获得整个规格
+     */
 
     /**
      * 新增入库单
      */
     public function actionEditCheckIn(){
+        $GoodsAndFormatObj = new \CommonClass\Stockandsale\GoodsAndFormatClassify();
+        $totDataOfFormatList = $GoodsAndFormatObj->getByFormat(0);
         $checkInJson = 0;
         if($checkId = intval(I('checkin'))){
             $checkInListFromDb = M('ysy_checkin')
@@ -54,6 +59,7 @@ class CheckinController extends Controller
         $dataListFromService = array(
             'goods' => json_encode($goodsDataFromDb , JSON_UNESCAPED_UNICODE),
         );
+        $this->assign('dataOfFormat' , json_encode($totDataOfFormatList , JSON_UNESCAPED_UNICODE));
         $this->assign('checkId' , $checkId);
         $this->assign('checkInJson' , $checkInJson);
         $this->assign('dataListFromService' , $dataListFromService);
@@ -67,9 +73,28 @@ class CheckinController extends Controller
         $type = I('type');
         if($type == 'checkin'){
             $this->_checkIn();
+        }elseif($type == 'selectformat'){
+            $this->_getGoodsByFormatId();
         }
     }
 
+    /**
+     * 通过
+     */
+    private function _getGoodsByFormatId(){
+        $formatId = intval(I('formatid'));
+        $GoodsAndFormatObj = new \CommonClass\Stockandsale\GoodsAndFormatClassify();
+        $totDataOfFormatList = $GoodsAndFormatObj->getByFormat($formatId);
+
+        $formatIdList = array($formatId);
+        foreach($totDataOfFormatList as $k => $v){
+            array_push($formatIdList , $v['format_id']);
+        }
+        $formatStr = implode(',' , $formatIdList);
+        $goods = M('ysy_goods')->where("format_id in ($formatStr)")->select();
+        $goods = json_encode($goods , JSON_UNESCAPED_UNICODE);
+        die($goods);
+    }
 
     /**
      * 入库单
