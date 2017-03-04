@@ -11,6 +11,17 @@ use Think\Controller;
 
 class ApproveCenterController extends Controller
 {
+
+    private $_status = array(
+        "leader"=>'销售主管审批',
+        "chiefleader"=>'销售经理审批',
+        "storehouse"=>'库管审批',
+        "complete"=>'审批通过',
+        "cancel"=>'撤销',
+        "retreat"=>'退回',
+    );
+
+
     /**
      * 主页
      */
@@ -24,8 +35,9 @@ class ApproveCenterController extends Controller
     /**
      * 查询服务
      */
-    public function _waitOfMyApproveList(){
+    public function _waitOfMyApproveList($varPage = 0){
         $LogObj=new \CommonClass\Login\ProcessLoginInfo();
+        $page = $varPage;
         $uid = $LogObj->getLoginInfo()['id'];
         $where = " AND wp.userid = {$uid}";
         $orderList = M('workflow_participation')->alias('wp')
@@ -33,11 +45,80 @@ class ApproveCenterController extends Controller
             ->join("think_workflow_task as wt ON wp.task = wt.dbid")
             ->join("think_ysy_order as o ON o.flowerid = wt.execution")
             ->join("think_user as u ON u.id = o.order_user")
+            ->limit("{$page} , 10")
+            ->order('wp.addtime desc')
             ->where("1 = 1 {$where}")
             ->select();
 
         return $orderList;
 
+    }
+
+    /**
+     * ajax请求
+     */
+    public function actionRequestService(){
+        $type = trim(I('type'));
+        if($type == 'showwaitofmyapprove'){
+            $res = $this->_selectWaitOfMyApprove();
+        }else{
+            $res = $this->_selectMyApprove();
+        }
+        die($res);
+    }
+
+    /**
+     * 得到需要我审批的订单
+     */
+    private function _selectMyApprove(){
+        $pageNum = I('pagenum');
+        $dataOfHtml = $this->_showOfMyApproveList($pageNum);
+        $html = '';
+        foreach($dataOfHtml as $k => $v){
+            $hrefTmp = U('ApproveCenter/ApproveCenter/actionApproveInfo');
+            $v['addtime'] = date("Y-m-d H:i:s",$v['addtime']);
+            $html .=<<<EOT
+					<div class="tabone pl10">
+						<a href="{$hrefTmp}?id={$v['order_id']}&type=show" class="bbt pt10 pb10 pr10 clearfix block">
+							<div class="fl ell-width">
+								<p class="ellipsis ft14">{$v['order_realname']}的申请</p>
+								<p class="c999 ft12">{$v['addtime']}</p>
+							</div>
+							<p class="fr orange ft16 pt10">
+							    {$this->_status[$v['status']]}
+							</p>
+						</a>
+					</div>
+EOT;
+        }
+        return $html;
+    }
+
+    /**
+     * 得到需要我审批的订单
+     */
+    private function _selectWaitOfMyApprove(){
+        $pageNum = I('pagenum');
+        $dataOfHtml = $this->_waitOfMyApproveList($pageNum);
+        $html = '';
+        foreach($dataOfHtml as $k => $v){
+            $hrefTmp = U('ApproveCenter/ApproveCenter/actionApproveInfo');
+            $v['addtime'] = date("Y-m-d H:i:s",$v['addtime']);
+            $html .=<<<EOT
+					<div class="tabone pl10">
+						<a href="{$hrefTmp}?id={$v['order_id']}" class="bbt pt10 pb10 pr10 clearfix block">
+							<div class="fl ell-width">
+								<p class="ellipsis ft14">{$v['order_realname']}的申请</p>
+								<p class="c999 ft12">{$v['addtime']}</p>
+							</div>
+							<p class="fr orange ft16 pt10">
+							    {$this->_status[$v['status']]}
+							</p>
+						</a>
+					</div>
+EOT;
+        }
+        return $html;
     }
 
 
@@ -62,15 +143,16 @@ class ApproveCenterController extends Controller
     /**
      * 显示
      */
-    private function _showOfMyApproveList(){
+    private function _showOfMyApproveList($varPage = 0){
         $LogObj=new \CommonClass\Login\ProcessLoginInfo();
         $uid = $LogObj->getLoginInfo()['id'];
         $where = " AND o.order_user = {$uid}";
         $orderList = M('ysy_order')->alias('o')
             ->field("o.order_id , o.order_user , o.addtime , o.status , u.realname as order_realname")
-
             ->join("think_user as u ON u.id = o.order_user")
             ->where("1 = 1 {$where}")
+            ->limit("{$varPage} , 10")
+            ->order('o.addtime desc')
             ->select();
         return $orderList;
     }

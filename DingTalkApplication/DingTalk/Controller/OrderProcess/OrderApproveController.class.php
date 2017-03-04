@@ -31,6 +31,15 @@ class OrderApproveController extends Controller
                 $packageHtml .= $this->_assPackageHtml($v);
             }
         }
+
+
+
+        $userInfoList = M('user')->select();
+
+
+
+
+
         $goodsPackageList= $this->_getGoodsPackage();
         $goodsPackageList = json_encode($goodsPackageList , JSON_UNESCAPED_UNICODE);
         $ConfigObj = new \CommonClass\Config\BaseConfig();
@@ -38,6 +47,10 @@ class OrderApproveController extends Controller
             'sendType' => $ConfigObj->getSendType(),
             'orderType' => $ConfigObj->getOrderType(),
         );
+
+
+        $this->assign('uid' , $uid);
+        $this->assign('userInfoList' , $userInfoList);
         $this->assign('goodsInfo' , reset($dataFromDb));
         $this->assign('goodsPackageList' , $goodsPackageList);
         $this->assign('configList' , json_encode($configList , JSON_UNESCAPED_UNICODE));
@@ -154,9 +167,7 @@ EOT;
         if($orderId){
             $ReBackObj = new \CommonClass\Order\Dealpackage\RebackOrderGoods();
             $ReBackObj->initi($orderId);
-
             $reBackOrderGoodsList = $ReBackObj->getGoodsInfoByOrderId();
-
         }
         $AssembleOrderObj = new \CommonClass\Order\AssembleOrderOfForm();
         $AssembleOrderObj->initi($data , $orderId);

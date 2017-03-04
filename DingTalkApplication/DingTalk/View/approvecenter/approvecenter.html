@@ -24,10 +24,10 @@
 				</div>
 				</a>
 
-				<div class="fl w33 pt15 pb15">
-					<div class="apply-icon ct ai3"></div>
-					<p class="c949f ftc ft14">待我审批</p>
-				</div>
+				<!--<div class="fl w33 pt15 pb15">-->
+					<!--<div class="apply-icon ct ai3"></div>-->
+					<!--<p class="c949f ftc ft14">待我审批</p>-->
+				<!--</div>-->
 			</div>
 			<div class="bbt clearfix bgfff">
 				<a class="w33 fl blockflame block" href="<?php echo U('OrderProcess/OrderApprove') ?>">

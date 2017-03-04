@@ -16,7 +16,22 @@
 
     }
 
+    .label-primary {
+        background-color: #337ab7;
+    }
 
+    .label {
+        display: inline;
+        padding: .2em .6em .3em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: .25em;
+    }
 
 </style>
 
@@ -40,12 +55,15 @@
 
         <div class="weui-cells" style="margin-top:0">
             <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">客户电话</label></div>
+                <div class="weui-cell__hd"><label class="weui-label">客户电话</label><span style="display: none" class="fresh-customer label label-primary"></span></div>
                 <div class="weui-cell__bd">
                     <input name="rece_tel" value="<?php echo ($goodsInfo['rece_tel']); ?>" class="weui-input" type="text"  placeholder="必填">
                 </div>
             </div>
         </div>
+
+
+
 
         <div class="weui-cells" style="margin-top:0">
             <div class="weui-cell">
@@ -61,6 +79,31 @@
                 <div class="weui-cell__hd"><label class="weui-label">收货人地址</label></div>
                 <div class="weui-cell__bd">
                     <input name="rece_addr" class="weui-input" value="<?php echo ($goodsInfo['rece_addr']); ?>"  placeholder="必填">
+                </div>
+            </div>
+        </div>
+
+        <div class="weui-cells" style="margin-top:0">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">所属行业</label></div>
+                <div class="weui-cell__bd">
+                    <input name="belongtoindustry" value="<?php echo ($goodsInfo['rece_tel']); ?>" class="weui-input" type="text"  placeholder="必填">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="weui-cells" style="margin-top:0">
+            <div class="weui-cell weui-cell_select weui-cell_select-after">
+                <div class="weui-cell__hd">
+                    <label for="" class="weui-label">资金归属</label>
+                </div>
+                <div class="weui-cell__bd">
+                    <select class="weui-select" name="moneytouid">
+                        <?php if(is_array($userInfoList)): foreach($userInfoList as $k=>$v): if($uid == $v['id'] ): ?><option selected value="<?php echo ($v['id']); ?>"><?php echo ($v['realname']); ?></option>
+                                <?php else: ?>
+                                <option value="<?php echo ($v['id']); ?>"><?php echo ($v['realname']); ?></option><?php endif; endforeach; endif; ?>
+                    </select>
                 </div>
             </div>
         </div>
@@ -256,7 +299,7 @@
                     if(dataJson.error){
                         _promptBox('warm' , dataJson.msg);
                     }else{
-                        window.location.href='<?php echo U('ApproveCenter/ApproveCenter') ?>';
+//                        window.location.href='<?php echo U('ApproveCenter/ApproveCenter') ?>';
                     }
                 });
             });
@@ -266,9 +309,13 @@
                 $.get('<?php echo U('OrderProcess/OrderApprove/actionRequestService') ?>',{type:'getaddress',tel:$(this).val()},function(data){
                     var responseJson = JSON.parse(data);
                     if(responseJson['tel'] != 0){
+                        $('.fresh-customer').text('老客户').css('display' , 'block');
                         $('input[name="rece_name"]').val(responseJson['name']);
                         $('input[name="rece_addr"]').val(responseJson['addr']);
+                    }else {
+                        $('.fresh-customer').text('新客户').css('display' , 'block');
                     }
+
                     _promptBox('hide');
                 });
             });

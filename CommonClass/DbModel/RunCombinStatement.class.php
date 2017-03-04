@@ -31,6 +31,7 @@ class RunCombinStatement
      * 运行
      */
     public function run(){
+
         $flag = true;
         foreach($this->_combinStatementList as $k => $v){
             $flagDb = $v->run();

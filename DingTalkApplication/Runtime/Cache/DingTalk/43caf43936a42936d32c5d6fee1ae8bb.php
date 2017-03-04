@@ -8,6 +8,17 @@
 		<title></title>
 	</head>
 	<body>
+
+	<div id="loadingToast" style="opacity: 0; display: none;">
+		<div class="weui-mask_transparent"></div>
+		<div class="weui-toast">
+			<!--<i class="weui-loading weui-icon_toast"></i>-->
+			<!--<i class="weui-icon-cancel font84"></i>-->
+			<i class="weui-loading weui-icon_toast"></i>
+			<p class="weui-toast__content">数据加载中</p>
+		</div>
+	</div>
+
 		<div class="main">
 			<div class="clearfix tab-top">
 				<p class="fl w50 ftc pt10 pb10 tabblue">待我审批的</p>
@@ -31,6 +42,7 @@
 						</a>
 					</div><?php endforeach; endif; ?>
 
+
 			</div>
 		</div>
 	</body>
@@ -39,6 +51,66 @@
 			$(this).addClass("tabblue").siblings().removeClass('tabblue');
 			var index=$(".tab-top p").index(this);
 			$(".tab-box .tabone").eq(index).show().siblings().hide();
-		})
+		});
+		//提示框
+		var _promptBox = function(varType , varMsg){
+			if(varType == 'showLoading'){
+				$('#loadingToast i').attr('class','weui-loading weui-icon_toast');
+				$('#loadingToast .weui-toast__content').html('加载中');
+				$('#loadingToast').css({'opacity':1 , 'display':'block'});
+			}else if(varType == 'hide'){
+				$('#loadingToast').css({'opacity':0 , 'display':'none'});
+				$('#loadingToast i').attr('class','weui-loading weui-icon_toast');
+				$('#loadingToast .weui-toast__content').html('加载中');
+			}else if(varType == 'warm'){
+				$('#loadingToast i').attr('class' , 'weui-icon-cancel font84');
+				$('#loadingToast .weui-toast__content').html(varMsg);
+			}
+
+		};
+
+
+		var WaitOfMyApprove = function(){
+			var _curPage = 0; //
+			var _pageFun = function(){
+
+				if($('.tabone').length <= 10 ){
+					return true;
+				}else{
+					var selectJson = {
+						type:'showwaitofmyapprove',
+						pagenum : _curPage
+					};
+					var href="<?php echo U('ApproveCenter/ApproveCenter/actionRequestService'); ?>";
+					_promptBox('showLoading');
+					$.get(href , selectJson , function(response){
+						_curPage += 10;
+						$('.tab-box').append(response);
+						_promptBox('hide');
+					});
+					//$('.tab-box').append('<11>');
+				}
+			};
+
+			var _intit = function(){
+				$(window).scroll(function(){
+					var totalheight = parseFloat($(window).height()) + parseFloat($(window).scrollTop());
+					if(($(document).height()) <= totalheight) {
+						WaitOfMyApprove();
+					}
+				});
+
+			}();
+
+			return {
+
+				test:_pageFun
+			}
+
+
+		}();
+
+
+
 	</script>
 </html>

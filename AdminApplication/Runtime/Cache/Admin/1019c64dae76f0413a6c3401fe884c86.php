@@ -229,7 +229,7 @@
                         goodsnum : $('input[name="goodsinfo_num"]').val()
                     };
                     $.get(url , requestJson , function(data){
-                        var url = '<?php echo U('stockandsale/ManagePacks') ?>';
+                        var url = '<?php echo U('stockandsale/ManageGoods') ?>';
                         window.location.href = url;
                     });
                     return false;
