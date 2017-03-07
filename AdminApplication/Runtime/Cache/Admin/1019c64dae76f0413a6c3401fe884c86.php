@@ -207,12 +207,15 @@
 
             $('.modal-dialog .btn-default').on('click' , function(){
                 $('.modal#exampleModal').hide();
+                $('#editgoods').hide();
                 $('.modal-backdrop').hide();
 
             });
 
             $('.modal-dialog .close').on('click' , function(){
+
                 $('.modal#exampleModal').hide();
+                $('#editgoods').hide();
                 $('.modal-backdrop').hide();
             });
 

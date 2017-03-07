@@ -248,7 +248,7 @@
                     var remark = $('input[name="remark"]').val();
                     var type = $('input[name="type"]').val();
                     $.get(url , {type:type,formatid:formatid,goodsname:goodsname,remark:remark } , function(data){
-                        var url = '<?php echo U('stockandsale/ManageGoods') ?>';
+                        var url = '<?php echo U('stockandsale/ManagePacks') ?>';
                         var responseJson = JSON.parse(data);
                         if(responseJson.error === 0){
                             window.location.href = url;
