@@ -25,8 +25,8 @@
                 <thead>
                 <tr>
                     <th>包装id</th>
-                    <th>规格</th>
-                    <th>名称</th>
+                    <th>包装名称</th>
+                    <th>包装组件</th>
                     <th>库存</th>
                     <th>操作</th>
                 </tr>
@@ -199,8 +199,8 @@
 
             $('.addgoods-a').on('click' , function(){
                 $('.title-span').text('新增商品');
-                $('.text1-span').text('规格');
-                $('.text2-span').text('商品名称');
+                $('.text1-span').text('包装名称');
+                $('.text2-span').text('包装组件');
                 $('input[name="type"]').val('addgoods');
                 $('.modal').show();
                 $('.modal-backdrop').show();
@@ -208,8 +208,8 @@
 
             $('.addformat-a').on('click' , function(){
                 $('.title-span').text('新增规格');
-                $('.text1-span').text('父级规格');
-                $('.text2-span').text('规格名称');
+                $('.text1-span').text('包装分类');
+                $('.text2-span').text('包装名称');
                 $('input[name="type"]').val('addformat');
                 $('.modal#exampleModal').show();
                 $('.modal-backdrop').show();

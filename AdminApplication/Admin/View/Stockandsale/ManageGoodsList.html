@@ -25,8 +25,8 @@
                 <thead>
                 <tr>
                     <th>商品id</th>
-                    <th>规格</th>
-                    <th>名称</th>
+                    <th>商品名称</th>
+                    <th>售卖规格</th>
                     <th>库存</th>
                     <th>操作</th>
                 </tr>
@@ -192,8 +192,8 @@
 
 
                 $('.title-span').text('新增商品');
-                $('.text1-span').text('规格');
-                $('.text2-span').text('商品名称');
+                $('.text1-span').text('商品名称');
+                $('.text2-span').text('售卖规格');
                 $('input[name="type"]').val('addgoods');
 
                 $('.modal#exampleModal').show();
@@ -202,8 +202,8 @@
 
             $('.addformat-a').on('click' , function(){
                 $('.title-span').text('新增规格');
-                $('.text1-span').text('父级规格');
-                $('.text2-span').text('规格名称');
+                $('.text1-span').text('商品分类');
+                $('.text2-span').text('商品名称');
                 $('input[name="type"]').val('addformat');
                 $('.modal#exampleModal').show();
                 $('.modal-backdrop').show();

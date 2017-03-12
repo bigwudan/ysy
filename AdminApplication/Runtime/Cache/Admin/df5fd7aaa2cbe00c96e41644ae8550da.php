@@ -56,7 +56,7 @@
                             <table class="table goods-table packinfo-table">
                                 <thead>
                                 <tr>
-                                    <th>商品名</th>
+                                    <th>售卖规格</th>
                                     <th>数量</th>
                                     <th>操作</th>
                                 </tr>
@@ -75,7 +75,7 @@
                             <table class="table pack-table packinfo-table">
                                 <thead>
                                 <tr>
-                                    <th>包装名称</th>
+                                    <th>包装组件</th>
                                     <th>数量</th>
                                     <th>操作</th>
                                 </tr>
