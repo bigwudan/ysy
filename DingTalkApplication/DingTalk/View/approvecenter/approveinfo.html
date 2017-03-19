@@ -164,7 +164,7 @@
                 var remark = $('textarea[name="remark"]').val();
                 $.get('<?php echo U('ApproveCenter/ApproveCenter/actionApproveService') ?>',{id:id , approvetype : approvetype , remark :  remark},function(responseData){
 
-                    console.log(responseData);
+					window.location.href='<?php echo U('ApproveCenter/ApproveCenter/actionWaitOfMyApprove') ?>';
 
                 });
 

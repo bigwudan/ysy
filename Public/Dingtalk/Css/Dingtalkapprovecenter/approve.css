@@ -123,7 +123,7 @@ a {color:#333; text-decoration: none; -webkit-tap-highlight-color: transparent; 
 .typeico{top: 25px;left: -10px;}
 .lh40{line-height: 40px;}
 .fixed{position: fixed;}
-.fix-position{bottom: 0;left: 0;}
+.fix-position{bottom: 0;left: 0;z-index: 9999}
 .mb60{margin-bottom: 60px;}
 
 textarea::-webkit-input-placeholder{color: #999;}

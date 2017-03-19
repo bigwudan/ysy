@@ -299,7 +299,7 @@
                     if(dataJson.error){
                         _promptBox('warm' , dataJson.msg);
                     }else{
-//                        window.location.href='<?php echo U('ApproveCenter/ApproveCenter') ?>';
+                        window.location.href='<?php echo U('ApproveCenter/ApproveCenter') ?>';
                     }
                 });
             });
